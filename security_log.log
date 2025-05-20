@@ -1,0 +1,1093 @@
+2025-05-20 10:49:24,328 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.3.183:5000
+2025-05-20 10:49:24,328 [33mPress CTRL+C to quit[0m
+2025-05-20 10:49:24,328  * Restarting with stat
+2025-05-20 10:49:24,633  * Debugger is active!
+2025-05-20 10:49:24,634  * Debugger PIN: 101-758-739
+2025-05-20 10:49:31,261 127.0.0.1 - - [20/May/2025 10:49:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-20 10:49:31,490 127.0.0.1 - - [20/May/2025 10:49:31] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 10:49:31,845 127.0.0.1 - - [20/May/2025 10:49:31] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-05-20 10:49:31,902 127.0.0.1 - - [20/May/2025 10:49:31] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-05-20 10:49:32,014 127.0.0.1 - - [20/May/2025 10:49:32] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-05-20 10:49:32,455 127.0.0.1 - - [20/May/2025 10:49:32] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-05-20 10:49:32,547 127.0.0.1 - - [20/May/2025 10:49:32] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-05-20 10:49:32,808 127.0.0.1 - - [20/May/2025 10:49:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:49:32,869 127.0.0.1 - - [20/May/2025 10:49:32] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-05-20 10:49:32,984 127.0.0.1 - - [20/May/2025 10:49:32] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2025-05-20 10:49:32,992 127.0.0.1 - - [20/May/2025 10:49:32] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-20 10:49:32,995 127.0.0.1 - - [20/May/2025 10:49:32] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2025-05-20 10:49:33,000 127.0.0.1 - - [20/May/2025 10:49:33] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2025-05-20 10:49:33,005 127.0.0.1 - - [20/May/2025 10:49:33] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2025-05-20 10:49:33,019 127.0.0.1 - - [20/May/2025 10:49:33] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2025-05-20 10:49:33,026 127.0.0.1 - - [20/May/2025 10:49:33] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2025-05-20 10:49:33,029 127.0.0.1 - - [20/May/2025 10:49:33] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2025-05-20 10:49:33,052 127.0.0.1 - - [20/May/2025 10:49:33] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2025-05-20 10:50:13,794  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-20 10:50:13,835  * Restarting with stat
+2025-05-20 10:50:14,138  * Debugger is active!
+2025-05-20 10:50:14,139  * Debugger PIN: 101-758-739
+2025-05-20 10:50:14,711 127.0.0.1 - - [20/May/2025 10:50:14] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 10:50:15,014 127.0.0.1 - - [20/May/2025 10:50:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:50:15,019 127.0.0.1 - - [20/May/2025 10:50:15] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-05-20 10:50:15,030 127.0.0.1 - - [20/May/2025 10:50:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:50:15,105 127.0.0.1 - - [20/May/2025 10:50:15] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:50:15,165 127.0.0.1 - - [20/May/2025 10:50:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 10:50:15,266 127.0.0.1 - - [20/May/2025 10:50:15] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 10:52:38,741 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 10:52:38,742 Error during login attempt for user: TestUser - HTTPConnectionPool(host='127.0.0.1', port=3000): Max retries exceeded with url: /api/login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79ba22014a10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-05-20 10:52:38,743 127.0.0.1 - - [20/May/2025 10:52:38] "POST /login.html HTTP/1.1" 200 -
+2025-05-20 10:52:39,103 127.0.0.1 - - [20/May/2025 10:52:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:52:39,116 127.0.0.1 - - [20/May/2025 10:52:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:52:39,117 127.0.0.1 - - [20/May/2025 10:52:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 10:52:39,266 127.0.0.1 - - [20/May/2025 10:52:39] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:52:39,402 127.0.0.1 - - [20/May/2025 10:52:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:06,332 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 10:54:06,340 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 500 22177
+2025-05-20 10:54:06,341 Invalid login attempt for user: TestUser - 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:3000/api/login
+2025-05-20 10:54:06,342 127.0.0.1 - - [20/May/2025 10:54:06] "POST /login.html HTTP/1.1" 200 -
+2025-05-20 10:54:06,620 127.0.0.1 - - [20/May/2025 10:54:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:54:06,621 127.0.0.1 - - [20/May/2025 10:54:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 10:54:06,628 127.0.0.1 - - [20/May/2025 10:54:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:06,778 127.0.0.1 - - [20/May/2025 10:54:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:06,935 127.0.0.1 - - [20/May/2025 10:54:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:07,004 127.0.0.1 - - [20/May/2025 10:54:07] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 10:54:11,240 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 10:54:11,250 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 500 22177
+2025-05-20 10:54:11,251 Invalid login attempt for user: TestUser - 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:3000/api/login
+2025-05-20 10:54:11,253 127.0.0.1 - - [20/May/2025 10:54:11] "POST /login.html HTTP/1.1" 200 -
+2025-05-20 10:54:11,398 127.0.0.1 - - [20/May/2025 10:54:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 10:54:11,402 127.0.0.1 - - [20/May/2025 10:54:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:11,406 127.0.0.1 - - [20/May/2025 10:54:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:54:11,470 127.0.0.1 - - [20/May/2025 10:54:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:11,526 127.0.0.1 - - [20/May/2025 10:54:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:19,921 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 10:54:19,932 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 500 22177
+2025-05-20 10:54:19,933 Invalid login attempt for user: TestUser - 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:3000/api/login
+2025-05-20 10:54:19,935 127.0.0.1 - - [20/May/2025 10:54:19] "POST /login.html HTTP/1.1" 200 -
+2025-05-20 10:54:20,054 127.0.0.1 - - [20/May/2025 10:54:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 10:54:20,072 127.0.0.1 - - [20/May/2025 10:54:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:20,084 127.0.0.1 - - [20/May/2025 10:54:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:54:20,133 127.0.0.1 - - [20/May/2025 10:54:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:20,186 127.0.0.1 - - [20/May/2025 10:54:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:32,953 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 10:54:32,959 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 500 22177
+2025-05-20 10:54:32,959 Invalid login attempt for user: TestUser - 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:3000/api/login
+2025-05-20 10:54:32,960 127.0.0.1 - - [20/May/2025 10:54:32] "POST /login.html HTTP/1.1" 200 -
+2025-05-20 10:54:33,057 127.0.0.1 - - [20/May/2025 10:54:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 10:54:33,070 127.0.0.1 - - [20/May/2025 10:54:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:54:33,079 127.0.0.1 - - [20/May/2025 10:54:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:33,125 127.0.0.1 - - [20/May/2025 10:54:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:54:33,162 127.0.0.1 - - [20/May/2025 10:54:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 10:55:26,251 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 10:55:26,256 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 500 22177
+2025-05-20 10:55:26,256 Invalid login attempt for user: TestUser - 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:3000/api/login
+2025-05-20 10:55:26,257 127.0.0.1 - - [20/May/2025 10:55:26] "POST /login.html HTTP/1.1" 200 -
+2025-05-20 10:55:26,375 127.0.0.1 - - [20/May/2025 10:55:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:55:26,381 127.0.0.1 - - [20/May/2025 10:55:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 10:55:26,386 127.0.0.1 - - [20/May/2025 10:55:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:55:26,446 127.0.0.1 - - [20/May/2025 10:55:26] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:55:26,497 127.0.0.1 - - [20/May/2025 10:55:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 10:55:26,566 127.0.0.1 - - [20/May/2025 10:55:26] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 10:55:36,902 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 10:55:36,911 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 500 22177
+2025-05-20 10:55:36,912 Invalid login attempt for user: TestUser - 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:3000/api/login
+2025-05-20 10:55:36,914 127.0.0.1 - - [20/May/2025 10:55:36] "POST /login.html HTTP/1.1" 200 -
+2025-05-20 10:55:37,026 127.0.0.1 - - [20/May/2025 10:55:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:55:37,044 127.0.0.1 - - [20/May/2025 10:55:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 10:55:37,046 127.0.0.1 - - [20/May/2025 10:55:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:55:37,097 127.0.0.1 - - [20/May/2025 10:55:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:55:37,137 127.0.0.1 - - [20/May/2025 10:55:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 10:58:28,975  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 10:58:29,028  * Restarting with stat
+2025-05-20 10:58:29,384  * Debugger is active!
+2025-05-20 10:58:29,384  * Debugger PIN: 101-758-739
+2025-05-20 10:58:33,168  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 10:58:33,217  * Restarting with stat
+2025-05-20 10:58:33,545  * Debugger is active!
+2025-05-20 10:58:33,546  * Debugger PIN: 101-758-739
+2025-05-20 10:58:34,085 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 10:58:34,222 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 10:58:34,222 User 'TestUser' logged in, hasn't passed 2FA
+2025-05-20 10:58:34,227 127.0.0.1 - - [20/May/2025 10:58:34] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 10:58:34,451 127.0.0.1 - - [20/May/2025 10:58:34] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 10:58:34,708 127.0.0.1 - - [20/May/2025 10:58:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 10:58:34,712 127.0.0.1 - - [20/May/2025 10:58:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:58:34,712 127.0.0.1 - - [20/May/2025 10:58:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:58:34,841 127.0.0.1 - - [20/May/2025 10:58:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:58:34,876 127.0.0.1 - - [20/May/2025 10:58:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 10:58:34,945 127.0.0.1 - - [20/May/2025 10:58:34] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 10:58:40,256 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 10:58:40,347 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 10:58:40,348 User 'TestUser' logged in, hasn't passed 2FA
+2025-05-20 10:58:40,349 127.0.0.1 - - [20/May/2025 10:58:40] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 10:58:40,395 127.0.0.1 - - [20/May/2025 10:58:40] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 10:58:40,604 127.0.0.1 - - [20/May/2025 10:58:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 10:58:40,614 127.0.0.1 - - [20/May/2025 10:58:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:58:40,620 127.0.0.1 - - [20/May/2025 10:58:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:58:40,945 127.0.0.1 - - [20/May/2025 10:58:40] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:58:40,987 127.0.0.1 - - [20/May/2025 10:58:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 10:58:41,085 127.0.0.1 - - [20/May/2025 10:58:41] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 10:59:39,884 2FA successful, User 'TestUser' logged in successfully
+2025-05-20 10:59:39,885 127.0.0.1 - - [20/May/2025 10:59:39] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-05-20 10:59:39,928 127.0.0.1 - - [20/May/2025 10:59:39] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-05-20 10:59:40,060 127.0.0.1 - - [20/May/2025 10:59:40] "GET / HTTP/1.1" 200 -
+2025-05-20 10:59:40,180 127.0.0.1 - - [20/May/2025 10:59:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 10:59:40,194 127.0.0.1 - - [20/May/2025 10:59:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 10:59:40,198 127.0.0.1 - - [20/May/2025 10:59:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 10:59:40,252 127.0.0.1 - - [20/May/2025 10:59:40] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 10:59:40,287 127.0.0.1 - - [20/May/2025 10:59:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:00:28,670 127.0.0.1 - - [20/May/2025 11:00:28] "GET /privacy.html HTTP/1.1" 200 -
+2025-05-20 11:00:28,787 127.0.0.1 - - [20/May/2025 11:00:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:00:28,790 127.0.0.1 - - [20/May/2025 11:00:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:00:28,793 127.0.0.1 - - [20/May/2025 11:00:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:00:28,858 127.0.0.1 - - [20/May/2025 11:00:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:00:28,894 127.0.0.1 - - [20/May/2025 11:00:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:00:30,185 127.0.0.1 - - [20/May/2025 11:00:30] "GET /privacy.html HTTP/1.1" 200 -
+2025-05-20 11:00:30,295 127.0.0.1 - - [20/May/2025 11:00:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:00:30,299 127.0.0.1 - - [20/May/2025 11:00:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:00:30,303 127.0.0.1 - - [20/May/2025 11:00:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:00:30,346 127.0.0.1 - - [20/May/2025 11:00:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:00:30,382 127.0.0.1 - - [20/May/2025 11:00:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:00:52,875 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.3.183:5000
+2025-05-20 11:00:52,875 [33mPress CTRL+C to quit[0m
+2025-05-20 11:00:52,876  * Restarting with stat
+2025-05-20 11:00:53,203  * Debugger is active!
+2025-05-20 11:00:53,203  * Debugger PIN: 101-758-739
+2025-05-20 11:00:53,645 127.0.0.1 - - [20/May/2025 11:00:53] "GET / HTTP/1.1" 200 -
+2025-05-20 11:00:53,868 127.0.0.1 - - [20/May/2025 11:00:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:00:53,868 127.0.0.1 - - [20/May/2025 11:00:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:00:53,870 127.0.0.1 - - [20/May/2025 11:00:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:00:54,198 127.0.0.1 - - [20/May/2025 11:00:54] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:00:54,234 127.0.0.1 - - [20/May/2025 11:00:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:01:46,805  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-20 11:01:46,851  * Restarting with stat
+2025-05-20 11:01:47,167  * Debugger is active!
+2025-05-20 11:01:47,167  * Debugger PIN: 101-758-739
+2025-05-20 11:03:33,422 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.3.183:5000
+2025-05-20 11:03:33,422 [33mPress CTRL+C to quit[0m
+2025-05-20 11:03:33,422  * Restarting with stat
+2025-05-20 11:03:33,742  * Debugger is active!
+2025-05-20 11:03:33,743  * Debugger PIN: 101-758-739
+2025-05-20 11:03:35,327 127.0.0.1 - - [20/May/2025 11:03:35] "GET / HTTP/1.1" 200 -
+2025-05-20 11:03:35,766 127.0.0.1 - - [20/May/2025 11:03:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:35,767 127.0.0.1 - - [20/May/2025 11:03:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:03:35,778 127.0.0.1 - - [20/May/2025 11:03:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:03:35,836 127.0.0.1 - - [20/May/2025 11:03:35] "GET / HTTP/1.1" 200 -
+2025-05-20 11:03:35,921 127.0.0.1 - - [20/May/2025 11:03:35] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:36,019 127.0.0.1 - - [20/May/2025 11:03:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:36,098 127.0.0.1 - - [20/May/2025 11:03:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:03:36,101 127.0.0.1 - - [20/May/2025 11:03:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:36,103 127.0.0.1 - - [20/May/2025 11:03:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:03:36,414 127.0.0.1 - - [20/May/2025 11:03:36] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:03:36,417 127.0.0.1 - - [20/May/2025 11:03:36] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:36,475 127.0.0.1 - - [20/May/2025 11:03:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:36,660 127.0.0.1 - - [20/May/2025 11:03:36] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:03:38,449 User 'TestUser' logged out successfully
+2025-05-20 11:03:38,450 127.0.0.1 - - [20/May/2025 11:03:38] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-20 11:03:38,491 127.0.0.1 - - [20/May/2025 11:03:38] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:03:38,588 127.0.0.1 - - [20/May/2025 11:03:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:03:38,602 127.0.0.1 - - [20/May/2025 11:03:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:03:38,606 127.0.0.1 - - [20/May/2025 11:03:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:38,658 127.0.0.1 - - [20/May/2025 11:03:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:38,703 127.0.0.1 - - [20/May/2025 11:03:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:46,226 127.0.0.1 - - [20/May/2025 11:03:46] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 11:03:46,321 127.0.0.1 - - [20/May/2025 11:03:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:03:46,325 127.0.0.1 - - [20/May/2025 11:03:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:03:46,327 127.0.0.1 - - [20/May/2025 11:03:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:46,375 127.0.0.1 - - [20/May/2025 11:03:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:46,417 127.0.0.1 - - [20/May/2025 11:03:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:47,370 127.0.0.1 - - [20/May/2025 11:03:47] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:03:47,484 127.0.0.1 - - [20/May/2025 11:03:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:03:47,486 127.0.0.1 - - [20/May/2025 11:03:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:47,489 127.0.0.1 - - [20/May/2025 11:03:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:03:47,548 127.0.0.1 - - [20/May/2025 11:03:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:03:47,589 127.0.0.1 - - [20/May/2025 11:03:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:04:05,907 127.0.0.1 - - [20/May/2025 11:04:05] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:04:06,021 127.0.0.1 - - [20/May/2025 11:04:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:04:06,026 127.0.0.1 - - [20/May/2025 11:04:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:04:06,033 127.0.0.1 - - [20/May/2025 11:04:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:04:06,116 127.0.0.1 - - [20/May/2025 11:04:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:04:06,157 127.0.0.1 - - [20/May/2025 11:04:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:04:06,228 127.0.0.1 - - [20/May/2025 11:04:06] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:19:07,668  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 11:19:07,708  * Restarting with stat
+2025-05-20 11:19:08,018  * Debugger is active!
+2025-05-20 11:19:08,018  * Debugger PIN: 101-758-739
+2025-05-20 11:19:47,398  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 11:19:47,443  * Restarting with stat
+2025-05-20 11:19:47,748  * Debugger is active!
+2025-05-20 11:19:47,748  * Debugger PIN: 101-758-739
+2025-05-20 11:20:49,811 127.0.0.1 - - [20/May/2025 11:20:49] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:20:50,087 127.0.0.1 - - [20/May/2025 11:20:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:20:50,091 127.0.0.1 - - [20/May/2025 11:20:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:20:50,244 127.0.0.1 - - [20/May/2025 11:20:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:20:50,491 127.0.0.1 - - [20/May/2025 11:20:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:20:50,680 127.0.0.1 - - [20/May/2025 11:20:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:20:50,833 127.0.0.1 - - [20/May/2025 11:20:50] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:21:13,337 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 11:21:13,440 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 11:21:13,440 User 'TestUser' logged in, hasn't passed 2FA
+2025-05-20 11:21:13,441 127.0.0.1 - - [20/May/2025 11:21:13] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 11:21:13,530 127.0.0.1 - - [20/May/2025 11:21:13] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 11:21:13,663 127.0.0.1 - - [20/May/2025 11:21:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:21:13,665 127.0.0.1 - - [20/May/2025 11:21:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:21:13,677 127.0.0.1 - - [20/May/2025 11:21:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:21:13,744 127.0.0.1 - - [20/May/2025 11:21:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:21:13,801 127.0.0.1 - - [20/May/2025 11:21:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:21:49,513 2FA successful, User 'TestUser' logged in successfully
+2025-05-20 11:21:49,515 127.0.0.1 - - [20/May/2025 11:21:49] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-05-20 11:21:49,577 127.0.0.1 - - [20/May/2025 11:21:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-05-20 11:21:49,641 127.0.0.1 - - [20/May/2025 11:21:49] "GET / HTTP/1.1" 200 -
+2025-05-20 11:21:49,804 127.0.0.1 - - [20/May/2025 11:21:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:21:49,808 127.0.0.1 - - [20/May/2025 11:21:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:21:49,811 127.0.0.1 - - [20/May/2025 11:21:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:21:49,878 127.0.0.1 - - [20/May/2025 11:21:49] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:21:49,932 127.0.0.1 - - [20/May/2025 11:21:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:21:54,346 User 'TestUser' logged out successfully
+2025-05-20 11:21:54,347 127.0.0.1 - - [20/May/2025 11:21:54] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-20 11:21:54,411 127.0.0.1 - - [20/May/2025 11:21:54] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:21:54,538 127.0.0.1 - - [20/May/2025 11:21:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:21:54,557 127.0.0.1 - - [20/May/2025 11:21:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:21:54,561 127.0.0.1 - - [20/May/2025 11:21:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:21:54,622 127.0.0.1 - - [20/May/2025 11:21:54] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:21:54,678 127.0.0.1 - - [20/May/2025 11:21:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:22:17,424 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 11:22:17,516 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 11:22:17,516 User 'TestUser' logged in, hasn't passed 2FA
+2025-05-20 11:22:17,517 127.0.0.1 - - [20/May/2025 11:22:17] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 11:22:17,600 127.0.0.1 - - [20/May/2025 11:22:17] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 11:22:17,725 127.0.0.1 - - [20/May/2025 11:22:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:22:17,741 127.0.0.1 - - [20/May/2025 11:22:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:22:17,749 127.0.0.1 - - [20/May/2025 11:22:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:22:17,810 127.0.0.1 - - [20/May/2025 11:22:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:22:17,864 127.0.0.1 - - [20/May/2025 11:22:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:22:25,224 127.0.0.1 - - [20/May/2025 11:22:25] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 11:22:25,371 127.0.0.1 - - [20/May/2025 11:22:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:22:25,372 127.0.0.1 - - [20/May/2025 11:22:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:22:25,373 127.0.0.1 - - [20/May/2025 11:22:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:22:25,429 127.0.0.1 - - [20/May/2025 11:22:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:22:25,478 127.0.0.1 - - [20/May/2025 11:22:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:22:25,558 127.0.0.1 - - [20/May/2025 11:22:25] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:22:26,247 127.0.0.1 - - [20/May/2025 11:22:26] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:22:26,373 127.0.0.1 - - [20/May/2025 11:22:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:22:26,379 127.0.0.1 - - [20/May/2025 11:22:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:22:26,383 127.0.0.1 - - [20/May/2025 11:22:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:22:26,446 127.0.0.1 - - [20/May/2025 11:22:26] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:22:26,495 127.0.0.1 - - [20/May/2025 11:22:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:14,449 127.0.0.1 - - [20/May/2025 11:23:14] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 11:23:14,578 127.0.0.1 - - [20/May/2025 11:23:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:23:14,594 127.0.0.1 - - [20/May/2025 11:23:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:14,597 127.0.0.1 - - [20/May/2025 11:23:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:23:14,659 127.0.0.1 - - [20/May/2025 11:23:14] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:14,707 127.0.0.1 - - [20/May/2025 11:23:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:25,457 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 11:23:25,572 http://127.0.0.1:3000 "POST /api/signup HTTP/1.1" 201 45
+2025-05-20 11:23:25,572 User 'Jaiden' signed up successfully
+2025-05-20 11:23:25,573 127.0.0.1 - - [20/May/2025 11:23:25] "[32mPOST /signUp.html HTTP/1.1[0m" 302 -
+2025-05-20 11:23:25,625 127.0.0.1 - - [20/May/2025 11:23:25] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:23:25,757 127.0.0.1 - - [20/May/2025 11:23:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:23:25,761 127.0.0.1 - - [20/May/2025 11:23:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:23:25,765 127.0.0.1 - - [20/May/2025 11:23:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:25,823 127.0.0.1 - - [20/May/2025 11:23:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:25,872 127.0.0.1 - - [20/May/2025 11:23:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:36,950 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 11:23:37,058 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 11:23:37,058 User 'Jaiden' logged in, hasn't passed 2FA
+2025-05-20 11:23:37,059 127.0.0.1 - - [20/May/2025 11:23:37] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 11:23:37,125 127.0.0.1 - - [20/May/2025 11:23:37] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 11:23:37,260 127.0.0.1 - - [20/May/2025 11:23:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:37,265 127.0.0.1 - - [20/May/2025 11:23:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:23:37,271 127.0.0.1 - - [20/May/2025 11:23:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:23:37,339 127.0.0.1 - - [20/May/2025 11:23:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:37,390 127.0.0.1 - - [20/May/2025 11:23:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:59,178 2FA successful, User 'Jaiden' logged in successfully
+2025-05-20 11:23:59,179 127.0.0.1 - - [20/May/2025 11:23:59] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-05-20 11:23:59,233 127.0.0.1 - - [20/May/2025 11:23:59] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-05-20 11:23:59,320 127.0.0.1 - - [20/May/2025 11:23:59] "GET / HTTP/1.1" 200 -
+2025-05-20 11:23:59,449 127.0.0.1 - - [20/May/2025 11:23:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:23:59,462 127.0.0.1 - - [20/May/2025 11:23:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:23:59,466 127.0.0.1 - - [20/May/2025 11:23:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:59,552 127.0.0.1 - - [20/May/2025 11:23:59] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:23:59,626 127.0.0.1 - - [20/May/2025 11:23:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:24:02,751 User 'Jaiden' logged out successfully
+2025-05-20 11:24:02,752 127.0.0.1 - - [20/May/2025 11:24:02] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-20 11:24:02,802 127.0.0.1 - - [20/May/2025 11:24:02] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:24:02,937 127.0.0.1 - - [20/May/2025 11:24:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:24:02,943 127.0.0.1 - - [20/May/2025 11:24:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:24:02,945 127.0.0.1 - - [20/May/2025 11:24:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:24:03,009 127.0.0.1 - - [20/May/2025 11:24:03] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:24:03,062 127.0.0.1 - - [20/May/2025 11:24:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:24:08,560 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 11:24:08,662 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 11:24:08,662 User 'Jaiden' logged in, hasn't passed 2FA
+2025-05-20 11:24:08,663 127.0.0.1 - - [20/May/2025 11:24:08] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 11:24:08,727 127.0.0.1 - - [20/May/2025 11:24:08] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 11:24:08,853 127.0.0.1 - - [20/May/2025 11:24:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:24:08,860 127.0.0.1 - - [20/May/2025 11:24:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:24:08,866 127.0.0.1 - - [20/May/2025 11:24:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:24:08,930 127.0.0.1 - - [20/May/2025 11:24:08] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:24:08,988 127.0.0.1 - - [20/May/2025 11:24:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:24:11,842 127.0.0.1 - - [20/May/2025 11:24:11] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:24:11,961 127.0.0.1 - - [20/May/2025 11:24:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:24:11,978 127.0.0.1 - - [20/May/2025 11:24:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:24:11,981 127.0.0.1 - - [20/May/2025 11:24:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:24:12,083 127.0.0.1 - - [20/May/2025 11:24:12] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:24:12,136 127.0.0.1 - - [20/May/2025 11:24:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:26:21,980  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 11:26:22,034  * Restarting with stat
+2025-05-20 11:26:22,344  * Debugger is active!
+2025-05-20 11:26:22,344  * Debugger PIN: 101-758-739
+2025-05-20 11:27:39,707  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 11:27:39,753  * Restarting with stat
+2025-05-20 11:27:40,078  * Debugger is active!
+2025-05-20 11:27:40,078  * Debugger PIN: 101-758-739
+2025-05-20 11:27:41,747 127.0.0.1 - - [20/May/2025 11:27:41] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:27:42,036 127.0.0.1 - - [20/May/2025 11:27:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:27:42,043 127.0.0.1 - - [20/May/2025 11:27:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:27:42,054 127.0.0.1 - - [20/May/2025 11:27:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:27:42,187 127.0.0.1 - - [20/May/2025 11:27:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:27:42,325 127.0.0.1 - - [20/May/2025 11:27:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:27:42,402 127.0.0.1 - - [20/May/2025 11:27:42] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:27:47,560 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 11:27:47,651 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 11:27:47,652 User 'Jaiden' logged in, hasn't passed 2FA
+2025-05-20 11:27:47,653 127.0.0.1 - - [20/May/2025 11:27:47] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 11:27:47,717 127.0.0.1 - - [20/May/2025 11:27:47] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 11:27:47,817 127.0.0.1 - - [20/May/2025 11:27:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:27:47,834 127.0.0.1 - - [20/May/2025 11:27:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:27:47,837 127.0.0.1 - - [20/May/2025 11:27:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:27:47,891 127.0.0.1 - - [20/May/2025 11:27:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:27:47,933 127.0.0.1 - - [20/May/2025 11:27:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:29:38,044 127.0.0.1 - - [20/May/2025 11:29:38] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:29:38,317 127.0.0.1 - - [20/May/2025 11:29:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:29:38,332 127.0.0.1 - - [20/May/2025 11:29:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:29:38,338 127.0.0.1 - - [20/May/2025 11:29:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:29:38,460 127.0.0.1 - - [20/May/2025 11:29:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:29:38,587 127.0.0.1 - - [20/May/2025 11:29:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:31:06,695  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 11:31:06,739  * Restarting with stat
+2025-05-20 11:31:07,050  * Debugger is active!
+2025-05-20 11:31:07,051  * Debugger PIN: 101-758-739
+2025-05-20 11:31:10,573 127.0.0.1 - - [20/May/2025 11:31:10] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:31:10,700 127.0.0.1 - - [20/May/2025 11:31:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:31:10,703 127.0.0.1 - - [20/May/2025 11:31:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:31:10,787 127.0.0.1 - - [20/May/2025 11:31:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:31:10,905 127.0.0.1 - - [20/May/2025 11:31:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:31:10,943 127.0.0.1 - - [20/May/2025 11:31:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:31:11,002 127.0.0.1 - - [20/May/2025 11:31:11] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:31:18,733 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 11:31:18,825 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 11:31:18,825 User 'TestUser' logged in, hasn't passed 2FA
+2025-05-20 11:31:18,827 127.0.0.1 - - [20/May/2025 11:31:18] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 11:31:18,864 User: TestUser, twofa_enabled: None
+2025-05-20 11:31:18,885 127.0.0.1 - - [20/May/2025 11:31:18] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 11:31:18,990 127.0.0.1 - - [20/May/2025 11:31:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:31:18,997 127.0.0.1 - - [20/May/2025 11:31:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:31:19,011 127.0.0.1 - - [20/May/2025 11:31:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:31:19,059 127.0.0.1 - - [20/May/2025 11:31:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:31:19,097 127.0.0.1 - - [20/May/2025 11:31:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:32:42,015  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 11:32:42,057  * Restarting with stat
+2025-05-20 11:32:42,378  * Debugger is active!
+2025-05-20 11:32:42,379  * Debugger PIN: 101-758-739
+2025-05-20 11:32:45,770 User: TestUser, twofa_enabled: 1
+2025-05-20 11:32:45,779 127.0.0.1 - - [20/May/2025 11:32:45] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 11:32:45,898 127.0.0.1 - - [20/May/2025 11:32:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:32:45,915 127.0.0.1 - - [20/May/2025 11:32:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:32:45,980 127.0.0.1 - - [20/May/2025 11:32:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:32:46,117 127.0.0.1 - - [20/May/2025 11:32:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:32:46,166 127.0.0.1 - - [20/May/2025 11:32:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:32:46,229 127.0.0.1 - - [20/May/2025 11:32:46] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:32:47,910 127.0.0.1 - - [20/May/2025 11:32:47] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:32:48,010 127.0.0.1 - - [20/May/2025 11:32:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:32:48,029 127.0.0.1 - - [20/May/2025 11:32:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:32:48,035 127.0.0.1 - - [20/May/2025 11:32:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:32:48,082 127.0.0.1 - - [20/May/2025 11:32:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:32:48,117 127.0.0.1 - - [20/May/2025 11:32:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:00,091 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 11:33:00,204 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 11:33:00,204 User 'Jaiden' logged in, hasn't passed 2FA
+2025-05-20 11:33:00,206 127.0.0.1 - - [20/May/2025 11:33:00] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 11:33:00,243 User: Jaiden, twofa_enabled: 1
+2025-05-20 11:33:00,245 127.0.0.1 - - [20/May/2025 11:33:00] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 11:33:00,354 127.0.0.1 - - [20/May/2025 11:33:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:00,361 127.0.0.1 - - [20/May/2025 11:33:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:00,367 127.0.0.1 - - [20/May/2025 11:33:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:00,414 127.0.0.1 - - [20/May/2025 11:33:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:00,454 127.0.0.1 - - [20/May/2025 11:33:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:04,838 127.0.0.1 - - [20/May/2025 11:33:04] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:33:04,968 127.0.0.1 - - [20/May/2025 11:33:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:04,973 127.0.0.1 - - [20/May/2025 11:33:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:04,975 127.0.0.1 - - [20/May/2025 11:33:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:05,026 127.0.0.1 - - [20/May/2025 11:33:05] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:05,072 127.0.0.1 - - [20/May/2025 11:33:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:49,969 127.0.0.1 - - [20/May/2025 11:33:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-05-20 11:33:50,009 127.0.0.1 - - [20/May/2025 11:33:50] "GET / HTTP/1.1" 200 -
+2025-05-20 11:33:50,117 127.0.0.1 - - [20/May/2025 11:33:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:50,133 127.0.0.1 - - [20/May/2025 11:33:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:50,136 127.0.0.1 - - [20/May/2025 11:33:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:50,193 127.0.0.1 - - [20/May/2025 11:33:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:50,231 127.0.0.1 - - [20/May/2025 11:33:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:52,186 127.0.0.1 - - [20/May/2025 11:33:52] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-05-20 11:33:52,249 127.0.0.1 - - [20/May/2025 11:33:52] "GET / HTTP/1.1" 200 -
+2025-05-20 11:33:52,374 127.0.0.1 - - [20/May/2025 11:33:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:52,377 127.0.0.1 - - [20/May/2025 11:33:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:52,378 127.0.0.1 - - [20/May/2025 11:33:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:52,461 127.0.0.1 - - [20/May/2025 11:33:52] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:52,510 127.0.0.1 - - [20/May/2025 11:33:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:52,980 User 'Jaiden' logged out successfully
+2025-05-20 11:33:52,981 127.0.0.1 - - [20/May/2025 11:33:52] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-20 11:33:53,021 127.0.0.1 - - [20/May/2025 11:33:53] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:33:53,139 127.0.0.1 - - [20/May/2025 11:33:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:53,141 127.0.0.1 - - [20/May/2025 11:33:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:53,144 127.0.0.1 - - [20/May/2025 11:33:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:53,195 127.0.0.1 - - [20/May/2025 11:33:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:53,236 127.0.0.1 - - [20/May/2025 11:33:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:55,354 127.0.0.1 - - [20/May/2025 11:33:55] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:33:55,455 127.0.0.1 - - [20/May/2025 11:33:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:55,464 127.0.0.1 - - [20/May/2025 11:33:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:55,471 127.0.0.1 - - [20/May/2025 11:33:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:55,506 127.0.0.1 - - [20/May/2025 11:33:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:55,549 127.0.0.1 - - [20/May/2025 11:33:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:56,129 127.0.0.1 - - [20/May/2025 11:33:56] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 11:33:56,246 127.0.0.1 - - [20/May/2025 11:33:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:56,248 127.0.0.1 - - [20/May/2025 11:33:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:56,253 127.0.0.1 - - [20/May/2025 11:33:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:56,304 127.0.0.1 - - [20/May/2025 11:33:56] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:56,348 127.0.0.1 - - [20/May/2025 11:33:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:57,231 127.0.0.1 - - [20/May/2025 11:33:57] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:33:57,329 127.0.0.1 - - [20/May/2025 11:33:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:57,357 127.0.0.1 - - [20/May/2025 11:33:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:57,362 127.0.0.1 - - [20/May/2025 11:33:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:57,409 127.0.0.1 - - [20/May/2025 11:33:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:57,448 127.0.0.1 - - [20/May/2025 11:33:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:58,512 127.0.0.1 - - [20/May/2025 11:33:58] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 11:33:58,641 127.0.0.1 - - [20/May/2025 11:33:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:58,659 127.0.0.1 - - [20/May/2025 11:33:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:58,662 127.0.0.1 - - [20/May/2025 11:33:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:58,719 127.0.0.1 - - [20/May/2025 11:33:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:58,763 127.0.0.1 - - [20/May/2025 11:33:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:59,386 127.0.0.1 - - [20/May/2025 11:33:59] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:33:59,500 127.0.0.1 - - [20/May/2025 11:33:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:59,502 127.0.0.1 - - [20/May/2025 11:33:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:33:59,507 127.0.0.1 - - [20/May/2025 11:33:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:59,561 127.0.0.1 - - [20/May/2025 11:33:59] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:33:59,598 127.0.0.1 - - [20/May/2025 11:33:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:34:00,236 127.0.0.1 - - [20/May/2025 11:34:00] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 11:34:00,336 127.0.0.1 - - [20/May/2025 11:34:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:34:00,353 127.0.0.1 - - [20/May/2025 11:34:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:34:00,355 127.0.0.1 - - [20/May/2025 11:34:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:34:00,397 127.0.0.1 - - [20/May/2025 11:34:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:34:00,437 127.0.0.1 - - [20/May/2025 11:34:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:34:00,810 127.0.0.1 - - [20/May/2025 11:34:00] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:34:00,923 127.0.0.1 - - [20/May/2025 11:34:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:34:00,932 127.0.0.1 - - [20/May/2025 11:34:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:34:00,944 127.0.0.1 - - [20/May/2025 11:34:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:34:00,993 127.0.0.1 - - [20/May/2025 11:34:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:34:01,030 127.0.0.1 - - [20/May/2025 11:34:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:34:43,397  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 11:34:43,440  * Restarting with stat
+2025-05-20 11:34:43,766  * Debugger is active!
+2025-05-20 11:34:43,766  * Debugger PIN: 101-758-739
+2025-05-20 11:34:44,684  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 11:34:44,726  * Restarting with stat
+2025-05-20 11:34:45,043  * Debugger is active!
+2025-05-20 11:34:45,043  * Debugger PIN: 101-758-739
+2025-05-20 11:34:45,504 127.0.0.1 - - [20/May/2025 11:34:45] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:34:45,616 127.0.0.1 - - [20/May/2025 11:34:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:34:45,622 127.0.0.1 - - [20/May/2025 11:34:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:34:45,628 127.0.0.1 - - [20/May/2025 11:34:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:34:45,671 127.0.0.1 - - [20/May/2025 11:34:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:34:45,710 127.0.0.1 - - [20/May/2025 11:34:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:34:45,770 127.0.0.1 - - [20/May/2025 11:34:45] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:35:00,168  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 11:35:00,209  * Restarting with stat
+2025-05-20 11:35:00,517  * Debugger is active!
+2025-05-20 11:35:00,517  * Debugger PIN: 101-758-739
+2025-05-20 11:35:09,966  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 11:35:10,012  * Restarting with stat
+2025-05-20 11:35:10,325  * Debugger is active!
+2025-05-20 11:35:10,325  * Debugger PIN: 101-758-739
+2025-05-20 11:35:28,399  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 11:35:28,440  * Restarting with stat
+2025-05-20 11:35:28,773  * Debugger is active!
+2025-05-20 11:35:28,773  * Debugger PIN: 101-758-739
+2025-05-20 11:36:20,589  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 11:36:20,643  * Restarting with stat
+2025-05-20 11:36:20,976  * Debugger is active!
+2025-05-20 11:36:20,977  * Debugger PIN: 101-758-739
+2025-05-20 11:36:40,456 127.0.0.1 - - [20/May/2025 11:36:40] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 11:36:40,725 127.0.0.1 - - [20/May/2025 11:36:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:36:40,725 127.0.0.1 - - [20/May/2025 11:36:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:36:40,726 127.0.0.1 - - [20/May/2025 11:36:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:36:40,847 127.0.0.1 - - [20/May/2025 11:36:40] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:36:40,966 127.0.0.1 - - [20/May/2025 11:36:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:36:41,033 127.0.0.1 - - [20/May/2025 11:36:41] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:36:58,537 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 11:36:58,638 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 11:36:58,639 User 'Jaiden' logged in, hasn't passed 2FA
+2025-05-20 11:36:58,641 127.0.0.1 - - [20/May/2025 11:36:58] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 11:36:58,695 127.0.0.1 - - [20/May/2025 11:36:58] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 11:36:58,814 127.0.0.1 - - [20/May/2025 11:36:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:36:58,824 127.0.0.1 - - [20/May/2025 11:36:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:36:58,827 127.0.0.1 - - [20/May/2025 11:36:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:36:58,874 127.0.0.1 - - [20/May/2025 11:36:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:36:58,917 127.0.0.1 - - [20/May/2025 11:36:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:11,636 Invalid 2FA token for user: Jaiden
+2025-05-20 11:37:11,638 127.0.0.1 - - [20/May/2025 11:37:11] "POST /2fa HTTP/1.1" 200 -
+2025-05-20 11:37:11,750 127.0.0.1 - - [20/May/2025 11:37:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:37:11,756 127.0.0.1 - - [20/May/2025 11:37:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:11,758 127.0.0.1 - - [20/May/2025 11:37:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:37:11,806 127.0.0.1 - - [20/May/2025 11:37:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:11,850 127.0.0.1 - - [20/May/2025 11:37:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:22,029 Invalid 2FA token for user: Jaiden
+2025-05-20 11:37:22,031 127.0.0.1 - - [20/May/2025 11:37:22] "POST /2fa HTTP/1.1" 200 -
+2025-05-20 11:37:22,148 127.0.0.1 - - [20/May/2025 11:37:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:22,154 127.0.0.1 - - [20/May/2025 11:37:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:37:22,155 127.0.0.1 - - [20/May/2025 11:37:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:37:22,200 127.0.0.1 - - [20/May/2025 11:37:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:22,237 127.0.0.1 - - [20/May/2025 11:37:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:34,224 2FA successful, User 'Jaiden' logged in successfully
+2025-05-20 11:37:34,225 127.0.0.1 - - [20/May/2025 11:37:34] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-05-20 11:37:34,266 127.0.0.1 - - [20/May/2025 11:37:34] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-05-20 11:37:34,301 127.0.0.1 - - [20/May/2025 11:37:34] "GET / HTTP/1.1" 200 -
+2025-05-20 11:37:34,426 127.0.0.1 - - [20/May/2025 11:37:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:34,430 127.0.0.1 - - [20/May/2025 11:37:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:37:34,436 127.0.0.1 - - [20/May/2025 11:37:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:37:34,488 127.0.0.1 - - [20/May/2025 11:37:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:34,527 127.0.0.1 - - [20/May/2025 11:37:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:58,226 127.0.0.1 - - [20/May/2025 11:37:58] "GET /privacy.html HTTP/1.1" 200 -
+2025-05-20 11:37:58,344 127.0.0.1 - - [20/May/2025 11:37:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:37:58,354 127.0.0.1 - - [20/May/2025 11:37:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:37:58,358 127.0.0.1 - - [20/May/2025 11:37:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:58,398 127.0.0.1 - - [20/May/2025 11:37:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:37:58,439 127.0.0.1 - - [20/May/2025 11:37:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:38:23,958 127.0.0.1 - - [20/May/2025 11:38:23] "GET /privacy.html HTTP/1.1" 200 -
+2025-05-20 11:38:24,068 127.0.0.1 - - [20/May/2025 11:38:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:38:24,076 127.0.0.1 - - [20/May/2025 11:38:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:38:24,082 127.0.0.1 - - [20/May/2025 11:38:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:38:24,136 127.0.0.1 - - [20/May/2025 11:38:24] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:38:24,176 127.0.0.1 - - [20/May/2025 11:38:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:38:24,263 127.0.0.1 - - [20/May/2025 11:38:24] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:39:01,826 127.0.0.1 - - [20/May/2025 11:39:01] "GET /privacy.html HTTP/1.1" 200 -
+2025-05-20 11:39:01,963 127.0.0.1 - - [20/May/2025 11:39:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:39:01,986 127.0.0.1 - - [20/May/2025 11:39:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:39:01,987 127.0.0.1 - - [20/May/2025 11:39:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:39:02,043 127.0.0.1 - - [20/May/2025 11:39:02] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:39:02,092 127.0.0.1 - - [20/May/2025 11:39:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:39:02,170 127.0.0.1 - - [20/May/2025 11:39:02] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 11:39:09,317 127.0.0.1 - - [20/May/2025 11:39:09] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-05-20 11:39:09,365 127.0.0.1 - - [20/May/2025 11:39:09] "GET / HTTP/1.1" 200 -
+2025-05-20 11:39:09,489 127.0.0.1 - - [20/May/2025 11:39:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 11:39:09,494 127.0.0.1 - - [20/May/2025 11:39:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 11:39:09,495 127.0.0.1 - - [20/May/2025 11:39:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 11:39:09,564 127.0.0.1 - - [20/May/2025 11:39:09] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 11:39:09,606 127.0.0.1 - - [20/May/2025 11:39:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 11:43:47,585  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-20 11:43:47,637  * Restarting with stat
+2025-05-20 11:43:47,944  * Debugger is active!
+2025-05-20 11:43:47,944  * Debugger PIN: 101-758-739
+2025-05-20 11:44:50,432  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 11:44:50,485  * Restarting with stat
+2025-05-20 11:44:50,804  * Debugger is active!
+2025-05-20 11:44:50,804  * Debugger PIN: 101-758-739
+2025-05-20 12:06:31,035  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/forms.py', reloading
+2025-05-20 12:06:31,077  * Restarting with stat
+2025-05-20 12:06:31,381  * Debugger is active!
+2025-05-20 12:06:31,382  * Debugger PIN: 101-758-739
+2025-05-20 12:06:36,592  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/forms.py', reloading
+2025-05-20 12:06:36,637  * Restarting with stat
+2025-05-20 12:06:36,949  * Debugger is active!
+2025-05-20 12:06:36,950  * Debugger PIN: 101-758-739
+2025-05-20 12:06:38,860 User 'Jaiden' logged out successfully
+2025-05-20 12:06:38,861 127.0.0.1 - - [20/May/2025 12:06:38] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-20 12:06:39,210 127.0.0.1 - - [20/May/2025 12:06:39] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:06:39,593 127.0.0.1 - - [20/May/2025 12:06:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:06:39,595 127.0.0.1 - - [20/May/2025 12:06:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:06:39,611 127.0.0.1 - - [20/May/2025 12:06:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:06:39,752 127.0.0.1 - - [20/May/2025 12:06:39] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:06:39,811 127.0.0.1 - - [20/May/2025 12:06:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:06:42,075 127.0.0.1 - - [20/May/2025 12:06:42] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:06:42,204 127.0.0.1 - - [20/May/2025 12:06:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:06:42,209 127.0.0.1 - - [20/May/2025 12:06:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:06:42,213 127.0.0.1 - - [20/May/2025 12:06:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:06:42,272 127.0.0.1 - - [20/May/2025 12:06:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:06:42,327 127.0.0.1 - - [20/May/2025 12:06:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:06:43,875 127.0.0.1 - - [20/May/2025 12:06:43] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:06:43,997 127.0.0.1 - - [20/May/2025 12:06:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:06:44,003 127.0.0.1 - - [20/May/2025 12:06:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:06:44,008 127.0.0.1 - - [20/May/2025 12:06:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:06:44,067 127.0.0.1 - - [20/May/2025 12:06:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:06:44,119 127.0.0.1 - - [20/May/2025 12:06:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:06:44,200 127.0.0.1 - - [20/May/2025 12:06:44] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:06:50,719  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/forms.py', reloading
+2025-05-20 12:06:50,760  * Restarting with stat
+2025-05-20 12:06:51,063  * Debugger is active!
+2025-05-20 12:06:51,064  * Debugger PIN: 101-758-739
+2025-05-20 12:08:02,473 127.0.0.1 - - [20/May/2025 12:08:02] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:08:03,071 127.0.0.1 - - [20/May/2025 12:08:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:08:03,083 127.0.0.1 - - [20/May/2025 12:08:03] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:08:03,087 127.0.0.1 - - [20/May/2025 12:08:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:08:03,091 127.0.0.1 - - [20/May/2025 12:08:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:08:03,107 127.0.0.1 - - [20/May/2025 12:08:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:08:03,183 127.0.0.1 - - [20/May/2025 12:08:03] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:08:45,991 127.0.0.1 - - [20/May/2025 12:08:45] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:08:46,098 127.0.0.1 - - [20/May/2025 12:08:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:08:46,104 127.0.0.1 - - [20/May/2025 12:08:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:08:46,105 127.0.0.1 - - [20/May/2025 12:08:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:08:46,149 127.0.0.1 - - [20/May/2025 12:08:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:08:46,189 127.0.0.1 - - [20/May/2025 12:08:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:08:46,287 127.0.0.1 - - [20/May/2025 12:08:46] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:09:41,678  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 12:09:41,719  * Restarting with stat
+2025-05-20 12:09:42,018  * Debugger is active!
+2025-05-20 12:09:42,018  * Debugger PIN: 101-758-739
+2025-05-20 12:10:14,355  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-20 12:10:14,397  * Restarting with stat
+2025-05-20 12:10:14,701  * Debugger is active!
+2025-05-20 12:10:14,701  * Debugger PIN: 101-758-739
+2025-05-20 12:10:50,428 Validation error in Email: Enter a valid email address.
+2025-05-20 12:10:50,428 Validation error in Password: Password must contain at least one uppercase letter.
+2025-05-20 12:10:50,428 Validation error in Password: Password must contain at least one digit.
+2025-05-20 12:10:50,428 Validation error in Password: Password must contain at least one special character (@$!%*?&).
+2025-05-20 12:10:50,441 127.0.0.1 - - [20/May/2025 12:10:50] "POST /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:10:50,684 127.0.0.1 - - [20/May/2025 12:10:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:10:50,696 127.0.0.1 - - [20/May/2025 12:10:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:10:50,704 127.0.0.1 - - [20/May/2025 12:10:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:10:50,839 127.0.0.1 - - [20/May/2025 12:10:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:10:50,966 127.0.0.1 - - [20/May/2025 12:10:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:11:02,067 Validation error in Email: Enter a valid email address.
+2025-05-20 12:11:02,067 Validation error in Password: Password must contain at least one uppercase letter.
+2025-05-20 12:11:02,068 Validation error in Password: Password must contain at least one digit.
+2025-05-20 12:11:02,068 Validation error in Password: Password must contain at least one special character (@$!%*?&).
+2025-05-20 12:11:02,069 127.0.0.1 - - [20/May/2025 12:11:02] "POST /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:11:02,182 127.0.0.1 - - [20/May/2025 12:11:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:11:02,187 127.0.0.1 - - [20/May/2025 12:11:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:11:02,190 127.0.0.1 - - [20/May/2025 12:11:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:11:02,231 127.0.0.1 - - [20/May/2025 12:11:02] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:11:02,278 127.0.0.1 - - [20/May/2025 12:11:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:11:02,337 127.0.0.1 - - [20/May/2025 12:11:02] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:11:03,305 127.0.0.1 - - [20/May/2025 12:11:03] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:11:03,414 127.0.0.1 - - [20/May/2025 12:11:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:11:03,416 127.0.0.1 - - [20/May/2025 12:11:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:11:03,420 127.0.0.1 - - [20/May/2025 12:11:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:11:03,523 127.0.0.1 - - [20/May/2025 12:11:03] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:11:03,601 127.0.0.1 - - [20/May/2025 12:11:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:11:03,944 127.0.0.1 - - [20/May/2025 12:11:03] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:11:04,043 127.0.0.1 - - [20/May/2025 12:11:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:11:04,056 127.0.0.1 - - [20/May/2025 12:11:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:11:04,060 127.0.0.1 - - [20/May/2025 12:11:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:11:04,098 127.0.0.1 - - [20/May/2025 12:11:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:11:04,162 127.0.0.1 - - [20/May/2025 12:11:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:12:06,931  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-20 12:12:06,982  * Restarting with stat
+2025-05-20 12:12:07,293  * Debugger is active!
+2025-05-20 12:12:07,293  * Debugger PIN: 101-758-739
+2025-05-20 12:12:18,184  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/userLogic.py', reloading
+2025-05-20 12:12:18,232  * Restarting with stat
+2025-05-20 12:12:18,598  * Debugger is active!
+2025-05-20 12:12:18,599  * Debugger PIN: 101-758-739
+2025-05-20 12:12:43,811  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:12:43,855  * Restarting with stat
+2025-05-20 12:12:44,155  * Debugger is active!
+2025-05-20 12:12:44,155  * Debugger PIN: 101-758-739
+2025-05-20 12:13:07,072  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:13:07,119  * Restarting with stat
+2025-05-20 12:13:07,431  * Debugger is active!
+2025-05-20 12:13:07,432  * Debugger PIN: 101-758-739
+2025-05-20 12:13:08,212  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:13:08,259  * Restarting with stat
+2025-05-20 12:13:08,598  * Debugger is active!
+2025-05-20 12:13:08,598  * Debugger PIN: 101-758-739
+2025-05-20 12:13:10,839  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:13:10,885  * Restarting with stat
+2025-05-20 12:13:11,187  * Debugger is active!
+2025-05-20 12:13:11,188  * Debugger PIN: 101-758-739
+2025-05-20 12:13:12,058  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:13:12,103  * Restarting with stat
+2025-05-20 12:13:12,418  * Debugger is active!
+2025-05-20 12:13:12,418  * Debugger PIN: 101-758-739
+2025-05-20 12:13:16,335  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/userLogic.py', reloading
+2025-05-20 12:13:16,377  * Restarting with stat
+2025-05-20 12:13:16,691  * Debugger is active!
+2025-05-20 12:13:16,691  * Debugger PIN: 101-758-739
+2025-05-20 12:13:18,931  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-20 12:13:18,974  * Restarting with stat
+2025-05-20 12:13:19,300  * Debugger is active!
+2025-05-20 12:13:19,300  * Debugger PIN: 101-758-739
+2025-05-20 12:13:19,759 127.0.0.1 - - [20/May/2025 12:13:19] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:13:20,238 127.0.0.1 - - [20/May/2025 12:13:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:13:20,251 127.0.0.1 - - [20/May/2025 12:13:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:13:20,265 127.0.0.1 - - [20/May/2025 12:13:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:13:20,276 127.0.0.1 - - [20/May/2025 12:13:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:13:20,284 127.0.0.1 - - [20/May/2025 12:13:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:13:20,352 127.0.0.1 - - [20/May/2025 12:13:20] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:13:55,653 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 12:13:55,751 http://127.0.0.1:3000 "POST /api/signup HTTP/1.1" 500 41
+2025-05-20 12:13:55,751 Error during signup attempt for user: CoolGuy123 - 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:3000/api/signup
+2025-05-20 12:13:55,753 127.0.0.1 - - [20/May/2025 12:13:55] "POST /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:13:55,932 127.0.0.1 - - [20/May/2025 12:13:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:13:55,936 127.0.0.1 - - [20/May/2025 12:13:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:13:55,938 127.0.0.1 - - [20/May/2025 12:13:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:13:56,044 127.0.0.1 - - [20/May/2025 12:13:56] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:13:56,083 127.0.0.1 - - [20/May/2025 12:13:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:17:07,033  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:17:07,075  * Restarting with stat
+2025-05-20 12:17:07,412  * Debugger is active!
+2025-05-20 12:17:07,412  * Debugger PIN: 101-758-739
+2025-05-20 12:17:16,908  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:17:16,960  * Restarting with stat
+2025-05-20 12:17:17,309  * Debugger is active!
+2025-05-20 12:17:17,310  * Debugger PIN: 101-758-739
+2025-05-20 12:17:26,815  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:17:26,861  * Restarting with stat
+2025-05-20 12:17:27,199  * Debugger is active!
+2025-05-20 12:17:27,200  * Debugger PIN: 101-758-739
+2025-05-20 12:17:29,650 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 12:17:29,759 http://127.0.0.1:3000 "POST /api/signup HTTP/1.1" 201 45
+2025-05-20 12:17:29,759 User 'CoolGuy123' signed up successfully
+2025-05-20 12:17:29,761 127.0.0.1 - - [20/May/2025 12:17:29] "[32mPOST /signUp.html HTTP/1.1[0m" 302 -
+2025-05-20 12:17:29,895 127.0.0.1 - - [20/May/2025 12:17:29] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:17:30,214 127.0.0.1 - - [20/May/2025 12:17:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:17:30,215 127.0.0.1 - - [20/May/2025 12:17:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:17:30,216 127.0.0.1 - - [20/May/2025 12:17:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:17:30,359 127.0.0.1 - - [20/May/2025 12:17:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:17:30,404 127.0.0.1 - - [20/May/2025 12:17:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:17:30,485 127.0.0.1 - - [20/May/2025 12:17:30] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:17:32,581 127.0.0.1 - - [20/May/2025 12:17:32] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:17:32,687 127.0.0.1 - - [20/May/2025 12:17:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:17:32,692 127.0.0.1 - - [20/May/2025 12:17:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:17:32,695 127.0.0.1 - - [20/May/2025 12:17:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:17:32,743 127.0.0.1 - - [20/May/2025 12:17:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:17:32,778 127.0.0.1 - - [20/May/2025 12:17:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:17:52,038 127.0.0.1 - - [20/May/2025 12:17:52] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:17:52,150 127.0.0.1 - - [20/May/2025 12:17:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:17:52,156 127.0.0.1 - - [20/May/2025 12:17:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:17:52,162 127.0.0.1 - - [20/May/2025 12:17:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:17:52,209 127.0.0.1 - - [20/May/2025 12:17:52] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:17:52,243 127.0.0.1 - - [20/May/2025 12:17:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:06,221 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 12:18:06,343 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 12:18:06,343 User 'CoolGuy123' logged in, hasn't passed 2FA
+2025-05-20 12:18:06,345 127.0.0.1 - - [20/May/2025 12:18:06] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 12:18:06,410 127.0.0.1 - - [20/May/2025 12:18:06] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 12:18:06,552 127.0.0.1 - - [20/May/2025 12:18:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:18:06,558 127.0.0.1 - - [20/May/2025 12:18:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:06,560 127.0.0.1 - - [20/May/2025 12:18:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:18:06,605 127.0.0.1 - - [20/May/2025 12:18:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:06,648 127.0.0.1 - - [20/May/2025 12:18:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:09,071 127.0.0.1 - - [20/May/2025 12:18:09] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:18:09,206 127.0.0.1 - - [20/May/2025 12:18:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:18:09,210 127.0.0.1 - - [20/May/2025 12:18:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:18:09,217 127.0.0.1 - - [20/May/2025 12:18:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:09,273 127.0.0.1 - - [20/May/2025 12:18:09] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:09,313 127.0.0.1 - - [20/May/2025 12:18:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:10,283 User 'CoolGuy123' logged out successfully
+2025-05-20 12:18:10,284 127.0.0.1 - - [20/May/2025 12:18:10] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-20 12:18:10,324 127.0.0.1 - - [20/May/2025 12:18:10] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:18:10,430 127.0.0.1 - - [20/May/2025 12:18:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:18:10,446 127.0.0.1 - - [20/May/2025 12:18:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:18:10,450 127.0.0.1 - - [20/May/2025 12:18:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:10,499 127.0.0.1 - - [20/May/2025 12:18:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:10,546 127.0.0.1 - - [20/May/2025 12:18:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:13,507 127.0.0.1 - - [20/May/2025 12:18:13] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:18:13,627 127.0.0.1 - - [20/May/2025 12:18:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:18:13,633 127.0.0.1 - - [20/May/2025 12:18:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:13,635 127.0.0.1 - - [20/May/2025 12:18:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:18:13,687 127.0.0.1 - - [20/May/2025 12:18:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:13,729 127.0.0.1 - - [20/May/2025 12:18:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:36,651 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 12:18:36,755 http://127.0.0.1:3000 "POST /api/signup HTTP/1.1" 201 45
+2025-05-20 12:18:36,756 User 'MuscleMan' signed up successfully
+2025-05-20 12:18:36,757 127.0.0.1 - - [20/May/2025 12:18:36] "[32mPOST /signUp.html HTTP/1.1[0m" 302 -
+2025-05-20 12:18:36,806 127.0.0.1 - - [20/May/2025 12:18:36] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:18:37,145 127.0.0.1 - - [20/May/2025 12:18:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:18:37,152 127.0.0.1 - - [20/May/2025 12:18:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:37,157 127.0.0.1 - - [20/May/2025 12:18:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:18:37,214 127.0.0.1 - - [20/May/2025 12:18:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:18:37,280 127.0.0.1 - - [20/May/2025 12:18:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:19:44,043  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-20 12:19:44,092  * Restarting with stat
+2025-05-20 12:19:44,392  * Debugger is active!
+2025-05-20 12:19:44,393  * Debugger PIN: 101-758-739
+2025-05-20 12:21:26,814  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:21:26,863  * Restarting with stat
+2025-05-20 12:22:18,931 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.3.183:5000
+2025-05-20 12:22:18,931 [33mPress CTRL+C to quit[0m
+2025-05-20 12:22:18,932  * Restarting with stat
+2025-05-20 12:22:19,231  * Debugger is active!
+2025-05-20 12:22:19,231  * Debugger PIN: 101-758-739
+2025-05-20 12:22:20,413 127.0.0.1 - - [20/May/2025 12:22:20] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-20 12:22:20,640 127.0.0.1 - - [20/May/2025 12:22:20] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:22:20,875 127.0.0.1 - - [20/May/2025 12:22:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:22:21,066 127.0.0.1 - - [20/May/2025 12:22:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:22:21,070 127.0.0.1 - - [20/May/2025 12:22:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:22:21,417 127.0.0.1 - - [20/May/2025 12:22:21] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:22:21,549 127.0.0.1 - - [20/May/2025 12:22:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:22:21,658 127.0.0.1 - - [20/May/2025 12:22:21] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:22:22,457 127.0.0.1 - - [20/May/2025 12:22:22] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:22:22,581 127.0.0.1 - - [20/May/2025 12:22:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:22:22,588 127.0.0.1 - - [20/May/2025 12:22:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:22:22,676 127.0.0.1 - - [20/May/2025 12:22:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:22:22,738 127.0.0.1 - - [20/May/2025 12:22:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:22:22,833 127.0.0.1 - - [20/May/2025 12:22:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:29:18,696  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:29:18,739  * Restarting with stat
+2025-05-20 12:29:19,047  * Debugger is active!
+2025-05-20 12:29:19,047  * Debugger PIN: 101-758-739
+2025-05-20 12:29:48,718  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:29:48,759  * Restarting with stat
+2025-05-20 12:29:49,060  * Debugger is active!
+2025-05-20 12:29:49,060  * Debugger PIN: 101-758-739
+2025-05-20 12:30:33,237  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:30:33,277  * Restarting with stat
+2025-05-20 12:30:33,578  * Debugger is active!
+2025-05-20 12:30:33,578  * Debugger PIN: 101-758-739
+2025-05-20 12:30:37,229  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:30:37,273  * Restarting with stat
+2025-05-20 12:30:37,609  * Debugger is active!
+2025-05-20 12:30:37,609  * Debugger PIN: 101-758-739
+2025-05-20 12:31:12,509 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 12:31:12,510 Error during signup attempt for user: TestUser - HTTPConnectionPool(host='127.0.0.1', port=3000): Max retries exceeded with url: /api/signup (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d22a02dff20>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-05-20 12:31:12,523 127.0.0.1 - - [20/May/2025 12:31:12] "POST /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:31:12,829 127.0.0.1 - - [20/May/2025 12:31:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:31:12,843 127.0.0.1 - - [20/May/2025 12:31:12] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:31:12,844 127.0.0.1 - - [20/May/2025 12:31:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:31:12,973 127.0.0.1 - - [20/May/2025 12:31:12] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:31:13,083 127.0.0.1 - - [20/May/2025 12:31:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:08,388  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 12:33:08,431  * Restarting with stat
+2025-05-20 12:33:08,745  * Debugger is active!
+2025-05-20 12:33:08,745  * Debugger PIN: 101-758-739
+2025-05-20 12:33:13,237 127.0.0.1 - - [20/May/2025 12:33:13] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:33:13,497 127.0.0.1 - - [20/May/2025 12:33:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:33:13,520 127.0.0.1 - - [20/May/2025 12:33:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:33:13,529 127.0.0.1 - - [20/May/2025 12:33:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:13,745 127.0.0.1 - - [20/May/2025 12:33:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:13,891 127.0.0.1 - - [20/May/2025 12:33:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:14,468 127.0.0.1 - - [20/May/2025 12:33:14] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:33:14,628 127.0.0.1 - - [20/May/2025 12:33:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:33:14,635 127.0.0.1 - - [20/May/2025 12:33:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:33:14,640 127.0.0.1 - - [20/May/2025 12:33:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:14,691 127.0.0.1 - - [20/May/2025 12:33:14] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:14,735 127.0.0.1 - - [20/May/2025 12:33:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:33,961 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 12:33:34,059 http://127.0.0.1:3000 "POST /api/signup HTTP/1.1" 201 45
+2025-05-20 12:33:34,060 User 'TestUser' signed up successfully
+2025-05-20 12:33:34,061 127.0.0.1 - - [20/May/2025 12:33:34] "[32mPOST /signUp.html HTTP/1.1[0m" 302 -
+2025-05-20 12:33:34,098 127.0.0.1 - - [20/May/2025 12:33:34] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:33:34,219 127.0.0.1 - - [20/May/2025 12:33:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:33:34,223 127.0.0.1 - - [20/May/2025 12:33:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:33:34,227 127.0.0.1 - - [20/May/2025 12:33:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:34,271 127.0.0.1 - - [20/May/2025 12:33:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:34,316 127.0.0.1 - - [20/May/2025 12:33:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:46,411 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 12:33:46,501 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 12:33:46,502 User 'TestUser' logged in, hasn't passed 2FA
+2025-05-20 12:33:46,503 127.0.0.1 - - [20/May/2025 12:33:46] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 12:33:46,576 127.0.0.1 - - [20/May/2025 12:33:46] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 12:33:47,136 127.0.0.1 - - [20/May/2025 12:33:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:33:47,140 127.0.0.1 - - [20/May/2025 12:33:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:33:47,144 127.0.0.1 - - [20/May/2025 12:33:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:47,213 127.0.0.1 - - [20/May/2025 12:33:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:33:47,270 127.0.0.1 - - [20/May/2025 12:33:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:34:36,772 2FA successful, User 'TestUser' logged in successfully
+2025-05-20 12:34:36,773 127.0.0.1 - - [20/May/2025 12:34:36] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-05-20 12:34:36,814 127.0.0.1 - - [20/May/2025 12:34:36] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-05-20 12:34:36,855 127.0.0.1 - - [20/May/2025 12:34:36] "GET / HTTP/1.1" 200 -
+2025-05-20 12:34:36,981 127.0.0.1 - - [20/May/2025 12:34:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:34:36,989 127.0.0.1 - - [20/May/2025 12:34:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:34:36,994 127.0.0.1 - - [20/May/2025 12:34:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:34:37,043 127.0.0.1 - - [20/May/2025 12:34:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:34:37,076 127.0.0.1 - - [20/May/2025 12:34:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:34:48,052 User 'TestUser' logged out successfully
+2025-05-20 12:34:48,053 127.0.0.1 - - [20/May/2025 12:34:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-20 12:34:48,099 127.0.0.1 - - [20/May/2025 12:34:48] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:34:48,221 127.0.0.1 - - [20/May/2025 12:34:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:34:48,224 127.0.0.1 - - [20/May/2025 12:34:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:34:48,227 127.0.0.1 - - [20/May/2025 12:34:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:34:48,269 127.0.0.1 - - [20/May/2025 12:34:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:34:48,305 127.0.0.1 - - [20/May/2025 12:34:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:35:19,482  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/twoFactor.py', reloading
+2025-05-20 12:35:19,527  * Restarting with stat
+2025-05-20 12:35:19,850  * Debugger is active!
+2025-05-20 12:35:19,850  * Debugger PIN: 101-758-739
+2025-05-20 12:35:23,653 127.0.0.1 - - [20/May/2025 12:35:23] "GET /signUp.html HTTP/1.1" 200 -
+2025-05-20 12:35:23,770 127.0.0.1 - - [20/May/2025 12:35:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:35:23,781 127.0.0.1 - - [20/May/2025 12:35:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:35:23,785 127.0.0.1 - - [20/May/2025 12:35:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:35:23,824 127.0.0.1 - - [20/May/2025 12:35:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:35:23,861 127.0.0.1 - - [20/May/2025 12:35:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:35:25,212 127.0.0.1 - - [20/May/2025 12:35:25] "GET /login.html HTTP/1.1" 200 -
+2025-05-20 12:35:25,306 127.0.0.1 - - [20/May/2025 12:35:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:35:25,319 127.0.0.1 - - [20/May/2025 12:35:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:35:25,322 127.0.0.1 - - [20/May/2025 12:35:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:35:25,374 127.0.0.1 - - [20/May/2025 12:35:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:35:25,418 127.0.0.1 - - [20/May/2025 12:35:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:41:46,361  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-20 12:41:46,421  * Restarting with stat
+2025-05-20 12:41:46,727  * Debugger is active!
+2025-05-20 12:41:46,727  * Debugger PIN: 101-758-739
+2025-05-20 12:43:09,893  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 12:43:09,934  * Restarting with stat
+2025-05-20 12:44:20,492 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.3.183:5000
+2025-05-20 12:44:20,492 [33mPress CTRL+C to quit[0m
+2025-05-20 12:44:20,493  * Restarting with stat
+2025-05-20 12:44:20,795  * Debugger is active!
+2025-05-20 12:44:20,796  * Debugger PIN: 101-758-739
+2025-05-20 12:44:21,704 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-20 12:44:21,795 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 36
+2025-05-20 12:44:21,795 User 'TestUser' logged in, hasn't passed 2FA
+2025-05-20 12:44:21,797 127.0.0.1 - - [20/May/2025 12:44:21] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-20 12:44:21,918 127.0.0.1 - - [20/May/2025 12:44:21] "GET /2fa HTTP/1.1" 200 -
+2025-05-20 12:44:22,180 127.0.0.1 - - [20/May/2025 12:44:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:22,184 127.0.0.1 - - [20/May/2025 12:44:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:22,187 127.0.0.1 - - [20/May/2025 12:44:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:22,234 127.0.0.1 - - [20/May/2025 12:44:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:22,270 127.0.0.1 - - [20/May/2025 12:44:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:22,416 127.0.0.1 - - [20/May/2025 12:44:22] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:44:22,623 127.0.0.1 - - [20/May/2025 12:44:22] "GET / HTTP/1.1" 200 -
+2025-05-20 12:44:22,877 127.0.0.1 - - [20/May/2025 12:44:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:22,882 127.0.0.1 - - [20/May/2025 12:44:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:22,887 127.0.0.1 - - [20/May/2025 12:44:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:23,228 127.0.0.1 - - [20/May/2025 12:44:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:23,263 127.0.0.1 - - [20/May/2025 12:44:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:28,050 127.0.0.1 - - [20/May/2025 12:44:28] "GET / HTTP/1.1" 200 -
+2025-05-20 12:44:28,151 127.0.0.1 - - [20/May/2025 12:44:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:28,164 127.0.0.1 - - [20/May/2025 12:44:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:28,169 127.0.0.1 - - [20/May/2025 12:44:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:28,206 127.0.0.1 - - [20/May/2025 12:44:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:28,242 127.0.0.1 - - [20/May/2025 12:44:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:28,297 127.0.0.1 - - [20/May/2025 12:44:28] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:44:28,886 127.0.0.1 - - [20/May/2025 12:44:28] "GET / HTTP/1.1" 200 -
+2025-05-20 12:44:28,981 127.0.0.1 - - [20/May/2025 12:44:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:28,991 127.0.0.1 - - [20/May/2025 12:44:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,000 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,046 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,083 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,101 127.0.0.1 - - [20/May/2025 12:44:29] "GET / HTTP/1.1" 200 -
+2025-05-20 12:44:29,205 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,207 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,210 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,249 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,286 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,297 127.0.0.1 - - [20/May/2025 12:44:29] "GET / HTTP/1.1" 200 -
+2025-05-20 12:44:29,395 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,407 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,410 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,451 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,474 127.0.0.1 - - [20/May/2025 12:44:29] "GET / HTTP/1.1" 200 -
+2025-05-20 12:44:29,492 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,574 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,581 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,584 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,629 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,640 127.0.0.1 - - [20/May/2025 12:44:29] "GET / HTTP/1.1" 200 -
+2025-05-20 12:44:29,670 127.0.0.1 - - [20/May/2025 12:44:29] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-05-20 12:44:29,750 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,754 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,756 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,795 127.0.0.1 - - [20/May/2025 12:44:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:44:29,832 127.0.0.1 - - [20/May/2025 12:44:29] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-05-20 12:44:30,003 127.0.0.1 - - [20/May/2025 12:44:30] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:54:27,865  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:54:27,909  * Restarting with stat
+2025-05-20 12:54:28,233  * Debugger is active!
+2025-05-20 12:54:28,233  * Debugger PIN: 101-758-739
+2025-05-20 12:54:56,235  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 12:54:56,283  * Restarting with stat
+2025-05-20 12:54:56,601  * Debugger is active!
+2025-05-20 12:54:56,601  * Debugger PIN: 101-758-739
+2025-05-20 12:55:15,271 127.0.0.1 - - [20/May/2025 12:55:15] "GET / HTTP/1.1" 200 -
+2025-05-20 12:55:15,479 127.0.0.1 - - [20/May/2025 12:55:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:15,524 127.0.0.1 - - [20/May/2025 12:55:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:55:15,527 127.0.0.1 - - [20/May/2025 12:55:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:55:15,659 127.0.0.1 - - [20/May/2025 12:55:15] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:15,792 127.0.0.1 - - [20/May/2025 12:55:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:15,860 127.0.0.1 - - [20/May/2025 12:55:15] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:55:42,148  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/formHandlers.py', reloading
+2025-05-20 12:55:42,191  * Restarting with stat
+2025-05-20 12:55:42,515  * Debugger is active!
+2025-05-20 12:55:42,515  * Debugger PIN: 101-758-739
+2025-05-20 12:55:44,981 127.0.0.1 - - [20/May/2025 12:55:44] "GET / HTTP/1.1" 200 -
+2025-05-20 12:55:45,110 127.0.0.1 - - [20/May/2025 12:55:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:55:45,113 127.0.0.1 - - [20/May/2025 12:55:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:55:45,116 127.0.0.1 - - [20/May/2025 12:55:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:45,158 127.0.0.1 - - [20/May/2025 12:55:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:45,192 127.0.0.1 - - [20/May/2025 12:55:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:45,246 127.0.0.1 - - [20/May/2025 12:55:45] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:55:46,039 127.0.0.1 - - [20/May/2025 12:55:46] "GET / HTTP/1.1" 200 -
+2025-05-20 12:55:46,138 127.0.0.1 - - [20/May/2025 12:55:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-05-20 12:55:46,154 127.0.0.1 - - [20/May/2025 12:55:46] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-05-20 12:55:46,158 127.0.0.1 - - [20/May/2025 12:55:46] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-05-20 12:55:46,265 127.0.0.1 - - [20/May/2025 12:55:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:46,303 127.0.0.1 - - [20/May/2025 12:55:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:46,357 127.0.0.1 - - [20/May/2025 12:55:46] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:55:46,544 127.0.0.1 - - [20/May/2025 12:55:46] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-05-20 12:55:46,583 127.0.0.1 - - [20/May/2025 12:55:46] "GET / HTTP/1.1" 200 -
+2025-05-20 12:55:46,692 127.0.0.1 - - [20/May/2025 12:55:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:55:46,697 127.0.0.1 - - [20/May/2025 12:55:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:55:46,699 127.0.0.1 - - [20/May/2025 12:55:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:46,747 127.0.0.1 - - [20/May/2025 12:55:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:46,783 127.0.0.1 - - [20/May/2025 12:55:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:47,735 127.0.0.1 - - [20/May/2025 12:55:47] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-05-20 12:55:47,772 127.0.0.1 - - [20/May/2025 12:55:47] "GET / HTTP/1.1" 200 -
+2025-05-20 12:55:47,879 127.0.0.1 - - [20/May/2025 12:55:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:47,884 127.0.0.1 - - [20/May/2025 12:55:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:55:47,887 127.0.0.1 - - [20/May/2025 12:55:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:55:47,931 127.0.0.1 - - [20/May/2025 12:55:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:47,973 127.0.0.1 - - [20/May/2025 12:55:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:48,726 127.0.0.1 - - [20/May/2025 12:55:48] "GET / HTTP/1.1" 200 -
+2025-05-20 12:55:48,839 127.0.0.1 - - [20/May/2025 12:55:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:55:48,843 127.0.0.1 - - [20/May/2025 12:55:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:55:48,845 127.0.0.1 - - [20/May/2025 12:55:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:48,885 127.0.0.1 - - [20/May/2025 12:55:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:48,924 127.0.0.1 - - [20/May/2025 12:55:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:55:48,982 127.0.0.1 - - [20/May/2025 12:55:48] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:56:12,201 127.0.0.1 - - [20/May/2025 12:56:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-20 12:56:12,274 127.0.0.1 - - [20/May/2025 12:56:12] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-20 12:56:12,283 127.0.0.1 - - [20/May/2025 12:56:12] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-20 12:56:12,340 127.0.0.1 - - [20/May/2025 12:56:12] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=wbCTc8nqoRkF4baKAoD2 HTTP/1.1" 200 -
+2025-05-20 12:56:12,399 127.0.0.1 - - [20/May/2025 12:56:12] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-20 12:57:19,056  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-20 12:57:19,107  * Restarting with stat
+2025-05-20 12:57:19,409  * Debugger is active!
+2025-05-20 12:57:19,410  * Debugger PIN: 101-758-739
+2025-05-20 12:57:20,642 127.0.0.1 - - [20/May/2025 12:57:20] "GET / HTTP/1.1" 200 -
+2025-05-20 12:57:20,769 127.0.0.1 - - [20/May/2025 12:57:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:57:20,771 127.0.0.1 - - [20/May/2025 12:57:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:57:20,853 127.0.0.1 - - [20/May/2025 12:57:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:57:20,902 127.0.0.1 - - [20/May/2025 12:57:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:57:21,029 127.0.0.1 - - [20/May/2025 12:57:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:57:21,089 127.0.0.1 - - [20/May/2025 12:57:21] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:57:22,185 127.0.0.1 - - [20/May/2025 12:57:22] "GET /team.html HTTP/1.1" 200 -
+2025-05-20 12:57:22,293 127.0.0.1 - - [20/May/2025 12:57:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:57:22,296 127.0.0.1 - - [20/May/2025 12:57:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:57:22,299 127.0.0.1 - - [20/May/2025 12:57:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:57:22,356 127.0.0.1 - - [20/May/2025 12:57:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:57:22,400 127.0.0.1 - - [20/May/2025 12:57:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:59:09,265 127.0.0.1 - - [20/May/2025 12:59:09] "GET /team.html HTTP/1.1" 200 -
+2025-05-20 12:59:09,536 127.0.0.1 - - [20/May/2025 12:59:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-20 12:59:09,545 127.0.0.1 - - [20/May/2025 12:59:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-20 12:59:09,545 127.0.0.1 - - [20/May/2025 12:59:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-20 12:59:09,600 127.0.0.1 - - [20/May/2025 12:59:09] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-20 12:59:09,643 127.0.0.1 - - [20/May/2025 12:59:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-20 12:59:09,708 127.0.0.1 - - [20/May/2025 12:59:09] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-20 12:59:40,122  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-20 12:59:40,166  * Restarting with stat
+2025-05-20 12:59:40,467  * Debugger is active!
+2025-05-20 12:59:40,468  * Debugger PIN: 101-758-739

@@ -1,7 +1,17 @@
 -- database: ./database.db
 
--- CREATE TABLE id7-tusers(id INTEGER PRIMARY KEY autoincrement,username TEXT NOT NULL UNIQUE, password TEXT NOT NULL);
 
--- INSERT INTO id7-tusers(username,password) VALUES ("","");
+/*CREATE TABLE secure_users_9f_new (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    email TEXT,
+    full_name TEXT,
+    role TEXT DEFAULT 'Player',
+    team_id INTEGER NOT NULL DEFAULT 0,
+    totp_secret TEXT,
+    twofa_enabled INTEGER DEFAULT 0
+);*/
 
--- SELECT * FROM extension;
+INSERT INTO volleyball_teams (name, description)
+VALUES ('Spike Masters', 'A competitive volleyball team focused on regional tournaments.');

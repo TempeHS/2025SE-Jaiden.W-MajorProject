@@ -1,0 +1,18 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="teams-container">
+  <h2>Volleyball Teams</h2>
+  {% if teams %}
+  <ul class="team-list">
+    {% for team in teams %}
+    <li class="team-item">
+      <h3>{{ team.name }}</h3>
+      <p>{{ team.description }}</p>
+      <small>Created at: {{ team.created_at }}</small>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No teams found.</p>
+  {% endif %}
+</div>
+{% endblock %}
