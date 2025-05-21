@@ -8,9 +8,8 @@ from flask_session import Session
 import logging
 from datetime import timedelta
 
-import databaseManagement as dbHandler
 from forms import LoginForm, SignUpForm, TwoFactorForm 
-from formHandlers import handle_login, handle_two_factor, handle_sign_up, handle_team
+from formHandlers import handle_login, handle_two_factor, handle_sign_up, handle_team, handle_team_detail, handle_team_events, handle_team_messages
 from sessionLocks import acquire_session_lock, cleanup_session_lock
 
 app = Flask(__name__)
@@ -123,6 +122,26 @@ def team():
     lock = acquire_session_lock()
     with lock:
         return handle_team()
+
+# dynamic flask route for specific teams
+@app.route('/team/<int:team_id>', methods=['GET'])
+def team_detail(team_id):
+    lock = acquire_session_lock()
+    with lock:
+        return handle_team_detail(team_id)
+    
+
+@app.route('/team/<int:team_id>/events', methods=['GET', 'POST'])
+def team_events(team_id):
+    lock = acquire_session_lock()
+    with lock:
+        return handle_team_events(team_id)
+
+@app.route('/team/<int:team_id>/messages', methods=['GET', 'POST'])
+def team_messages(team_id):
+    lock = acquire_session_lock()
+    with lock:
+        return handle_team_messages(team_id)
 
 @app.route("/logout")
 def logout():

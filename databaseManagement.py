@@ -50,7 +50,6 @@ def updateUserTotpSecret(username, totp_secret):
     conn.commit()
     conn.close()
 
-# Add this to databaseManagement.py
 def setTwoFAEnabled(username, enabled=True):
     conn = sql.connect(db_path)
     conn.execute(
@@ -75,3 +74,19 @@ def get_all_teams():
     ]
     conn.close()
     return teams
+
+def get_team_by_id(team_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT id, name, description, created_at FROM volleyball_teams WHERE id = ?", (team_id,))
+    row = cur.fetchone()
+    conn.close()
+    if row:
+        return {
+            "id": row[0],
+            "name": row[1],
+            "description": row[2],
+            "created_at": row[3]
+        }
+    return None
+

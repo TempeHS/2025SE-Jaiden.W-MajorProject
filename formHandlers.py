@@ -43,6 +43,7 @@ def handle_two_factor(twoFactorForm):
         return redirect(url_for('login'))
     secret = user.get('totp_secret')
     twofa_enabled = int(user.get('twofa_enabled', 0)) 
+    
     # If user does not have a secret, generate and store one
     if not secret:
         secret = generate_totp_secret()
@@ -83,7 +84,7 @@ def handle_sign_up(signUpForm):
                 #flash('Sign up successful. Please log in.', 'success')
                 return redirect(url_for('login'))
             else:
-                flash('An esrror occurred during sign up. Please try again.', 'danger')
+                flash('An error occurred during sign up. Please try again.', 'danger')
                 app_log.warning("Failed signup attempt for user: %s", signUpForm.username.data)
         except requests.exceptions.RequestException as e:
             flash(f'An error occurred', 'danger')
@@ -98,3 +99,18 @@ def handle_sign_up(signUpForm):
 def handle_team():
     teams = dbHandler.get_all_teams()
     return render_template('team.html', teams=teams)
+
+def handle_team_detail(team_id):
+    team = dbHandler.get_team_by_id(team_id)
+    if not team:
+        flash("Team not found.", "danger")
+        return redirect(url_for('team'))
+    return render_template('teamDetail.html', team=team)
+
+def handle_team_events(team_id):
+    team = dbHandler.get_team_by_id(team_id)
+    return render_template('teamEvents.html', team=team)
+
+def handle_team_messages(team_id):
+    team = dbHandler.get_team_by_id(team_id)
+    return render_template('teamMessages.html', team=team)

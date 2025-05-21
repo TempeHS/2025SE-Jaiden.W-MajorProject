@@ -14,4 +14,4 @@
 );*/
 
 INSERT INTO volleyball_teams (name, description)
-VALUES ('Spike Masters', 'A competitive volleyball team focused on regional tournaments.');
+VALUES ('Open Boys', 'Open boys Tempe volleyball team');
