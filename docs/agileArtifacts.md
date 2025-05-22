@@ -17,6 +17,8 @@
 - Roles clearly defined for user
 - Functioning Login & Sign-up page
 - Functioning Team page
+- Players can join a team
+- Coaches can make a team
 
 ## Sprint Review (Focus on project management)
 

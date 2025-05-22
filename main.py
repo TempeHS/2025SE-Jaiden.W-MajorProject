@@ -8,8 +8,8 @@ from flask_session import Session
 import logging
 from datetime import timedelta
 
-from forms import LoginForm, SignUpForm, TwoFactorForm 
-from formHandlers import handle_login, handle_two_factor, handle_sign_up, handle_team, handle_team_detail, handle_team_events, handle_team_messages
+from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm
+from formHandlers import handle_login, handle_two_factor, handle_sign_up, handle_my_team, handle_team_detail, handle_team_events, handle_team_messages, handle_search_team, handle_join_team, handle_create_team
 from sessionLocks import acquire_session_lock, cleanup_session_lock
 
 app = Flask(__name__)
@@ -121,7 +121,27 @@ def privacy():
 def team():
     lock = acquire_session_lock()
     with lock:
-        return handle_team()
+        return handle_my_team()
+
+@app.route('/searchteam', methods=['GET'])
+def search_team():
+    joinTeamForm = JoinTeamForm()
+    lock = acquire_session_lock()
+    with lock:
+        return handle_search_team(joinTeamForm)
+
+@app.route('/jointeam/<int:team_id>', methods=['POST'])
+def join_team(team_id):
+    lock = acquire_session_lock()
+    with lock:
+        return handle_join_team(team_id)
+
+@app.route('/create_team', methods=['GET', 'POST'])
+def create_team():
+    teamForm = TeamForm()
+    lock = acquire_session_lock()
+    with lock:
+        return handle_create_team(teamForm)
 
 # dynamic flask route for specific teams
 @app.route('/team/<int:team_id>', methods=['GET'])
@@ -129,7 +149,6 @@ def team_detail(team_id):
     lock = acquire_session_lock()
     with lock:
         return handle_team_detail(team_id)
-    
 
 @app.route('/team/<int:team_id>/events', methods=['GET', 'POST'])
 def team_events(team_id):
@@ -151,14 +170,12 @@ def logout():
     flash('You have been logged out.', 'success')
     return redirect("login.html")
 
-
 # Endpoint for logging CSP violations
 @app.route("/csp_report", methods=["POST"])
 @csrf.exempt
 def csp_report():
     app.logger.critical(request.data.decode())
     return "done"
-
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

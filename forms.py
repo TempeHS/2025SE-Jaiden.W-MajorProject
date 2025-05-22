@@ -58,3 +58,18 @@ class SignUpForm(FlaskForm):
 class TwoFactorForm(FlaskForm):
     token = StringField('2FA Token', validators=[DataRequired()])
     submit = SubmitField('Verify')
+
+class JoinTeamForm(FlaskForm):
+    submit = SubmitField('Join Team')
+
+class TeamForm(FlaskForm):
+    team_name = StringField('Team Name', validators=[
+        DataRequired(), 
+        Length(min=2, max=50), 
+        Regexp(r'^[\w\s]+$', message="Team name must contain only letters, numbers, and spaces.")
+    ])
+    team_description = StringField('Team Description', validators=[
+        DataRequired(), 
+        Length(max=200)
+    ])
+    submit = SubmitField('Create Team')

@@ -1,0 +1,16 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container mt-4">
+  <h2>Create a New Team</h2>
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <div class="input__wrapper">
+      {{ form.team_name.label }} {{ form.team_name(class="input__field") }}
+    </div>
+    <div class="input__wrapper">
+      {{ form.team_description.label }} {{
+      form.team_description(class="input__field") }}
+    </div>
+    <div class="input__wrapper">{{ form.submit(class="btn btn-primary") }}</div>
+  </form>
+</div>
+{% endblock %}

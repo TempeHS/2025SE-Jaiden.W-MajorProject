@@ -19,6 +19,17 @@
           <a class="nav-link" href="{{ url_for('team') }}">Teams</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('search_team') }}"
+            >Join a Team</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('create_team') }}"
+            >Create a Team</a
+          >
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
         </li>
         {% else %}

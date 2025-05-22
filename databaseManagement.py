@@ -90,3 +90,32 @@ def get_team_by_id(team_id):
         }
     return None
 
+def search_teams_by_name(query):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT id, name, description, created_at FROM volleyball_teams WHERE name LIKE ?", ('%' + query + '%',))
+    teams = [
+        {
+            "id": row[0],
+            "name": row[1],
+            "description": row[2],
+            "created_at": row[3]
+        }
+        for row in cur.fetchall()
+    ]
+    conn.close()
+    return teams
+
+def update_user_team(username, team_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("UPDATE secure_users_9f SET team_id = ? WHERE username = ?", (team_id, username))
+    conn.commit()
+    conn.close()
+
+def create_team(name, description):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("INSERT INTO volleyball_teams (name, description) VALUES (?, ?)", (name, description))
+    conn.commit()
+    conn.close()

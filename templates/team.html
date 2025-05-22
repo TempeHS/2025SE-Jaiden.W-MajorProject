@@ -1,7 +1,7 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container mt-4">
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    {% for team in teams %}
+    {% if team %}
     <div class="col">
       <div class="card h-100">
         <img
@@ -23,7 +23,9 @@
         </div>
       </div>
     </div>
-    {% endfor %}
+    {% else %}
+    <p>You have not joined a team yet.</p>
+    {% endif %}
   </div>
 </div>
 {% endblock %}

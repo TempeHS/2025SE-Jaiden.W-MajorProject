@@ -60,6 +60,21 @@ def api_signup():
         api.logger.error("Error during signup", exc_info=True)
         return jsonify({"message": "Internal server error"}), 500
 
+@api.route("/api/create_team", methods=["POST"])
+@limiter.limit("1/second", override_defaults=False)
+def api_create_team():
+    auth_response = check_api_key()
+    if auth_response:
+        return auth_response
+    data = request.get_json()
+    team_name = data.get("name")
+    team_description = data.get("description")
+    try:
+        dbHandler.create_team(team_name, team_description)
+        return jsonify({"message": "Team created successfully"}), 201
+    except Exception as e:
+        api.logger.error("Error creating team: %s", str(e))
+        return jsonify({"message": "Internal server error"}), 500
 
 if __name__ == "__main__":
     api.run(debug=True, host="0.0.0.0", port=3000)

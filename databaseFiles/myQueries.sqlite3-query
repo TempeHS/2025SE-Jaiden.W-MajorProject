@@ -13,5 +13,5 @@
     twofa_enabled INTEGER DEFAULT 0
 );*/
 
-INSERT INTO volleyball_teams (name, description)
-VALUES ('Open Boys', 'Open boys Tempe volleyball team');
+--INSERT INTO volleyball_teams (name, description)
+--VALUES ('Open Boys', 'Open boys Tempe volleyball team');
