@@ -2,9 +2,9 @@
 
 ### Core Functionalities
 
-- User registration and login system (Coach / Player roles)
+- ~~User registration and login system (Coach / Player roles)~~
 - Role-based dashboard views
-- Create/join a volleyball team
+- ~~Create/join a volleyball team~~
 - Team chat functionality
 - Private messaging between users
 - Attendance tracking system
@@ -22,10 +22,10 @@
 
 ### Security/Privacy Features
 
-- Input sanitization (prevent XSS/injection)
-- Passwords hashed and securely stored
-- 2FA Authentication
-- Implement a strict content security policy
-- Privacy Handling Policy
-- Secure session management
+- ~~Input sanitization (prevent XSS/injection)~~
+- ~~Passwords hashed and securely stored~~
+- ~~2FA Authentication~~
+- ~~Implement a strict content security policy~~
+- ~~Privacy Handling Policy~~
+- ~~Secure session management~~
 - Users given the option to download or delete their data

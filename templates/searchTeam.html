@@ -1,0 +1,76 @@
+{% extends 'layout.html' %} {% block head %}
+<meta name="description" content="View and search volleyball teams." />
+{% endblock %} {% block content %}
+<h1 class="text-center my-4">Volleyball Teams</h1>
+<div class="container">
+  <!-- Flash Messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %}
+  <div class="flash-messages">
+    {% for category, message in messages %}
+    <div
+      class="alert alert-{{ category }} alert-dismissible fade show"
+      role="alert"
+    >
+      {{ message }}
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %} {% endwith %}
+  <!-- Flash Messages -->
+
+  <form
+    class="d-flex mb-4"
+    role="search"
+    action="{{ url_for('search_team') }}"
+    method="get"
+  >
+    <input
+      class="form-control me-2"
+      type="search"
+      name="q"
+      value="{{ query }}"
+      placeholder="Search for teams..."
+      aria-label="Search"
+    />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+  <div class="row">
+    {% if teams %} {% for team in teams %}
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-primary">{{ team.name }}</h5>
+          <p class="card-text">
+            <strong>Description:</strong> {{ team.description }}
+          </p>
+          {% if team.created_at %}
+          <p class="card-text">
+            <strong>Created at:</strong> {{ team.created_at }}
+          </p>
+          {% endif %}
+          <form
+            method="post"
+            action="{{ url_for('join_team', team_id=team.id) }}"
+            style="display: inline"
+          >
+            {{ form.hidden_tag() }} {{ form.submit(class="btn btn-success
+            btn-sm") }}
+          </form>
+        </div>
+      </div>
+    </div>
+    {% endfor %} {% elif query %}
+    <p>No teams found for "{{ query }}".</p>
+    {% else %}
+    <p>No teams available.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

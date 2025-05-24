@@ -1,18 +1,25 @@
-from flask import Flask
-from flask import redirect
-from flask import render_template
-from flask import request
-from flask import jsonify
-import requests
-from flask_wtf import CSRFProtect
+from flask import Flask, render_template, request, redirect, flash, session
+from flask_wtf.csrf import CSRFProtect
 from flask_csp.csp import csp_header
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+from flask_cors import CORS
+from flask_session import Session
 import logging
+from datetime import timedelta
 
-import userManagement as dbHandler
+from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm
+from formHandlers import handle_login, handle_two_factor, handle_sign_up, handle_my_team, handle_team_detail, handle_team_events, handle_team_messages, handle_search_team, handle_join_team, handle_create_team
+from sessionLocks import acquire_session_lock, cleanup_session_lock
 
-# Code snippet for logging a message
-# app.logger.critical("message")
+app = Flask(__name__)
+app.secret_key = b"T4Ht6NAcHy2yNDH3;apl"
+limiter = Limiter(get_remote_address, app=app)
+csrf = CSRFProtect(app)
+cors = CORS(app) 
+app.config["CORS_HEADERS"] = "Content-Type"
 
+# logging configuration
 app_log = logging.getLogger(__name__)
 logging.basicConfig(
     filename="security_log.log",
@@ -21,11 +28,35 @@ logging.basicConfig(
     format="%(asctime)s %(message)s",
 )
 
-# Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
-app = Flask(__name__)
-app.secret_key = b"_53oi3uriq9pifpff;apl"
-csrf = CSRFProtect(app)
+# Flask-Session configuration
+app.config["SESSION_TYPE"] = "filesystem"
+app.config["SESSION_PERMANENT"] = True  # Make sessions permanent
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=720)  # Set session lifetime to 24 hrs
+app.config["SESSION_USE_SIGNER"] = True
+app.config["SESSION_KEY_PREFIX"] = "session:"
+app.config["SESSION_FILE_DIR"] = "./.flask_session/"
+app.config["SESSION_FILE_THRESHOLD"] = 100
+Session(app)
 
+# Secure cookie settings
+app.config.update(
+    SESSION_COOKIE_SECURE=True,  # Ensure cookies are only sent over HTTPS
+    SESSION_COOKIE_HTTPONLY=True,  # Prevent JavaScript access to cookies
+    SESSION_COOKIE_SAMESITE='Lax',  # Control how cookies are sent with cross-site requests
+)
+
+# Register the cleanup function to be called after each request
+@app.teardown_request
+def teardown_request(exception=None):
+    return cleanup_session_lock(exception)
+
+
+# Custom error handler for rate limit exceeded
+@app.errorhandler(429)
+def ratelimit_handler(e):
+    flash("Too many incorrect attempts. Please try again later.", "danger")
+    app_log.warning("Rate limit exceeded for IP: %s", request.remote_addr)
+    return render_template("login.html", form=LoginForm(), rate_limit_exceeded=True), 429
 
 # Redirect index.html to domain root for consistent UX
 @app.route("/index", methods=["GET"])
@@ -59,24 +90,85 @@ def root():
     }
 )
 def index():
+    if request.method == 'GET':
+        if 'username' not in session:
+            return redirect("/login.html")
     return render_template("/index.html")
 
+@app.route("/login.html", methods=["GET", "POST"])
+@limiter.limit("5 per minute")
+def login():
+    loginForm = LoginForm()
+    return handle_login(loginForm)
+
+@app.route("/2fa", methods=["GET", "POST"])
+def two_factor():
+    twoFactorForm = TwoFactorForm()
+    lock = acquire_session_lock()
+    with lock:
+        return handle_two_factor(twoFactorForm)
+
+@app.route("/signUp.html", methods=["GET", "POST"])
+def sign_up():
+    signUpForm = SignUpForm()
+    return handle_sign_up(signUpForm)
 
 @app.route("/privacy.html", methods=["GET"])
 def privacy():
     return render_template("/privacy.html")
 
+@app.route('/team.html', methods=['GET'])
+def team():
+    lock = acquire_session_lock()
+    with lock:
+        return handle_my_team()
 
-# example CSRF protected form
-@app.route("/form.html", methods=["POST", "GET"])
-def form():
-    if request.method == "POST":
-        email = request.form["email"]
-        text = request.form["text"]
-        return render_template("/form.html")
-    else:
-        return render_template("/form.html")
+@app.route('/searchteam', methods=['GET'])
+def search_team():
+    joinTeamForm = JoinTeamForm()
+    lock = acquire_session_lock()
+    with lock:
+        return handle_search_team(joinTeamForm)
 
+@app.route('/jointeam/<int:team_id>', methods=['POST'])
+def join_team(team_id):
+    lock = acquire_session_lock()
+    with lock:
+        return handle_join_team(team_id)
+
+@app.route('/create_team', methods=['GET', 'POST'])
+def create_team():
+    teamForm = TeamForm()
+    lock = acquire_session_lock()
+    with lock:
+        return handle_create_team(teamForm)
+
+# dynamic flask route for specific teams
+@app.route('/team/<int:team_id>', methods=['GET'])
+def team_detail(team_id):
+    lock = acquire_session_lock()
+    with lock:
+        return handle_team_detail(team_id)
+
+@app.route('/team/<int:team_id>/events', methods=['GET', 'POST'])
+def team_events(team_id):
+    lock = acquire_session_lock()
+    with lock:
+        return handle_team_events(team_id)
+
+@app.route('/team/<int:team_id>/messages', methods=['GET', 'POST'])
+def team_messages(team_id):
+    lock = acquire_session_lock()
+    with lock:
+        return handle_team_messages(team_id)
+
+@app.route("/logout")
+def logout():
+    username = session.pop('username', None)
+    if username:
+        app_log.info("User '%s' logged out successfully", username)
+    flash('You have been logged out.', 'success')
+    return redirect("login.html")
 
 # Endpoint for logging CSP violations
 @app.route("/csp_report", methods=["POST"])
@@ -84,7 +176,6 @@ def form():
 def csp_report():
     app.logger.critical(request.data.decode())
     return "done"
-
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

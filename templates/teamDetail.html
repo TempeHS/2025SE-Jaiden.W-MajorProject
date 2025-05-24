@@ -1,0 +1,10 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <h1 class="display-1">Hello [USER]!</h1>
+    <a href="{{ url_for('team_events', team_id=team.id) }}">Events</a>
+    <a href="{{ url_for('team_messages', team_id=team.id) }}">Messages</a>
+  </div>
+  <div class="row"></div>
+</div>
+{% endblock %}
