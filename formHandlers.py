@@ -109,9 +109,16 @@ def handle_my_team():
 def handle_search_team(JoinTeamForm):
     query = request.args.get('q', '')
     query = sanitize_input(query)
-    teams = []
+    params = {}
     if query:
-        teams = dbHandler.search_teams_by_name(query)
+        params['q'] = query
+    try:
+        response = requests.get("http://127.0.0.1:3000/api/search_teams", params=params, headers=app_header)
+        response.raise_for_status()
+        teams = response.json().get("teams", [])
+    except Exception as e:
+        flash("Could not fetch teams from the server.", "danger")
+        teams = []
     return render_template('searchTeam.html', teams=teams, query=query, form=JoinTeamForm)
 
 def handle_join_team(team_id):
@@ -120,7 +127,7 @@ def handle_join_team(team_id):
     user = dbHandler.retrieveUserByUsername(session['username'])
     dbHandler.update_user_team(user['username'], team_id)
     flash("You have joined the team!", "success")
-    return redirect(url_for('team'))
+    return redirect(url_for('search_team'))
 
 def handle_create_team(teamForm):
     if 'username' not in session:
@@ -139,7 +146,7 @@ def handle_create_team(teamForm):
             if response.status_code == 201:
                 app_log.info("Team '%s' created successfully", teamForm.team_name.data)
                 flash('Team created successfully!', 'success')
-                return redirect(url_for('team'))
+                return redirect(url_for('search_team'))
             else:
                 flash('An error occurred during team creation. Please try again.', 'danger')
                 app_log.warning("Failed team creation attempt: %s", teamForm.team_name.data)
