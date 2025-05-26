@@ -1,0 +1,117 @@
+from flask import flash, session, redirect, render_template, request, url_for
+import requests
+import logging
+import databaseManagement as dbHandler
+from sanitize import sanitize_data, sanitize_input
+
+app_log = logging.getLogger(__name__)
+app_header = {"Authorisation": "uPTPeF9BDNiqAkNj"}
+
+def handle_my_team():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    user = dbHandler.retrieveUserByUsername(session['username'])
+    if not user or not user.get('team_id'):
+        flash("You have not joined a team yet.", "info")
+        return render_template('index.html', team=None)
+    team = dbHandler.get_team_by_id(user['team_id'])
+    return render_template('index.html', team=team)
+
+def handle_search_team(JoinTeamForm):
+    query = request.args.get('q', '')
+    query = sanitize_input(query)
+    params = {}
+    if query:
+        params['q'] = query
+    try:
+        response = requests.get("http://127.0.0.1:3000/api/search_teams", params=params, headers=app_header)
+        response.raise_for_status()
+        teams = response.json().get("teams", [])
+    except Exception as e:
+        flash("Could not fetch teams from the server.", "danger")
+        teams = []
+    return render_template('searchTeam.html', teams=teams, query=query, form=JoinTeamForm)
+
+def handle_join_team(team_id):
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    user = dbHandler.retrieveUserByUsername(session['username'])
+    dbHandler.update_user_team(user['username'], team_id)
+    flash("You have joined the team!", "success")
+    return redirect(url_for('search_team'))
+
+def handle_create_team(teamForm):
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    user = dbHandler.retrieveUserByUsername(session['username'])
+    if not user or user.get('role') != 'Coach':
+        return redirect(url_for('index'))
+    if teamForm.validate_on_submit():
+        sanitized_data = sanitize_data({
+            "name": teamForm.team_name.data,
+            "description": teamForm.team_description.data
+        })
+        try:
+            response = requests.post("http://127.0.0.1:3000/api/create_team", json=sanitized_data, headers=app_header)
+            response.raise_for_status()
+            if response.status_code == 201:
+                app_log.info("Team '%s' created successfully", teamForm.team_name.data)
+                flash('Team created successfully!', 'success')
+                return redirect(url_for('search_team'))
+            else:
+                flash('An error occurred during team creation. Please try again.', 'danger')
+                app_log.warning("Failed team creation attempt: %s", teamForm.team_name.data)
+        except requests.exceptions.RequestException as e:
+            flash('An error occurred. Please try again later.', 'danger')
+            app_log.error("Error during team creation attempt: %s - %s", teamForm.team_name.data, str(e))
+    else:
+        for field, errors in teamForm.errors.items():
+            for error in errors: 
+                flash(f"Error in {getattr(teamForm, field).label.text}: {error}", 'danger')
+                app_log.warning("Validation error in %s: %s", getattr(teamForm, field).label.text, error)
+    return render_template('createTeam.html', form=teamForm)
+
+def handle_team_detail(team_id):
+    team = dbHandler.get_team_by_id(team_id)
+    if not team:
+        flash("Team not found.", "danger")
+        return redirect(url_for('index'))
+    return render_template('teamDetail.html', team=team, team_id=team_id, team_nav=True)
+
+def handle_team_events(team_id):
+    team = dbHandler.get_team_by_id(team_id)
+    return render_template('teamEvents.html', team=team, team_nav=True)
+
+def handle_create_team_event(team_id, form):
+    user = dbHandler.retrieveUserByUsername(session.get('username'))
+    if not user or user.get('role') != 'Coach':
+        return redirect(url_for('team_detail', team_id=team_id))
+    team = dbHandler.get_team_by_id(team_id)
+    if not team:
+        flash("Team not found.", "danger")
+        return redirect(url_for('index'))
+    if form.validate_on_submit():
+        event_data = {
+            "team_id": team_id,
+            "title": form.title.data,
+            "description": form.description.data,
+            "event_date": form.event_date.data.strftime('%Y-%m-%dT%H:%M'),
+            "location": form.location.data
+        }
+        try:
+            response = requests.post("http://127.0.0.1:3000/api/create_team_event",json=event_data,headers=app_header)
+            response.raise_for_status()
+            if response.status_code == 201:
+                flash("Event created successfully!", "success")
+                return redirect(url_for('team_events', team_id=team_id))
+            else:
+                flash("Failed to create event. Please try again.", "danger")
+                app_log.warning("Failed to create team event: %s", response.text)
+        except requests.exceptions.RequestException as e:
+            flash("An error occurred while creating the event.", "danger")
+            app_log.error("Error during team event creation: %s", str(e))
+    return render_template('createTeamEvent.html', form=form, team=team)
+
+def handle_team_messages(team_id):
+    team = dbHandler.get_team_by_id(team_id)
+    return render_template('teamMessages.html', team=team, team_nav=True)

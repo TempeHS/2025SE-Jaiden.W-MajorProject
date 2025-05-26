@@ -14,21 +14,40 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        {% if 'username' in session %}
+        {% if team_nav %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('team') }}">Teams</a>
+          <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{{ url_for('team_events', team_id=team.id) }}"
+            >Events</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{{ url_for('team_messages', team_id=team.id) }}"
+            >Messages</a
+          >
+        </li>
+        {% elif 'username' in session %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('index') }}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('search_team') }}"
             >Join a Team</a
           >
         </li>
+        {% if session.get('role') == 'coach' %}
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('create_team') }}"
             >Create a Team</a
           >
         </li>
-
+        {% endif %}
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
         </li>

@@ -39,6 +39,11 @@ def api_login():
     username = data.get("username")
     password = data.get("password")
     response, status_code = login_user(username, password)
+    # if login is sucessful, add user's role to response
+    if status_code == 200:
+        user = dbHandler.retrieveUserByUsername(username)
+        if user:
+            response["role"] = user.get("role")
     return jsonify(response), status_code
 
 @api.route("/api/signup", methods=["POST"])
@@ -87,6 +92,27 @@ def api_create_team():
         return jsonify({"message": "Team created successfully"}), 201
     except Exception as e:
         api.logger.error("Error creating team: %s", str(e))
+        return jsonify({"message": "Internal server error"}), 500
+    
+@api.route("/api/create_team_event", methods=["POST"])
+@limiter.limit("1/second", override_defaults=False)
+def api_create_team_event():
+    auth_response = check_api_key()
+    if auth_response:
+        return auth_response
+    data = request.get_json()
+    team_id = data.get("team_id")
+    title = data.get("title")
+    description = data.get("description")
+    event_date = data.get("event_date")
+    location = data.get("location")
+    if not all([team_id, title, event_date, location]):
+        return jsonify({"message": "Missing required fields"}), 400
+    try:
+        dbHandler.create_team_event(team_id, title, description, event_date, location)
+        return jsonify({"message": "Team event created successfully"}), 201
+    except Exception as e:
+        api.logger.error("Error creating team event: %s", str(e))
         return jsonify({"message": "Internal server error"}), 500
 
 

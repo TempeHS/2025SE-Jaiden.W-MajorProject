@@ -119,3 +119,33 @@ def create_team(name, description):
     cur.execute("INSERT INTO volleyball_teams (name, description) VALUES (?, ?)", (name, description))
     conn.commit()
     conn.close()
+
+def create_team_event(team_id, title, description, event_date, location):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute(
+        "INSERT INTO team_events (team_id, title, description, event_date, location) VALUES (?, ?, ?, ?, ?)",
+        (team_id, title, description, event_date, location)
+    )
+    conn.commit()
+    conn.close()
+
+def get_team_events(team_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute(
+        "SELECT id, title, description, event_date, location FROM team_events WHERE team_id = ? ORDER BY event_date ASC",
+        (team_id,)
+    )
+    events = [
+        {
+            "id": row[0],
+            "title": row[1],
+            "description": row[2],
+            "event_date": row[3],
+            "location": row[4]
+        }
+        for row in cur.fetchall()
+    ]
+    conn.close()
+    return events

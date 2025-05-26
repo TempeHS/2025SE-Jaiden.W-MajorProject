@@ -15,3 +15,14 @@
 
 --INSERT INTO volleyball_teams (name, description)
 --VALUES ('Open Boys', 'Open boys Tempe volleyball team');
+
+/*CREATE TABLE team_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    team_id INTEGER NOT NULL,
+    title TEXT NOT NULL,
+    description TEXT,
+    event_date DATETIME NOT NULL,
+    location TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (team_id) REFERENCES volleyball_teams(id)
+);*/

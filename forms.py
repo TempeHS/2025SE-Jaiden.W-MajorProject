@@ -1,8 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, RadioField
-from wtforms.validators import DataRequired, Length, Regexp, URL, ValidationError
-import html
-from datetime import datetime
+from wtforms import StringField, PasswordField, SubmitField, RadioField, TextAreaField, DateTimeField
+from wtforms.validators import DataRequired, Length, Regexp, ValidationError
 
 def has_uppercase(_form, field):
     if not any(char.isupper() for char in field.data):
@@ -73,3 +71,18 @@ class TeamForm(FlaskForm):
         Length(max=200)
     ])
     submit = SubmitField('Create Team')
+
+class TeamEventForm(FlaskForm):
+    title = StringField('Event Title', validators=[
+        DataRequired(),
+        Length(min=2, max=100)
+    ])
+    description = TextAreaField('Description', validators=[
+        Length(max=500)
+    ])
+    event_date = DateTimeField('Event Date & Time', format='%Y-%m-%dT%H:%M', validators=[DataRequired()], render_kw={"type": "datetime-local"})
+    location = StringField('Location', validators=[
+        DataRequired(),
+        Length(max=100)
+    ])
+    submit = SubmitField('Create Event')

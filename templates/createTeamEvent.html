@@ -1,0 +1,41 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="mb-4">Create Event for {{ team.name }}</h2>
+      <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+          {{ form.title.label(class="form-label") }} {{
+          form.title(class="form-control") }} {% for error in form.title.errors
+          %}
+          <div class="text-danger">{{ error }}</div>
+          {% endfor %}
+        </div>
+        <div class="mb-3">
+          {{ form.description.label(class="form-label") }} {{
+          form.description(class="form-control") }} {% for error in
+          form.description.errors %}
+          <div class="text-danger">{{ error }}</div>
+          {% endfor %}
+        </div>
+        <div class="mb-3">
+          {{ form.event_date.label(class="form-label") }} {{
+          form.event_date(class="form-control", type="datetime-local") }} {% for
+          error in form.event_date.errors %}
+          <div class="text-danger">{{ error }}</div>
+          {% endfor %}
+        </div>
+        <div class="mb-3">
+          {{ form.location.label(class="form-label") }} {{
+          form.location(class="form-control") }} {% for error in
+          form.location.errors %}
+          <div class="text-danger">{{ error }}</div>
+          {% endfor %}
+        </div>
+        <div class="mb-3">{{ form.submit(class="btn btn-primary") }}</div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
