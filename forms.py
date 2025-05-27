@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, RadioField, TextAreaField, DateTimeField
+from wtforms import StringField, PasswordField, SubmitField, RadioField, TextAreaField, DateTimeField, SelectField, DateField
 from wtforms.validators import DataRequired, Length, Regexp, ValidationError
 
 def has_uppercase(_form, field):
@@ -85,4 +85,13 @@ class TeamEventForm(FlaskForm):
         DataRequired(),
         Length(max=100)
     ])
+    recurrence = SelectField('Repeat', choices = [
+        ('none', 'No Repeat'),
+        ('daily', 'Daily'),
+        ('weekly', 'Weekly'),
+    ], default='none')
+    recurrence_end = DateField('Repeat Until', format='%Y-%m-%d', render_kw={"type": "date"})
     submit = SubmitField('Create Event')
+
+class DeleteEventForm(FlaskForm):
+    submit = SubmitField('Delete')

@@ -3,6 +3,7 @@ import requests
 import logging
 import databaseManagement as dbHandler
 from sanitize import sanitize_data, sanitize_input
+from forms import DeleteEventForm
 
 app_log = logging.getLogger(__name__)
 app_header = {"Authorisation": "uPTPeF9BDNiqAkNj"}
@@ -80,7 +81,11 @@ def handle_team_detail(team_id):
 
 def handle_team_events(team_id):
     team = dbHandler.get_team_by_id(team_id)
-    return render_template('teamEvents.html', team=team, team_nav=True)
+    upcoming_events = dbHandler.get_upcoming_team_events(team_id)
+    past_events = dbHandler.get_past_team_events(team_id)
+    # delete forms for each event
+    delete_forms = {event['id']: DeleteEventForm() for event in upcoming_events + past_events}
+    return render_template('teamEvents.html', team=team, upcoming_events=upcoming_events, past_events=past_events, team_nav=True, delete_forms=delete_forms)
 
 def handle_create_team_event(team_id, form):
     user = dbHandler.retrieveUserByUsername(session.get('username'))
@@ -91,12 +96,15 @@ def handle_create_team_event(team_id, form):
         flash("Team not found.", "danger")
         return redirect(url_for('index'))
     if form.validate_on_submit():
+        print("Form validated and submitted!")  # Add this line for debugging
         event_data = {
             "team_id": team_id,
             "title": form.title.data,
             "description": form.description.data,
             "event_date": form.event_date.data.strftime('%Y-%m-%dT%H:%M'),
-            "location": form.location.data
+            "location": form.location.data,
+            "recurrence": form.recurrence.data,
+            "recurrence_end": form.recurrence_end.data.strftime('%Y-%m-%d') if form.recurrence_end.data != "none" else None
         }
         try:
             response = requests.post("http://127.0.0.1:3000/api/create_team_event",json=event_data,headers=app_header)
@@ -111,6 +119,15 @@ def handle_create_team_event(team_id, form):
             flash("An error occurred while creating the event.", "danger")
             app_log.error("Error during team event creation: %s", str(e))
     return render_template('createTeamEvent.html', form=form, team=team)
+
+def handle_delete_team_event (team_id, event_id):
+    user = dbHandler.retrieveUserByUsername(session.get('username'))
+    if not user or user.get('role') != 'Coach':
+        return redirect(url_for('team_events', team_id=team_id))
+    dbHandler.delete_team_event(event_id)
+    flash("Event deleted successfully!", "success")
+    return redirect(url_for('team_events', team_id=team_id))
+
 
 def handle_team_messages(team_id):
     team = dbHandler.get_team_by_id(team_id)

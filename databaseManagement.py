@@ -1,4 +1,7 @@
+# This file contains functions to manage the database operations for the volleyball team application.
+
 import sqlite3 as sql
+from datetime import datetime
 
 db_path = "./databaseFiles/database.db"
 
@@ -130,22 +133,59 @@ def create_team_event(team_id, title, description, event_date, location):
     conn.commit()
     conn.close()
 
-def get_team_events(team_id):
+def get_upcoming_team_events(team_id):
     conn = sql.connect(db_path)
     cur = conn.cursor()
+    now = datetime.now().strftime("%Y-%m-%dT%H:%M")
     cur.execute(
-        "SELECT id, title, description, event_date, location FROM team_events WHERE team_id = ? ORDER BY event_date ASC",
-        (team_id,)
+        "SELECT id, title, description, event_date, location FROM team_events WHERE team_id = ? AND event_date >= ? ORDER BY event_date ASC",
+        (team_id, now)
     )
-    events = [
-        {
+    events = []
+    for row in cur.fetchall():
+        try:
+            event_date = datetime.strptime(row[3], "%Y-%m-%dT%H:%M")
+            formatted_date = event_date.strftime("%A, %d %B %Y at %I:%M %p")
+        except Exception:
+            formatted_date = row[3]
+        events.append({
             "id": row[0],
             "title": row[1],
             "description": row[2],
-            "event_date": row[3],
+            "event_date": formatted_date,
             "location": row[4]
-        }
-        for row in cur.fetchall()
-    ]
+        })
     conn.close()
     return events
+
+def get_past_team_events(team_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    now = datetime.now().strftime("%Y-%m-%dT%H:%M")
+    cur.execute(
+        "SELECT id, title, description, event_date, location FROM team_events WHERE team_id = ? AND event_date < ? ORDER BY event_date DESC",
+        (team_id, now)
+    )
+    events = []
+    for row in cur.fetchall():
+        try:
+            event_date = datetime.strptime(row[3], "%Y-%m-%dT%H:%M")
+            formatted_date = event_date.strftime("%A, %d %B %Y at %I:%M %p")
+        except Exception:
+            formatted_date = row[3]
+        events.append({
+            "id": row[0],
+            "title": row[1],
+            "description": row[2],
+            "event_date": formatted_date,
+            "location": row[4]
+        })
+    conn.close()
+    return events
+
+def delete_team_event(event_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("DELETE FROM team_events WHERE id = ?", (event_id,))
+    conn.commit()
+    conn.close()

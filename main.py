@@ -9,12 +9,9 @@ from flask_cors import CORS
 from flask_session import Session
 
 
-from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm, TeamEventForm
+from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm, TeamEventForm, DeleteEventForm
 from authHandlers import handle_login, handle_two_factor, handle_sign_up
-from teamHandlers import (
-    handle_my_team, handle_team_detail, handle_team_events,
-    handle_team_messages, handle_search_team, handle_join_team, handle_create_team, handle_create_team_event
-)
+import teamHandlers as teamHandler
 from sessionLocks import acquire_session_lock, cleanup_session_lock
 
 
@@ -99,7 +96,7 @@ def root():
 def index():
     lock = acquire_session_lock()
     with lock:
-        return handle_my_team()
+        return teamHandler.handle_my_team()
 
 
 @app.route("/login.html", methods=["GET", "POST"])
@@ -129,46 +126,52 @@ def search_team():
     joinTeamForm = JoinTeamForm()
     lock = acquire_session_lock()
     with lock:
-        return handle_search_team(joinTeamForm)
+        return teamHandler.handle_search_team(joinTeamForm)
 
 @app.route('/jointeam/<int:team_id>', methods=['POST'])
 def join_team(team_id):
     lock = acquire_session_lock()
     with lock:
-        return handle_join_team(team_id)
+        return teamHandler.handle_join_team(team_id)
 
 @app.route('/create_team', methods=['GET', 'POST'])
 def create_team():
     teamForm = TeamForm()
     lock = acquire_session_lock()
     with lock:
-        return handle_create_team(teamForm)
+        return teamHandler.handle_create_team(teamForm)
 
 # dynamic flask route for specific teams
 @app.route('/team/<int:team_id>', methods=['GET'])
 def team_detail(team_id):
     lock = acquire_session_lock()
     with lock:
-        return handle_team_detail(team_id)
+        return teamHandler.handle_team_detail(team_id)
 
 @app.route('/team/<int:team_id>/events', methods=['GET', 'POST'])
 def team_events(team_id):
     lock = acquire_session_lock()
     with lock:
-        return handle_team_events(team_id)
+        return teamHandler.handle_team_events(team_id)
     
 @app.route('/team/<int:team_id>/create_event', methods=['GET', 'POST'])
 def create_team_event(team_id):
     form = TeamEventForm()
     lock = acquire_session_lock()
     with lock:
-        return handle_create_team_event(team_id, form)
+        return teamHandler.handle_create_team_event(team_id, form)
+
+@app.route('/team/<int:team_id>/delete_event/<int:event_id>', methods=['POST'])
+def delete_team_event(team_id, event_id):
+    lock = acquire_session_lock()
+    with lock:
+        return teamHandler.handle_delete_team_event(team_id, event_id)
 
 @app.route('/team/<int:team_id>/messages', methods=['GET', 'POST'])
 def team_messages(team_id):
     lock = acquire_session_lock()
     with lock:
-        return handle_team_messages(team_id)
+        return teamHandler.handle_team_messages(team_id)
 
 @app.route("/logout")
 def logout():

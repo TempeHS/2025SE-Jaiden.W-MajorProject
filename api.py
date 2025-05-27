@@ -5,6 +5,7 @@ from flask_limiter.util import get_remote_address
 import logging
 from userLogic import login_user, signup_user  
 import databaseManagement as dbHandler
+from datetime import timedelta, datetime
 
 api = Flask(__name__)
 cors = CORS(api)
@@ -106,15 +107,34 @@ def api_create_team_event():
     description = data.get("description")
     event_date = data.get("event_date")
     location = data.get("location")
+    recurrence = data.get("recurrence")
+    recurrence_end = data.get("recurrence_end")
     if not all([team_id, title, event_date, location]):
         return jsonify({"message": "Missing required fields"}), 400
     try:
         dbHandler.create_team_event(team_id, title, description, event_date, location)
+        # Handle recurrence
+        if recurrence and recurrence != "none" and recurrence_end:
+            start_date = datetime.strptime(event_date, "%Y-%m-%dT%H:%M")
+            end_date = datetime.strptime(recurrence_end, "%Y-%m-%d")
+            next_date = start_date
+            while True:
+                # Calculate next occurrence
+                if recurrence == "daily":
+                    next_date += timedelta(days=1)
+                elif recurrence == "weekly":
+                    next_date += timedelta(weeks=1)
+                else:
+                    break
+                if next_date.date() > end_date.date():
+                    break
+                dbHandler.create_team_event(
+                    team_id, title, description, next_date.strftime("%Y-%m-%dT%H:%M"), location
+                )
         return jsonify({"message": "Team event created successfully"}), 201
     except Exception as e:
         api.logger.error("Error creating team event: %s", str(e))
         return jsonify({"message": "Internal server error"}), 500
-
 
 if __name__ == "__main__":
     api.run(debug=True, host="0.0.0.0", port=3000)
