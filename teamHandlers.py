@@ -1,9 +1,9 @@
+import logging
 from flask import flash, session, redirect, render_template, request, url_for
 import requests
-import logging
 import databaseManagement as dbHandler
 from sanitize import sanitize_data, sanitize_input
-from forms import DeleteEventForm
+from forms import DeleteEventForm, AttendanceForm
 
 app_log = logging.getLogger(__name__)
 app_header = {"Authorisation": "uPTPeF9BDNiqAkNj"}
@@ -25,10 +25,10 @@ def handle_search_team(JoinTeamForm):
     if query:
         params['q'] = query
     try:
-        response = requests.get("http://127.0.0.1:3000/api/search_teams", params=params, headers=app_header)
+        response = requests.get("http://127.0.0.1:3000/api/search_teams", params=params, headers=app_header, timeout=5)
         response.raise_for_status()
         teams = response.json().get("teams", [])
-    except Exception as e:
+    except Exception as _e:
         flash("Could not fetch teams from the server.", "danger")
         teams = []
     return render_template('searchTeam.html', teams=teams, query=query, form=JoinTeamForm)
@@ -53,7 +53,7 @@ def handle_create_team(teamForm):
             "description": teamForm.team_description.data
         })
         try:
-            response = requests.post("http://127.0.0.1:3000/api/create_team", json=sanitized_data, headers=app_header)
+            response = requests.post("http://127.0.0.1:3000/api/create_team", json=sanitized_data, headers=app_header, timeout=5)
             response.raise_for_status()
             if response.status_code == 201:
                 app_log.info("Team '%s' created successfully", teamForm.team_name.data)
@@ -83,9 +83,15 @@ def handle_team_events(team_id):
     team = dbHandler.get_team_by_id(team_id)
     upcoming_events = dbHandler.get_upcoming_team_events(team_id)
     past_events = dbHandler.get_past_team_events(team_id)
-    # delete forms for each event
+    # delete + attendance forms for each event
     delete_forms = {event['id']: DeleteEventForm() for event in upcoming_events + past_events}
-    return render_template('teamEvents.html', team=team, upcoming_events=upcoming_events, past_events=past_events, team_nav=True, delete_forms=delete_forms)
+    attendance_forms = {event['id']: AttendanceForm() for event in upcoming_events}
+    # attendance counts for each event
+    attendance_counts = {}
+    for event in upcoming_events + past_events:
+        attendance_counts[event['id']] = dbHandler.get_event_attendance_counts(event['id'])
+    return render_template('teamEvents.html', team=team, upcoming_events=upcoming_events, past_events=past_events, 
+    team_nav=True, delete_forms=delete_forms, attendance_forms=attendance_forms, attendance_counts=attendance_counts)
 
 def handle_create_team_event(team_id, form):
     user = dbHandler.retrieveUserByUsername(session.get('username'))
@@ -107,7 +113,7 @@ def handle_create_team_event(team_id, form):
             "recurrence_end": form.recurrence_end.data.strftime('%Y-%m-%d') if form.recurrence_end.data != "none" else None
         }
         try:
-            response = requests.post("http://127.0.0.1:3000/api/create_team_event",json=event_data,headers=app_header)
+            response = requests.post("http://127.0.0.1:3000/api/create_team_event",json=event_data,headers=app_header, timeout=5)
             response.raise_for_status()
             if response.status_code == 201:
                 flash("Event created successfully!", "success")
@@ -128,6 +134,20 @@ def handle_delete_team_event (team_id, event_id):
     flash("Event deleted successfully!", "success")
     return redirect(url_for('team_events', team_id=team_id))
 
+def handle_event_attendance (team_id, event_id):
+    user = dbHandler.retrieveUserByUsername(session.get('username'))
+    if not user or user.get('role') != 'Player':
+        return redirect(url_for('team_events', team_id=team_id))
+    form = AttendanceForm()
+    if form.validate_on_submit():
+        dbHandler.set_event_attendance(event_id, user['id'], form.status.data)
+        flash("Your attendance has been recorded.", "success")
+        return redirect(url_for('team_events', team_id=team_id))
+    #pre-fill form if already responded
+    current_status = dbHandler.get_event_attendance(event_id, user['id'])
+    if current_status:
+        form.status.data = current_status
+    return redirect(url_for('team_events', team_id=team_id))
 
 def handle_team_messages(team_id):
     team = dbHandler.get_team_by_id(team_id)

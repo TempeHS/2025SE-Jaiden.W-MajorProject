@@ -7137,3 +7137,796 @@
 2025-05-27 12:06:23,814 127.0.0.1 - - [27/May/2025 12:06:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
 2025-05-27 12:06:23,906 127.0.0.1 - - [27/May/2025 12:06:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
 2025-05-27 12:06:24,037 127.0.0.1 - - [27/May/2025 12:06:24] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-28 23:52:24,374 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.23:5000
+2025-05-28 23:52:24,376 [33mPress CTRL+C to quit[0m
+2025-05-28 23:52:24,377  * Restarting with stat
+2025-05-28 23:52:24,748  * Debugger is active!
+2025-05-28 23:52:24,749  * Debugger PIN: 781-631-028
+2025-05-28 23:52:59,304  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-28 23:52:59,367  * Restarting with stat
+2025-05-28 23:52:59,845  * Debugger is active!
+2025-05-28 23:52:59,845  * Debugger PIN: 781-631-028
+2025-05-28 23:53:01,041  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-28 23:53:01,131  * Restarting with stat
+2025-05-28 23:53:01,612  * Debugger is active!
+2025-05-28 23:53:01,613  * Debugger PIN: 781-631-028
+2025-05-28 23:53:41,316  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-28 23:53:41,389  * Restarting with stat
+2025-05-28 23:53:41,866  * Debugger is active!
+2025-05-28 23:53:41,866  * Debugger PIN: 781-631-028
+2025-05-28 23:54:04,641  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-28 23:54:04,696  * Restarting with stat
+2025-05-28 23:54:05,201  * Debugger is active!
+2025-05-28 23:54:05,201  * Debugger PIN: 781-631-028
+2025-05-28 23:54:28,264 127.0.0.1 - - [28/May/2025 23:54:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-28 23:54:28,399 127.0.0.1 - - [28/May/2025 23:54:28] "GET /login.html HTTP/1.1" 200 -
+2025-05-28 23:54:28,641 127.0.0.1 - - [28/May/2025 23:54:28] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-05-28 23:54:28,651 127.0.0.1 - - [28/May/2025 23:54:28] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-05-28 23:54:28,654 127.0.0.1 - - [28/May/2025 23:54:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-05-28 23:54:29,019 127.0.0.1 - - [28/May/2025 23:54:29] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-05-28 23:54:29,059 127.0.0.1 - - [28/May/2025 23:54:29] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-05-28 23:54:29,151 127.0.0.1 - - [28/May/2025 23:54:29] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-05-28 23:54:29,161 127.0.0.1 - - [28/May/2025 23:54:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-28 23:54:29,273 127.0.0.1 - - [28/May/2025 23:54:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-28 23:54:29,378 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,385 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,393 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,421 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,432 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,434 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,440 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,441 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,446 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,447 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,450 127.0.0.1 - - [28/May/2025 23:54:29] "GET /login.html HTTP/1.1" 200 -
+2025-05-28 23:54:29,453 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,457 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/images/volleyballteam.png HTTP/1.1[0m" 404 -
+2025-05-28 23:54:29,462 127.0.0.1 - - [28/May/2025 23:54:29] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2025-05-28 23:54:40,231 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-28 23:54:40,332 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 55
+2025-05-28 23:54:40,332 User 'TestCoach' logged in, hasn't passed 2FA
+2025-05-28 23:54:40,333 127.0.0.1 - - [28/May/2025 23:54:40] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-28 23:54:40,459 127.0.0.1 - - [28/May/2025 23:54:40] "GET /2fa HTTP/1.1" 200 -
+2025-05-28 23:54:40,730 127.0.0.1 - - [28/May/2025 23:54:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-28 23:54:40,797 127.0.0.1 - - [28/May/2025 23:54:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-28 23:54:40,799 127.0.0.1 - - [28/May/2025 23:54:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-28 23:54:41,007 127.0.0.1 - - [28/May/2025 23:54:41] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-28 23:54:41,070 127.0.0.1 - - [28/May/2025 23:54:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-28 23:54:57,157 2FA successful, User 'TestCoach' logged in successfully
+2025-05-28 23:54:57,158 127.0.0.1 - - [28/May/2025 23:54:57] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-05-28 23:54:57,195 127.0.0.1 - - [28/May/2025 23:54:57] "GET / HTTP/1.1" 200 -
+2025-05-28 23:54:57,343 127.0.0.1 - - [28/May/2025 23:54:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-28 23:54:57,353 127.0.0.1 - - [28/May/2025 23:54:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-28 23:54:57,353 127.0.0.1 - - [28/May/2025 23:54:57] "GET /static/images/volleyballteam.png HTTP/1.1" 200 -
+2025-05-28 23:54:57,358 127.0.0.1 - - [28/May/2025 23:54:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-28 23:54:57,442 127.0.0.1 - - [28/May/2025 23:54:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-28 23:54:57,516 127.0.0.1 - - [28/May/2025 23:54:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-28 23:54:57,668 {"csp-report":{"document-uri":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/","referrer":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/2fa","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-05-28 23:54:57,670 127.0.0.1 - - [28/May/2025 23:54:57] "POST /csp_report HTTP/1.1" 200 -
+2025-05-28 23:55:05,888 127.0.0.1 - - [28/May/2025 23:55:05] "GET /team/1 HTTP/1.1" 200 -
+2025-05-28 23:55:06,092 127.0.0.1 - - [28/May/2025 23:55:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-28 23:55:06,097 127.0.0.1 - - [28/May/2025 23:55:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-28 23:55:06,099 127.0.0.1 - - [28/May/2025 23:55:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-28 23:55:06,104 127.0.0.1 - - [28/May/2025 23:55:06] "GET /static/icons/team_messages_icon.png HTTP/1.1" 200 -
+2025-05-28 23:55:06,106 127.0.0.1 - - [28/May/2025 23:55:06] "GET /static/icons/team_event_icon.png HTTP/1.1" 200 -
+2025-05-28 23:55:06,167 127.0.0.1 - - [28/May/2025 23:55:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-28 23:55:06,202 127.0.0.1 - - [28/May/2025 23:55:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-28 23:55:06,297 127.0.0.1 - - [28/May/2025 23:55:06] "[33mGET /team/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-05-28 23:55:06,299 127.0.0.1 - - [28/May/2025 23:55:06] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-28 23:55:07,353 127.0.0.1 - - [28/May/2025 23:55:07] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-28 23:55:07,513 127.0.0.1 - - [28/May/2025 23:55:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-28 23:55:07,519 127.0.0.1 - - [28/May/2025 23:55:07] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-28 23:55:07,522 127.0.0.1 - - [28/May/2025 23:55:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-28 23:55:07,526 127.0.0.1 - - [28/May/2025 23:55:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-28 23:55:07,531 127.0.0.1 - - [28/May/2025 23:55:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-28 23:55:07,637 127.0.0.1 - - [28/May/2025 23:55:07] "[33mGET /team/1/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-05-28 23:55:07,637 127.0.0.1 - - [28/May/2025 23:55:07] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-28 23:57:30,182 127.0.0.1 - - [28/May/2025 23:57:30] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-28 23:57:31,075 127.0.0.1 - - [28/May/2025 23:57:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-28 23:57:31,079 127.0.0.1 - - [28/May/2025 23:57:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-28 23:57:31,082 127.0.0.1 - - [28/May/2025 23:57:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-28 23:57:31,127 127.0.0.1 - - [28/May/2025 23:57:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-28 23:57:31,128 127.0.0.1 - - [28/May/2025 23:57:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-28 23:57:31,944 127.0.0.1 - - [28/May/2025 23:57:31] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-28 23:58:06,887 127.0.0.1 - - [28/May/2025 23:58:06] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-28 23:58:07,277 127.0.0.1 - - [28/May/2025 23:58:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-28 23:58:07,351 127.0.0.1 - - [28/May/2025 23:58:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-28 23:58:07,415 127.0.0.1 - - [28/May/2025 23:58:07] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-28 23:58:07,418 127.0.0.1 - - [28/May/2025 23:58:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-28 23:58:07,809 127.0.0.1 - - [28/May/2025 23:58:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-28 23:58:08,185 127.0.0.1 - - [28/May/2025 23:58:08] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-28 23:58:13,877 127.0.0.1 - - [28/May/2025 23:58:13] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-28 23:58:14,271 127.0.0.1 - - [28/May/2025 23:58:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-28 23:58:14,347 127.0.0.1 - - [28/May/2025 23:58:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-28 23:58:14,355 127.0.0.1 - - [28/May/2025 23:58:14] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-28 23:58:14,359 127.0.0.1 - - [28/May/2025 23:58:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-28 23:58:14,642 127.0.0.1 - - [28/May/2025 23:58:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-28 23:58:15,348 127.0.0.1 - - [28/May/2025 23:58:15] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:01:01,600 127.0.0.1 - - [29/May/2025 00:01:01] "[35m[1mGET /team/1/create_event HTTP/1.1[0m" 500 -
+2025-05-29 00:01:01,783 127.0.0.1 - - [29/May/2025 00:01:01] "GET /team/1/create_event?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-29 00:01:01,795 127.0.0.1 - - [29/May/2025 00:01:01] "GET /team/1/create_event?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-29 00:01:02,025 127.0.0.1 - - [29/May/2025 00:01:02] "GET /team/1/create_event?__debugger__=yes&cmd=resource&f=console.png&s=XcdhLMO7SU69Zu54YSLm HTTP/1.1" 200 -
+2025-05-29 00:01:02,238 127.0.0.1 - - [29/May/2025 00:01:02] "GET /team/1/create_event?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-29 00:02:12,454 127.0.0.1 - - [29/May/2025 00:02:12] "[35m[1mGET /team/1/create_event HTTP/1.1[0m" 500 -
+2025-05-29 00:02:12,643 127.0.0.1 - - [29/May/2025 00:02:12] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:02:12,647 127.0.0.1 - - [29/May/2025 00:02:12] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-29 00:02:12,705 127.0.0.1 - - [29/May/2025 00:02:12] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=console.png&s=XcdhLMO7SU69Zu54YSLm HTTP/1.1[0m" 304 -
+2025-05-29 00:04:31,244 127.0.0.1 - - [29/May/2025 00:04:31] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:04:31,650 127.0.0.1 - - [29/May/2025 00:04:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:04:31,663 127.0.0.1 - - [29/May/2025 00:04:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:04:31,701 127.0.0.1 - - [29/May/2025 00:04:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:04:31,709 127.0.0.1 - - [29/May/2025 00:04:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:04:31,712 127.0.0.1 - - [29/May/2025 00:04:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:04:31,804 127.0.0.1 - - [29/May/2025 00:04:31] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:04:32,742 127.0.0.1 - - [29/May/2025 00:04:32] "[35m[1mGET /team/1/create_event HTTP/1.1[0m" 500 -
+2025-05-29 00:04:32,835 127.0.0.1 - - [29/May/2025 00:04:32] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:04:32,852 127.0.0.1 - - [29/May/2025 00:04:32] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-29 00:04:32,975 127.0.0.1 - - [29/May/2025 00:04:32] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=console.png&s=XcdhLMO7SU69Zu54YSLm HTTP/1.1[0m" 304 -
+2025-05-29 00:06:38,745 127.0.0.1 - - [29/May/2025 00:06:38] "[35m[1mGET /team/1/create_event HTTP/1.1[0m" 500 -
+2025-05-29 00:06:38,913 127.0.0.1 - - [29/May/2025 00:06:38] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:38,914 127.0.0.1 - - [29/May/2025 00:06:38] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:39,045 127.0.0.1 - - [29/May/2025 00:06:39] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=console.png&s=XcdhLMO7SU69Zu54YSLm HTTP/1.1[0m" 304 -
+2025-05-29 00:06:39,165 127.0.0.1 - - [29/May/2025 00:06:39] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-29 00:06:41,827 127.0.0.1 - - [29/May/2025 00:06:41] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:06:41,930 127.0.0.1 - - [29/May/2025 00:06:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:42,024 127.0.0.1 - - [29/May/2025 00:06:42] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:06:43,188 127.0.0.1 - - [29/May/2025 00:06:43] "[35m[1mGET /team/1/create_event HTTP/1.1[0m" 500 -
+2025-05-29 00:06:43,715 127.0.0.1 - - [29/May/2025 00:06:43] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:43,733 127.0.0.1 - - [29/May/2025 00:06:43] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:43,801 127.0.0.1 - - [29/May/2025 00:06:43] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=console.png&s=XcdhLMO7SU69Zu54YSLm HTTP/1.1[0m" 304 -
+2025-05-29 00:06:46,558 127.0.0.1 - - [29/May/2025 00:06:46] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:06:47,162 127.0.0.1 - - [29/May/2025 00:06:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:47,165 127.0.0.1 - - [29/May/2025 00:06:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:47,167 127.0.0.1 - - [29/May/2025 00:06:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:47,218 127.0.0.1 - - [29/May/2025 00:06:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:47,271 127.0.0.1 - - [29/May/2025 00:06:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:47,337 127.0.0.1 - - [29/May/2025 00:06:47] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:06:47,842 127.0.0.1 - - [29/May/2025 00:06:47] "GET / HTTP/1.1" 200 -
+2025-05-29 00:06:47,965 127.0.0.1 - - [29/May/2025 00:06:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:47,969 127.0.0.1 - - [29/May/2025 00:06:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:47,971 127.0.0.1 - - [29/May/2025 00:06:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:47,973 127.0.0.1 - - [29/May/2025 00:06:47] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-05-29 00:06:48,033 127.0.0.1 - - [29/May/2025 00:06:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:48,076 127.0.0.1 - - [29/May/2025 00:06:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:48,176 {"csp-report":{"document-uri":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/","referrer":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/team/1/events","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-05-29 00:06:48,177 127.0.0.1 - - [29/May/2025 00:06:48] "POST /csp_report HTTP/1.1" 200 -
+2025-05-29 00:06:49,914 127.0.0.1 - - [29/May/2025 00:06:49] "GET /team/1 HTTP/1.1" 200 -
+2025-05-29 00:06:50,044 127.0.0.1 - - [29/May/2025 00:06:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:50,047 127.0.0.1 - - [29/May/2025 00:06:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:50,050 127.0.0.1 - - [29/May/2025 00:06:50] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 00:06:50,053 127.0.0.1 - - [29/May/2025 00:06:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:50,056 127.0.0.1 - - [29/May/2025 00:06:50] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 00:06:50,088 127.0.0.1 - - [29/May/2025 00:06:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:50,128 127.0.0.1 - - [29/May/2025 00:06:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:50,189 127.0.0.1 - - [29/May/2025 00:06:50] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:06:50,871 127.0.0.1 - - [29/May/2025 00:06:50] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:06:51,013 127.0.0.1 - - [29/May/2025 00:06:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:51,032 127.0.0.1 - - [29/May/2025 00:06:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:51,048 127.0.0.1 - - [29/May/2025 00:06:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:51,101 127.0.0.1 - - [29/May/2025 00:06:51] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:51,140 127.0.0.1 - - [29/May/2025 00:06:51] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:51,220 127.0.0.1 - - [29/May/2025 00:06:51] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:06:55,232 127.0.0.1 - - [29/May/2025 00:06:55] "[32mPOST /team/1/delete_event/6 HTTP/1.1[0m" 302 -
+2025-05-29 00:06:55,281 127.0.0.1 - - [29/May/2025 00:06:55] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:06:55,416 127.0.0.1 - - [29/May/2025 00:06:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:55,429 127.0.0.1 - - [29/May/2025 00:06:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:55,430 127.0.0.1 - - [29/May/2025 00:06:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:55,474 127.0.0.1 - - [29/May/2025 00:06:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:55,512 127.0.0.1 - - [29/May/2025 00:06:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:55,581 127.0.0.1 - - [29/May/2025 00:06:55] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:06:58,177 127.0.0.1 - - [29/May/2025 00:06:58] "[35m[1mGET /team/1/create_event HTTP/1.1[0m" 500 -
+2025-05-29 00:06:58,252 127.0.0.1 - - [29/May/2025 00:06:58] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:06:58,257 127.0.0.1 - - [29/May/2025 00:06:58] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-29 00:06:58,326 127.0.0.1 - - [29/May/2025 00:06:58] "[36mGET /team/1/create_event?__debugger__=yes&cmd=resource&f=console.png&s=XcdhLMO7SU69Zu54YSLm HTTP/1.1[0m" 304 -
+2025-05-29 00:07:33,137 127.0.0.1 - - [29/May/2025 00:07:33] "GET /team/1/create_event HTTP/1.1" 200 -
+2025-05-29 00:07:33,271 127.0.0.1 - - [29/May/2025 00:07:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:07:33,274 127.0.0.1 - - [29/May/2025 00:07:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:07:33,304 127.0.0.1 - - [29/May/2025 00:07:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:33,368 127.0.0.1 - - [29/May/2025 00:07:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:33,413 127.0.0.1 - - [29/May/2025 00:07:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:33,474 127.0.0.1 - - [29/May/2025 00:07:33] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:07:40,951 127.0.0.1 - - [29/May/2025 00:07:40] "GET / HTTP/1.1" 200 -
+2025-05-29 00:07:41,083 127.0.0.1 - - [29/May/2025 00:07:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:07:41,086 127.0.0.1 - - [29/May/2025 00:07:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:07:41,089 127.0.0.1 - - [29/May/2025 00:07:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:41,092 127.0.0.1 - - [29/May/2025 00:07:41] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-05-29 00:07:41,153 127.0.0.1 - - [29/May/2025 00:07:41] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:41,194 127.0.0.1 - - [29/May/2025 00:07:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:41,306 {"csp-report":{"document-uri":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/","referrer":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/team/1/create_event","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-05-29 00:07:41,306 127.0.0.1 - - [29/May/2025 00:07:41] "POST /csp_report HTTP/1.1" 200 -
+2025-05-29 00:07:42,525 127.0.0.1 - - [29/May/2025 00:07:42] "GET /team/1 HTTP/1.1" 200 -
+2025-05-29 00:07:42,674 127.0.0.1 - - [29/May/2025 00:07:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:07:42,675 127.0.0.1 - - [29/May/2025 00:07:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:42,676 127.0.0.1 - - [29/May/2025 00:07:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:07:42,677 127.0.0.1 - - [29/May/2025 00:07:42] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 00:07:42,679 127.0.0.1 - - [29/May/2025 00:07:42] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 00:07:42,738 127.0.0.1 - - [29/May/2025 00:07:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:42,829 127.0.0.1 - - [29/May/2025 00:07:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:42,900 127.0.0.1 - - [29/May/2025 00:07:42] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:07:43,521 127.0.0.1 - - [29/May/2025 00:07:43] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:07:43,679 127.0.0.1 - - [29/May/2025 00:07:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:43,682 127.0.0.1 - - [29/May/2025 00:07:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:07:43,684 127.0.0.1 - - [29/May/2025 00:07:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:07:43,771 127.0.0.1 - - [29/May/2025 00:07:43] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:43,815 127.0.0.1 - - [29/May/2025 00:07:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:07:43,910 127.0.0.1 - - [29/May/2025 00:07:43] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:08:28,139  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/main.py', reloading
+2025-05-29 00:08:28,209  * Restarting with stat
+2025-05-29 00:08:28,645  * Debugger is active!
+2025-05-29 00:08:28,646  * Debugger PIN: 781-631-028
+2025-05-29 00:09:19,030  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:09:19,093  * Restarting with stat
+2025-05-29 00:09:19,558  * Debugger is active!
+2025-05-29 00:09:19,559  * Debugger PIN: 781-631-028
+2025-05-29 00:09:32,208  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:09:32,253  * Restarting with stat
+2025-05-29 00:09:32,634  * Debugger is active!
+2025-05-29 00:09:32,634  * Debugger PIN: 781-631-028
+2025-05-29 00:09:47,090  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:09:47,134  * Restarting with stat
+2025-05-29 00:09:47,510  * Debugger is active!
+2025-05-29 00:09:47,511  * Debugger PIN: 781-631-028
+2025-05-29 00:09:53,337  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:09:53,410  * Restarting with stat
+2025-05-29 00:09:53,928  * Debugger is active!
+2025-05-29 00:09:53,928  * Debugger PIN: 781-631-028
+2025-05-29 00:10:19,922  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:10:19,979  * Restarting with stat
+2025-05-29 00:10:20,306  * Debugger is active!
+2025-05-29 00:10:20,306  * Debugger PIN: 781-631-028
+2025-05-29 00:10:44,520  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:10:44,579  * Restarting with stat
+2025-05-29 00:10:44,896  * Debugger is active!
+2025-05-29 00:10:44,897  * Debugger PIN: 781-631-028
+2025-05-29 00:11:00,504  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:11:00,566  * Restarting with stat
+2025-05-29 00:11:01,003  * Debugger is active!
+2025-05-29 00:11:01,003  * Debugger PIN: 781-631-028
+2025-05-29 00:11:40,255  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:11:40,348  * Restarting with stat
+2025-05-29 00:11:40,843  * Debugger is active!
+2025-05-29 00:11:40,843  * Debugger PIN: 781-631-028
+2025-05-29 00:11:46,428  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:11:46,506  * Restarting with stat
+2025-05-29 00:11:46,912  * Debugger is active!
+2025-05-29 00:11:46,912  * Debugger PIN: 781-631-028
+2025-05-29 00:12:38,609  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:12:38,673  * Restarting with stat
+2025-05-29 00:12:39,075  * Debugger is active!
+2025-05-29 00:12:39,076  * Debugger PIN: 781-631-028
+2025-05-29 00:12:45,812  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:12:45,885  * Restarting with stat
+2025-05-29 00:12:46,212  * Debugger is active!
+2025-05-29 00:12:46,213  * Debugger PIN: 781-631-028
+2025-05-29 00:12:50,133  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:12:50,213  * Restarting with stat
+2025-05-29 00:12:50,690  * Debugger is active!
+2025-05-29 00:12:50,691  * Debugger PIN: 781-631-028
+2025-05-29 00:13:07,600  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:13:07,675  * Restarting with stat
+2025-05-29 00:13:08,063  * Debugger is active!
+2025-05-29 00:13:08,064  * Debugger PIN: 781-631-028
+2025-05-29 00:13:57,009  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:13:57,090  * Restarting with stat
+2025-05-29 00:13:57,544  * Debugger is active!
+2025-05-29 00:13:57,544  * Debugger PIN: 781-631-028
+2025-05-29 00:14:13,397  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:14:13,481  * Restarting with stat
+2025-05-29 00:14:13,887  * Debugger is active!
+2025-05-29 00:14:13,888  * Debugger PIN: 781-631-028
+2025-05-29 00:14:18,293  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:14:18,372  * Restarting with stat
+2025-05-29 00:14:18,764  * Debugger is active!
+2025-05-29 00:14:18,764  * Debugger PIN: 781-631-028
+2025-05-29 00:14:44,540  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-05-29 00:14:44,623  * Restarting with stat
+2025-05-29 00:14:45,000  * Debugger is active!
+2025-05-29 00:14:45,001  * Debugger PIN: 781-631-028
+2025-05-29 00:17:39,139  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/authHandlers.py', reloading
+2025-05-29 00:17:39,185  * Restarting with stat
+2025-05-29 00:17:39,651  * Debugger is active!
+2025-05-29 00:17:39,651  * Debugger PIN: 781-631-028
+2025-05-29 00:17:58,335  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/authHandlers.py', reloading
+2025-05-29 00:17:58,390  * Restarting with stat
+2025-05-29 00:22:47,348 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.23:5000
+2025-05-29 00:22:47,349 [33mPress CTRL+C to quit[0m
+2025-05-29 00:22:47,349  * Restarting with stat
+2025-05-29 00:22:47,707  * Debugger is active!
+2025-05-29 00:22:47,707  * Debugger PIN: 781-631-028
+2025-05-29 00:22:49,233 127.0.0.1 - - [29/May/2025 00:22:49] "GET / HTTP/1.1" 200 -
+2025-05-29 00:22:49,651 127.0.0.1 - - [29/May/2025 00:22:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:22:49,670 127.0.0.1 - - [29/May/2025 00:22:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:22:49,700 127.0.0.1 - - [29/May/2025 00:22:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:22:49,704 127.0.0.1 - - [29/May/2025 00:22:49] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-05-29 00:22:49,871 127.0.0.1 - - [29/May/2025 00:22:49] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:22:49,916 127.0.0.1 - - [29/May/2025 00:22:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:22:50,048 {"csp-report":{"document-uri":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/","referrer":"https://ideal-parakeet-7rqgw5vj6gvfx476.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-05-29 00:22:50,049 127.0.0.1 - - [29/May/2025 00:22:50] "POST /csp_report HTTP/1.1" 200 -
+2025-05-29 00:22:56,429 127.0.0.1 - - [29/May/2025 00:22:56] "GET /team/1 HTTP/1.1" 200 -
+2025-05-29 00:22:56,700 127.0.0.1 - - [29/May/2025 00:22:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:22:56,703 127.0.0.1 - - [29/May/2025 00:22:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:22:56,706 127.0.0.1 - - [29/May/2025 00:22:56] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 00:22:56,708 127.0.0.1 - - [29/May/2025 00:22:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:22:56,712 127.0.0.1 - - [29/May/2025 00:22:56] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 00:22:56,764 127.0.0.1 - - [29/May/2025 00:22:56] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:22:56,796 127.0.0.1 - - [29/May/2025 00:22:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:22:56,854 127.0.0.1 - - [29/May/2025 00:22:56] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:22:57,732 127.0.0.1 - - [29/May/2025 00:22:57] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:22:57,868 127.0.0.1 - - [29/May/2025 00:22:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:22:57,871 127.0.0.1 - - [29/May/2025 00:22:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:22:57,873 127.0.0.1 - - [29/May/2025 00:22:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:22:57,940 127.0.0.1 - - [29/May/2025 00:22:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:22:57,974 127.0.0.1 - - [29/May/2025 00:22:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:22:58,036 127.0.0.1 - - [29/May/2025 00:22:58] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:25:28,252 127.0.0.1 - - [29/May/2025 00:25:28] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:25:28,582 127.0.0.1 - - [29/May/2025 00:25:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:25:28,610 127.0.0.1 - - [29/May/2025 00:25:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:25:28,613 127.0.0.1 - - [29/May/2025 00:25:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:25:28,768 127.0.0.1 - - [29/May/2025 00:25:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:25:28,904 127.0.0.1 - - [29/May/2025 00:25:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:25:28,954 127.0.0.1 - - [29/May/2025 00:25:28] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:26:13,381 127.0.0.1 - - [29/May/2025 00:26:13] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:26:13,494 127.0.0.1 - - [29/May/2025 00:26:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:26:13,499 127.0.0.1 - - [29/May/2025 00:26:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:26:13,501 127.0.0.1 - - [29/May/2025 00:26:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:26:13,506 127.0.0.1 - - [29/May/2025 00:26:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:26:13,507 127.0.0.1 - - [29/May/2025 00:26:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:26:13,610 127.0.0.1 - - [29/May/2025 00:26:13] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:26:49,106 127.0.0.1 - - [29/May/2025 00:26:49] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:26:49,243 127.0.0.1 - - [29/May/2025 00:26:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:26:49,247 127.0.0.1 - - [29/May/2025 00:26:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:26:49,250 127.0.0.1 - - [29/May/2025 00:26:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:26:49,324 127.0.0.1 - - [29/May/2025 00:26:49] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:26:49,356 127.0.0.1 - - [29/May/2025 00:26:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:26:49,417 127.0.0.1 - - [29/May/2025 00:26:49] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:29:30,626 127.0.0.1 - - [29/May/2025 00:29:30] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:29:30,885 127.0.0.1 - - [29/May/2025 00:29:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:29:30,887 127.0.0.1 - - [29/May/2025 00:29:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:29:30,889 127.0.0.1 - - [29/May/2025 00:29:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:29:31,013 127.0.0.1 - - [29/May/2025 00:29:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:29:31,119 127.0.0.1 - - [29/May/2025 00:29:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:29:31,185 127.0.0.1 - - [29/May/2025 00:29:31] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:30:16,221 127.0.0.1 - - [29/May/2025 00:30:16] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:30:16,332 127.0.0.1 - - [29/May/2025 00:30:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:30:16,336 127.0.0.1 - - [29/May/2025 00:30:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:30:16,375 127.0.0.1 - - [29/May/2025 00:30:16] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:30:16,378 127.0.0.1 - - [29/May/2025 00:30:16] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:30:17,392 127.0.0.1 - - [29/May/2025 00:30:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:30:17,472 127.0.0.1 - - [29/May/2025 00:30:17] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:32:10,816 127.0.0.1 - - [29/May/2025 00:32:10] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:32:10,973 127.0.0.1 - - [29/May/2025 00:32:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:32:11,111 127.0.0.1 - - [29/May/2025 00:32:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:11,125 127.0.0.1 - - [29/May/2025 00:32:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:32:11,144 127.0.0.1 - - [29/May/2025 00:32:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:11,156 127.0.0.1 - - [29/May/2025 00:32:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:11,227 127.0.0.1 - - [29/May/2025 00:32:11] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:32:19,050 127.0.0.1 - - [29/May/2025 00:32:19] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:32:19,172 127.0.0.1 - - [29/May/2025 00:32:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:32:19,172 127.0.0.1 - - [29/May/2025 00:32:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:32:19,175 127.0.0.1 - - [29/May/2025 00:32:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:19,235 127.0.0.1 - - [29/May/2025 00:32:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:19,272 127.0.0.1 - - [29/May/2025 00:32:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:19,358 127.0.0.1 - - [29/May/2025 00:32:19] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:32:48,562 127.0.0.1 - - [29/May/2025 00:32:48] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:32:48,835 127.0.0.1 - - [29/May/2025 00:32:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:32:48,844 127.0.0.1 - - [29/May/2025 00:32:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:48,844 127.0.0.1 - - [29/May/2025 00:32:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:32:48,893 127.0.0.1 - - [29/May/2025 00:32:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:48,935 127.0.0.1 - - [29/May/2025 00:32:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:49,019 127.0.0.1 - - [29/May/2025 00:32:49] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:32:57,815 127.0.0.1 - - [29/May/2025 00:32:57] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:32:57,930 127.0.0.1 - - [29/May/2025 00:32:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:32:57,934 127.0.0.1 - - [29/May/2025 00:32:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:32:58,007 127.0.0.1 - - [29/May/2025 00:32:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:58,009 127.0.0.1 - - [29/May/2025 00:32:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:58,012 127.0.0.1 - - [29/May/2025 00:32:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:32:58,097 127.0.0.1 - - [29/May/2025 00:32:58] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:33:08,078 127.0.0.1 - - [29/May/2025 00:33:08] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:33:08,191 127.0.0.1 - - [29/May/2025 00:33:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:33:08,195 127.0.0.1 - - [29/May/2025 00:33:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:33:08,198 127.0.0.1 - - [29/May/2025 00:33:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:33:08,200 127.0.0.1 - - [29/May/2025 00:33:08] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:33:08,203 127.0.0.1 - - [29/May/2025 00:33:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:33:08,290 127.0.0.1 - - [29/May/2025 00:33:08] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:34:09,089 127.0.0.1 - - [29/May/2025 00:34:09] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:34:09,207 127.0.0.1 - - [29/May/2025 00:34:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:34:09,211 127.0.0.1 - - [29/May/2025 00:34:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:34:09,213 127.0.0.1 - - [29/May/2025 00:34:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:34:09,273 127.0.0.1 - - [29/May/2025 00:34:09] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:34:09,309 127.0.0.1 - - [29/May/2025 00:34:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:34:09,369 127.0.0.1 - - [29/May/2025 00:34:09] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:34:40,311 127.0.0.1 - - [29/May/2025 00:34:40] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:34:40,437 127.0.0.1 - - [29/May/2025 00:34:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:34:40,438 127.0.0.1 - - [29/May/2025 00:34:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:34:40,487 127.0.0.1 - - [29/May/2025 00:34:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:34:40,491 127.0.0.1 - - [29/May/2025 00:34:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:34:40,493 127.0.0.1 - - [29/May/2025 00:34:40] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:34:40,640 127.0.0.1 - - [29/May/2025 00:34:40] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 00:34:47,753 127.0.0.1 - - [29/May/2025 00:34:47] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 00:34:47,864 127.0.0.1 - - [29/May/2025 00:34:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 00:34:47,867 127.0.0.1 - - [29/May/2025 00:34:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 00:34:47,906 127.0.0.1 - - [29/May/2025 00:34:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 00:34:47,937 127.0.0.1 - - [29/May/2025 00:34:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 00:34:47,965 127.0.0.1 - - [29/May/2025 00:34:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 00:34:48,022 127.0.0.1 - - [29/May/2025 00:34:48] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 11:28:08,434 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.109:5000
+2025-05-29 11:28:08,435 [33mPress CTRL+C to quit[0m
+2025-05-29 11:28:08,436  * Restarting with stat
+2025-05-29 11:28:08,828  * Debugger is active!
+2025-05-29 11:28:08,829  * Debugger PIN: 124-657-513
+2025-05-29 11:28:12,874 127.0.0.1 - - [29/May/2025 11:28:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-29 11:28:13,069 127.0.0.1 - - [29/May/2025 11:28:13] "GET /login.html HTTP/1.1" 200 -
+2025-05-29 11:28:13,326 127.0.0.1 - - [29/May/2025 11:28:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 11:28:13,345 127.0.0.1 - - [29/May/2025 11:28:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 11:28:13,354 127.0.0.1 - - [29/May/2025 11:28:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 11:28:13,545 127.0.0.1 - - [29/May/2025 11:28:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 11:28:13,599 127.0.0.1 - - [29/May/2025 11:28:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 11:28:27,634 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-29 11:28:27,749 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 55
+2025-05-29 11:28:27,749 User 'TestCoach' logged in, hasn't passed 2FA
+2025-05-29 11:28:27,751 127.0.0.1 - - [29/May/2025 11:28:27] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-29 11:28:27,807 127.0.0.1 - - [29/May/2025 11:28:27] "GET /2fa HTTP/1.1" 200 -
+2025-05-29 11:28:27,915 127.0.0.1 - - [29/May/2025 11:28:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 11:28:28,010 127.0.0.1 - - [29/May/2025 11:28:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 11:28:28,017 127.0.0.1 - - [29/May/2025 11:28:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 11:28:28,215 127.0.0.1 - - [29/May/2025 11:28:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 11:28:28,284 127.0.0.1 - - [29/May/2025 11:28:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 11:29:05,163 2FA successful, User 'TestCoach' logged in successfully
+2025-05-29 11:29:05,165 127.0.0.1 - - [29/May/2025 11:29:05] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-05-29 11:29:05,563 127.0.0.1 - - [29/May/2025 11:29:05] "GET / HTTP/1.1" 200 -
+2025-05-29 11:29:05,841 127.0.0.1 - - [29/May/2025 11:29:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 11:29:05,846 127.0.0.1 - - [29/May/2025 11:29:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 11:29:05,852 127.0.0.1 - - [29/May/2025 11:29:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 11:29:05,855 127.0.0.1 - - [29/May/2025 11:29:05] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-05-29 11:29:06,017 127.0.0.1 - - [29/May/2025 11:29:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 11:29:06,806 127.0.0.1 - - [29/May/2025 11:29:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 11:29:09,540 127.0.0.1 - - [29/May/2025 11:29:09] "GET /team/1 HTTP/1.1" 200 -
+2025-05-29 11:29:09,708 127.0.0.1 - - [29/May/2025 11:29:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 11:29:09,711 127.0.0.1 - - [29/May/2025 11:29:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 11:29:09,716 127.0.0.1 - - [29/May/2025 11:29:09] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 11:29:09,719 127.0.0.1 - - [29/May/2025 11:29:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 11:29:09,722 127.0.0.1 - - [29/May/2025 11:29:09] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 11:29:09,802 127.0.0.1 - - [29/May/2025 11:29:09] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 11:29:09,979 127.0.0.1 - - [29/May/2025 11:29:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 11:29:10,053 127.0.0.1 - - [29/May/2025 11:29:10] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 11:29:10,065 127.0.0.1 - - [29/May/2025 11:29:10] "[33mGET /team/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-05-29 11:29:10,400 127.0.0.1 - - [29/May/2025 11:29:10] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 11:29:10,514 127.0.0.1 - - [29/May/2025 11:29:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 11:29:10,517 127.0.0.1 - - [29/May/2025 11:29:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 11:29:10,649 127.0.0.1 - - [29/May/2025 11:29:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 11:29:10,652 127.0.0.1 - - [29/May/2025 11:29:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 11:29:10,654 127.0.0.1 - - [29/May/2025 11:29:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 11:29:10,743 127.0.0.1 - - [29/May/2025 11:29:10] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 11:29:11,089 127.0.0.1 - - [29/May/2025 11:29:11] "[33mGET /team/1/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-05-29 11:37:51,625 127.0.0.1 - - [29/May/2025 11:37:51] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 11:37:52,029 127.0.0.1 - - [29/May/2025 11:37:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 11:37:52,034 127.0.0.1 - - [29/May/2025 11:37:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 11:37:52,076 127.0.0.1 - - [29/May/2025 11:37:52] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 11:37:52,086 127.0.0.1 - - [29/May/2025 11:37:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 11:37:52,091 127.0.0.1 - - [29/May/2025 11:37:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 11:37:52,199 127.0.0.1 - - [29/May/2025 11:37:52] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 11:37:52,220 127.0.0.1 - - [29/May/2025 11:37:52] "[33mGET /team/1/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-05-29 11:38:01,603 127.0.0.1 - - [29/May/2025 11:38:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 11:38:01,607 127.0.0.1 - - [29/May/2025 11:38:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 11:38:01,711 127.0.0.1 - - [29/May/2025 11:38:01] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-05-29 11:38:01,716 127.0.0.1 - - [29/May/2025 11:38:01] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-05-29 11:46:41,356  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-29 11:46:41,401  * Restarting with stat
+2025-05-29 11:46:41,723  * Debugger is active!
+2025-05-29 11:46:41,724  * Debugger PIN: 124-657-513
+2025-05-29 11:49:56,577  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-29 11:49:56,624  * Restarting with stat
+2025-05-29 11:50:53,736 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.109:5000
+2025-05-29 11:50:53,737 [33mPress CTRL+C to quit[0m
+2025-05-29 11:50:53,737  * Restarting with stat
+2025-05-29 11:50:54,268  * Debugger is active!
+2025-05-29 11:50:54,269  * Debugger PIN: 124-657-513
+2025-05-29 11:51:05,433 127.0.0.1 - - [29/May/2025 11:51:05] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 11:51:05,807 127.0.0.1 - - [29/May/2025 11:51:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 11:51:05,810 127.0.0.1 - - [29/May/2025 11:51:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 11:51:05,834 127.0.0.1 - - [29/May/2025 11:51:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 11:51:05,835 127.0.0.1 - - [29/May/2025 11:51:05] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 11:51:05,836 127.0.0.1 - - [29/May/2025 11:51:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 11:51:05,946 127.0.0.1 - - [29/May/2025 11:51:05] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 11:51:05,962 127.0.0.1 - - [29/May/2025 11:51:05] "[33mGET /team/1/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-05-29 11:51:16,405  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-29 11:51:16,456  * Restarting with stat
+2025-05-29 12:12:57,299 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.109:5000
+2025-05-29 12:12:57,300 [33mPress CTRL+C to quit[0m
+2025-05-29 12:12:57,300  * Restarting with stat
+2025-05-29 12:12:57,616  * Debugger is active!
+2025-05-29 12:12:57,617  * Debugger PIN: 124-657-513
+2025-05-29 12:12:59,499 127.0.0.1 - - [29/May/2025 12:12:59] "GET / HTTP/1.1" 200 -
+2025-05-29 12:12:59,943 127.0.0.1 - - [29/May/2025 12:12:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:12:59,987 127.0.0.1 - - [29/May/2025 12:12:59] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-05-29 12:13:00,017 127.0.0.1 - - [29/May/2025 12:13:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:00,019 127.0.0.1 - - [29/May/2025 12:13:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:13:00,451 127.0.0.1 - - [29/May/2025 12:13:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:00,506 127.0.0.1 - - [29/May/2025 12:13:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:00,702 {"csp-report":{"document-uri":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/","referrer":"https://ideal-parakeet-7rqgw5vj6gvfx476.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://ideal-parakeet-7rqgw5vj6gvfx476-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-05-29 12:13:00,703 127.0.0.1 - - [29/May/2025 12:13:00] "POST /csp_report HTTP/1.1" 200 -
+2025-05-29 12:13:06,180 127.0.0.1 - - [29/May/2025 12:13:06] "GET /team/1 HTTP/1.1" 200 -
+2025-05-29 12:13:06,308 127.0.0.1 - - [29/May/2025 12:13:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:13:06,313 127.0.0.1 - - [29/May/2025 12:13:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:13:06,318 127.0.0.1 - - [29/May/2025 12:13:06] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 12:13:06,324 127.0.0.1 - - [29/May/2025 12:13:06] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 12:13:06,328 127.0.0.1 - - [29/May/2025 12:13:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:06,379 127.0.0.1 - - [29/May/2025 12:13:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:06,419 127.0.0.1 - - [29/May/2025 12:13:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:06,498 127.0.0.1 - - [29/May/2025 12:13:06] "[33mGET /team/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-05-29 12:13:06,501 127.0.0.1 - - [29/May/2025 12:13:06] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:13:06,941 127.0.0.1 - - [29/May/2025 12:13:06] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:13:07,075 127.0.0.1 - - [29/May/2025 12:13:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:13:07,078 127.0.0.1 - - [29/May/2025 12:13:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:07,082 127.0.0.1 - - [29/May/2025 12:13:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:13:07,085 127.0.0.1 - - [29/May/2025 12:13:07] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:07,087 127.0.0.1 - - [29/May/2025 12:13:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:07,176 127.0.0.1 - - [29/May/2025 12:13:07] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:13:19,771 127.0.0.1 - - [29/May/2025 12:13:19] "[32mPOST /team/1/event/3/attendance HTTP/1.1[0m" 302 -
+2025-05-29 12:13:19,819 127.0.0.1 - - [29/May/2025 12:13:19] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:13:19,933 127.0.0.1 - - [29/May/2025 12:13:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:13:19,939 127.0.0.1 - - [29/May/2025 12:13:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:13:19,942 127.0.0.1 - - [29/May/2025 12:13:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:19,952 127.0.0.1 - - [29/May/2025 12:13:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:19,955 127.0.0.1 - - [29/May/2025 12:13:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:13:20,031 127.0.0.1 - - [29/May/2025 12:13:20] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:14:44,170 127.0.0.1 - - [29/May/2025 12:14:44] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:14:44,306 127.0.0.1 - - [29/May/2025 12:14:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:14:44,314 127.0.0.1 - - [29/May/2025 12:14:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:14:44,317 127.0.0.1 - - [29/May/2025 12:14:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:14:44,321 127.0.0.1 - - [29/May/2025 12:14:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:14:44,390 127.0.0.1 - - [29/May/2025 12:14:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:14:44,474 127.0.0.1 - - [29/May/2025 12:14:44] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:14:54,730 127.0.0.1 - - [29/May/2025 12:14:54] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:14:54,854 127.0.0.1 - - [29/May/2025 12:14:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:14:54,858 127.0.0.1 - - [29/May/2025 12:14:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:14:54,864 127.0.0.1 - - [29/May/2025 12:14:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:14:54,922 127.0.0.1 - - [29/May/2025 12:14:54] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:14:54,970 127.0.0.1 - - [29/May/2025 12:14:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:14:55,048 127.0.0.1 - - [29/May/2025 12:14:55] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:15:02,211 127.0.0.1 - - [29/May/2025 12:15:02] "GET / HTTP/1.1" 200 -
+2025-05-29 12:15:02,329 127.0.0.1 - - [29/May/2025 12:15:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:02,344 127.0.0.1 - - [29/May/2025 12:15:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:02,350 127.0.0.1 - - [29/May/2025 12:15:02] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-05-29 12:15:02,355 127.0.0.1 - - [29/May/2025 12:15:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:02,407 127.0.0.1 - - [29/May/2025 12:15:02] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:02,458 127.0.0.1 - - [29/May/2025 12:15:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:03,842 User 'TestCoach' logged out successfully
+2025-05-29 12:15:03,843 127.0.0.1 - - [29/May/2025 12:15:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-29 12:15:03,890 127.0.0.1 - - [29/May/2025 12:15:03] "GET /login.html HTTP/1.1" 200 -
+2025-05-29 12:15:03,985 127.0.0.1 - - [29/May/2025 12:15:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:03,998 127.0.0.1 - - [29/May/2025 12:15:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:04,002 127.0.0.1 - - [29/May/2025 12:15:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:04,055 127.0.0.1 - - [29/May/2025 12:15:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:04,106 127.0.0.1 - - [29/May/2025 12:15:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:09,635 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-29 12:15:09,743 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 56
+2025-05-29 12:15:09,743 User 'TestUser' logged in, hasn't passed 2FA
+2025-05-29 12:15:09,745 127.0.0.1 - - [29/May/2025 12:15:09] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-29 12:15:09,804 127.0.0.1 - - [29/May/2025 12:15:09] "GET /2fa HTTP/1.1" 200 -
+2025-05-29 12:15:09,924 127.0.0.1 - - [29/May/2025 12:15:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:09,929 127.0.0.1 - - [29/May/2025 12:15:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:09,934 127.0.0.1 - - [29/May/2025 12:15:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:10,007 127.0.0.1 - - [29/May/2025 12:15:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:10,056 127.0.0.1 - - [29/May/2025 12:15:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:22,536 2FA successful, User 'TestUser' logged in successfully
+2025-05-29 12:15:22,537 127.0.0.1 - - [29/May/2025 12:15:22] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-05-29 12:15:22,598 127.0.0.1 - - [29/May/2025 12:15:22] "GET / HTTP/1.1" 200 -
+2025-05-29 12:15:22,729 127.0.0.1 - - [29/May/2025 12:15:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:22,734 127.0.0.1 - - [29/May/2025 12:15:22] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-05-29 12:15:22,736 127.0.0.1 - - [29/May/2025 12:15:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:22,739 127.0.0.1 - - [29/May/2025 12:15:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:22,802 127.0.0.1 - - [29/May/2025 12:15:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:22,858 127.0.0.1 - - [29/May/2025 12:15:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:23,811 127.0.0.1 - - [29/May/2025 12:15:23] "GET /team/1 HTTP/1.1" 200 -
+2025-05-29 12:15:23,942 127.0.0.1 - - [29/May/2025 12:15:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:23,945 127.0.0.1 - - [29/May/2025 12:15:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:23,951 127.0.0.1 - - [29/May/2025 12:15:23] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 12:15:23,954 127.0.0.1 - - [29/May/2025 12:15:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:23,957 127.0.0.1 - - [29/May/2025 12:15:23] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 12:15:24,006 127.0.0.1 - - [29/May/2025 12:15:24] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:24,051 127.0.0.1 - - [29/May/2025 12:15:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:24,135 127.0.0.1 - - [29/May/2025 12:15:24] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:15:24,498 127.0.0.1 - - [29/May/2025 12:15:24] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:15:24,633 127.0.0.1 - - [29/May/2025 12:15:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:24,636 127.0.0.1 - - [29/May/2025 12:15:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:24,639 127.0.0.1 - - [29/May/2025 12:15:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:24,641 127.0.0.1 - - [29/May/2025 12:15:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:24,644 127.0.0.1 - - [29/May/2025 12:15:24] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:24,746 127.0.0.1 - - [29/May/2025 12:15:24] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:15:32,418 127.0.0.1 - - [29/May/2025 12:15:32] "[32mPOST /team/1/event/3/attendance HTTP/1.1[0m" 302 -
+2025-05-29 12:15:32,459 127.0.0.1 - - [29/May/2025 12:15:32] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:15:32,572 127.0.0.1 - - [29/May/2025 12:15:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:32,587 127.0.0.1 - - [29/May/2025 12:15:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:32,590 127.0.0.1 - - [29/May/2025 12:15:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:15:32,593 127.0.0.1 - - [29/May/2025 12:15:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:32,595 127.0.0.1 - - [29/May/2025 12:15:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:15:32,680 127.0.0.1 - - [29/May/2025 12:15:32] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:17:08,742 127.0.0.1 - - [29/May/2025 12:17:08] "GET / HTTP/1.1" 200 -
+2025-05-29 12:17:08,943 127.0.0.1 - - [29/May/2025 12:17:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:09,116 127.0.0.1 - - [29/May/2025 12:17:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:09,121 127.0.0.1 - - [29/May/2025 12:17:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:09,123 127.0.0.1 - - [29/May/2025 12:17:09] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-05-29 12:17:09,247 127.0.0.1 - - [29/May/2025 12:17:09] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:09,304 127.0.0.1 - - [29/May/2025 12:17:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:12,907 127.0.0.1 - - [29/May/2025 12:17:12] "GET /team/1 HTTP/1.1" 200 -
+2025-05-29 12:17:13,025 127.0.0.1 - - [29/May/2025 12:17:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:13,035 127.0.0.1 - - [29/May/2025 12:17:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:13,045 127.0.0.1 - - [29/May/2025 12:17:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:13,048 127.0.0.1 - - [29/May/2025 12:17:13] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 12:17:13,052 127.0.0.1 - - [29/May/2025 12:17:13] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 12:17:13,100 127.0.0.1 - - [29/May/2025 12:17:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:13,184 127.0.0.1 - - [29/May/2025 12:17:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:13,486 127.0.0.1 - - [29/May/2025 12:17:13] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:17:16,871 127.0.0.1 - - [29/May/2025 12:17:16] "GET / HTTP/1.1" 200 -
+2025-05-29 12:17:16,996 127.0.0.1 - - [29/May/2025 12:17:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:17,000 127.0.0.1 - - [29/May/2025 12:17:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:17,004 127.0.0.1 - - [29/May/2025 12:17:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:17,007 127.0.0.1 - - [29/May/2025 12:17:17] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-05-29 12:17:17,061 127.0.0.1 - - [29/May/2025 12:17:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:17,109 127.0.0.1 - - [29/May/2025 12:17:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:22,924 User 'TestUser' logged out successfully
+2025-05-29 12:17:22,925 127.0.0.1 - - [29/May/2025 12:17:22] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-29 12:17:22,964 127.0.0.1 - - [29/May/2025 12:17:22] "GET /login.html HTTP/1.1" 200 -
+2025-05-29 12:17:23,131 127.0.0.1 - - [29/May/2025 12:17:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:23,135 127.0.0.1 - - [29/May/2025 12:17:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:23,138 127.0.0.1 - - [29/May/2025 12:17:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:23,195 127.0.0.1 - - [29/May/2025 12:17:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:23,243 127.0.0.1 - - [29/May/2025 12:17:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:28,975 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-29 12:17:29,079 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 55
+2025-05-29 12:17:29,080 User 'TestCoach' logged in, hasn't passed 2FA
+2025-05-29 12:17:29,081 127.0.0.1 - - [29/May/2025 12:17:29] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-29 12:17:29,126 127.0.0.1 - - [29/May/2025 12:17:29] "GET /2fa HTTP/1.1" 200 -
+2025-05-29 12:17:29,263 127.0.0.1 - - [29/May/2025 12:17:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:29,269 127.0.0.1 - - [29/May/2025 12:17:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:29,285 127.0.0.1 - - [29/May/2025 12:17:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:29,340 127.0.0.1 - - [29/May/2025 12:17:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:29,391 127.0.0.1 - - [29/May/2025 12:17:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:41,379 Invalid 2FA token for user: TestCoach
+2025-05-29 12:17:41,381 127.0.0.1 - - [29/May/2025 12:17:41] "POST /2fa HTTP/1.1" 200 -
+2025-05-29 12:17:41,497 127.0.0.1 - - [29/May/2025 12:17:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:41,501 127.0.0.1 - - [29/May/2025 12:17:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:41,503 127.0.0.1 - - [29/May/2025 12:17:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:41,552 127.0.0.1 - - [29/May/2025 12:17:41] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:41,598 127.0.0.1 - - [29/May/2025 12:17:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:47,078 Invalid 2FA token for user: TestCoach
+2025-05-29 12:17:47,080 127.0.0.1 - - [29/May/2025 12:17:47] "POST /2fa HTTP/1.1" 200 -
+2025-05-29 12:17:47,179 127.0.0.1 - - [29/May/2025 12:17:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:47,185 127.0.0.1 - - [29/May/2025 12:17:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:17:47,193 127.0.0.1 - - [29/May/2025 12:17:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:47,245 127.0.0.1 - - [29/May/2025 12:17:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:17:47,295 127.0.0.1 - - [29/May/2025 12:17:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:03,980 Invalid 2FA token for user: TestCoach
+2025-05-29 12:18:03,981 127.0.0.1 - - [29/May/2025 12:18:03] "POST /2fa HTTP/1.1" 200 -
+2025-05-29 12:18:04,100 127.0.0.1 - - [29/May/2025 12:18:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:04,103 127.0.0.1 - - [29/May/2025 12:18:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:04,105 127.0.0.1 - - [29/May/2025 12:18:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:04,161 127.0.0.1 - - [29/May/2025 12:18:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:04,206 127.0.0.1 - - [29/May/2025 12:18:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:19,687 127.0.0.1 - - [29/May/2025 12:18:19] "GET /login.html HTTP/1.1" 200 -
+2025-05-29 12:18:19,781 127.0.0.1 - - [29/May/2025 12:18:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:19,785 127.0.0.1 - - [29/May/2025 12:18:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:19,791 127.0.0.1 - - [29/May/2025 12:18:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:19,853 127.0.0.1 - - [29/May/2025 12:18:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:19,901 127.0.0.1 - - [29/May/2025 12:18:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:27,604 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-05-29 12:18:27,705 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 55
+2025-05-29 12:18:27,705 User 'TestCoach' logged in, hasn't passed 2FA
+2025-05-29 12:18:27,707 127.0.0.1 - - [29/May/2025 12:18:27] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-05-29 12:18:27,747 127.0.0.1 - - [29/May/2025 12:18:27] "GET /2fa HTTP/1.1" 200 -
+2025-05-29 12:18:27,871 127.0.0.1 - - [29/May/2025 12:18:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:27,874 127.0.0.1 - - [29/May/2025 12:18:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:27,876 127.0.0.1 - - [29/May/2025 12:18:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:27,943 127.0.0.1 - - [29/May/2025 12:18:27] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:27,990 127.0.0.1 - - [29/May/2025 12:18:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:36,230 2FA successful, User 'TestCoach' logged in successfully
+2025-05-29 12:18:36,231 127.0.0.1 - - [29/May/2025 12:18:36] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-05-29 12:18:36,317 127.0.0.1 - - [29/May/2025 12:18:36] "GET / HTTP/1.1" 200 -
+2025-05-29 12:18:36,436 127.0.0.1 - - [29/May/2025 12:18:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:36,452 127.0.0.1 - - [29/May/2025 12:18:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:36,457 127.0.0.1 - - [29/May/2025 12:18:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:36,459 127.0.0.1 - - [29/May/2025 12:18:36] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-05-29 12:18:36,516 127.0.0.1 - - [29/May/2025 12:18:36] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:36,577 127.0.0.1 - - [29/May/2025 12:18:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:37,584 127.0.0.1 - - [29/May/2025 12:18:37] "GET /team/1 HTTP/1.1" 200 -
+2025-05-29 12:18:37,699 127.0.0.1 - - [29/May/2025 12:18:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:37,717 127.0.0.1 - - [29/May/2025 12:18:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:37,733 127.0.0.1 - - [29/May/2025 12:18:37] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 12:18:37,738 127.0.0.1 - - [29/May/2025 12:18:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:37,738 127.0.0.1 - - [29/May/2025 12:18:37] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-05-29 12:18:37,785 127.0.0.1 - - [29/May/2025 12:18:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:37,834 127.0.0.1 - - [29/May/2025 12:18:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:37,902 127.0.0.1 - - [29/May/2025 12:18:37] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:18:43,873 127.0.0.1 - - [29/May/2025 12:18:43] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:18:43,966 127.0.0.1 - - [29/May/2025 12:18:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:43,974 127.0.0.1 - - [29/May/2025 12:18:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:43,979 127.0.0.1 - - [29/May/2025 12:18:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:18:44,036 127.0.0.1 - - [29/May/2025 12:18:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:44,079 127.0.0.1 - - [29/May/2025 12:18:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:18:44,162 127.0.0.1 - - [29/May/2025 12:18:44] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:21:47,357  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/teamHandlers.py', reloading
+2025-05-29 12:21:47,412  * Restarting with stat
+2025-05-29 12:21:47,814  * Debugger is active!
+2025-05-29 12:21:47,815  * Debugger PIN: 124-657-513
+2025-05-29 12:22:51,720  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/teamHandlers.py', reloading
+2025-05-29 12:22:51,779  * Restarting with stat
+2025-05-29 12:22:52,179  * Debugger is active!
+2025-05-29 12:22:52,179  * Debugger PIN: 124-657-513
+2025-05-29 12:24:06,401  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-29 12:24:06,446  * Restarting with stat
+2025-05-29 12:24:06,809  * Debugger is active!
+2025-05-29 12:24:06,810  * Debugger PIN: 124-657-513
+2025-05-29 12:25:15,258  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-05-29 12:25:15,304  * Restarting with stat
+2025-05-29 12:25:15,672  * Debugger is active!
+2025-05-29 12:25:15,672  * Debugger PIN: 124-657-513
+2025-05-29 12:25:59,955  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/teamHandlers.py', reloading
+2025-05-29 12:26:00,000  * Restarting with stat
+2025-05-29 12:26:00,341  * Debugger is active!
+2025-05-29 12:26:00,342  * Debugger PIN: 124-657-513
+2025-05-29 12:26:18,580  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/teamHandlers.py', reloading
+2025-05-29 12:26:18,640  * Restarting with stat
+2025-05-29 12:26:18,992  * Debugger is active!
+2025-05-29 12:26:18,993  * Debugger PIN: 124-657-513
+2025-05-29 12:26:24,339  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/teamHandlers.py', reloading
+2025-05-29 12:26:24,386  * Restarting with stat
+2025-05-29 12:26:24,751  * Debugger is active!
+2025-05-29 12:26:24,751  * Debugger PIN: 124-657-513
+2025-05-29 12:27:14,788 127.0.0.1 - - [29/May/2025 12:27:14] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:27:14,976 127.0.0.1 - - [29/May/2025 12:27:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:27:15,065 127.0.0.1 - - [29/May/2025 12:27:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:27:15,148 127.0.0.1 - - [29/May/2025 12:27:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:27:15,355 127.0.0.1 - - [29/May/2025 12:27:15] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:27:15,713 127.0.0.1 - - [29/May/2025 12:27:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:27:15,800 127.0.0.1 - - [29/May/2025 12:27:15] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:27:42,461 127.0.0.1 - - [29/May/2025 12:27:42] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:27:42,591 127.0.0.1 - - [29/May/2025 12:27:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:27:42,596 127.0.0.1 - - [29/May/2025 12:27:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:27:42,665 127.0.0.1 - - [29/May/2025 12:27:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:27:42,727 127.0.0.1 - - [29/May/2025 12:27:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:27:42,783 127.0.0.1 - - [29/May/2025 12:27:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:27:42,875 127.0.0.1 - - [29/May/2025 12:27:42] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:27:43,299 127.0.0.1 - - [29/May/2025 12:27:43] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:27:43,417 127.0.0.1 - - [29/May/2025 12:27:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:27:43,429 127.0.0.1 - - [29/May/2025 12:27:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:27:43,441 127.0.0.1 - - [29/May/2025 12:27:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:27:43,512 127.0.0.1 - - [29/May/2025 12:27:43] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:27:43,573 127.0.0.1 - - [29/May/2025 12:27:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:27:43,669 127.0.0.1 - - [29/May/2025 12:27:43] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:30:29,201 127.0.0.1 - - [29/May/2025 12:30:29] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:30:29,542 127.0.0.1 - - [29/May/2025 12:30:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:30:29,544 127.0.0.1 - - [29/May/2025 12:30:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:30:29,549 127.0.0.1 - - [29/May/2025 12:30:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:30:29,697 127.0.0.1 - - [29/May/2025 12:30:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:30:29,878 127.0.0.1 - - [29/May/2025 12:30:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:30:29,972 127.0.0.1 - - [29/May/2025 12:30:29] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:30:42,495 127.0.0.1 - - [29/May/2025 12:30:42] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:30:42,619 127.0.0.1 - - [29/May/2025 12:30:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:30:42,622 127.0.0.1 - - [29/May/2025 12:30:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:30:42,625 127.0.0.1 - - [29/May/2025 12:30:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:30:42,673 127.0.0.1 - - [29/May/2025 12:30:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:30:42,729 127.0.0.1 - - [29/May/2025 12:30:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:30:42,881 127.0.0.1 - - [29/May/2025 12:30:42] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-05-29 12:31:22,395 127.0.0.1 - - [29/May/2025 12:31:22] "GET /team/1/events HTTP/1.1" 200 -
+2025-05-29 12:31:22,514 127.0.0.1 - - [29/May/2025 12:31:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-29 12:31:22,515 127.0.0.1 - - [29/May/2025 12:31:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-29 12:31:22,518 127.0.0.1 - - [29/May/2025 12:31:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-29 12:31:22,581 127.0.0.1 - - [29/May/2025 12:31:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-05-29 12:31:22,632 127.0.0.1 - - [29/May/2025 12:31:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-29 12:31:22,711 127.0.0.1 - - [29/May/2025 12:31:22] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -

@@ -189,3 +189,39 @@ def delete_team_event(event_id):
     cur.execute("DELETE FROM team_events WHERE id = ?", (event_id,))
     conn.commit()
     conn.close()
+
+def set_event_attendance (event_id, user_id, status):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    # inserts a new attendance record or updates the existing one by using ON CONFLICT
+    cur.execute("""
+        INSERT INTO event_attendance (event_id, user_id, status)
+        VALUES (?, ?, ?)
+        ON CONFLICT(event_id, user_id) DO UPDATE SET status=excluded.status, responded_at=CURRENT_TIMESTAMP
+    """, (event_id, user_id, status))
+    conn.commit()
+    conn.close()
+
+def get_event_attendance (event_id, user_id, status):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT status FROM event_attendance WHERE event_id = ? AND user_id = ?", (event_id, user_id))
+    row = cur.fetchone()
+    conn.close()
+    return row[0] if row else None
+
+def get_event_attendance_counts(event_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT status, COUNT(*) FROM event_attendance
+        WHERE event_id = ?
+        GROUP BY status
+    """, (event_id,))
+    counts = {row[0]: row[1] for row in cur.fetchall()}
+    conn.close()
+    # Ensure both keys exist 
+    return {
+        'attending': counts.get('attending', 0),
+        'not_attending': counts.get('not_attending', 0)
+    }

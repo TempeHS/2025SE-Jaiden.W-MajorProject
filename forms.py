@@ -95,3 +95,7 @@ class TeamEventForm(FlaskForm):
 
 class DeleteEventForm(FlaskForm):
     submit = SubmitField('Delete')
+
+class AttendanceForm(FlaskForm):
+    status = SelectField('Attendance', choices=[('attending', 'Yes, I will attend'), ('not_attending', 'No, I cannot attend')])
+    submit = SubmitField('Submit')

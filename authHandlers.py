@@ -1,6 +1,6 @@
-from flask import flash, session, redirect, render_template, request, url_for
-import requests
 import logging
+import requests
+from flask import flash, session, redirect, render_template, request, url_for
 import databaseManagement as dbHandler
 from twoFactor import generate_totp_secret, get_totp_uri, generate_qr_code, verify_totp
 from sanitize import sanitize_data
@@ -16,7 +16,7 @@ def handle_login(loginForm):
             "password": loginForm.password.data
         })
         try:
-            response = requests.post("http://127.0.0.1:3000/api/login", json=sanitized_data, headers=app_header)
+            response = requests.post("http://127.0.0.1:3000/api/login", json=sanitized_data, headers=app_header, timeout=5)
             response.raise_for_status()
             if response.status_code == 200:
                 user_data = response.json()
@@ -67,8 +67,7 @@ def handle_two_factor(twoFactorForm):
             flash('Invalid 2FA token', 'danger')
             app_log.warning("Invalid 2FA token for user: %s", username)
     return render_template("2fa.html", form=twoFactorForm, qr_code=qr_code)
-
-    
+ 
 def handle_sign_up(signUpForm):
     if signUpForm.validate_on_submit():
         sanitized_data = sanitize_data({
@@ -77,9 +76,9 @@ def handle_sign_up(signUpForm):
             "email": signUpForm.email.data,
             "full_name": signUpForm.full_name.data,
             "role": signUpForm.role.data
-        })        
+        })      
         try:
-            response = requests.post("http://127.0.0.1:3000/api/signup", json=sanitized_data, headers=app_header)
+            response = requests.post("http://127.0.0.1:3000/api/signup", json=sanitized_data, headers=app_header, timeout=5)
             response.raise_for_status()
             if response.status_code == 201:
                 app_log.info("User '%s' signed up successfully", signUpForm.username.data)
@@ -89,7 +88,7 @@ def handle_sign_up(signUpForm):
                 flash('An error occurred during sign up. Please try again.', 'danger')
                 app_log.warning("Failed signup attempt for user: %s", signUpForm.username.data)
         except requests.exceptions.RequestException as e:
-            flash(f'An error occurred', 'danger')
+            flash('An error occurred', 'danger')
             app_log.error("Error during signup attempt for user: %s - %s", signUpForm.username.data, str(e))
     else:
         for field, errors in signUpForm.errors.items():

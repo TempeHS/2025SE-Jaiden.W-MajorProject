@@ -35,7 +35,8 @@
   ========================== -->
   <div class="row mb-3">
     {% if session.get('role') == 'Coach' %}
-    <div class="col">
+    <div class="col-8"></div>
+    <div class="col-4">
       <a
         href="{{ url_for('create_team_event', team_id=team.id) }}"
         class="btn btn-primary"
@@ -102,6 +103,15 @@
             <strong>Location:</strong> {{ event.location }}
           </small>
           {% if session.get('role') == 'Coach' %}
+          <div class="mt-2">
+            <span class="badge bg-success">
+              Attending: {{ attendance_counts[event.id]['attending'] }}
+            </span>
+            <span class="badge bg-danger ms-2">
+              Not Attending: {{ attendance_counts[event.id]['not_attending'] }}
+            </span>
+          </div>
+          {% endif %} {% if session.get('role') == 'Coach' %}
           <!-- Delete Event Button (Coach Only) -->
           <form
             method="POST"
@@ -109,58 +119,73 @@
             style="display: inline"
           >
             {{ delete_forms[event.id].hidden_tag() }} {{
-            delete_forms[event.id].submit(class="btn btn-danger btn-sm") }}
+            delete_forms[event.id].submit(class_="btn btn-danger btn-sm") }}
           </form>
           {% endif %}
           <!-- RSVP Button (Player Only) -->
+          {% if session.get('role') == 'Player' %}
           <button
             type="button"
             class="btn btn-primary"
             data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"
+            data-bs-target="#attendanceModal{{ event.id }}"
           >
-            Launch static backdrop modal
+            RSVP / Attendance
           </button>
 
           <!-- Modal -->
           <div
             class="modal fade"
-            id="staticBackdrop"
+            id="attendanceModal{{ event.id }}"
             data-bs-backdrop="static"
             data-bs-keyboard="false"
             tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
+            aria-labelledby="attendanceModalLabel{{ event.id }}"
             aria-hidden="true"
           >
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                    Modal title
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">...</div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Understood
-                  </button>
-                </div>
+                <form
+                  method="POST"
+                  action="{{ url_for('event_attendance', team_id=team.id, event_id=event.id) }}"
+                >
+                  {{ attendance_forms[event.id].hidden_tag() }}
+                  <div class="modal-header">
+                    <h1
+                      class="modal-title fs-5"
+                      id="attendanceModalLabel{{ event.id }}"
+                    >
+                      Attendance Confirmation
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    {{
+                    attendance_forms[event.id].status.label(class="form-label")
+                    }} {{ attendance_forms[event.id].status(class="form-select")
+                    }}
+                  </div>
+                  <div class="modal-footer">
+                    {{ attendance_forms[event.id].submit(class="btn
+                    btn-success") }}
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
@@ -186,6 +211,16 @@
             <strong>Date:</strong> {{ event.event_date }}<br />
             <strong>Location:</strong> {{ event.location }}
           </small>
+          {% if session.get('role') == 'Coach' %}
+          <div class="mt-2">
+            <span class="badge bg-success">
+              Attending: {{ attendance_counts[event.id]['attending'] }}
+            </span>
+            <span class="badge bg-danger ms-2">
+              Not Attending: {{ attendance_counts[event.id]['not_attending'] }}
+            </span>
+          </div>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>

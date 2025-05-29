@@ -9,7 +9,7 @@ from flask_cors import CORS
 from flask_session import Session
 
 
-from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm, TeamEventForm, DeleteEventForm
+from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm, TeamEventForm
 from authHandlers import handle_login, handle_two_factor, handle_sign_up
 import teamHandlers as teamHandler
 from sessionLocks import acquire_session_lock, cleanup_session_lock
@@ -56,7 +56,7 @@ def teardown_request(exception=None):
 
 # Custom error handler for rate limit exceeded
 @app.errorhandler(429)
-def ratelimit_handler(e):
+def ratelimit_handler(_e):
     """Custom error handler for rate limit exceeded."""
     flash("Too many incorrect attempts. Please try again later.", "danger")
     app_log.warning("Rate limit exceeded for IP: %s", request.remote_addr)
@@ -153,7 +153,7 @@ def team_events(team_id):
     lock = acquire_session_lock()
     with lock:
         return teamHandler.handle_team_events(team_id)
-    
+
 @app.route('/team/<int:team_id>/create_event', methods=['GET', 'POST'])
 def create_team_event(team_id):
     form = TeamEventForm()
@@ -166,6 +166,12 @@ def delete_team_event(team_id, event_id):
     lock = acquire_session_lock()
     with lock:
         return teamHandler.handle_delete_team_event(team_id, event_id)
+    
+@app.route('/team/<int:team_id>/event/<int:event_id>/attendance', methods=['GET', 'POST'])
+def event_attendance(team_id, event_id):
+    lock = acquire_session_lock()
+    with lock:
+        return teamHandler.handle_event_attendance(team_id, event_id)
 
 @app.route('/team/<int:team_id>/messages', methods=['GET', 'POST'])
 def team_messages(team_id):

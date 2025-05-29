@@ -1,11 +1,11 @@
+import logging
+from datetime import timedelta, datetime
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-import logging
-from userLogic import login_user, signup_user  
+from userLogic import login_user, signup_user
 import databaseManagement as dbHandler
-from datetime import timedelta, datetime
 
 api = Flask(__name__)
 cors = CORS(api)
@@ -50,6 +50,7 @@ def api_login():
 @api.route("/api/signup", methods=["POST"])
 @limiter.limit("1/second", override_defaults=False)
 def api_signup():
+    """Handles user signup by creating a new user with the provided details."""
     auth_response = check_api_key()
     if auth_response:
         return auth_response
@@ -94,7 +95,7 @@ def api_create_team():
     except Exception as e:
         api.logger.error("Error creating team: %s", str(e))
         return jsonify({"message": "Internal server error"}), 500
-    
+   
 @api.route("/api/create_team_event", methods=["POST"])
 @limiter.limit("1/second", override_defaults=False)
 def api_create_team_event():
@@ -138,3 +139,4 @@ def api_create_team_event():
 
 if __name__ == "__main__":
     api.run(debug=True, host="0.0.0.0", port=3000)
+# End-of-file (EOF)
