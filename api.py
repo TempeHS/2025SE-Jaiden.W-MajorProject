@@ -1,9 +1,10 @@
+import logging
+from datetime import timedelta, datetime
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-import logging
-from userLogic import login_user, signup_user  
+from userLogic import login_user, signup_user
 import databaseManagement as dbHandler
 
 api = Flask(__name__)
@@ -39,11 +40,17 @@ def api_login():
     username = data.get("username")
     password = data.get("password")
     response, status_code = login_user(username, password)
+    # if login is sucessful, add user's role to response
+    if status_code == 200:
+        user = dbHandler.retrieveUserByUsername(username)
+        if user:
+            response["role"] = user.get("role")
     return jsonify(response), status_code
 
 @api.route("/api/signup", methods=["POST"])
 @limiter.limit("1/second", override_defaults=False)
 def api_signup():
+    """Handles user signup by creating a new user with the provided details."""
     auth_response = check_api_key()
     if auth_response:
         return auth_response
@@ -89,6 +96,47 @@ def api_create_team():
         api.logger.error("Error creating team: %s", str(e))
         return jsonify({"message": "Internal server error"}), 500
 
+@api.route("/api/create_team_event", methods=["POST"])
+@limiter.limit("1/second", override_defaults=False)
+def api_create_team_event():
+    auth_response = check_api_key()
+    if auth_response:
+        return auth_response
+    data = request.get_json()
+    team_id = data.get("team_id")
+    title = data.get("title")
+    description = data.get("description")
+    event_date = data.get("event_date")
+    location = data.get("location")
+    recurrence = data.get("recurrence")
+    recurrence_end = data.get("recurrence_end")
+    if not all([team_id, title, event_date, location]):
+        return jsonify({"message": "Missing required fields"}), 400
+    try:
+        dbHandler.create_team_event(team_id, title, description, event_date, location)
+        # Handle recurrence
+        if recurrence and recurrence != "none" and recurrence_end:
+            start_date = datetime.strptime(event_date, "%Y-%m-%dT%H:%M")
+            end_date = datetime.strptime(recurrence_end, "%Y-%m-%d")
+            next_date = start_date
+            while True:
+                # Calculate next occurrence
+                if recurrence == "daily":
+                    next_date += timedelta(days=1)
+                elif recurrence == "weekly":
+                    next_date += timedelta(weeks=1)
+                else:
+                    break
+                if next_date.date() > end_date.date():
+                    break
+                dbHandler.create_team_event(
+                    team_id, title, description, next_date.strftime("%Y-%m-%dT%H:%M"), location
+                )
+        return jsonify({"message": "Team event created successfully"}), 201
+    except Exception as e:
+        api.logger.error("Error creating team event: %s", str(e))
+        return jsonify({"message": "Internal server error"}), 500
 
 if __name__ == "__main__":
     api.run(debug=True, host="0.0.0.0", port=3000)
+# End-of-file (EOF)

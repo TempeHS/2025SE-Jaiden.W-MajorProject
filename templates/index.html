@@ -1,8 +1,36 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="container">
-  <div class="row">
-    <h1 class="display-1">Hello world!</h1>
+<div class="container mt-4">
+  <div class="row mb-4">
+    <div class="col text-center">
+      <h1 class="display-5">Welcome, {{ session['username']|capitalize }}!</h1>
+    </div>
   </div>
-  <div class="row"></div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% if team %}
+    <div class="col">
+      <div class="card h-100">
+        <img
+          src="{{ url_for('static', filename='images/volleyballteam.png') }}"
+          class="card-img-top"
+          alt="{{ team.name }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ team.name }}</h5>
+          <p class="card-text">{{ team.description }}</p>
+          <a
+            href="{{ url_for('team_detail', team_id=team.id) }}"
+            class="btn btn-primary"
+            >View Team</a
+          >
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Created at: {{ team.created_at }}</small>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <p>You have not joined a team yet.</p>
+    {% endif %}
+  </div>
 </div>
 {% endblock %}

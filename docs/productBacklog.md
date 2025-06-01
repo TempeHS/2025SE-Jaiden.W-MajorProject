@@ -12,7 +12,7 @@
 - Enable search function for chat and events by keyword/date.
 - Build shared event view (e.g., matches, training).
 - Implement “create event” feature for coaches with recurrence options.
-- Add RSVP system for events with optional reason for absence.
+- Add RSVP system for events.
 
 ### UI Elements
 
