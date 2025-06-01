@@ -202,7 +202,7 @@ def set_event_attendance (event_id, user_id, status):
     conn.commit()
     conn.close()
 
-def get_event_attendance (event_id, user_id, status):
+def get_event_attendance (event_id, user_id):
     conn = sql.connect(db_path)
     cur = conn.cursor()
     cur.execute("SELECT status FROM event_attendance WHERE event_id = ? AND user_id = ?", (event_id, user_id))
@@ -225,3 +225,40 @@ def get_event_attendance_counts(event_id):
         'attending': counts.get('attending', 0),
         'not_attending': counts.get('not_attending', 0)
     }
+
+def get_team_members(team_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT id, username FROM secure_users_9f WHERE team_id = ? AND role != 'Coach'", (team_id,))
+    members = cur.fetchall() 
+    conn.close()
+    return members
+
+def get_event_responses(event_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT user_id, status FROM event_attendance WHERE event_id = ?", (event_id,))
+    responses = cur.fetchall() 
+    conn.close()
+    return responses
+
+def categorize_attendance(event_id, team_id):
+    members = get_team_members(team_id) 
+    responses = dict(get_event_responses(event_id)) 
+    attending = []
+    not_attending = []
+    not_responded = []
+    for user_id, username in members:
+        status = responses.get(user_id)
+        if status == 'attending':
+            attending.append(username)
+        elif status == 'not_attending':
+            not_attending.append(username)
+        else:
+            not_responded.append(username)
+    return {
+        'attending': attending,
+        'not_attending': not_attending,
+        'not_responded': not_responded
+    }
+

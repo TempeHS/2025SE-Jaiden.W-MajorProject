@@ -102,14 +102,100 @@
             <strong>Date:</strong> {{ event.event_date }}<br />
             <strong>Location:</strong> {{ event.location }}
           </small>
-          {% if session.get('role') == 'Coach' %}
+          {% if session.get('role') == 'Player' %}
           <div class="mt-2">
-            <span class="badge bg-success">
-              Attending: {{ attendance_counts[event.id]['attending'] }}
+            <span>
+              <strong>Your Attendance:</strong>
+              {% if user_attendance[event.id] == 'attending' %}
+              <span class="badge bg-success">Attending</span>
+              {% elif user_attendance[event.id] == 'not_attending' %}
+              <span class="badge bg-danger">Not Attending</span>
+              {% else %}
+              <span class="badge bg-secondary">No Response</span>
+              {% endif %}
             </span>
-            <span class="badge bg-danger ms-2">
-              Not Attending: {{ attendance_counts[event.id]['not_attending'] }}
-            </span>
+          </div>
+          {% endif %} {% if session.get('role') == 'Coach' %}
+          <!-- Button to trigger Attendance Summary Modal -->
+          <button
+            type="button"
+            class="btn btn-info btn-sm"
+            data-bs-toggle="modal"
+            data-bs-target="#attendanceSummaryModal{{ event.id }}"
+          >
+            View Attendance Summary
+          </button>
+
+          <!-- Attendance Summary Modal -->
+          <div
+            class="modal fade"
+            id="attendanceSummaryModal{{ event.id }}"
+            tabindex="-1"
+            aria-labelledby="attendanceSummaryModalLabel{{ event.id }}"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5
+                    class="modal-title"
+                    id="attendanceSummaryModalLabel{{ event.id }}"
+                  >
+                    Attendance Summary
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Attendance badges -->
+                  <div class="mb-2">
+                    <span class="badge bg-success">
+                      Attending: {{ attendance_counts[event.id]['attending'] }}
+                    </span>
+                    <span class="badge bg-danger ms-2">
+                      Not Attending: {{
+                      attendance_counts[event.id]['not_attending'] }}
+                    </span>
+                  </div>
+                  <!-- Attendance usernames -->
+                  <div class="mb-2">
+                    <strong>Attending:</strong>
+                    {% if attendance_usernames[event.id]['attending'] %} {{
+                    attendance_usernames[event.id]['attending']|join(', ') }} {%
+                    else %}
+                    <span class="text-muted">None</span>
+                    {% endif %}
+                    <br />
+                    <strong>Not Attending:</strong>
+                    {% if attendance_usernames[event.id]['not_attending'] %} {{
+                    attendance_usernames[event.id]['not_attending']|join(', ')
+                    }} {% else %}
+                    <span class="text-muted">None</span>
+                    {% endif %}
+                    <br />
+                    <strong>No Response:</strong>
+                    {% if attendance_usernames[event.id]['not_responded'] %} {{
+                    attendance_usernames[event.id]['not_responded']|join(', ')
+                    }} {% else %}
+                    <span class="text-muted">None</span>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
           {% endif %} {% if session.get('role') == 'Coach' %}
           <!-- Delete Event Button (Coach Only) -->
@@ -132,7 +218,6 @@
           >
             RSVP / Attendance
           </button>
-
           <!-- Modal -->
           <div
             class="modal fade"
@@ -211,14 +296,88 @@
             <strong>Date:</strong> {{ event.event_date }}<br />
             <strong>Location:</strong> {{ event.location }}
           </small>
+
           {% if session.get('role') == 'Coach' %}
-          <div class="mt-2">
-            <span class="badge bg-success">
-              Attending: {{ attendance_counts[event.id]['attending'] }}
-            </span>
-            <span class="badge bg-danger ms-2">
-              Not Attending: {{ attendance_counts[event.id]['not_attending'] }}
-            </span>
+          <!-- Button to trigger Attendance Summary Modal -->
+          <button
+            type="button"
+            class="btn btn-info btn-sm"
+            data-bs-toggle="modal"
+            data-bs-target="#attendanceSummaryModal{{ event.id }}"
+          >
+            View Attendance Summary
+          </button>
+
+          <!-- Attendance Summary Modal -->
+          <div
+            class="modal fade"
+            id="attendanceSummaryModal{{ event.id }}"
+            tabindex="-1"
+            aria-labelledby="attendanceSummaryModalLabel{{ event.id }}"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5
+                    class="modal-title"
+                    id="attendanceSummaryModalLabel{{ event.id }}"
+                  >
+                    Attendance Summary
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Attendance badges -->
+                  <div class="mb-2">
+                    <span class="badge bg-success">
+                      Attending: {{ attendance_counts[event.id]['attending'] }}
+                    </span>
+                    <span class="badge bg-danger ms-2">
+                      Not Attending: {{
+                      attendance_counts[event.id]['not_attending'] }}
+                    </span>
+                  </div>
+                  <!-- Attendance usernames -->
+                  <div class="mb-2">
+                    <strong>Attending:</strong>
+                    {% if attendance_usernames[event.id]['attending'] %} {{
+                    attendance_usernames[event.id]['attending']|join(', ') }} {%
+                    else %}
+                    <span class="text-muted">None</span>
+                    {% endif %}
+                    <br />
+                    <strong>Not Attending:</strong>
+                    {% if attendance_usernames[event.id]['not_attending'] %} {{
+                    attendance_usernames[event.id]['not_attending']|join(', ')
+                    }} {% else %}
+                    <span class="text-muted">None</span>
+                    {% endif %}
+                    <br />
+                    <strong>No Response:</strong>
+                    {% if attendance_usernames[event.id]['not_responded'] %} {{
+                    attendance_usernames[event.id]['not_responded']|join(', ')
+                    }} {% else %}
+                    <span class="text-muted">None</span>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
           {% endif %}
         </li>

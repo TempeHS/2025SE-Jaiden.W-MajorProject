@@ -8,6 +8,15 @@ from forms import DeleteEventForm, AttendanceForm
 app_log = logging.getLogger(__name__)
 app_header = {"Authorisation": "uPTPeF9BDNiqAkNj"}
 
+def user_in_team(team_id):
+    """returns user if logged in and in the given team, else None"""
+    if 'username' not in session:
+        return None
+    user = dbHandler.retrieveUserByUsername(session['username'])
+    if not user or user.get('team_id') != team_id:
+        return None
+    return user
+
 def handle_my_team():
     if 'username' not in session:
         return redirect(url_for('login'))
@@ -73,6 +82,9 @@ def handle_create_team(teamForm):
     return render_template('createTeam.html', form=teamForm)
 
 def handle_team_detail(team_id):
+    user = user_in_team(team_id)
+    if not user:
+        return redirect(url_for('index'))
     team = dbHandler.get_team_by_id(team_id)
     if not team:
         flash("Team not found.", "danger")
@@ -86,12 +98,23 @@ def handle_team_events(team_id):
     # delete + attendance forms for each event
     delete_forms = {event['id']: DeleteEventForm() for event in upcoming_events + past_events}
     attendance_forms = {event['id']: AttendanceForm() for event in upcoming_events}
-    # attendance counts for each event
+    # attendance counts + username for each event
     attendance_counts = {}
+    attendance_usernames = {}
+    user_attendance = {}
     for event in upcoming_events + past_events:
         attendance_counts[event['id']] = dbHandler.get_event_attendance_counts(event['id'])
+        attendance_usernames[event['id']] = dbHandler.categorize_attendance(event['id'], team['id'])
+    if 'username' in session:
+        user = dbHandler.retrieveUserByUsername(session['username'])
+        if user:
+            for event in upcoming_events + past_events:
+                status = dbHandler.get_event_attendance(event['id'], user['id'])
+                user_attendance[event['id']] = status
+
     return render_template('teamEvents.html', team=team, upcoming_events=upcoming_events, past_events=past_events, 
-    team_nav=True, delete_forms=delete_forms, attendance_forms=attendance_forms, attendance_counts=attendance_counts)
+    team_nav=True, delete_forms=delete_forms, attendance_forms=attendance_forms, attendance_counts=attendance_counts, 
+    user_attendance=user_attendance, attendance_usernames=attendance_usernames)
 
 def handle_create_team_event(team_id, form):
     user = dbHandler.retrieveUserByUsername(session.get('username'))
@@ -150,5 +173,8 @@ def handle_event_attendance (team_id, event_id):
     return redirect(url_for('team_events', team_id=team_id))
 
 def handle_team_messages(team_id):
+    user = user_in_team(team_id)
+    if not user:
+        return redirect(url_for('index'))
     team = dbHandler.get_team_by_id(team_id)
     return render_template('teamMessages.html', team=team, team_nav=True)

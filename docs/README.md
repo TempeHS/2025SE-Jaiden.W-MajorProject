@@ -15,7 +15,14 @@ python api.py
 ### Logging In/Signing Up
 
 > [!TIP]
-> Developers can use this working login, Username: TestUser, Password: Test1234%
+> Developers can use these working logins:
+>
+> - Player
+>   - Username: TestUser
+>   - Password: Test1234%
+> - Coach
+>   - Username: TestCoach
+>   - Password: Test1234%
 
 ### Two Factor Authentication
 

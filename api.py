@@ -95,7 +95,7 @@ def api_create_team():
     except Exception as e:
         api.logger.error("Error creating team: %s", str(e))
         return jsonify({"message": "Internal server error"}), 500
-   
+
 @api.route("/api/create_team_event", methods=["POST"])
 @limiter.limit("1/second", override_defaults=False)
 def api_create_team_event():
