@@ -177,4 +177,4 @@ def handle_team_messages(team_id):
     if not user:
         return redirect(url_for('index'))
     team = dbHandler.get_team_by_id(team_id)
-    return render_template('teamMessages.html', team=team, team_nav=True)
+    return render_template('teamMessages.html', team=team, team_nav=True, team_id=team_id)

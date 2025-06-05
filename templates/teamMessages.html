@@ -1,8 +1,22 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="container">
-  <div class="row">
-    <h1 class="display-1">Messages</h1>
+<div class="message-box">
+  <h2>Messages</h2>
+  <div
+    class="messages"
+    id="messages"
+    data-team-id="{{ team_id }}"
+    data-username="{{session['username']}}"
+  ></div>
+  <div class="inputs">
+    <input
+      type="text"
+      rows="3"
+      placeholder="Message"
+      name="message"
+      id="message"
+    />
+    <button type="button" name="send" id="send-btn">Send</button>
   </div>
-  <div class="row"></div>
 </div>
+<script src="{{ url_for('static', filename='js/teamChat.js') }}"></script>
 {% endblock %}

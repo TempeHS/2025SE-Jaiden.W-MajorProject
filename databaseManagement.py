@@ -262,3 +262,25 @@ def categorize_attendance(event_id, team_id):
         'not_responded': not_responded
     }
 
+def save_team_messages (team_id, username, message):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute(
+        "INSERT INTO team_messages (team_id, username, message) VALUES (?,?,?)", 
+        (team_id, username, message)
+                )
+    conn.commit()
+    conn.close()
+
+def get_team_messages(team_id, limit=50):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT username, message, timestamp FROM team_messages WHERE team_id = ? ORDER by timestamp DESC LIMIT ?",
+                (team_id, limit)
+                )
+    messages = [
+        {"name": row[0], "message": row[1], "timestamp": row[2]}
+        for row in cur.fetchall()
+    ]
+    conn.close()
+    return list(reversed(messages))  # Oldest first

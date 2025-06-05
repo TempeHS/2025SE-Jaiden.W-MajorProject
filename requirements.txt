@@ -7,3 +7,4 @@ flask-cors
 pyotp
 qrcode
 Flask-Session
+flask_socketio

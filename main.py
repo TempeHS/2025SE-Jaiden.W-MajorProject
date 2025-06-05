@@ -7,19 +7,20 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_cors import CORS
 from flask_session import Session
-
+from flask_socketio import SocketIO, join_room, leave_room, send
 
 from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm, TeamEventForm
 from authHandlers import handle_login, handle_two_factor, handle_sign_up
 import teamHandlers as teamHandler
 from sessionLocks import acquire_session_lock, cleanup_session_lock
-
+import databaseManagement as dbHandler
 
 app = Flask(__name__)
 app.secret_key = b"T4Ht6NAcHy2yNDH3;apl"
 limiter = Limiter(get_remote_address, app=app)
 csrf = CSRFProtect(app)
 cors = CORS(app)
+socketio = SocketIO(app, cors_allowed_origins= "*")
 app.config["CORS_HEADERS"] = "Content-Type"
 
 # logging configuration
@@ -79,7 +80,7 @@ def root():
         "base-uri": "'self'",
         "default-src": "'self'",
         "style-src": "'self'",
-        "script-src": "'self'",
+        "script-src": "'self'" and "https://cdnjs.cloudflare.com",
         "img-src": "'self' data:",
         "media-src": "'self'",
         "font-src": "'self'",
@@ -97,7 +98,6 @@ def index():
     lock = acquire_session_lock()
     with lock:
         return teamHandler.handle_my_team()
-
 
 @app.route("/login.html", methods=["GET", "POST"])
 @limiter.limit("5 per minute")
@@ -179,6 +179,40 @@ def team_messages(team_id):
     with lock:
         return teamHandler.handle_team_messages(team_id)
 
+@socketio.on('join')
+def on_join(data):
+    username = session['username']
+    room = data['room']
+    team_id = data['team_id']
+    join_room(room)
+    #team messaging
+    if room.startswith("team_"):
+        previous_messages = dbHandler.get_team_messages(team_id)
+        for msg in previous_messages:
+            send(msg, to=request.sid)
+    #send({"name":username, "message": f"{username} has entered the room."}, to=room)
+    app_log(f"{username} has joined the room {room}")
+
+@socketio.on('leave')
+def on_leave(data):
+    username = session['username']
+    room = data['room']
+    leave_room(room)
+    send({"name":username, "message": f"{username} has left the room."}, to=room)
+    print(f"{username} has left the room {room}")
+
+@socketio.on('send_message')
+def handle_message(data):
+    username = session.get('username')
+    room = data['room']
+    team_id = data['team_id']
+    message_text = data['message']
+    #save to DB for team chat
+    if room.startswith("team_"):
+        dbHandler.save_team_messages(team_id, username, message_text)
+    content = {"name": username, "message": message_text}
+    send(content, to=room)
+
 @app.route("/logout")
 def logout():
     username = session.pop('username', None)
@@ -195,4 +229,4 @@ def csp_report():
     return "done"
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    socketio.run(app, debug=True, host="0.0.0.0", port=5000)

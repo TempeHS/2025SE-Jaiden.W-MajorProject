@@ -37,3 +37,11 @@
     FOREIGN KEY (user_id) REFERENCES secure_users_9f(id),
     UNIQUE(event_id, user_id)
 );*/
+
+/*CREATE TABLE team_messages (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    team_id INTEGER NOT NULL, 
+    username TEXT NOT NULL,
+    message TEXT NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);*/
