@@ -298,20 +298,22 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-textarea#developer_code {
-  font-family: "Courier New", Courier, monospace;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
-  resize: vertical;
+/* Chat Page Styling */
+.chat-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 80vh;
 }
 
 .message-box {
   border: 2px solid black;
   border-radius: 10px;
   background-color: whitesmoke;
-  margin: 2rem auto;
   height: 80vh;
   width: 80vw;
   max-width: 600px;
@@ -383,4 +385,46 @@ textarea#developer_code {
   align-self: flex-start;
   background: #f1f1f1;
   text-align: left;
+}
+
+.msg-timestamp {
+  color: #888;
+  font-size: 0.85em;
+  margin-right: 8px;
+}
+
+/* Sidebar for chat */
+.chat-sidebar {
+  width: 180px;
+  background: #f5f5f5;
+  padding: 16px 8px;
+  border-radius: 10px;
+  height: 80vh;
+}
+
+.chat-sidebar h4 {
+  margin-bottom: 1rem;
+}
+
+.chat-switch-btn {
+  width: 100%;
+  margin-bottom: 8px;
+  background: #fff;
+  color: #007bff;
+  border: 1.5px solid #007bff;
+  border-radius: 20px;
+  padding: 8px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.chat-switch-btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.chat-switch-btn.active {
+  background: #007bff;
+  color: #fff;
 }

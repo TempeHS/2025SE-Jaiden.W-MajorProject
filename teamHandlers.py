@@ -13,7 +13,15 @@ def user_in_team(team_id):
     if 'username' not in session:
         return None
     user = dbHandler.retrieveUserByUsername(session['username'])
-    if not user or user.get('team_id') != team_id:
+    if not user:
+        return None
+    try:
+        # Always compare as integers
+        if int(user.get('team_id')) != int(team_id):
+            print(f"User {session['username']} is not in team {team_id}.")
+            return None
+    except (ValueError, TypeError):
+        print(f"Type error comparing team IDs")
         return None
     return user
 
@@ -177,4 +185,10 @@ def handle_team_messages(team_id):
     if not user:
         return redirect(url_for('index'))
     team = dbHandler.get_team_by_id(team_id)
-    return render_template('teamMessages.html', team=team, team_nav=True, team_id=team_id)
+    team_name = team.get('name')
+    # chat sidebar
+    all_users = dbHandler.get_all_usernames_in_team(team_id)
+    current_user = session['username']
+    dm_users = [user for user in all_users if user != current_user]
+    return render_template('teamMessages.html', team=team, team_nav=True, team_id=team_id, 
+    team_name=team_name, dm_users=dm_users)

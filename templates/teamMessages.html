@@ -1,21 +1,47 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="message-box">
-  <h2>Messages</h2>
-  <div
-    class="messages"
-    id="messages"
-    data-team-id="{{ team_id }}"
-    data-username="{{session['username']}}"
-  ></div>
-  <div class="inputs">
-    <input
-      type="text"
-      rows="3"
-      placeholder="Message"
-      name="message"
-      id="message"
-    />
-    <button type="button" name="send" id="send-btn">Send</button>
+<div class="chat-container">
+  <!-- Sidebar -->
+  <div class="chat-sidebar">
+    <h4>Chats</h4>
+    <button
+      class="chat-switch-btn active"
+      data-room="team_{{ team_id }}"
+      data-type="team"
+    >
+      Team Chat
+    </button>
+    {% for user in dm_users %}
+    <button
+      class="chat-switch-btn"
+      data-room="dm_{{ [session['username'], user]|sort|join('_') }}"
+      data-type="dm"
+      data-user="{{ user }}"
+    >
+      DM: {{ user }}
+    </button>
+    {% endfor %}
+  </div>
+  <!-- Main chat area -->
+  <div class="message-box">
+    <h2 id="chat-title">{{team_name}} Team Chat</h2>
+    <div
+      class="messages"
+      id="messages"
+      data-team-id="{{ team_id }}"
+      data-username="{{session['username']}}"
+      data-team-name="{{ team_name }}"
+      data-csrf-token="{{ csrf_token() }}"
+    ></div>
+    <div class="inputs">
+      <input
+        type="text"
+        rows="3"
+        placeholder="Message"
+        name="message"
+        id="message"
+      />
+      <button type="button" name="send" id="send-btn">Send</button>
+    </div>
   </div>
 </div>
 <script src="{{ url_for('static', filename='js/teamChat.js') }}"></script>

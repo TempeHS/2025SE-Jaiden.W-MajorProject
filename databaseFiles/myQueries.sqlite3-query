@@ -45,3 +45,11 @@
     message TEXT NOT NULL,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );*/
+
+/*CREATE TABLE private_messages (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    sender TEXT NOT NULL,
+    recipient TEXT NOT NULL,
+    message TEXT NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);*/
