@@ -119,6 +119,11 @@ def update_user_team(username, team_id):
 def create_team(name, description):
     conn = sql.connect(db_path)
     cur = conn.cursor()
+    #check if the team name already exists
+    cur.execute("SELECT COUNT(*) FROM volleyball_teams WHERE name = ?", (name,))
+    if cur.fetchone()[0] > 0:
+        conn.close()
+        raise Exception ("Team name already exists")
     cur.execute("INSERT INTO volleyball_teams (name, description) VALUES (?, ?)", (name, description))
     conn.commit()
     conn.close()

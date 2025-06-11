@@ -93,6 +93,8 @@ def api_create_team():
         dbHandler.create_team(team_name, team_description)
         return jsonify({"message": "Team created successfully"}), 201
     except Exception as e:
+        if "already exists" in str(e):
+            return jsonify({"message": "A team with this name already exists."}), 400
         api.logger.error("Error creating team: %s", str(e))
         return jsonify({"message": "Internal server error"}), 500
 

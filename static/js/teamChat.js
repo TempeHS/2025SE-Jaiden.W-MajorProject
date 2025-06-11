@@ -98,6 +98,18 @@ const sendMessage = () => {
   message.value = "";
 };
 
+// Message search/filter
+document
+  .getElementById("message-search")
+  .addEventListener("input", function () {
+    const search = this.value.toLowerCase();
+    document.querySelectorAll("#messages .message").forEach((msg) => {
+      msg.style.display = msg.textContent.toLowerCase().includes(search)
+        ? ""
+        : "none";
+    });
+  });
+
 document.getElementById("send-btn").addEventListener("click", sendMessage);
 
 // Handle Enter key for sending messages

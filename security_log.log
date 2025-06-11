@@ -16373,3 +16373,1235 @@
 2025-06-08 12:30:37,332 127.0.0.1 - - [08/Jun/2025 12:30:37] "GET /socket.io/?EIO=4&transport=polling&t=PTFXRMK&sid=tgJJpeyrSS4Bf3wWAAAA HTTP/1.1" 200 -
 2025-06-08 12:30:37,347 127.0.0.1 - - [08/Jun/2025 12:30:37] "GET /socket.io/?EIO=4&transport=polling&t=PTFXRMS&sid=oQtGr4-bHoWrC_n4AAAB HTTP/1.1" 200 -
 2025-06-08 12:30:37,374 127.0.0.1 - - [08/Jun/2025 12:30:37] "GET /socket.io/?EIO=4&transport=polling&t=PTFXRMy&sid=tgJJpeyrSS4Bf3wWAAAA HTTP/1.1" 200 -
+2025-06-09 22:49:35,395 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.59:5000
+2025-06-09 22:49:35,491 [33mPress CTRL+C to quit[0m
+2025-06-09 22:49:35,491  * Restarting with stat
+2025-06-09 22:49:35,982  * Debugger is active!
+2025-06-09 22:49:35,983  * Debugger PIN: 907-451-143
+2025-06-09 22:50:03,373 127.0.0.1 - - [09/Jun/2025 22:50:03] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-09 22:50:03,569 127.0.0.1 - - [09/Jun/2025 22:50:03] "GET /login.html HTTP/1.1" 200 -
+2025-06-09 22:50:03,750 127.0.0.1 - - [09/Jun/2025 22:50:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:50:03,784 127.0.0.1 - - [09/Jun/2025 22:50:03] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-09 22:50:03,907 127.0.0.1 - - [09/Jun/2025 22:50:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:04,069 127.0.0.1 - - [09/Jun/2025 22:50:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:04,103 127.0.0.1 - - [09/Jun/2025 22:50:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:19,611 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 22:50:19,758 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 56
+2025-06-09 22:50:19,759 User 'TestUser' logged in, hasn't passed 2FA
+2025-06-09 22:50:19,760 127.0.0.1 - - [09/Jun/2025 22:50:19] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-06-09 22:50:19,809 127.0.0.1 - - [09/Jun/2025 22:50:19] "GET /2fa HTTP/1.1" 200 -
+2025-06-09 22:50:19,905 127.0.0.1 - - [09/Jun/2025 22:50:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:50:19,909 127.0.0.1 - - [09/Jun/2025 22:50:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:50:19,955 127.0.0.1 - - [09/Jun/2025 22:50:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:19,994 127.0.0.1 - - [09/Jun/2025 22:50:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:20,027 127.0.0.1 - - [09/Jun/2025 22:50:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:39,244 2FA successful, User 'TestUser' logged in successfully
+2025-06-09 22:50:39,246 127.0.0.1 - - [09/Jun/2025 22:50:39] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-06-09 22:50:39,280 127.0.0.1 - - [09/Jun/2025 22:50:39] "GET / HTTP/1.1" 200 -
+2025-06-09 22:50:39,333 127.0.0.1 - - [09/Jun/2025 22:50:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:50:39,336 127.0.0.1 - - [09/Jun/2025 22:50:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:50:39,383 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 22:50:39,385 127.0.0.1 - - [09/Jun/2025 22:50:39] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:50:39,391 127.0.0.1 - - [09/Jun/2025 22:50:39] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 22:50:39,392 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 22:50:39,393 127.0.0.1 - - [09/Jun/2025 22:50:39] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:50:39,395 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 22:50:39,397 127.0.0.1 - - [09/Jun/2025 22:50:39] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:50:39,459 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 22:50:39,460 127.0.0.1 - - [09/Jun/2025 22:50:39] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:50:47,820 127.0.0.1 - - [09/Jun/2025 22:50:47] "GET /team/1 HTTP/1.1" 200 -
+2025-06-09 22:50:47,874 127.0.0.1 - - [09/Jun/2025 22:50:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:50:47,878 127.0.0.1 - - [09/Jun/2025 22:50:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:50:47,929 127.0.0.1 - - [09/Jun/2025 22:50:47] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-06-09 22:50:47,932 127.0.0.1 - - [09/Jun/2025 22:50:47] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-06-09 22:50:47,935 127.0.0.1 - - [09/Jun/2025 22:50:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:47,964 127.0.0.1 - - [09/Jun/2025 22:50:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:47,990 127.0.0.1 - - [09/Jun/2025 22:50:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:48,038 127.0.0.1 - - [09/Jun/2025 22:50:48] "[33mGET /team/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-06-09 22:50:48,041 127.0.0.1 - - [09/Jun/2025 22:50:48] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:50:48,761 127.0.0.1 - - [09/Jun/2025 22:50:48] "GET /team/1/messages HTTP/1.1" 200 -
+2025-06-09 22:50:48,819 127.0.0.1 - - [09/Jun/2025 22:50:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:50:48,823 127.0.0.1 - - [09/Jun/2025 22:50:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:50:48,857 127.0.0.1 - - [09/Jun/2025 22:50:48] "GET /static/js/teamChat.js HTTP/1.1" 200 -
+2025-06-09 22:50:48,898 127.0.0.1 - - [09/Jun/2025 22:50:48] "GET /socket.io/?EIO=4&transport=polling&t=PTMuwLP HTTP/1.1" 200 -
+2025-06-09 22:50:48,904 127.0.0.1 - - [09/Jun/2025 22:50:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:48,963 127.0.0.1 - - [09/Jun/2025 22:50:48] "POST /socket.io/?EIO=4&transport=polling&t=PTMuwM2&sid=VJKg1TRPnlyAisxuAAAA HTTP/1.1" 200 -
+2025-06-09 22:50:48,963 127.0.0.1 - - [09/Jun/2025 22:50:48] "GET /socket.io/?EIO=4&transport=polling&t=PTMuwM3&sid=VJKg1TRPnlyAisxuAAAA HTTP/1.1" 200 -
+2025-06-09 22:50:48,979 127.0.0.1 - - [09/Jun/2025 22:50:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:49,020 127.0.0.1 - - [09/Jun/2025 22:50:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:50:49,032 127.0.0.1 - - [09/Jun/2025 22:50:49] "GET /socket.io/?EIO=4&transport=polling&t=PTMuwN2&sid=VJKg1TRPnlyAisxuAAAA HTTP/1.1" 200 -
+2025-06-09 22:50:49,040 127.0.0.1 - - [09/Jun/2025 22:50:49] "POST /socket.io/?EIO=4&transport=polling&t=PTMuwN2.0&sid=VJKg1TRPnlyAisxuAAAA HTTP/1.1" 200 -
+2025-06-09 22:50:49,045 TestUser has joined the room team_1
+2025-06-09 22:50:49,085 127.0.0.1 - - [09/Jun/2025 22:50:49] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:50:49,093 127.0.0.1 - - [09/Jun/2025 22:50:49] "[33mGET /team/1/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-06-09 22:51:09,226 127.0.0.1 - - [09/Jun/2025 22:51:09] "GET /socket.io/?EIO=4&transport=polling&t=PTMu_Iv HTTP/1.1" 200 -
+2025-06-09 22:51:09,243 127.0.0.1 - - [09/Jun/2025 22:51:09] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:51:09,272 127.0.0.1 - - [09/Jun/2025 22:51:09] "POST /socket.io/?EIO=4&transport=polling&t=PTMu_Jg&sid=nQn-hxardkmYa2A1AAAC HTTP/1.1" 200 -
+2025-06-09 22:51:09,272 127.0.0.1 - - [09/Jun/2025 22:51:09] "GET /socket.io/?EIO=4&transport=polling&t=PTMu_Jh&sid=nQn-hxardkmYa2A1AAAC HTTP/1.1" 200 -
+2025-06-09 22:51:09,307 127.0.0.1 - - [09/Jun/2025 22:51:09] "GET /socket.io/?EIO=4&transport=polling&t=PTMu_KM&sid=nQn-hxardkmYa2A1AAAC HTTP/1.1" 200 -
+2025-06-09 22:51:09,311 127.0.0.1 - - [09/Jun/2025 22:51:09] "POST /socket.io/?EIO=4&transport=polling&t=PTMu_KM.0&sid=nQn-hxardkmYa2A1AAAC HTTP/1.1" 200 -
+2025-06-09 22:51:09,314 TestUser has joined the room team_1
+2025-06-09 22:51:10,538 127.0.0.1 - - [09/Jun/2025 22:51:10] "GET /socket.io/?EIO=4&transport=websocket&sid=nQn-hxardkmYa2A1AAAC HTTP/1.1" 200 -
+2025-06-09 22:52:24,342 127.0.0.1 - - [09/Jun/2025 22:52:24] "[32mGET /team/1/messages HTTP/1.1[0m" 302 -
+2025-06-09 22:52:24,449 127.0.0.1 - - [09/Jun/2025 22:52:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-09 22:52:24,564 127.0.0.1 - - [09/Jun/2025 22:52:24] "GET /login.html HTTP/1.1" 200 -
+2025-06-09 22:52:24,753 127.0.0.1 - - [09/Jun/2025 22:52:24] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-06-09 22:52:24,759 127.0.0.1 - - [09/Jun/2025 22:52:24] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-09 22:52:24,902 127.0.0.1 - - [09/Jun/2025 22:52:24] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-06-09 22:52:24,941 127.0.0.1 - - [09/Jun/2025 22:52:24] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-06-09 22:52:24,966 127.0.0.1 - - [09/Jun/2025 22:52:24] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-06-09 22:52:25,030 127.0.0.1 - - [09/Jun/2025 22:52:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:52:25,033 127.0.0.1 - - [09/Jun/2025 22:52:25] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-06-09 22:52:25,122 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,127 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,133 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,140 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,148 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,149 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,154 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,159 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,160 127.0.0.1 - - [09/Jun/2025 22:52:25] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-09 22:52:25,163 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,163 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,170 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2025-06-09 22:52:25,177 127.0.0.1 - - [09/Jun/2025 22:52:25] "[33mGET /static/js/static/images/volleyballteam.png HTTP/1.1[0m" 404 -
+2025-06-09 22:52:37,809 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 22:52:37,900 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 55
+2025-06-09 22:52:37,901 User 'TestCoach' logged in, hasn't passed 2FA
+2025-06-09 22:52:37,902 127.0.0.1 - - [09/Jun/2025 22:52:37] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-06-09 22:52:38,018 127.0.0.1 - - [09/Jun/2025 22:52:38] "GET /2fa HTTP/1.1" 200 -
+2025-06-09 22:52:38,204 127.0.0.1 - - [09/Jun/2025 22:52:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:52:38,208 127.0.0.1 - - [09/Jun/2025 22:52:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:52:38,341 127.0.0.1 - - [09/Jun/2025 22:52:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:52:38,482 127.0.0.1 - - [09/Jun/2025 22:52:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:52:38,517 127.0.0.1 - - [09/Jun/2025 22:52:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:52:49,451 2FA successful, User 'TestCoach' logged in successfully
+2025-06-09 22:52:49,451 127.0.0.1 - - [09/Jun/2025 22:52:49] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-06-09 22:52:49,483 127.0.0.1 - - [09/Jun/2025 22:52:49] "GET / HTTP/1.1" 200 -
+2025-06-09 22:52:49,546 127.0.0.1 - - [09/Jun/2025 22:52:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:52:49,559 127.0.0.1 - - [09/Jun/2025 22:52:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:52:49,603 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 22:52:49,604 127.0.0.1 - - [09/Jun/2025 22:52:49] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:52:49,608 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 22:52:49,608 127.0.0.1 - - [09/Jun/2025 22:52:49] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:52:49,611 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 22:52:49,612 127.0.0.1 - - [09/Jun/2025 22:52:49] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:52:49,615 127.0.0.1 - - [09/Jun/2025 22:52:49] "GET /static/images/volleyballteam.png HTTP/1.1" 200 -
+2025-06-09 22:52:49,710 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 22:52:49,711 127.0.0.1 - - [09/Jun/2025 22:52:49] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:53:00,648 127.0.0.1 - - [09/Jun/2025 22:53:00] "GET /team/1 HTTP/1.1" 200 -
+2025-06-09 22:53:00,700 127.0.0.1 - - [09/Jun/2025 22:53:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:53:00,712 127.0.0.1 - - [09/Jun/2025 22:53:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:53:00,750 127.0.0.1 - - [09/Jun/2025 22:53:00] "GET /static/icons/team_event_icon.png HTTP/1.1" 200 -
+2025-06-09 22:53:00,758 127.0.0.1 - - [09/Jun/2025 22:53:00] "GET /static/icons/team_messages_icon.png HTTP/1.1" 200 -
+2025-06-09 22:53:00,767 127.0.0.1 - - [09/Jun/2025 22:53:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:53:00,803 127.0.0.1 - - [09/Jun/2025 22:53:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:53:00,830 127.0.0.1 - - [09/Jun/2025 22:53:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:53:00,882 127.0.0.1 - - [09/Jun/2025 22:53:00] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:53:00,885 127.0.0.1 - - [09/Jun/2025 22:53:00] "[33mGET /team/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-06-09 22:53:01,532 127.0.0.1 - - [09/Jun/2025 22:53:01] "GET /team/1/messages HTTP/1.1" 200 -
+2025-06-09 22:53:01,598 127.0.0.1 - - [09/Jun/2025 22:53:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:53:01,608 127.0.0.1 - - [09/Jun/2025 22:53:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:53:01,644 127.0.0.1 - - [09/Jun/2025 22:53:01] "GET /static/js/teamChat.js HTTP/1.1" 200 -
+2025-06-09 22:53:01,693 127.0.0.1 - - [09/Jun/2025 22:53:01] "GET /socket.io/?EIO=4&transport=polling&t=PTMvQmC HTTP/1.1" 200 -
+2025-06-09 22:53:01,697 127.0.0.1 - - [09/Jun/2025 22:53:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:53:01,742 127.0.0.1 - - [09/Jun/2025 22:53:01] "POST /socket.io/?EIO=4&transport=polling&t=PTMvQm-&sid=VJA-WAL92Qg-Dih-AAAE HTTP/1.1" 200 -
+2025-06-09 22:53:01,746 127.0.0.1 - - [09/Jun/2025 22:53:01] "GET /socket.io/?EIO=4&transport=polling&t=PTMvQn2&sid=VJA-WAL92Qg-Dih-AAAE HTTP/1.1" 200 -
+2025-06-09 22:53:01,756 127.0.0.1 - - [09/Jun/2025 22:53:01] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:53:01,799 127.0.0.1 - - [09/Jun/2025 22:53:01] "POST /socket.io/?EIO=4&transport=polling&t=PTMvQnw&sid=VJA-WAL92Qg-Dih-AAAE HTTP/1.1" 200 -
+2025-06-09 22:53:01,801 TestCoach has joined the room team_1
+2025-06-09 22:53:01,803 127.0.0.1 - - [09/Jun/2025 22:53:01] "GET /socket.io/?EIO=4&transport=polling&t=PTMvQnw.0&sid=VJA-WAL92Qg-Dih-AAAE HTTP/1.1" 200 -
+2025-06-09 22:53:01,807 127.0.0.1 - - [09/Jun/2025 22:53:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:53:01,889 127.0.0.1 - - [09/Jun/2025 22:53:01] "[33mGET /team/1/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-06-09 22:53:01,893 127.0.0.1 - - [09/Jun/2025 22:53:01] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:53:09,401 TestUser has left the room team_1
+2025-06-09 22:53:21,619 TestCoach has left the room team_1
+2025-06-09 22:53:29,617 TestCoach has joined the room team_1
+2025-06-09 22:53:29,617 TestCoach has left the room dm_TestCoach_TestUser
+2025-06-09 22:53:30,913 TestUser has left the room dm_TestCoach_TestUser
+2025-06-09 22:53:30,916 TestUser has joined the room team_1
+2025-06-09 22:54:23,517 TestUser has left the room team_1
+2025-06-09 22:54:25,337 TestUser has left the room dm_TestCoach_TestUser
+2025-06-09 22:54:25,341 TestUser has joined the room team_1
+2025-06-09 22:54:38,134 127.0.0.1 - - [09/Jun/2025 22:54:38] "GET /socket.io/?EIO=4&transport=websocket&sid=VJKg1TRPnlyAisxuAAAA HTTP/1.1" 200 -
+2025-06-09 22:54:38,789 127.0.0.1 - - [09/Jun/2025 22:54:38] "GET /team/1/messages HTTP/1.1" 200 -
+2025-06-09 22:54:38,945 127.0.0.1 - - [09/Jun/2025 22:54:38] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-09 22:54:38,948 127.0.0.1 - - [09/Jun/2025 22:54:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:54:39,054 127.0.0.1 - - [09/Jun/2025 22:54:39] "[36mGET /static/js/teamChat.js HTTP/1.1[0m" 304 -
+2025-06-09 22:54:39,203 127.0.0.1 - - [09/Jun/2025 22:54:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:54:39,205 127.0.0.1 - - [09/Jun/2025 22:54:39] "GET /socket.io/?EIO=4&transport=polling&t=PTMvoY8 HTTP/1.1" 200 -
+2025-06-09 22:54:39,248 127.0.0.1 - - [09/Jun/2025 22:54:39] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:54:39,251 127.0.0.1 - - [09/Jun/2025 22:54:39] "POST /socket.io/?EIO=4&transport=polling&t=PTMvoaV&sid=-lrI54eoPwi88IccAAAG HTTP/1.1" 200 -
+2025-06-09 22:54:39,251 127.0.0.1 - - [09/Jun/2025 22:54:39] "GET /socket.io/?EIO=4&transport=polling&t=PTMvoaV.0&sid=-lrI54eoPwi88IccAAAG HTTP/1.1" 200 -
+2025-06-09 22:54:39,288 127.0.0.1 - - [09/Jun/2025 22:54:39] "GET /socket.io/?EIO=4&transport=polling&t=PTMvobE.0&sid=-lrI54eoPwi88IccAAAG HTTP/1.1" 200 -
+2025-06-09 22:54:39,296 127.0.0.1 - - [09/Jun/2025 22:54:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:54:39,296 127.0.0.1 - - [09/Jun/2025 22:54:39] "POST /socket.io/?EIO=4&transport=polling&t=PTMvobE&sid=-lrI54eoPwi88IccAAAG HTTP/1.1" 200 -
+2025-06-09 22:54:39,299 TestUser has joined the room team_1
+2025-06-09 22:54:39,344 127.0.0.1 - - [09/Jun/2025 22:54:39] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:54:48,631 127.0.0.1 - - [09/Jun/2025 22:54:48] "GET /socket.io/?EIO=4&transport=websocket&sid=-lrI54eoPwi88IccAAAG HTTP/1.1" 200 -
+2025-06-09 22:54:48,658 127.0.0.1 - - [09/Jun/2025 22:54:48] "GET /team/1/messages HTTP/1.1" 200 -
+2025-06-09 22:54:48,697 127.0.0.1 - - [09/Jun/2025 22:54:48] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-09 22:54:48,700 127.0.0.1 - - [09/Jun/2025 22:54:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:54:48,795 127.0.0.1 - - [09/Jun/2025 22:54:48] "[36mGET /static/js/teamChat.js HTTP/1.1[0m" 304 -
+2025-06-09 22:54:48,834 127.0.0.1 - - [09/Jun/2025 22:54:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:54:48,863 127.0.0.1 - - [09/Jun/2025 22:54:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:54:48,899 127.0.0.1 - - [09/Jun/2025 22:54:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:54:48,912 127.0.0.1 - - [09/Jun/2025 22:54:48] "GET /socket.io/?EIO=4&transport=polling&t=PTMvqwJ HTTP/1.1" 200 -
+2025-06-09 22:54:48,953 127.0.0.1 - - [09/Jun/2025 22:54:48] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:54:48,958 127.0.0.1 - - [09/Jun/2025 22:54:48] "POST /socket.io/?EIO=4&transport=polling&t=PTMvqyE&sid=vU4sgKTOmbRf3iLAAAAI HTTP/1.1" 200 -
+2025-06-09 22:54:48,960 127.0.0.1 - - [09/Jun/2025 22:54:48] "GET /socket.io/?EIO=4&transport=polling&t=PTMvqyE.0&sid=vU4sgKTOmbRf3iLAAAAI HTTP/1.1" 200 -
+2025-06-09 22:54:48,994 127.0.0.1 - - [09/Jun/2025 22:54:48] "POST /socket.io/?EIO=4&transport=polling&t=PTMvqyz&sid=vU4sgKTOmbRf3iLAAAAI HTTP/1.1" 200 -
+2025-06-09 22:54:48,996 TestUser has joined the room team_1
+2025-06-09 22:54:48,998 127.0.0.1 - - [09/Jun/2025 22:54:48] "GET /socket.io/?EIO=4&transport=polling&t=PTMvqyz.0&sid=vU4sgKTOmbRf3iLAAAAI HTTP/1.1" 200 -
+2025-06-09 22:55:16,564 127.0.0.1 - - [09/Jun/2025 22:55:16] "GET /socket.io/?EIO=4&transport=websocket&sid=vU4sgKTOmbRf3iLAAAAI HTTP/1.1" 200 -
+2025-06-09 22:55:16,635 127.0.0.1 - - [09/Jun/2025 22:55:16] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-09 22:55:16,687 127.0.0.1 - - [09/Jun/2025 22:55:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:16,690 127.0.0.1 - - [09/Jun/2025 22:55:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:16,717 127.0.0.1 - - [09/Jun/2025 22:55:16] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:16,749 127.0.0.1 - - [09/Jun/2025 22:55:16] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:16,774 127.0.0.1 - - [09/Jun/2025 22:55:16] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:16,814 127.0.0.1 - - [09/Jun/2025 22:55:16] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:55:17,531 127.0.0.1 - - [09/Jun/2025 22:55:17] "GET /team/1/messages HTTP/1.1" 200 -
+2025-06-09 22:55:17,586 127.0.0.1 - - [09/Jun/2025 22:55:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:17,592 127.0.0.1 - - [09/Jun/2025 22:55:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:17,630 127.0.0.1 - - [09/Jun/2025 22:55:17] "[36mGET /static/js/teamChat.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:17,669 127.0.0.1 - - [09/Jun/2025 22:55:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:17,671 127.0.0.1 - - [09/Jun/2025 22:55:17] "GET /socket.io/?EIO=4&transport=polling&t=PTMvxyt HTTP/1.1" 200 -
+2025-06-09 22:55:17,722 127.0.0.1 - - [09/Jun/2025 22:55:17] "POST /socket.io/?EIO=4&transport=polling&t=PTMvxzU&sid=0Z4wq0O48o1Q35mHAAAK HTTP/1.1" 200 -
+2025-06-09 22:55:17,723 127.0.0.1 - - [09/Jun/2025 22:55:17] "GET /socket.io/?EIO=4&transport=polling&t=PTMvxzV&sid=0Z4wq0O48o1Q35mHAAAK HTTP/1.1" 200 -
+2025-06-09 22:55:17,727 127.0.0.1 - - [09/Jun/2025 22:55:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:17,776 127.0.0.1 - - [09/Jun/2025 22:55:17] "GET /socket.io/?EIO=4&transport=polling&t=PTMvx-J.0&sid=0Z4wq0O48o1Q35mHAAAK HTTP/1.1" 200 -
+2025-06-09 22:55:17,781 127.0.0.1 - - [09/Jun/2025 22:55:17] "POST /socket.io/?EIO=4&transport=polling&t=PTMvx-J&sid=0Z4wq0O48o1Q35mHAAAK HTTP/1.1" 200 -
+2025-06-09 22:55:17,785 TestUser has joined the room team_1
+2025-06-09 22:55:17,787 127.0.0.1 - - [09/Jun/2025 22:55:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:17,830 127.0.0.1 - - [09/Jun/2025 22:55:17] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:55:18,411 127.0.0.1 - - [09/Jun/2025 22:55:18] "GET /socket.io/?EIO=4&transport=websocket&sid=0Z4wq0O48o1Q35mHAAAK HTTP/1.1" 200 -
+2025-06-09 22:55:18,446 127.0.0.1 - - [09/Jun/2025 22:55:18] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-09 22:55:18,503 127.0.0.1 - - [09/Jun/2025 22:55:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:18,568 127.0.0.1 - - [09/Jun/2025 22:55:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:18,598 127.0.0.1 - - [09/Jun/2025 22:55:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:18,624 127.0.0.1 - - [09/Jun/2025 22:55:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:18,651 127.0.0.1 - - [09/Jun/2025 22:55:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:18,685 127.0.0.1 - - [09/Jun/2025 22:55:18] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:55:19,424 127.0.0.1 - - [09/Jun/2025 22:55:19] "GET / HTTP/1.1" 200 -
+2025-06-09 22:55:19,473 127.0.0.1 - - [09/Jun/2025 22:55:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:19,476 127.0.0.1 - - [09/Jun/2025 22:55:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:19,523 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/events","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 22:55:19,524 127.0.0.1 - - [09/Jun/2025 22:55:19] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:19,529 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/events","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 22:55:19,530 127.0.0.1 - - [09/Jun/2025 22:55:19] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:19,532 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/events","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 22:55:19,533 127.0.0.1 - - [09/Jun/2025 22:55:19] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:19,538 127.0.0.1 - - [09/Jun/2025 22:55:19] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 22:55:19,613 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/events","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 22:55:19,614 127.0.0.1 - - [09/Jun/2025 22:55:19] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:23,154 127.0.0.1 - - [09/Jun/2025 22:55:23] "GET /team/1 HTTP/1.1" 200 -
+2025-06-09 22:55:23,199 127.0.0.1 - - [09/Jun/2025 22:55:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:23,202 127.0.0.1 - - [09/Jun/2025 22:55:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:23,247 127.0.0.1 - - [09/Jun/2025 22:55:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:23,250 127.0.0.1 - - [09/Jun/2025 22:55:23] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-06-09 22:55:23,253 127.0.0.1 - - [09/Jun/2025 22:55:23] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-06-09 22:55:23,277 127.0.0.1 - - [09/Jun/2025 22:55:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:23,314 127.0.0.1 - - [09/Jun/2025 22:55:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:23,354 127.0.0.1 - - [09/Jun/2025 22:55:23] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:55:24,832 127.0.0.1 - - [09/Jun/2025 22:55:24] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-09 22:55:24,888 127.0.0.1 - - [09/Jun/2025 22:55:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:24,890 127.0.0.1 - - [09/Jun/2025 22:55:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:24,937 127.0.0.1 - - [09/Jun/2025 22:55:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:24,970 127.0.0.1 - - [09/Jun/2025 22:55:24] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:25,001 127.0.0.1 - - [09/Jun/2025 22:55:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:25,040 127.0.0.1 - - [09/Jun/2025 22:55:25] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 22:55:29,616 127.0.0.1 - - [09/Jun/2025 22:55:29] "GET / HTTP/1.1" 200 -
+2025-06-09 22:55:29,661 127.0.0.1 - - [09/Jun/2025 22:55:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:29,664 127.0.0.1 - - [09/Jun/2025 22:55:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:29,705 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 22:55:29,706 127.0.0.1 - - [09/Jun/2025 22:55:29] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:29,709 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 22:55:29,710 127.0.0.1 - - [09/Jun/2025 22:55:29] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:29,712 127.0.0.1 - - [09/Jun/2025 22:55:29] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 22:55:29,714 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 22:55:29,715 127.0.0.1 - - [09/Jun/2025 22:55:29] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:29,763 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 22:55:29,764 127.0.0.1 - - [09/Jun/2025 22:55:29] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:30,185 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 22:55:30,188 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 22:55:30,194 127.0.0.1 - - [09/Jun/2025 22:55:30] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 22:55:30,241 127.0.0.1 - - [09/Jun/2025 22:55:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:30,243 127.0.0.1 - - [09/Jun/2025 22:55:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:30,269 127.0.0.1 - - [09/Jun/2025 22:55:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:30,294 127.0.0.1 - - [09/Jun/2025 22:55:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:30,321 127.0.0.1 - - [09/Jun/2025 22:55:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 22:55:57,824 127.0.0.1 - - [09/Jun/2025 22:55:57] "GET / HTTP/1.1" 200 -
+2025-06-09 22:55:57,873 127.0.0.1 - - [09/Jun/2025 22:55:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:57,876 127.0.0.1 - - [09/Jun/2025 22:55:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 22:55:57,919 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 22:55:57,920 127.0.0.1 - - [09/Jun/2025 22:55:57] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:57,924 127.0.0.1 - - [09/Jun/2025 22:55:57] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 22:55:57,926 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 22:55:57,926 127.0.0.1 - - [09/Jun/2025 22:55:57] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:57,929 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 22:55:57,930 127.0.0.1 - - [09/Jun/2025 22:55:57] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:55:57,989 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 22:55:57,990 127.0.0.1 - - [09/Jun/2025 22:55:57] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 22:56:09,943 TestCoach has left the room team_1
+2025-06-09 22:56:12,031 TestCoach has left the room dm_TestCoach_TestUser
+2025-06-09 22:56:12,033 TestCoach has joined the room team_1
+2025-06-09 23:04:40,643 127.0.0.1 - - [09/Jun/2025 23:04:40] "GET / HTTP/1.1" 200 -
+2025-06-09 23:04:40,808 127.0.0.1 - - [09/Jun/2025 23:04:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:04:40,808 127.0.0.1 - - [09/Jun/2025 23:04:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:04:40,862 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:04:40,863 127.0.0.1 - - [09/Jun/2025 23:04:40] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:04:40,990 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:04:40,991 127.0.0.1 - - [09/Jun/2025 23:04:40] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:04:40,998 127.0.0.1 - - [09/Jun/2025 23:04:40] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:04:41,004 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:04:41,005 127.0.0.1 - - [09/Jun/2025 23:04:41] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:04:41,097 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:04:41,098 127.0.0.1 - - [09/Jun/2025 23:04:41] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:04:43,715 127.0.0.1 - - [09/Jun/2025 23:04:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:04:43,718 127.0.0.1 - - [09/Jun/2025 23:04:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:04:43,793 127.0.0.1 - - [09/Jun/2025 23:04:43] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-06-09 23:06:03,989 127.0.0.1 - - [09/Jun/2025 23:06:03] "GET /socket.io/?EIO=4&transport=websocket&sid=VJA-WAL92Qg-Dih-AAAE HTTP/1.1" 200 -
+2025-06-09 23:06:04,175 127.0.0.1 - - [09/Jun/2025 23:06:04] "GET / HTTP/1.1" 200 -
+2025-06-09 23:06:04,263 127.0.0.1 - - [09/Jun/2025 23:06:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:04,353 127.0.0.1 - - [09/Jun/2025 23:06:04] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-09 23:06:04,419 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/messages","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:04,421 127.0.0.1 - - [09/Jun/2025 23:06:04] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:04,557 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/messages","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:04,559 127.0.0.1 - - [09/Jun/2025 23:06:04] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:04,560 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/messages","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:04,561 127.0.0.1 - - [09/Jun/2025 23:06:04] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:04,584 127.0.0.1 - - [09/Jun/2025 23:06:04] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:06:04,672 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/messages","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:06:04,672 127.0.0.1 - - [09/Jun/2025 23:06:04] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:05,969 127.0.0.1 - - [09/Jun/2025 23:06:05] "GET /team/1 HTTP/1.1" 200 -
+2025-06-09 23:06:06,010 127.0.0.1 - - [09/Jun/2025 23:06:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:06,021 127.0.0.1 - - [09/Jun/2025 23:06:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:06,060 127.0.0.1 - - [09/Jun/2025 23:06:06] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:06:06,063 127.0.0.1 - - [09/Jun/2025 23:06:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:06,066 127.0.0.1 - - [09/Jun/2025 23:06:06] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:06:06,093 127.0.0.1 - - [09/Jun/2025 23:06:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:06,121 127.0.0.1 - - [09/Jun/2025 23:06:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:06,160 127.0.0.1 - - [09/Jun/2025 23:06:06] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 23:06:09,236 127.0.0.1 - - [09/Jun/2025 23:06:09] "GET / HTTP/1.1" 200 -
+2025-06-09 23:06:09,277 127.0.0.1 - - [09/Jun/2025 23:06:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:09,287 127.0.0.1 - - [09/Jun/2025 23:06:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:09,328 127.0.0.1 - - [09/Jun/2025 23:06:09] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:06:09,330 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:09,331 127.0.0.1 - - [09/Jun/2025 23:06:09] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:09,333 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:09,334 127.0.0.1 - - [09/Jun/2025 23:06:09] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:09,336 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:09,336 127.0.0.1 - - [09/Jun/2025 23:06:09] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:09,386 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:06:09,387 127.0.0.1 - - [09/Jun/2025 23:06:09] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:10,366 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:06:10,368 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:06:10,370 127.0.0.1 - - [09/Jun/2025 23:06:10] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:06:10,410 127.0.0.1 - - [09/Jun/2025 23:06:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:10,420 127.0.0.1 - - [09/Jun/2025 23:06:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:10,448 127.0.0.1 - - [09/Jun/2025 23:06:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:10,478 127.0.0.1 - - [09/Jun/2025 23:06:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:10,504 127.0.0.1 - - [09/Jun/2025 23:06:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:14,734 127.0.0.1 - - [09/Jun/2025 23:06:14] "GET / HTTP/1.1" 200 -
+2025-06-09 23:06:14,777 127.0.0.1 - - [09/Jun/2025 23:06:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:14,784 127.0.0.1 - - [09/Jun/2025 23:06:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:14,825 127.0.0.1 - - [09/Jun/2025 23:06:14] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:06:14,829 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:14,830 127.0.0.1 - - [09/Jun/2025 23:06:14] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:14,832 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:14,833 127.0.0.1 - - [09/Jun/2025 23:06:14] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:14,834 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:14,835 127.0.0.1 - - [09/Jun/2025 23:06:14] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:14,887 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:06:14,888 127.0.0.1 - - [09/Jun/2025 23:06:14] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:18,006 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:06:18,009 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:06:18,010 127.0.0.1 - - [09/Jun/2025 23:06:18] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:06:18,054 127.0.0.1 - - [09/Jun/2025 23:06:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:18,057 127.0.0.1 - - [09/Jun/2025 23:06:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:18,086 127.0.0.1 - - [09/Jun/2025 23:06:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:18,113 127.0.0.1 - - [09/Jun/2025 23:06:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:18,137 127.0.0.1 - - [09/Jun/2025 23:06:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:20,481 127.0.0.1 - - [09/Jun/2025 23:06:20] "GET / HTTP/1.1" 200 -
+2025-06-09 23:06:20,524 127.0.0.1 - - [09/Jun/2025 23:06:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:20,534 127.0.0.1 - - [09/Jun/2025 23:06:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:20,575 127.0.0.1 - - [09/Jun/2025 23:06:20] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:06:20,577 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:20,578 127.0.0.1 - - [09/Jun/2025 23:06:20] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:20,583 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:20,584 127.0.0.1 - - [09/Jun/2025 23:06:20] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:20,588 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:20,590 127.0.0.1 - - [09/Jun/2025 23:06:20] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:20,635 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:06:20,636 127.0.0.1 - - [09/Jun/2025 23:06:20] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:21,374 127.0.0.1 - - [09/Jun/2025 23:06:21] "GET /team/1 HTTP/1.1" 200 -
+2025-06-09 23:06:21,419 127.0.0.1 - - [09/Jun/2025 23:06:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:21,425 127.0.0.1 - - [09/Jun/2025 23:06:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:21,476 127.0.0.1 - - [09/Jun/2025 23:06:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:21,478 127.0.0.1 - - [09/Jun/2025 23:06:21] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:06:21,485 127.0.0.1 - - [09/Jun/2025 23:06:21] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:06:21,506 127.0.0.1 - - [09/Jun/2025 23:06:21] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:21,533 127.0.0.1 - - [09/Jun/2025 23:06:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:21,573 127.0.0.1 - - [09/Jun/2025 23:06:21] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 23:06:23,274 127.0.0.1 - - [09/Jun/2025 23:06:23] "GET / HTTP/1.1" 200 -
+2025-06-09 23:06:23,324 127.0.0.1 - - [09/Jun/2025 23:06:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:23,338 127.0.0.1 - - [09/Jun/2025 23:06:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:23,388 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:23,390 127.0.0.1 - - [09/Jun/2025 23:06:23] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:23,392 127.0.0.1 - - [09/Jun/2025 23:06:23] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:06:23,396 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:23,399 127.0.0.1 - - [09/Jun/2025 23:06:23] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:23,401 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:06:23,402 127.0.0.1 - - [09/Jun/2025 23:06:23] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:23,450 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:06:23,452 127.0.0.1 - - [09/Jun/2025 23:06:23] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:06:24,739 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:06:24,741 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:06:24,743 127.0.0.1 - - [09/Jun/2025 23:06:24] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:06:24,797 127.0.0.1 - - [09/Jun/2025 23:06:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:24,804 127.0.0.1 - - [09/Jun/2025 23:06:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:06:24,841 127.0.0.1 - - [09/Jun/2025 23:06:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:24,872 127.0.0.1 - - [09/Jun/2025 23:06:24] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:06:24,897 127.0.0.1 - - [09/Jun/2025 23:06:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:00,799 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:07:00,801 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:07:00,804 127.0.0.1 - - [09/Jun/2025 23:07:00] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:07:00,866 127.0.0.1 - - [09/Jun/2025 23:07:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:00,868 127.0.0.1 - - [09/Jun/2025 23:07:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:00,927 127.0.0.1 - - [09/Jun/2025 23:07:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:00,952 127.0.0.1 - - [09/Jun/2025 23:07:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:00,987 127.0.0.1 - - [09/Jun/2025 23:07:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:01,033 127.0.0.1 - - [09/Jun/2025 23:07:01] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:07:02,928 127.0.0.1 - - [09/Jun/2025 23:07:02] "GET / HTTP/1.1" 200 -
+2025-06-09 23:07:02,974 127.0.0.1 - - [09/Jun/2025 23:07:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:02,977 127.0.0.1 - - [09/Jun/2025 23:07:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:03,018 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:07:03,019 127.0.0.1 - - [09/Jun/2025 23:07:03] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:03,024 127.0.0.1 - - [09/Jun/2025 23:07:03] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:07:03,026 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:07:03,027 127.0.0.1 - - [09/Jun/2025 23:07:03] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:03,029 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:07:03,030 127.0.0.1 - - [09/Jun/2025 23:07:03] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:03,090 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:07:03,090 127.0.0.1 - - [09/Jun/2025 23:07:03] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:04,121 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:07:04,123 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:07:04,125 127.0.0.1 - - [09/Jun/2025 23:07:04] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:07:04,167 127.0.0.1 - - [09/Jun/2025 23:07:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:04,178 127.0.0.1 - - [09/Jun/2025 23:07:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:04,210 127.0.0.1 - - [09/Jun/2025 23:07:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:04,236 127.0.0.1 - - [09/Jun/2025 23:07:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:04,265 127.0.0.1 - - [09/Jun/2025 23:07:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:40,205 127.0.0.1 - - [09/Jun/2025 23:07:40] "GET / HTTP/1.1" 200 -
+2025-06-09 23:07:40,257 127.0.0.1 - - [09/Jun/2025 23:07:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:40,267 127.0.0.1 - - [09/Jun/2025 23:07:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:40,306 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:07:40,307 127.0.0.1 - - [09/Jun/2025 23:07:40] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:40,309 127.0.0.1 - - [09/Jun/2025 23:07:40] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:07:40,312 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:07:40,313 127.0.0.1 - - [09/Jun/2025 23:07:40] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:40,317 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:07:40,318 127.0.0.1 - - [09/Jun/2025 23:07:40] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:40,387 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:07:40,388 127.0.0.1 - - [09/Jun/2025 23:07:40] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:41,448 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:07:41,450 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:07:41,452 127.0.0.1 - - [09/Jun/2025 23:07:41] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:07:41,493 127.0.0.1 - - [09/Jun/2025 23:07:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:41,500 127.0.0.1 - - [09/Jun/2025 23:07:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:41,526 127.0.0.1 - - [09/Jun/2025 23:07:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:41,551 127.0.0.1 - - [09/Jun/2025 23:07:41] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:41,577 127.0.0.1 - - [09/Jun/2025 23:07:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:47,395 127.0.0.1 - - [09/Jun/2025 23:07:47] "GET / HTTP/1.1" 200 -
+2025-06-09 23:07:47,439 127.0.0.1 - - [09/Jun/2025 23:07:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:47,444 127.0.0.1 - - [09/Jun/2025 23:07:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:47,485 127.0.0.1 - - [09/Jun/2025 23:07:47] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:07:47,489 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:07:47,490 127.0.0.1 - - [09/Jun/2025 23:07:47] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:47,491 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:07:47,492 127.0.0.1 - - [09/Jun/2025 23:07:47] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:47,494 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:07:47,495 127.0.0.1 - - [09/Jun/2025 23:07:47] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:47,547 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:07:47,548 127.0.0.1 - - [09/Jun/2025 23:07:47] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:07:51,513 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:07:51,515 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:07:51,516 127.0.0.1 - - [09/Jun/2025 23:07:51] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:07:51,562 127.0.0.1 - - [09/Jun/2025 23:07:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:51,574 127.0.0.1 - - [09/Jun/2025 23:07:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:07:51,601 127.0.0.1 - - [09/Jun/2025 23:07:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:51,627 127.0.0.1 - - [09/Jun/2025 23:07:51] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:07:51,655 127.0.0.1 - - [09/Jun/2025 23:07:51] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:08:25,552 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:08:25,554 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:08:25,556 127.0.0.1 - - [09/Jun/2025 23:08:25] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:08:25,720 127.0.0.1 - - [09/Jun/2025 23:08:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:08:25,722 127.0.0.1 - - [09/Jun/2025 23:08:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:08:25,833 127.0.0.1 - - [09/Jun/2025 23:08:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:08:25,961 127.0.0.1 - - [09/Jun/2025 23:08:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:08:26,063 127.0.0.1 - - [09/Jun/2025 23:08:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:09:22,217 127.0.0.1 - - [09/Jun/2025 23:09:22] "GET / HTTP/1.1" 200 -
+2025-06-09 23:09:22,273 127.0.0.1 - - [09/Jun/2025 23:09:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:09:22,274 127.0.0.1 - - [09/Jun/2025 23:09:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:09:22,315 127.0.0.1 - - [09/Jun/2025 23:09:22] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:09:22,320 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:09:22,321 127.0.0.1 - - [09/Jun/2025 23:09:22] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:09:22,322 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:09:22,323 127.0.0.1 - - [09/Jun/2025 23:09:22] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:09:22,328 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:09:22,329 127.0.0.1 - - [09/Jun/2025 23:09:22] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:09:22,380 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:09:22,381 127.0.0.1 - - [09/Jun/2025 23:09:22] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:09:49,574 127.0.0.1 - - [09/Jun/2025 23:09:49] "GET / HTTP/1.1" 200 -
+2025-06-09 23:09:49,620 127.0.0.1 - - [09/Jun/2025 23:09:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:09:49,625 127.0.0.1 - - [09/Jun/2025 23:09:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:09:49,670 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:09:49,673 127.0.0.1 - - [09/Jun/2025 23:09:49] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:09:49,675 127.0.0.1 - - [09/Jun/2025 23:09:49] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:09:49,675 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:09:49,676 127.0.0.1 - - [09/Jun/2025 23:09:49] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:09:49,680 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:09:49,681 127.0.0.1 - - [09/Jun/2025 23:09:49] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:09:49,716 127.0.0.1 - - [09/Jun/2025 23:09:49] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:09:49,738 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:09:49,738 127.0.0.1 - - [09/Jun/2025 23:09:49] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:09:53,790 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:09:53,792 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:09:53,794 127.0.0.1 - - [09/Jun/2025 23:09:53] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:09:53,837 127.0.0.1 - - [09/Jun/2025 23:09:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:09:53,840 127.0.0.1 - - [09/Jun/2025 23:09:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:09:53,866 127.0.0.1 - - [09/Jun/2025 23:09:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:09:53,893 127.0.0.1 - - [09/Jun/2025 23:09:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:09:53,923 127.0.0.1 - - [09/Jun/2025 23:09:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:10:02,773 127.0.0.1 - - [09/Jun/2025 23:10:02] "[32mPOST /jointeam/4 HTTP/1.1[0m" 302 -
+2025-06-09 23:10:02,801 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:10:02,803 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:10:02,805 127.0.0.1 - - [09/Jun/2025 23:10:02] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:10:02,859 127.0.0.1 - - [09/Jun/2025 23:10:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:10:02,863 127.0.0.1 - - [09/Jun/2025 23:10:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:10:02,892 127.0.0.1 - - [09/Jun/2025 23:10:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:10:02,917 127.0.0.1 - - [09/Jun/2025 23:10:02] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:10:02,942 127.0.0.1 - - [09/Jun/2025 23:10:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:10:10,460 127.0.0.1 - - [09/Jun/2025 23:10:10] "[32mPOST /jointeam/1 HTTP/1.1[0m" 302 -
+2025-06-09 23:10:10,488 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:10:10,490 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:10:10,492 127.0.0.1 - - [09/Jun/2025 23:10:10] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:10:10,554 127.0.0.1 - - [09/Jun/2025 23:10:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:10:10,555 127.0.0.1 - - [09/Jun/2025 23:10:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:10:10,585 127.0.0.1 - - [09/Jun/2025 23:10:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:10:10,613 127.0.0.1 - - [09/Jun/2025 23:10:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:10:10,642 127.0.0.1 - - [09/Jun/2025 23:10:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:18,526 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:11:18,528 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:11:18,535 127.0.0.1 - - [09/Jun/2025 23:11:18] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:11:18,579 127.0.0.1 - - [09/Jun/2025 23:11:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:11:18,583 127.0.0.1 - - [09/Jun/2025 23:11:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:11:18,755 127.0.0.1 - - [09/Jun/2025 23:11:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:18,793 127.0.0.1 - - [09/Jun/2025 23:11:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:18,828 127.0.0.1 - - [09/Jun/2025 23:11:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:18,868 127.0.0.1 - - [09/Jun/2025 23:11:18] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:11:19,712 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:11:19,714 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:11:19,717 127.0.0.1 - - [09/Jun/2025 23:11:19] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:11:19,757 127.0.0.1 - - [09/Jun/2025 23:11:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:11:19,759 127.0.0.1 - - [09/Jun/2025 23:11:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:11:19,790 127.0.0.1 - - [09/Jun/2025 23:11:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:19,818 127.0.0.1 - - [09/Jun/2025 23:11:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:19,842 127.0.0.1 - - [09/Jun/2025 23:11:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:19,885 127.0.0.1 - - [09/Jun/2025 23:11:19] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:11:20,273 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:11:20,276 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:11:20,279 127.0.0.1 - - [09/Jun/2025 23:11:20] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:11:20,331 127.0.0.1 - - [09/Jun/2025 23:11:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:11:20,333 127.0.0.1 - - [09/Jun/2025 23:11:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:11:20,364 127.0.0.1 - - [09/Jun/2025 23:11:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:20,399 127.0.0.1 - - [09/Jun/2025 23:11:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:20,451 127.0.0.1 - - [09/Jun/2025 23:11:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:20,501 127.0.0.1 - - [09/Jun/2025 23:11:20] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:11:28,781 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:11:28,784 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:11:28,794 127.0.0.1 - - [09/Jun/2025 23:11:28] "[35m[1mGET /searchteam HTTP/1.1[0m" 500 -
+2025-06-09 23:11:29,238 127.0.0.1 - - [09/Jun/2025 23:11:29] "GET /searchteam?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-09 23:11:29,812 127.0.0.1 - - [09/Jun/2025 23:11:29] "GET /searchteam?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-09 23:11:30,844 127.0.0.1 - - [09/Jun/2025 23:11:30] "GET /searchteam?__debugger__=yes&cmd=resource&f=console.png&s=uqVFLgehFlDZIfaAESOt HTTP/1.1" 200 -
+2025-06-09 23:11:31,261 127.0.0.1 - - [09/Jun/2025 23:11:31] "GET /searchteam?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-09 23:11:35,144 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:11:35,146 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:11:35,153 127.0.0.1 - - [09/Jun/2025 23:11:35] "[35m[1mGET /searchteam HTTP/1.1[0m" 500 -
+2025-06-09 23:11:36,182 127.0.0.1 - - [09/Jun/2025 23:11:36] "[36mGET /searchteam?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:11:36,188 127.0.0.1 - - [09/Jun/2025 23:11:36] "[36mGET /searchteam?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:37,300 127.0.0.1 - - [09/Jun/2025 23:11:37] "[36mGET /searchteam?__debugger__=yes&cmd=resource&f=console.png&s=uqVFLgehFlDZIfaAESOt HTTP/1.1[0m" 304 -
+2025-06-09 23:11:37,626 127.0.0.1 - - [09/Jun/2025 23:11:37] "[36mGET /searchteam?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-09 23:11:59,148 User 'TestUser' logged out successfully
+2025-06-09 23:11:59,149 127.0.0.1 - - [09/Jun/2025 23:11:59] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-09 23:11:59,182 127.0.0.1 - - [09/Jun/2025 23:11:59] "GET /login.html HTTP/1.1" 200 -
+2025-06-09 23:11:59,236 127.0.0.1 - - [09/Jun/2025 23:11:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:11:59,239 127.0.0.1 - - [09/Jun/2025 23:11:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:11:59,267 127.0.0.1 - - [09/Jun/2025 23:11:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:59,297 127.0.0.1 - - [09/Jun/2025 23:11:59] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:11:59,322 127.0.0.1 - - [09/Jun/2025 23:11:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:12:05,489 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:12:05,596 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 55
+2025-06-09 23:12:05,596 User 'TestCoach' logged in, hasn't passed 2FA
+2025-06-09 23:12:05,597 127.0.0.1 - - [09/Jun/2025 23:12:05] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-06-09 23:12:05,628 127.0.0.1 - - [09/Jun/2025 23:12:05] "GET /2fa HTTP/1.1" 200 -
+2025-06-09 23:12:05,678 127.0.0.1 - - [09/Jun/2025 23:12:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:12:05,681 127.0.0.1 - - [09/Jun/2025 23:12:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:12:05,709 127.0.0.1 - - [09/Jun/2025 23:12:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:12:05,734 127.0.0.1 - - [09/Jun/2025 23:12:05] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:12:05,758 127.0.0.1 - - [09/Jun/2025 23:12:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:12:20,867 2FA successful, User 'TestCoach' logged in successfully
+2025-06-09 23:12:20,868 127.0.0.1 - - [09/Jun/2025 23:12:20] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-06-09 23:12:20,896 127.0.0.1 - - [09/Jun/2025 23:12:20] "GET / HTTP/1.1" 200 -
+2025-06-09 23:12:20,948 127.0.0.1 - - [09/Jun/2025 23:12:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:12:20,950 127.0.0.1 - - [09/Jun/2025 23:12:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:12:20,998 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:12:20,999 127.0.0.1 - - [09/Jun/2025 23:12:20] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:12:21,002 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:12:21,003 127.0.0.1 - - [09/Jun/2025 23:12:21] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:12:21,005 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:12:21,005 127.0.0.1 - - [09/Jun/2025 23:12:21] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:12:21,008 127.0.0.1 - - [09/Jun/2025 23:12:21] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:12:21,069 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:12:21,070 127.0.0.1 - - [09/Jun/2025 23:12:21] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:12:29,077 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:12:29,080 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:12:29,090 127.0.0.1 - - [09/Jun/2025 23:12:29] "[35m[1mGET /searchteam HTTP/1.1[0m" 500 -
+2025-06-09 23:12:29,136 127.0.0.1 - - [09/Jun/2025 23:12:29] "GET /searchteam?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-09 23:12:29,139 127.0.0.1 - - [09/Jun/2025 23:12:29] "GET /searchteam?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-09 23:12:29,184 127.0.0.1 - - [09/Jun/2025 23:12:29] "GET /searchteam?__debugger__=yes&cmd=resource&f=console.png&s=uqVFLgehFlDZIfaAESOt HTTP/1.1" 200 -
+2025-06-09 23:12:29,218 127.0.0.1 - - [09/Jun/2025 23:12:29] "GET /searchteam?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-09 23:13:47,920 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:13:47,923 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:13:47,929 127.0.0.1 - - [09/Jun/2025 23:13:47] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:13:48,104 127.0.0.1 - - [09/Jun/2025 23:13:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:13:48,107 127.0.0.1 - - [09/Jun/2025 23:13:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:13:48,224 127.0.0.1 - - [09/Jun/2025 23:13:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:13:48,258 127.0.0.1 - - [09/Jun/2025 23:13:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:13:48,295 127.0.0.1 - - [09/Jun/2025 23:13:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:13:48,340 127.0.0.1 - - [09/Jun/2025 23:13:48] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:13:50,032 127.0.0.1 - - [09/Jun/2025 23:13:50] "GET /create_team HTTP/1.1" 200 -
+2025-06-09 23:13:50,082 127.0.0.1 - - [09/Jun/2025 23:13:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:13:50,085 127.0.0.1 - - [09/Jun/2025 23:13:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:13:50,115 127.0.0.1 - - [09/Jun/2025 23:13:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:13:50,144 127.0.0.1 - - [09/Jun/2025 23:13:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:13:50,169 127.0.0.1 - - [09/Jun/2025 23:13:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:13:53,372 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:13:53,375 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 840
+2025-06-09 23:13:53,376 127.0.0.1 - - [09/Jun/2025 23:13:53] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:13:56,893 127.0.0.1 - - [09/Jun/2025 23:13:56] "GET /create_team HTTP/1.1" 200 -
+2025-06-09 23:13:56,937 127.0.0.1 - - [09/Jun/2025 23:13:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:13:56,941 127.0.0.1 - - [09/Jun/2025 23:13:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:13:56,970 127.0.0.1 - - [09/Jun/2025 23:13:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:13:56,998 127.0.0.1 - - [09/Jun/2025 23:13:56] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:13:57,027 127.0.0.1 - - [09/Jun/2025 23:13:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:14:11,430 127.0.0.1 - - [09/Jun/2025 23:14:11] "GET /create_team HTTP/1.1" 200 -
+2025-06-09 23:14:11,482 127.0.0.1 - - [09/Jun/2025 23:14:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:14:11,487 127.0.0.1 - - [09/Jun/2025 23:14:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:14:11,515 127.0.0.1 - - [09/Jun/2025 23:14:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:14:11,540 127.0.0.1 - - [09/Jun/2025 23:14:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:14:11,569 127.0.0.1 - - [09/Jun/2025 23:14:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:14:23,318 127.0.0.1 - - [09/Jun/2025 23:14:23] "GET /create_team HTTP/1.1" 200 -
+2025-06-09 23:14:23,366 127.0.0.1 - - [09/Jun/2025 23:14:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:14:23,369 127.0.0.1 - - [09/Jun/2025 23:14:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:14:23,396 127.0.0.1 - - [09/Jun/2025 23:14:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:14:23,425 127.0.0.1 - - [09/Jun/2025 23:14:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:14:23,449 127.0.0.1 - - [09/Jun/2025 23:14:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:14:39,582 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:14:39,588 http://127.0.0.1:3000 "POST /api/create_team HTTP/1.1" 201 45
+2025-06-09 23:14:39,589 Team 'Tempe Yr9 Boys' created successfully
+2025-06-09 23:14:39,590 127.0.0.1 - - [09/Jun/2025 23:14:39] "[32mPOST /create_team HTTP/1.1[0m" 302 -
+2025-06-09 23:14:39,616 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:14:39,619 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 1001
+2025-06-09 23:14:39,621 127.0.0.1 - - [09/Jun/2025 23:14:39] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:14:39,673 127.0.0.1 - - [09/Jun/2025 23:14:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:14:39,676 127.0.0.1 - - [09/Jun/2025 23:14:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:14:39,704 127.0.0.1 - - [09/Jun/2025 23:14:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:14:39,732 127.0.0.1 - - [09/Jun/2025 23:14:39] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:14:39,760 127.0.0.1 - - [09/Jun/2025 23:14:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:15:12,633 127.0.0.1 - - [09/Jun/2025 23:15:12] "GET / HTTP/1.1" 200 -
+2025-06-09 23:15:12,683 127.0.0.1 - - [09/Jun/2025 23:15:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:15:12,686 127.0.0.1 - - [09/Jun/2025 23:15:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:15:12,732 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:15:12,734 127.0.0.1 - - [09/Jun/2025 23:15:12] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:15:12,738 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:15:12,739 127.0.0.1 - - [09/Jun/2025 23:15:12] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:15:12,742 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:15:12,743 127.0.0.1 - - [09/Jun/2025 23:15:12] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:15:12,747 127.0.0.1 - - [09/Jun/2025 23:15:12] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:15:12,874 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:15:12,875 127.0.0.1 - - [09/Jun/2025 23:15:12] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:15:14,864 127.0.0.1 - - [09/Jun/2025 23:15:14] "GET /team/1 HTTP/1.1" 200 -
+2025-06-09 23:15:14,911 127.0.0.1 - - [09/Jun/2025 23:15:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:15:14,914 127.0.0.1 - - [09/Jun/2025 23:15:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:15:14,957 127.0.0.1 - - [09/Jun/2025 23:15:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:15:14,962 127.0.0.1 - - [09/Jun/2025 23:15:14] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:15:14,967 127.0.0.1 - - [09/Jun/2025 23:15:14] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:15:14,999 127.0.0.1 - - [09/Jun/2025 23:15:14] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:15:15,028 127.0.0.1 - - [09/Jun/2025 23:15:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:15:15,072 127.0.0.1 - - [09/Jun/2025 23:15:15] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-09 23:15:16,626 127.0.0.1 - - [09/Jun/2025 23:15:16] "GET / HTTP/1.1" 200 -
+2025-06-09 23:15:16,679 127.0.0.1 - - [09/Jun/2025 23:15:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:15:16,683 127.0.0.1 - - [09/Jun/2025 23:15:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:15:16,730 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:15:16,731 127.0.0.1 - - [09/Jun/2025 23:15:16] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:15:16,734 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:15:16,739 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:15:16,741 127.0.0.1 - - [09/Jun/2025 23:15:16] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:15:16,742 127.0.0.1 - - [09/Jun/2025 23:15:16] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:15:16,742 127.0.0.1 - - [09/Jun/2025 23:15:16] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:15:16,819 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:15:16,820 127.0.0.1 - - [09/Jun/2025 23:15:16] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:15:17,857 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:15:17,860 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 1001
+2025-06-09 23:15:17,862 127.0.0.1 - - [09/Jun/2025 23:15:17] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:15:17,916 127.0.0.1 - - [09/Jun/2025 23:15:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:15:17,920 127.0.0.1 - - [09/Jun/2025 23:15:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:15:17,951 127.0.0.1 - - [09/Jun/2025 23:15:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:15:17,977 127.0.0.1 - - [09/Jun/2025 23:15:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:15:18,005 127.0.0.1 - - [09/Jun/2025 23:15:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:15:28,801 127.0.0.1 - - [09/Jun/2025 23:15:28] "GET /create_team HTTP/1.1" 200 -
+2025-06-09 23:15:28,846 127.0.0.1 - - [09/Jun/2025 23:15:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:15:28,849 127.0.0.1 - - [09/Jun/2025 23:15:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:15:28,874 127.0.0.1 - - [09/Jun/2025 23:15:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:15:28,899 127.0.0.1 - - [09/Jun/2025 23:15:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:15:28,929 127.0.0.1 - - [09/Jun/2025 23:15:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:23:07,225  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-06-09 23:23:07,277  * Restarting with stat
+2025-06-09 23:23:07,689  * Debugger is active!
+2025-06-09 23:23:07,689  * Debugger PIN: 907-451-143
+2025-06-09 23:24:38,696  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/databaseManagement.py', reloading
+2025-06-09 23:24:38,750  * Restarting with stat
+2025-06-09 23:24:39,145  * Debugger is active!
+2025-06-09 23:24:39,145  * Debugger PIN: 907-451-143
+2025-06-09 23:25:10,365  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-06-09 23:25:10,443  * Restarting with stat
+2025-06-09 23:25:10,888  * Debugger is active!
+2025-06-09 23:25:10,888  * Debugger PIN: 907-451-143
+2025-06-09 23:25:50,821  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-06-09 23:25:50,871  * Restarting with stat
+2025-06-09 23:25:51,290  * Debugger is active!
+2025-06-09 23:25:51,291  * Debugger PIN: 907-451-143
+2025-06-09 23:25:54,967  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/api.py', reloading
+2025-06-09 23:25:55,018  * Restarting with stat
+2025-06-09 23:25:55,408  * Debugger is active!
+2025-06-09 23:25:55,408  * Debugger PIN: 907-451-143
+2025-06-09 23:25:57,543 127.0.0.1 - - [09/Jun/2025 23:25:57] "GET /create_team HTTP/1.1" 200 -
+2025-06-09 23:25:57,716 127.0.0.1 - - [09/Jun/2025 23:25:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:25:57,718 127.0.0.1 - - [09/Jun/2025 23:25:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:25:57,836 127.0.0.1 - - [09/Jun/2025 23:25:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:25:57,954 127.0.0.1 - - [09/Jun/2025 23:25:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:25:58,084 127.0.0.1 - - [09/Jun/2025 23:25:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:25:58,142 127.0.0.1 - - [09/Jun/2025 23:25:58] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:26:01,634 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:26:01,645 127.0.0.1 - - [09/Jun/2025 23:26:01] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:26:03,845 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:26:03,846 127.0.0.1 - - [09/Jun/2025 23:26:03] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:26:03,885 127.0.0.1 - - [09/Jun/2025 23:26:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:26:03,888 127.0.0.1 - - [09/Jun/2025 23:26:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:26:03,912 127.0.0.1 - - [09/Jun/2025 23:26:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:26:03,938 127.0.0.1 - - [09/Jun/2025 23:26:03] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:26:03,962 127.0.0.1 - - [09/Jun/2025 23:26:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:26:03,994 127.0.0.1 - - [09/Jun/2025 23:26:03] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:26:44,263 127.0.0.1 - - [09/Jun/2025 23:26:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:26:44,266 127.0.0.1 - - [09/Jun/2025 23:26:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:26:44,300 127.0.0.1 - - [09/Jun/2025 23:26:44] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-06-09 23:26:44,326 127.0.0.1 - - [09/Jun/2025 23:26:44] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-06-09 23:28:46,802 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:28:46,805 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 1001
+2025-06-09 23:28:46,807 127.0.0.1 - - [09/Jun/2025 23:28:46] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:28:46,967 127.0.0.1 - - [09/Jun/2025 23:28:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-09 23:28:46,970 127.0.0.1 - - [09/Jun/2025 23:28:46] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-06-09 23:28:47,125 127.0.0.1 - - [09/Jun/2025 23:28:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:47,242 127.0.0.1 - - [09/Jun/2025 23:28:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:47,357 127.0.0.1 - - [09/Jun/2025 23:28:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:47,424 127.0.0.1 - - [09/Jun/2025 23:28:47] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:28:48,633 127.0.0.1 - - [09/Jun/2025 23:28:48] "GET /create_team HTTP/1.1" 200 -
+2025-06-09 23:28:48,678 127.0.0.1 - - [09/Jun/2025 23:28:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:28:48,681 127.0.0.1 - - [09/Jun/2025 23:28:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:28:48,710 127.0.0.1 - - [09/Jun/2025 23:28:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:48,736 127.0.0.1 - - [09/Jun/2025 23:28:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:48,763 127.0.0.1 - - [09/Jun/2025 23:28:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:49,874 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:28:49,877 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 1001
+2025-06-09 23:28:49,879 127.0.0.1 - - [09/Jun/2025 23:28:49] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:28:50,950 127.0.0.1 - - [09/Jun/2025 23:28:50] "GET /create_team HTTP/1.1" 200 -
+2025-06-09 23:28:50,997 127.0.0.1 - - [09/Jun/2025 23:28:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:28:51,001 127.0.0.1 - - [09/Jun/2025 23:28:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:28:51,031 127.0.0.1 - - [09/Jun/2025 23:28:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:51,059 127.0.0.1 - - [09/Jun/2025 23:28:51] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:51,087 127.0.0.1 - - [09/Jun/2025 23:28:51] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:56,623 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:28:56,626 http://127.0.0.1:3000 "POST /api/create_team HTTP/1.1" 400 57
+2025-06-09 23:28:56,626 Error during team creation attempt: Spike Masters - 400 Client Error: BAD REQUEST for url: http://127.0.0.1:3000/api/create_team
+2025-06-09 23:28:56,628 127.0.0.1 - - [09/Jun/2025 23:28:56] "POST /create_team HTTP/1.1" 200 -
+2025-06-09 23:28:56,667 127.0.0.1 - - [09/Jun/2025 23:28:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:28:56,670 127.0.0.1 - - [09/Jun/2025 23:28:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:28:56,701 127.0.0.1 - - [09/Jun/2025 23:28:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:56,732 127.0.0.1 - - [09/Jun/2025 23:28:56] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:28:56,774 127.0.0.1 - - [09/Jun/2025 23:28:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:07,611  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/teamHandlers.py', reloading
+2025-06-09 23:31:07,663  * Restarting with stat
+2025-06-09 23:31:08,054  * Debugger is active!
+2025-06-09 23:31:08,055  * Debugger PIN: 907-451-143
+2025-06-09 23:31:10,091 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:31:10,094 http://127.0.0.1:3000 "POST /api/create_team HTTP/1.1" 400 57
+2025-06-09 23:31:10,094 Error during team creation attempt: Spike Masters - 400 Client Error: BAD REQUEST for url: http://127.0.0.1:3000/api/create_team
+2025-06-09 23:31:10,109 127.0.0.1 - - [09/Jun/2025 23:31:10] "POST /create_team HTTP/1.1" 200 -
+2025-06-09 23:31:10,318 127.0.0.1 - - [09/Jun/2025 23:31:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:10,323 127.0.0.1 - - [09/Jun/2025 23:31:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:10,455 127.0.0.1 - - [09/Jun/2025 23:31:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:10,553 127.0.0.1 - - [09/Jun/2025 23:31:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:10,653 127.0.0.1 - - [09/Jun/2025 23:31:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:10,699 127.0.0.1 - - [09/Jun/2025 23:31:10] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-06-09 23:31:13,767 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:31:13,771 http://127.0.0.1:3000 "POST /api/create_team HTTP/1.1" 400 57
+2025-06-09 23:31:13,772 Error during team creation attempt: Spike Masters - 400 Client Error: BAD REQUEST for url: http://127.0.0.1:3000/api/create_team
+2025-06-09 23:31:13,773 127.0.0.1 - - [09/Jun/2025 23:31:13] "POST /create_team HTTP/1.1" 200 -
+2025-06-09 23:31:13,817 127.0.0.1 - - [09/Jun/2025 23:31:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:13,820 127.0.0.1 - - [09/Jun/2025 23:31:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:13,848 127.0.0.1 - - [09/Jun/2025 23:31:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:13,877 127.0.0.1 - - [09/Jun/2025 23:31:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:13,904 127.0.0.1 - - [09/Jun/2025 23:31:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:31,936 127.0.0.1 - - [09/Jun/2025 23:31:31] "GET / HTTP/1.1" 200 -
+2025-06-09 23:31:31,975 127.0.0.1 - - [09/Jun/2025 23:31:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:31,979 127.0.0.1 - - [09/Jun/2025 23:31:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:32,022 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/create_team","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:31:32,023 127.0.0.1 - - [09/Jun/2025 23:31:32] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:31:32,033 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/create_team","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:31:32,034 127.0.0.1 - - [09/Jun/2025 23:31:32] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:31:32,050 127.0.0.1 - - [09/Jun/2025 23:31:32] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:31:32,053 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/create_team","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:31:32,055 127.0.0.1 - - [09/Jun/2025 23:31:32] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:31:32,122 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/create_team","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:31:32,124 127.0.0.1 - - [09/Jun/2025 23:31:32] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:31:32,986 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:31:32,989 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 1001
+2025-06-09 23:31:33,000 127.0.0.1 - - [09/Jun/2025 23:31:33] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:31:33,054 127.0.0.1 - - [09/Jun/2025 23:31:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:33,057 127.0.0.1 - - [09/Jun/2025 23:31:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:33,090 127.0.0.1 - - [09/Jun/2025 23:31:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:33,119 127.0.0.1 - - [09/Jun/2025 23:31:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:33,147 127.0.0.1 - - [09/Jun/2025 23:31:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:33,810 127.0.0.1 - - [09/Jun/2025 23:31:33] "GET /create_team HTTP/1.1" 200 -
+2025-06-09 23:31:33,858 127.0.0.1 - - [09/Jun/2025 23:31:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:33,861 127.0.0.1 - - [09/Jun/2025 23:31:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:33,891 127.0.0.1 - - [09/Jun/2025 23:31:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:33,919 127.0.0.1 - - [09/Jun/2025 23:31:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:33,945 127.0.0.1 - - [09/Jun/2025 23:31:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:39,296 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:31:39,298 http://127.0.0.1:3000 "POST /api/create_team HTTP/1.1" 400 57
+2025-06-09 23:31:39,298 Error during team creation attempt: Spike Masters - 400 Client Error: BAD REQUEST for url: http://127.0.0.1:3000/api/create_team
+2025-06-09 23:31:39,300 127.0.0.1 - - [09/Jun/2025 23:31:39] "POST /create_team HTTP/1.1" 200 -
+2025-06-09 23:31:39,348 127.0.0.1 - - [09/Jun/2025 23:31:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:39,353 127.0.0.1 - - [09/Jun/2025 23:31:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:31:39,383 127.0.0.1 - - [09/Jun/2025 23:31:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:39,412 127.0.0.1 - - [09/Jun/2025 23:31:39] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:31:39,440 127.0.0.1 - - [09/Jun/2025 23:31:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:33:29,704  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/teamHandlers.py', reloading
+2025-06-09 23:33:29,758  * Restarting with stat
+2025-06-09 23:33:38,528 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.59:5000
+2025-06-09 23:33:38,528 [33mPress CTRL+C to quit[0m
+2025-06-09 23:33:38,528  * Restarting with stat
+2025-06-09 23:33:38,954  * Debugger is active!
+2025-06-09 23:33:38,955  * Debugger PIN: 907-451-143
+2025-06-09 23:33:39,446 127.0.0.1 - - [09/Jun/2025 23:33:39] "GET / HTTP/1.1" 200 -
+2025-06-09 23:33:39,631 127.0.0.1 - - [09/Jun/2025 23:33:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:33:39,631 127.0.0.1 - - [09/Jun/2025 23:33:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:33:39,682 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-09 23:33:39,683 127.0.0.1 - - [09/Jun/2025 23:33:39] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:33:39,691 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-09 23:33:39,692 127.0.0.1 - - [09/Jun/2025 23:33:39] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:33:39,796 127.0.0.1 - - [09/Jun/2025 23:33:39] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-09 23:33:39,798 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-09 23:33:39,799 127.0.0.1 - - [09/Jun/2025 23:33:39] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:33:39,886 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-06-09 23:33:39,887 127.0.0.1 - - [09/Jun/2025 23:33:39] "POST /csp_report HTTP/1.1" 200 -
+2025-06-09 23:33:41,115 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:33:41,118 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 1001
+2025-06-09 23:33:41,125 127.0.0.1 - - [09/Jun/2025 23:33:41] "GET /searchteam HTTP/1.1" 200 -
+2025-06-09 23:33:41,170 127.0.0.1 - - [09/Jun/2025 23:33:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:33:41,173 127.0.0.1 - - [09/Jun/2025 23:33:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:33:41,202 127.0.0.1 - - [09/Jun/2025 23:33:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:33:41,243 127.0.0.1 - - [09/Jun/2025 23:33:41] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:33:41,286 127.0.0.1 - - [09/Jun/2025 23:33:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:33:41,768 127.0.0.1 - - [09/Jun/2025 23:33:41] "GET /create_team HTTP/1.1" 200 -
+2025-06-09 23:33:41,820 127.0.0.1 - - [09/Jun/2025 23:33:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:33:41,824 127.0.0.1 - - [09/Jun/2025 23:33:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:33:41,853 127.0.0.1 - - [09/Jun/2025 23:33:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:33:41,886 127.0.0.1 - - [09/Jun/2025 23:33:41] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:33:41,921 127.0.0.1 - - [09/Jun/2025 23:33:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:33:47,131 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-09 23:33:47,134 http://127.0.0.1:3000 "POST /api/create_team HTTP/1.1" 400 57
+2025-06-09 23:33:47,134 Failed team creation attempt: Spike Masters - A team with this name already exists.
+2025-06-09 23:33:47,136 127.0.0.1 - - [09/Jun/2025 23:33:47] "POST /create_team HTTP/1.1" 200 -
+2025-06-09 23:33:47,177 127.0.0.1 - - [09/Jun/2025 23:33:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-09 23:33:47,181 127.0.0.1 - - [09/Jun/2025 23:33:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-09 23:33:47,206 127.0.0.1 - - [09/Jun/2025 23:33:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-09 23:33:47,231 127.0.0.1 - - [09/Jun/2025 23:33:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-09 23:33:47,257 127.0.0.1 - - [09/Jun/2025 23:33:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-09 23:33:52,851  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/teamHandlers.py', reloading
+2025-06-09 23:33:52,904  * Restarting with stat
+2025-06-09 23:33:53,298  * Debugger is active!
+2025-06-09 23:33:53,298  * Debugger PIN: 907-451-143
+2025-06-09 23:37:10,526  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/logging.py', reloading
+2025-06-09 23:37:10,593  * Restarting with stat
+2025-06-09 23:37:52,360 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.59:5000
+2025-06-09 23:37:52,360 [33mPress CTRL+C to quit[0m
+2025-06-09 23:37:52,360  * Restarting with stat
+2025-06-09 23:37:52,787  * Debugger is active!
+2025-06-09 23:37:52,788  * Debugger PIN: 907-451-143
+2025-06-11 10:54:40,927 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.37:5000
+2025-06-11 10:54:40,929 [33mPress CTRL+C to quit[0m
+2025-06-11 10:54:40,929  * Restarting with stat
+2025-06-11 10:54:41,327  * Debugger is active!
+2025-06-11 10:54:41,328  * Debugger PIN: 887-201-273
+2025-06-11 10:54:50,569 127.0.0.1 - - [11/Jun/2025 10:54:50] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-11 10:54:50,764 127.0.0.1 - - [11/Jun/2025 10:54:50] "GET /login.html HTTP/1.1" 200 -
+2025-06-11 10:54:51,121 127.0.0.1 - - [11/Jun/2025 10:54:51] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-11 10:54:51,141 127.0.0.1 - - [11/Jun/2025 10:54:51] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-06-11 10:54:51,317 127.0.0.1 - - [11/Jun/2025 10:54:51] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-06-11 10:54:51,463 127.0.0.1 - - [11/Jun/2025 10:54:51] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-06-11 10:54:51,505 127.0.0.1 - - [11/Jun/2025 10:54:51] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-06-11 10:54:51,872 127.0.0.1 - - [11/Jun/2025 10:54:51] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-06-11 10:54:51,883 127.0.0.1 - - [11/Jun/2025 10:54:51] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 10:54:52,016 127.0.0.1 - - [11/Jun/2025 10:54:52] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-11 10:54:52,035 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,038 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,044 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,044 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,047 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,054 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,059 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,071 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,075 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,078 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,080 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/images/volleyballteam.png HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,084 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2025-06-11 10:54:52,102 127.0.0.1 - - [11/Jun/2025 10:54:52] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2025-06-11 11:56:31,289 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.37:5000
+2025-06-11 11:56:31,289 [33mPress CTRL+C to quit[0m
+2025-06-11 11:56:31,289  * Restarting with stat
+2025-06-11 11:56:31,690  * Debugger is active!
+2025-06-11 11:56:31,690  * Debugger PIN: 887-201-273
+2025-06-11 11:56:32,145 127.0.0.1 - - [11/Jun/2025 11:56:32] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-11 11:56:32,292 127.0.0.1 - - [11/Jun/2025 11:56:32] "GET /login.html HTTP/1.1" 200 -
+2025-06-11 11:56:32,627 127.0.0.1 - - [11/Jun/2025 11:56:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 11:56:32,629 127.0.0.1 - - [11/Jun/2025 11:56:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 11:56:32,742 127.0.0.1 - - [11/Jun/2025 11:56:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 11:56:33,041 127.0.0.1 - - [11/Jun/2025 11:56:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 11:56:33,080 127.0.0.1 - - [11/Jun/2025 11:56:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 11:59:33,148 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-11 11:59:33,257 http://127.0.0.1:3000 "POST /api/login HTTP/1.1" 200 55
+2025-06-11 11:59:33,258 User 'TestCoach' logged in, hasn't passed 2FA
+2025-06-11 11:59:33,259 127.0.0.1 - - [11/Jun/2025 11:59:33] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-06-11 11:59:33,386 127.0.0.1 - - [11/Jun/2025 11:59:33] "GET /2fa HTTP/1.1" 200 -
+2025-06-11 11:59:33,641 127.0.0.1 - - [11/Jun/2025 11:59:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 11:59:33,643 127.0.0.1 - - [11/Jun/2025 11:59:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 11:59:33,768 127.0.0.1 - - [11/Jun/2025 11:59:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 11:59:33,888 127.0.0.1 - - [11/Jun/2025 11:59:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 11:59:33,934 127.0.0.1 - - [11/Jun/2025 11:59:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 11:59:59,251 2FA successful, User 'TestCoach' logged in successfully
+2025-06-11 11:59:59,252 127.0.0.1 - - [11/Jun/2025 11:59:59] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+2025-06-11 11:59:59,296 127.0.0.1 - - [11/Jun/2025 11:59:59] "GET / HTTP/1.1" 200 -
+2025-06-11 11:59:59,459 127.0.0.1 - - [11/Jun/2025 11:59:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 11:59:59,462 127.0.0.1 - - [11/Jun/2025 11:59:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 11:59:59,520 127.0.0.1 - - [11/Jun/2025 11:59:59] "GET /static/images/volleyballteam.png HTTP/1.1" 200 -
+2025-06-11 11:59:59,536 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-11 11:59:59,537 127.0.0.1 - - [11/Jun/2025 11:59:59] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 11:59:59,539 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-11 11:59:59,540 127.0.0.1 - - [11/Jun/2025 11:59:59] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 11:59:59,542 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/2fa","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-11 11:59:59,543 127.0.0.1 - - [11/Jun/2025 11:59:59] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:00:30,006 127.0.0.1 - - [11/Jun/2025 12:00:30] "GET /team/1 HTTP/1.1" 200 -
+2025-06-11 12:00:30,118 127.0.0.1 - - [11/Jun/2025 12:00:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:00:30,121 127.0.0.1 - - [11/Jun/2025 12:00:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:00:30,181 127.0.0.1 - - [11/Jun/2025 12:00:30] "GET /static/icons/team_event_icon.png HTTP/1.1" 200 -
+2025-06-11 12:00:30,199 127.0.0.1 - - [11/Jun/2025 12:00:30] "GET /static/icons/team_messages_icon.png HTTP/1.1" 200 -
+2025-06-11 12:00:30,203 127.0.0.1 - - [11/Jun/2025 12:00:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:30,241 127.0.0.1 - - [11/Jun/2025 12:00:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:30,274 127.0.0.1 - - [11/Jun/2025 12:00:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:30,342 127.0.0.1 - - [11/Jun/2025 12:00:30] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:00:30,347 127.0.0.1 - - [11/Jun/2025 12:00:30] "[33mGET /team/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-06-11 12:00:31,941 127.0.0.1 - - [11/Jun/2025 12:00:31] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-11 12:00:32,079 127.0.0.1 - - [11/Jun/2025 12:00:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:32,083 127.0.0.1 - - [11/Jun/2025 12:00:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:32,093 127.0.0.1 - - [11/Jun/2025 12:00:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:00:32,103 127.0.0.1 - - [11/Jun/2025 12:00:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:32,111 127.0.0.1 - - [11/Jun/2025 12:00:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:00:32,198 127.0.0.1 - - [11/Jun/2025 12:00:32] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:00:32,211 127.0.0.1 - - [11/Jun/2025 12:00:32] "[33mGET /team/1/static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-06-11 12:00:36,887 127.0.0.1 - - [11/Jun/2025 12:00:36] "GET /team/1/messages HTTP/1.1" 200 -
+2025-06-11 12:00:36,991 127.0.0.1 - - [11/Jun/2025 12:00:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:00:36,994 127.0.0.1 - - [11/Jun/2025 12:00:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:00:37,054 127.0.0.1 - - [11/Jun/2025 12:00:37] "GET /static/js/teamChat.js HTTP/1.1" 200 -
+2025-06-11 12:00:37,107 127.0.0.1 - - [11/Jun/2025 12:00:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:37,111 127.0.0.1 - - [11/Jun/2025 12:00:37] "GET /socket.io/?EIO=4&transport=polling&t=PTUtKvu HTTP/1.1" 200 -
+2025-06-11 12:00:37,172 127.0.0.1 - - [11/Jun/2025 12:00:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:37,177 127.0.0.1 - - [11/Jun/2025 12:00:37] "POST /socket.io/?EIO=4&transport=polling&t=PTUtKwq&sid=_16_IytA2M3qhfFIAAAA HTTP/1.1" 200 -
+2025-06-11 12:00:37,180 127.0.0.1 - - [11/Jun/2025 12:00:37] "GET /socket.io/?EIO=4&transport=polling&t=PTUtKwr&sid=_16_IytA2M3qhfFIAAAA HTTP/1.1" 200 -
+2025-06-11 12:00:37,211 127.0.0.1 - - [11/Jun/2025 12:00:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:37,233 127.0.0.1 - - [11/Jun/2025 12:00:37] "GET /socket.io/?EIO=4&transport=polling&t=PTUtKxu&sid=_16_IytA2M3qhfFIAAAA HTTP/1.1" 200 -
+2025-06-11 12:00:37,237 127.0.0.1 - - [11/Jun/2025 12:00:37] "POST /socket.io/?EIO=4&transport=polling&t=PTUtKxv&sid=_16_IytA2M3qhfFIAAAA HTTP/1.1" 200 -
+2025-06-11 12:00:37,239 TestCoach has joined the room team_1
+2025-06-11 12:00:37,281 127.0.0.1 - - [11/Jun/2025 12:00:37] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:00:49,697 127.0.0.1 - - [11/Jun/2025 12:00:49] "GET /socket.io/?EIO=4&transport=websocket&sid=_16_IytA2M3qhfFIAAAA HTTP/1.1" 200 -
+2025-06-11 12:00:49,746 127.0.0.1 - - [11/Jun/2025 12:00:49] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-11 12:00:49,890 127.0.0.1 - - [11/Jun/2025 12:00:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:00:49,896 127.0.0.1 - - [11/Jun/2025 12:00:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:00:49,902 127.0.0.1 - - [11/Jun/2025 12:00:49] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:49,903 127.0.0.1 - - [11/Jun/2025 12:00:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:49,907 127.0.0.1 - - [11/Jun/2025 12:00:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:00:49,995 127.0.0.1 - - [11/Jun/2025 12:00:49] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:01:29,344 127.0.0.1 - - [11/Jun/2025 12:01:29] "GET /team/1/messages HTTP/1.1" 200 -
+2025-06-11 12:01:29,449 127.0.0.1 - - [11/Jun/2025 12:01:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:01:29,452 127.0.0.1 - - [11/Jun/2025 12:01:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:01:29,503 127.0.0.1 - - [11/Jun/2025 12:01:29] "[36mGET /static/js/teamChat.js HTTP/1.1[0m" 304 -
+2025-06-11 12:01:29,553 127.0.0.1 - - [11/Jun/2025 12:01:29] "GET /socket.io/?EIO=4&transport=polling&t=PTUtXjM HTTP/1.1" 200 -
+2025-06-11 12:01:29,559 127.0.0.1 - - [11/Jun/2025 12:01:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:01:29,618 127.0.0.1 - - [11/Jun/2025 12:01:29] "POST /socket.io/?EIO=4&transport=polling&t=PTUtXkA&sid=GWY18XBK38rr-b9HAAAC HTTP/1.1" 200 -
+2025-06-11 12:01:29,623 127.0.0.1 - - [11/Jun/2025 12:01:29] "GET /socket.io/?EIO=4&transport=polling&t=PTUtXkB&sid=GWY18XBK38rr-b9HAAAC HTTP/1.1" 200 -
+2025-06-11 12:01:29,630 127.0.0.1 - - [11/Jun/2025 12:01:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:01:29,680 127.0.0.1 - - [11/Jun/2025 12:01:29] "GET /socket.io/?EIO=4&transport=polling&t=PTUtXlI.0&sid=GWY18XBK38rr-b9HAAAC HTTP/1.1" 200 -
+2025-06-11 12:01:29,683 127.0.0.1 - - [11/Jun/2025 12:01:29] "POST /socket.io/?EIO=4&transport=polling&t=PTUtXlI&sid=GWY18XBK38rr-b9HAAAC HTTP/1.1" 200 -
+2025-06-11 12:01:29,685 TestCoach has joined the room team_1
+2025-06-11 12:01:29,695 127.0.0.1 - - [11/Jun/2025 12:01:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:01:29,730 127.0.0.1 - - [11/Jun/2025 12:01:29] "GET /socket.io/?EIO=4&transport=polling&t=PTUtXmC&sid=GWY18XBK38rr-b9HAAAC HTTP/1.1" 200 -
+2025-06-11 12:01:29,760 127.0.0.1 - - [11/Jun/2025 12:01:29] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:05:35,908 127.0.0.1 - - [11/Jun/2025 12:05:35] "GET /socket.io/?EIO=4&transport=websocket&sid=GWY18XBK38rr-b9HAAAC HTTP/1.1" 200 -
+2025-06-11 12:05:36,074 127.0.0.1 - - [11/Jun/2025 12:05:36] "GET /team/1/messages HTTP/1.1" 200 -
+2025-06-11 12:05:36,282 127.0.0.1 - - [11/Jun/2025 12:05:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:05:36,286 127.0.0.1 - - [11/Jun/2025 12:05:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:05:36,422 127.0.0.1 - - [11/Jun/2025 12:05:36] "GET /static/js/teamChat.js HTTP/1.1" 200 -
+2025-06-11 12:05:36,482 127.0.0.1 - - [11/Jun/2025 12:05:36] "GET /socket.io/?EIO=4&transport=polling&t=PTUuT_T HTTP/1.1" 200 -
+2025-06-11 12:05:36,543 127.0.0.1 - - [11/Jun/2025 12:05:36] "POST /socket.io/?EIO=4&transport=polling&t=PTUuU0O&sid=i24ZUiFJqJM7tJgKAAAE HTTP/1.1" 200 -
+2025-06-11 12:05:36,543 127.0.0.1 - - [11/Jun/2025 12:05:36] "GET /socket.io/?EIO=4&transport=polling&t=PTUuU0O.0&sid=i24ZUiFJqJM7tJgKAAAE HTTP/1.1" 200 -
+2025-06-11 12:05:36,579 127.0.0.1 - - [11/Jun/2025 12:05:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:05:36,603 127.0.0.1 - - [11/Jun/2025 12:05:36] "GET /socket.io/?EIO=4&transport=polling&t=PTUuU1Q&sid=i24ZUiFJqJM7tJgKAAAE HTTP/1.1" 200 -
+2025-06-11 12:05:36,610 127.0.0.1 - - [11/Jun/2025 12:05:36] "POST /socket.io/?EIO=4&transport=polling&t=PTUuU1b&sid=i24ZUiFJqJM7tJgKAAAE HTTP/1.1" 200 -
+2025-06-11 12:05:36,612 TestCoach has joined the room team_1
+2025-06-11 12:05:36,662 127.0.0.1 - - [11/Jun/2025 12:05:36] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:05:36,707 127.0.0.1 - - [11/Jun/2025 12:05:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:05:36,782 127.0.0.1 - - [11/Jun/2025 12:05:36] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:06:42,843 TestCoach has left the room team_1
+2025-06-11 12:06:44,653 TestCoach has left the room dm_TestCoach_TestUser
+2025-06-11 12:06:44,654 TestCoach has joined the room team_1
+2025-06-11 12:09:08,072 127.0.0.1 - - [11/Jun/2025 12:09:08] "GET /socket.io/?EIO=4&transport=websocket&sid=i24ZUiFJqJM7tJgKAAAE HTTP/1.1" 200 -
+2025-06-11 12:09:08,243 127.0.0.1 - - [11/Jun/2025 12:09:08] "GET /team/1/messages HTTP/1.1" 200 -
+2025-06-11 12:09:08,506 127.0.0.1 - - [11/Jun/2025 12:09:08] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-11 12:09:08,515 127.0.0.1 - - [11/Jun/2025 12:09:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:09:08,659 127.0.0.1 - - [11/Jun/2025 12:09:08] "[36mGET /static/js/teamChat.js HTTP/1.1[0m" 304 -
+2025-06-11 12:09:08,715 127.0.0.1 - - [11/Jun/2025 12:09:08] "GET /socket.io/?EIO=4&transport=polling&t=PTUvHpf HTTP/1.1" 200 -
+2025-06-11 12:09:08,777 127.0.0.1 - - [11/Jun/2025 12:09:08] "POST /socket.io/?EIO=4&transport=polling&t=PTUvHqW&sid=gQcZElJVGNUE6vzVAAAG HTTP/1.1" 200 -
+2025-06-11 12:09:08,777 127.0.0.1 - - [11/Jun/2025 12:09:08] "GET /socket.io/?EIO=4&transport=polling&t=PTUvHqX&sid=gQcZElJVGNUE6vzVAAAG HTTP/1.1" 200 -
+2025-06-11 12:09:08,827 127.0.0.1 - - [11/Jun/2025 12:09:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:09:08,832 127.0.0.1 - - [11/Jun/2025 12:09:08] "GET /socket.io/?EIO=4&transport=polling&t=PTUvHrW&sid=gQcZElJVGNUE6vzVAAAG HTTP/1.1" 200 -
+2025-06-11 12:09:08,835 127.0.0.1 - - [11/Jun/2025 12:09:08] "POST /socket.io/?EIO=4&transport=polling&t=PTUvHrV&sid=gQcZElJVGNUE6vzVAAAG HTTP/1.1" 200 -
+2025-06-11 12:09:08,836 TestCoach has joined the room team_1
+2025-06-11 12:09:08,868 127.0.0.1 - - [11/Jun/2025 12:09:08] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:09:08,875 127.0.0.1 - - [11/Jun/2025 12:09:08] "GET /socket.io/?EIO=4&transport=polling&t=PTUvHsN&sid=gQcZElJVGNUE6vzVAAAG HTTP/1.1" 200 -
+2025-06-11 12:09:08,901 127.0.0.1 - - [11/Jun/2025 12:09:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:09:08,991 127.0.0.1 - - [11/Jun/2025 12:09:08] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:10:32,246 TestCoach has left the room team_1
+2025-06-11 12:10:32,592 TestCoach has left the room dm_TestCoach_TestUser
+2025-06-11 12:10:32,593 TestCoach has joined the room team_1
+2025-06-11 12:10:33,240 TestCoach has left the room team_1
+2025-06-11 12:10:34,901 TestCoach has left the room dm_TestCoach_TestUser
+2025-06-11 12:10:34,905 TestCoach has joined the room team_1
+2025-06-11 12:10:48,976 127.0.0.1 - - [11/Jun/2025 12:10:48] "GET /socket.io/?EIO=4&transport=websocket&sid=gQcZElJVGNUE6vzVAAAG HTTP/1.1" 200 -
+2025-06-11 12:10:49,126 127.0.0.1 - - [11/Jun/2025 12:10:49] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-11 12:10:49,598 127.0.0.1 - - [11/Jun/2025 12:10:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:10:49,651 127.0.0.1 - - [11/Jun/2025 12:10:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:10:49,677 127.0.0.1 - - [11/Jun/2025 12:10:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:10:49,680 127.0.0.1 - - [11/Jun/2025 12:10:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:10:49,686 127.0.0.1 - - [11/Jun/2025 12:10:49] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:10:49,777 127.0.0.1 - - [11/Jun/2025 12:10:49] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:14:23,345 127.0.0.1 - - [11/Jun/2025 12:14:23] "GET /team/1/create_event HTTP/1.1" 200 -
+2025-06-11 12:14:23,600 127.0.0.1 - - [11/Jun/2025 12:14:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:14:23,605 127.0.0.1 - - [11/Jun/2025 12:14:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:14:23,731 127.0.0.1 - - [11/Jun/2025 12:14:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:14:23,873 127.0.0.1 - - [11/Jun/2025 12:14:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:14:24,009 127.0.0.1 - - [11/Jun/2025 12:14:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:14:24,091 127.0.0.1 - - [11/Jun/2025 12:14:24] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:15:25,846 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-11 12:15:25,862 http://127.0.0.1:3000 "POST /api/create_team_event HTTP/1.1" 201 51
+2025-06-11 12:15:25,864 127.0.0.1 - - [11/Jun/2025 12:15:25] "[32mPOST /team/1/create_event HTTP/1.1[0m" 302 -
+2025-06-11 12:15:25,928 127.0.0.1 - - [11/Jun/2025 12:15:25] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-11 12:15:26,067 127.0.0.1 - - [11/Jun/2025 12:15:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:15:26,071 127.0.0.1 - - [11/Jun/2025 12:15:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:26,082 127.0.0.1 - - [11/Jun/2025 12:15:26] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:26,085 127.0.0.1 - - [11/Jun/2025 12:15:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:15:26,083 127.0.0.1 - - [11/Jun/2025 12:15:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:26,179 127.0.0.1 - - [11/Jun/2025 12:15:26] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:15:36,944 127.0.0.1 - - [11/Jun/2025 12:15:36] "[32mPOST /team/1/delete_event/11 HTTP/1.1[0m" 302 -
+2025-06-11 12:15:36,987 127.0.0.1 - - [11/Jun/2025 12:15:36] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-11 12:15:37,082 127.0.0.1 - - [11/Jun/2025 12:15:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:15:37,105 127.0.0.1 - - [11/Jun/2025 12:15:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:15:37,107 127.0.0.1 - - [11/Jun/2025 12:15:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:37,111 127.0.0.1 - - [11/Jun/2025 12:15:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:37,114 127.0.0.1 - - [11/Jun/2025 12:15:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:37,183 127.0.0.1 - - [11/Jun/2025 12:15:37] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:15:38,225 127.0.0.1 - - [11/Jun/2025 12:15:38] "[32mPOST /team/1/delete_event/12 HTTP/1.1[0m" 302 -
+2025-06-11 12:15:38,269 127.0.0.1 - - [11/Jun/2025 12:15:38] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-11 12:15:38,373 127.0.0.1 - - [11/Jun/2025 12:15:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:15:38,390 127.0.0.1 - - [11/Jun/2025 12:15:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:15:38,395 127.0.0.1 - - [11/Jun/2025 12:15:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:38,398 127.0.0.1 - - [11/Jun/2025 12:15:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:38,401 127.0.0.1 - - [11/Jun/2025 12:15:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:38,464 127.0.0.1 - - [11/Jun/2025 12:15:38] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:15:39,342 127.0.0.1 - - [11/Jun/2025 12:15:39] "[32mPOST /team/1/delete_event/13 HTTP/1.1[0m" 302 -
+2025-06-11 12:15:39,383 127.0.0.1 - - [11/Jun/2025 12:15:39] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-11 12:15:39,489 127.0.0.1 - - [11/Jun/2025 12:15:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:15:39,504 127.0.0.1 - - [11/Jun/2025 12:15:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:15:39,507 127.0.0.1 - - [11/Jun/2025 12:15:39] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:39,510 127.0.0.1 - - [11/Jun/2025 12:15:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:39,513 127.0.0.1 - - [11/Jun/2025 12:15:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:39,579 127.0.0.1 - - [11/Jun/2025 12:15:39] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:15:45,077 127.0.0.1 - - [11/Jun/2025 12:15:45] "GET /team/1/create_event HTTP/1.1" 200 -
+2025-06-11 12:15:45,173 127.0.0.1 - - [11/Jun/2025 12:15:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:15:45,184 127.0.0.1 - - [11/Jun/2025 12:15:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:15:45,245 127.0.0.1 - - [11/Jun/2025 12:15:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:45,280 127.0.0.1 - - [11/Jun/2025 12:15:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:45,324 127.0.0.1 - - [11/Jun/2025 12:15:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:15:45,386 127.0.0.1 - - [11/Jun/2025 12:15:45] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:16:14,727 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-11 12:16:14,739 http://127.0.0.1:3000 "POST /api/create_team_event HTTP/1.1" 201 51
+2025-06-11 12:16:14,740 127.0.0.1 - - [11/Jun/2025 12:16:14] "[32mPOST /team/1/create_event HTTP/1.1[0m" 302 -
+2025-06-11 12:16:14,789 127.0.0.1 - - [11/Jun/2025 12:16:14] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-11 12:16:14,928 127.0.0.1 - - [11/Jun/2025 12:16:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:16:14,936 127.0.0.1 - - [11/Jun/2025 12:16:14] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:16:14,939 127.0.0.1 - - [11/Jun/2025 12:16:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:16:14,944 127.0.0.1 - - [11/Jun/2025 12:16:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:16:14,949 127.0.0.1 - - [11/Jun/2025 12:16:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:16:15,038 127.0.0.1 - - [11/Jun/2025 12:16:15] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:16:42,645 127.0.0.1 - - [11/Jun/2025 12:16:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:16:42,653 127.0.0.1 - - [11/Jun/2025 12:16:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:16:42,737 127.0.0.1 - - [11/Jun/2025 12:16:42] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-06-11 12:16:42,779 127.0.0.1 - - [11/Jun/2025 12:16:42] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-06-11 12:18:56,948  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/teamHandlers.py', reloading
+2025-06-11 12:18:57,017  * Restarting with stat
+2025-06-11 12:18:57,430  * Debugger is active!
+2025-06-11 12:18:57,430  * Debugger PIN: 887-201-273
+2025-06-11 12:19:38,619  * Detected change in '/workspaces/2025SE-Jaiden.W-MajorProject/teamHandlers.py', reloading
+2025-06-11 12:19:38,684  * Restarting with stat
+2025-06-11 12:19:39,094  * Debugger is active!
+2025-06-11 12:19:39,094  * Debugger PIN: 887-201-273
+2025-06-11 12:26:24,842 127.0.0.1 - - [11/Jun/2025 12:26:24] "GET /team/1/messages HTTP/1.1" 200 -
+2025-06-11 12:26:25,115 127.0.0.1 - - [11/Jun/2025 12:26:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:25,118 127.0.0.1 - - [11/Jun/2025 12:26:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:25,250 127.0.0.1 - - [11/Jun/2025 12:26:25] "[36mGET /static/js/teamChat.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:25,427 127.0.0.1 - - [11/Jun/2025 12:26:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:25,430 127.0.0.1 - - [11/Jun/2025 12:26:25] "GET /socket.io/?EIO=4&transport=polling&t=PTUzEuB HTTP/1.1" 200 -
+2025-06-11 12:26:25,492 127.0.0.1 - - [11/Jun/2025 12:26:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:25,497 127.0.0.1 - - [11/Jun/2025 12:26:25] "POST /socket.io/?EIO=4&transport=polling&t=PTUzEw_&sid=YNlhWXhkolg5XiPOAAAA HTTP/1.1" 200 -
+2025-06-11 12:26:25,497 127.0.0.1 - - [11/Jun/2025 12:26:25] "GET /socket.io/?EIO=4&transport=polling&t=PTUzEx0&sid=YNlhWXhkolg5XiPOAAAA HTTP/1.1" 200 -
+2025-06-11 12:26:25,534 127.0.0.1 - - [11/Jun/2025 12:26:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:25,556 127.0.0.1 - - [11/Jun/2025 12:26:25] "POST /socket.io/?EIO=4&transport=polling&t=PTUzEy9&sid=YNlhWXhkolg5XiPOAAAA HTTP/1.1" 200 -
+2025-06-11 12:26:25,558 TestCoach has joined the room team_1
+2025-06-11 12:26:25,560 127.0.0.1 - - [11/Jun/2025 12:26:25] "GET /socket.io/?EIO=4&transport=polling&t=PTUzEy9.0&sid=YNlhWXhkolg5XiPOAAAA HTTP/1.1" 200 -
+2025-06-11 12:26:25,625 127.0.0.1 - - [11/Jun/2025 12:26:25] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:26:26,828 127.0.0.1 - - [11/Jun/2025 12:26:26] "GET /socket.io/?EIO=4&transport=websocket&sid=YNlhWXhkolg5XiPOAAAA HTTP/1.1" 200 -
+2025-06-11 12:26:26,889 127.0.0.1 - - [11/Jun/2025 12:26:26] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-11 12:26:27,020 127.0.0.1 - - [11/Jun/2025 12:26:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:27,024 127.0.0.1 - - [11/Jun/2025 12:26:27] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:27,027 127.0.0.1 - - [11/Jun/2025 12:26:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:27,032 127.0.0.1 - - [11/Jun/2025 12:26:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:27,033 127.0.0.1 - - [11/Jun/2025 12:26:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:27,107 127.0.0.1 - - [11/Jun/2025 12:26:27] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:26:27,724 127.0.0.1 - - [11/Jun/2025 12:26:27] "GET / HTTP/1.1" 200 -
+2025-06-11 12:26:27,821 127.0.0.1 - - [11/Jun/2025 12:26:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:27,825 127.0.0.1 - - [11/Jun/2025 12:26:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:27,879 127.0.0.1 - - [11/Jun/2025 12:26:27] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-11 12:26:27,897 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/events","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:27,899 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/events","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:27,900 127.0.0.1 - - [11/Jun/2025 12:26:27] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:27,900 127.0.0.1 - - [11/Jun/2025 12:26:27] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:27,903 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1/events","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:27,904 127.0.0.1 - - [11/Jun/2025 12:26:27] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:28,466 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-11 12:26:28,469 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 1001
+2025-06-11 12:26:28,477 127.0.0.1 - - [11/Jun/2025 12:26:28] "GET /searchteam HTTP/1.1" 200 -
+2025-06-11 12:26:28,565 127.0.0.1 - - [11/Jun/2025 12:26:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:28,574 127.0.0.1 - - [11/Jun/2025 12:26:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:28,634 127.0.0.1 - - [11/Jun/2025 12:26:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:28,673 127.0.0.1 - - [11/Jun/2025 12:26:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:28,713 127.0.0.1 - - [11/Jun/2025 12:26:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:31,698 127.0.0.1 - - [11/Jun/2025 12:26:31] "GET / HTTP/1.1" 200 -
+2025-06-11 12:26:31,797 127.0.0.1 - - [11/Jun/2025 12:26:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:31,799 127.0.0.1 - - [11/Jun/2025 12:26:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:31,887 127.0.0.1 - - [11/Jun/2025 12:26:31] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-11 12:26:31,891 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:31,892 127.0.0.1 - - [11/Jun/2025 12:26:31] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:31,893 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:31,894 127.0.0.1 - - [11/Jun/2025 12:26:31] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:31,896 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:31,898 127.0.0.1 - - [11/Jun/2025 12:26:31] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:32,724 127.0.0.1 - - [11/Jun/2025 12:26:32] "GET /team/1 HTTP/1.1" 200 -
+2025-06-11 12:26:32,821 127.0.0.1 - - [11/Jun/2025 12:26:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:32,824 127.0.0.1 - - [11/Jun/2025 12:26:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:32,882 127.0.0.1 - - [11/Jun/2025 12:26:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:32,893 127.0.0.1 - - [11/Jun/2025 12:26:32] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-06-11 12:26:32,896 127.0.0.1 - - [11/Jun/2025 12:26:32] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-06-11 12:26:32,917 127.0.0.1 - - [11/Jun/2025 12:26:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:32,967 127.0.0.1 - - [11/Jun/2025 12:26:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:33,035 127.0.0.1 - - [11/Jun/2025 12:26:33] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:26:33,751 127.0.0.1 - - [11/Jun/2025 12:26:33] "GET / HTTP/1.1" 200 -
+2025-06-11 12:26:33,845 127.0.0.1 - - [11/Jun/2025 12:26:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:33,849 127.0.0.1 - - [11/Jun/2025 12:26:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:33,927 127.0.0.1 - - [11/Jun/2025 12:26:33] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-11 12:26:33,932 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:33,933 127.0.0.1 - - [11/Jun/2025 12:26:33] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:33,936 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:33,937 127.0.0.1 - - [11/Jun/2025 12:26:33] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:33,939 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/team/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:33,940 127.0.0.1 - - [11/Jun/2025 12:26:33] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:34,252 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-06-11 12:26:34,256 http://127.0.0.1:3000 "GET /api/search_teams HTTP/1.1" 200 1001
+2025-06-11 12:26:34,258 127.0.0.1 - - [11/Jun/2025 12:26:34] "GET /searchteam HTTP/1.1" 200 -
+2025-06-11 12:26:34,357 127.0.0.1 - - [11/Jun/2025 12:26:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:34,358 127.0.0.1 - - [11/Jun/2025 12:26:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:34,414 127.0.0.1 - - [11/Jun/2025 12:26:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:34,451 127.0.0.1 - - [11/Jun/2025 12:26:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:34,485 127.0.0.1 - - [11/Jun/2025 12:26:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:53,798 127.0.0.1 - - [11/Jun/2025 12:26:53] "GET / HTTP/1.1" 200 -
+2025-06-11 12:26:53,898 127.0.0.1 - - [11/Jun/2025 12:26:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:53,900 127.0.0.1 - - [11/Jun/2025 12:26:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:53,982 127.0.0.1 - - [11/Jun/2025 12:26:53] "[36mGET /static/images/volleyballteam.png HTTP/1.1[0m" 304 -
+2025-06-11 12:26:53,984 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/app.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:53,985 127.0.0.1 - - [11/Jun/2025 12:26:53] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:53,990 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/bootstrap.bundle.min.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:53,991 127.0.0.1 - - [11/Jun/2025 12:26:53] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:53,993 {"csp-report":{"document-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/","referrer":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/searchteam","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src https://cdnjs.cloudflare.com; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://orange-parakeet-659rr9wvw62xxw7-5000.app.github.dev/static/js/serviceWorker.js","status-code":200,"script-sample":""}}
+2025-06-11 12:26:53,994 127.0.0.1 - - [11/Jun/2025 12:26:53] "POST /csp_report HTTP/1.1" 200 -
+2025-06-11 12:26:54,998 127.0.0.1 - - [11/Jun/2025 12:26:54] "GET /team/1 HTTP/1.1" 200 -
+2025-06-11 12:26:55,097 127.0.0.1 - - [11/Jun/2025 12:26:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:55,102 127.0.0.1 - - [11/Jun/2025 12:26:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:55,171 127.0.0.1 - - [11/Jun/2025 12:26:55] "[36mGET /static/icons/team_event_icon.png HTTP/1.1[0m" 304 -
+2025-06-11 12:26:55,185 127.0.0.1 - - [11/Jun/2025 12:26:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:55,190 127.0.0.1 - - [11/Jun/2025 12:26:55] "[36mGET /static/icons/team_messages_icon.png HTTP/1.1[0m" 304 -
+2025-06-11 12:26:55,226 127.0.0.1 - - [11/Jun/2025 12:26:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:55,268 127.0.0.1 - - [11/Jun/2025 12:26:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:55,338 127.0.0.1 - - [11/Jun/2025 12:26:55] "[33mGET /team/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-06-11 12:26:56,408 127.0.0.1 - - [11/Jun/2025 12:26:56] "GET /team/1/events HTTP/1.1" 200 -
+2025-06-11 12:26:56,531 127.0.0.1 - - [11/Jun/2025 12:26:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:56,537 127.0.0.1 - - [11/Jun/2025 12:26:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:56,541 127.0.0.1 - - [11/Jun/2025 12:26:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-11 12:26:56,544 127.0.0.1 - - [11/Jun/2025 12:26:56] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:56,553 127.0.0.1 - - [11/Jun/2025 12:26:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-11 12:26:56,619 127.0.0.1 - - [11/Jun/2025 12:26:56] "[33mGET /team/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
