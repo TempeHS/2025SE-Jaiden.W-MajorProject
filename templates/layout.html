@@ -3,7 +3,7 @@
   <head>
     <meta
       http-equiv="Content-Security-Policy"
-      content="base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'self'; worker-src 'self'; frame-src 'none'; form-action 'self'; manifest-src 'self'"
+      content="base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'self'; worker-src 'self'; frame-src 'none'; form-action 'self'; manifest-src 'self'"
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,6 +20,11 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+      integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     {% if request.endpoint != 'two_factor' %} {% include 'partials/menu.html' %}

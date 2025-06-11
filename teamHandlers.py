@@ -13,14 +13,33 @@ def user_in_team(team_id):
     if 'username' not in session:
         return None
     user = dbHandler.retrieveUserByUsername(session['username'])
-    if not user or user.get('team_id') != team_id:
+    if not user:
+        return None
+    try:
+        # Always compare as integers
+        if int(user.get('team_id')) != int(team_id):
+            print(f"User {session['username']} is not in team {team_id}.")
+            return None
+    except (ValueError, TypeError):
+        print(f"Type error comparing team IDs")
+        return None
+    return user
+
+def get_logged_in_user():
+    if 'username' not in session:
+        return None
+    return dbHandler.retrieveUserByUsername(session['username'])
+
+def require_role(role):
+    user = get_logged_in_user()
+    if not user or user.get('role') != role:
         return None
     return user
 
 def handle_my_team():
-    if 'username' not in session:
+    user = get_logged_in_user()
+    if not user:
         return redirect(url_for('login'))
-    user = dbHandler.retrieveUserByUsername(session['username'])
     if not user or not user.get('team_id'):
         flash("You have not joined a team yet.", "info")
         return render_template('index.html', team=None)
@@ -43,17 +62,17 @@ def handle_search_team(JoinTeamForm):
     return render_template('searchTeam.html', teams=teams, query=query, form=JoinTeamForm)
 
 def handle_join_team(team_id):
-    if 'username' not in session:
+    user = get_logged_in_user()
+    if not user:
         return redirect(url_for('login'))
-    user = dbHandler.retrieveUserByUsername(session['username'])
     dbHandler.update_user_team(user['username'], team_id)
     flash("You have joined the team!", "success")
     return redirect(url_for('search_team'))
 
 def handle_create_team(teamForm):
-    if 'username' not in session:
+    user = get_logged_in_user()
+    if not user:
         return redirect(url_for('login'))
-    user = dbHandler.retrieveUserByUsername(session['username'])
     if not user or user.get('role') != 'Coach':
         return redirect(url_for('index'))
     if teamForm.validate_on_submit():
@@ -63,14 +82,20 @@ def handle_create_team(teamForm):
         })
         try:
             response = requests.post("http://127.0.0.1:3000/api/create_team", json=sanitized_data, headers=app_header, timeout=5)
-            response.raise_for_status()
             if response.status_code == 201:
                 app_log.info("Team '%s' created successfully", teamForm.team_name.data)
                 flash('Team created successfully!', 'success')
                 return redirect(url_for('search_team'))
+            elif response.status_code == 400:
+                # Team name already exists
+                error_msg = response.json().get("message", "An error occurred during team creation.")
+                flash(error_msg, 'danger')
+                app_log.warning("Failed team creation attempt: %s - %s", teamForm.team_name.data, error_msg)
             else:
                 flash('An error occurred during team creation. Please try again.', 'danger')
                 app_log.warning("Failed team creation attempt: %s", teamForm.team_name.data)
+            if response.status_code not in (201, 400):
+                response.raise_for_status()
         except requests.exceptions.RequestException as e:
             flash('An error occurred. Please try again later.', 'danger')
             app_log.error("Error during team creation attempt: %s - %s", teamForm.team_name.data, str(e))
@@ -95,9 +120,11 @@ def handle_team_events(team_id):
     team = dbHandler.get_team_by_id(team_id)
     upcoming_events = dbHandler.get_upcoming_team_events(team_id)
     past_events = dbHandler.get_past_team_events(team_id)
+
     # delete + attendance forms for each event
     delete_forms = {event['id']: DeleteEventForm() for event in upcoming_events + past_events}
     attendance_forms = {event['id']: AttendanceForm() for event in upcoming_events}
+
     # attendance counts + username for each event
     attendance_counts = {}
     attendance_usernames = {}
@@ -105,27 +132,27 @@ def handle_team_events(team_id):
     for event in upcoming_events + past_events:
         attendance_counts[event['id']] = dbHandler.get_event_attendance_counts(event['id'])
         attendance_usernames[event['id']] = dbHandler.categorize_attendance(event['id'], team['id'])
+
     if 'username' in session:
         user = dbHandler.retrieveUserByUsername(session['username'])
         if user:
             for event in upcoming_events + past_events:
                 status = dbHandler.get_event_attendance(event['id'], user['id'])
                 user_attendance[event['id']] = status
-
+    
     return render_template('teamEvents.html', team=team, upcoming_events=upcoming_events, past_events=past_events, 
     team_nav=True, delete_forms=delete_forms, attendance_forms=attendance_forms, attendance_counts=attendance_counts, 
     user_attendance=user_attendance, attendance_usernames=attendance_usernames)
 
 def handle_create_team_event(team_id, form):
-    user = dbHandler.retrieveUserByUsername(session.get('username'))
-    if not user or user.get('role') != 'Coach':
+    user = require_role('Coach')
+    if not user:
         return redirect(url_for('team_detail', team_id=team_id))
     team = dbHandler.get_team_by_id(team_id)
     if not team:
         flash("Team not found.", "danger")
         return redirect(url_for('index'))
     if form.validate_on_submit():
-        print("Form validated and submitted!")  # Add this line for debugging
         event_data = {
             "team_id": team_id,
             "title": form.title.data,
@@ -150,16 +177,16 @@ def handle_create_team_event(team_id, form):
     return render_template('createTeamEvent.html', form=form, team=team)
 
 def handle_delete_team_event (team_id, event_id):
-    user = dbHandler.retrieveUserByUsername(session.get('username'))
-    if not user or user.get('role') != 'Coach':
-        return redirect(url_for('team_events', team_id=team_id))
+    user = require_role('Coach')
+    if not user:
+        return redirect(url_for('team_detail', team_id=team_id))
     dbHandler.delete_team_event(event_id)
     flash("Event deleted successfully!", "success")
     return redirect(url_for('team_events', team_id=team_id))
 
 def handle_event_attendance (team_id, event_id):
-    user = dbHandler.retrieveUserByUsername(session.get('username'))
-    if not user or user.get('role') != 'Player':
+    user = require_role('Player')
+    if not user:
         return redirect(url_for('team_events', team_id=team_id))
     form = AttendanceForm()
     if form.validate_on_submit():
@@ -177,4 +204,10 @@ def handle_team_messages(team_id):
     if not user:
         return redirect(url_for('index'))
     team = dbHandler.get_team_by_id(team_id)
-    return render_template('teamMessages.html', team=team, team_nav=True)
+    team_name = team.get('name')
+    # chat sidebar
+    all_users = dbHandler.get_all_usernames_in_team(team_id)
+    current_user = session['username']
+    dm_users = [user for user in all_users if user != current_user]
+    return render_template('teamMessages.html', team=team, team_nav=True, team_id=team_id, 
+    team_name=team_name, dm_users=dm_users)

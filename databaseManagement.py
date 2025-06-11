@@ -119,6 +119,11 @@ def update_user_team(username, team_id):
 def create_team(name, description):
     conn = sql.connect(db_path)
     cur = conn.cursor()
+    #check if the team name already exists
+    cur.execute("SELECT COUNT(*) FROM volleyball_teams WHERE name = ?", (name,))
+    if cur.fetchone()[0] > 0:
+        conn.close()
+        raise Exception ("Team name already exists")
     cur.execute("INSERT INTO volleyball_teams (name, description) VALUES (?, ?)", (name, description))
     conn.commit()
     conn.close()
@@ -234,6 +239,14 @@ def get_team_members(team_id):
     conn.close()
     return members
 
+def get_all_usernames_in_team(team_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT username FROM secure_users_9f WHERE team_id = ?", (team_id,))
+    members = [row[0] for row in cur.fetchall()]
+    conn.close()
+    return members
+
 def get_event_responses(event_id):
     conn = sql.connect(db_path)
     cur = conn.cursor()
@@ -262,3 +275,50 @@ def categorize_attendance(event_id, team_id):
         'not_responded': not_responded
     }
 
+def save_team_messages (team_id, username, message, timestamp):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute(
+        "INSERT INTO team_messages (team_id, username, message, timestamp) VALUES (?,?,?,?)", 
+        (team_id, username, message, timestamp)
+                )
+    conn.commit()
+    conn.close()
+
+def get_team_messages(team_id, limit=50):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT username, message, timestamp FROM team_messages WHERE team_id = ? ORDER by timestamp DESC LIMIT ?",
+                (team_id, limit)
+                )
+    messages = [
+        {"name": row[0], "message": row[1], "timestamp": row[2]}
+        for row in cur.fetchall()
+    ]
+    conn.close()
+    return list(reversed(messages))  # Oldest first
+
+def save_private_message(sender, recipient, message, timestamp):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute(
+        "INSERT INTO private_messages (sender, recipient, message, timestamp) VALUES (?, ?, ?, ?)", 
+        (sender, recipient, message, timestamp)
+    )
+    conn.commit()
+    conn.close()
+
+def get_private_messages(user1, user2, limit=50):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT sender, message, timestamp FROM private_messages
+        WHERE (sender = ? AND recipient = ?) OR (sender = ? AND recipient = ?)
+        ORDER BY timestamp DESC LIMIT ?
+    """, (user1, user2, user2, user1, limit))
+    messages = [
+        {"name": row[0], "message": row[1], "timestamp": row[2]}
+        for row in cur.fetchall()
+    ]
+    conn.close()
+    return list(reversed(messages))

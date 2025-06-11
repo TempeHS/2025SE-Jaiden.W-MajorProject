@@ -7,19 +7,20 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_cors import CORS
 from flask_session import Session
+from flask_socketio import SocketIO
 
-
+import chatSocket
 from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm, TeamEventForm
 from authHandlers import handle_login, handle_two_factor, handle_sign_up
 import teamHandlers as teamHandler
 from sessionLocks import acquire_session_lock, cleanup_session_lock
-
 
 app = Flask(__name__)
 app.secret_key = b"T4Ht6NAcHy2yNDH3;apl"
 limiter = Limiter(get_remote_address, app=app)
 csrf = CSRFProtect(app)
 cors = CORS(app)
+socketio = SocketIO(app, cors_allowed_origins= "*")
 app.config["CORS_HEADERS"] = "Content-Type"
 
 # logging configuration
@@ -48,11 +49,13 @@ app.config.update(
     SESSION_COOKIE_SAMESITE='Lax',  # Control how cookies are sent with cross-site requests
 )
 
+# Import and register chatSocket events here
+chatSocket.register_socketio_events(socketio, app_log)
+
 # Register the cleanup function to be called after each request
 @app.teardown_request
 def teardown_request(exception=None):
     return cleanup_session_lock(exception)
-
 
 # Custom error handler for rate limit exceeded
 @app.errorhandler(429)
@@ -71,7 +74,6 @@ def ratelimit_handler(_e):
 def root():
     return redirect("/", 302)
 
-
 @app.route("/", methods=["POST", "GET"])
 @csp_header(
     {
@@ -79,7 +81,7 @@ def root():
         "base-uri": "'self'",
         "default-src": "'self'",
         "style-src": "'self'",
-        "script-src": "'self'",
+        "script-src": "'self'" and "https://cdnjs.cloudflare.com",
         "img-src": "'self' data:",
         "media-src": "'self'",
         "font-src": "'self'",
@@ -97,7 +99,6 @@ def index():
     lock = acquire_session_lock()
     with lock:
         return teamHandler.handle_my_team()
-
 
 @app.route("/login.html", methods=["GET", "POST"])
 @limiter.limit("5 per minute")
@@ -195,4 +196,4 @@ def csp_report():
     return "done"
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    socketio.run(app, debug=True, host="0.0.0.0", port=5000)
