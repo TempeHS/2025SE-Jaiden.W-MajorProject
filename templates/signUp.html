@@ -10,7 +10,10 @@
       {{ form.username.label }} {{ form.username(class="input__field") }}
     </div>
     <div class="input__wrapper">
-      {{ form.password.label }} {{ form.password(class="input__field") }}
+      {{ form.password.label }} {{ form.password(class="input__field") }} {% for
+      error in form.password.errors %}
+      <div class="text-danger">{{ error }}</div>
+      {% endfor %}
     </div>
     <div class="input__wrapper">
       {{ form.email.label }} {{ form.email(class="input__field") }}

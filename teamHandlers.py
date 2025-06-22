@@ -21,7 +21,7 @@ def user_in_team(team_id):
             print(f"User {session['username']} is not in team {team_id}.")
             return None
     except (ValueError, TypeError):
-        print(f"Type error comparing team IDs")
+        print("Type error comparing team IDs")
         return None
     return user
 
@@ -59,7 +59,10 @@ def handle_search_team(JoinTeamForm):
     except Exception as _e:
         flash("Could not fetch teams from the server.", "danger")
         teams = []
-    return render_template('searchTeam.html', teams=teams, query=query, form=JoinTeamForm)
+    user = get_logged_in_user()
+    if user: 
+        user_team_id = user.get('team_id')
+    return render_template('searchTeam.html', teams=teams, query=query, form=JoinTeamForm, user_team_id=user_team_id)
 
 def handle_join_team(team_id):
     user = get_logged_in_user()
@@ -174,7 +177,7 @@ def handle_create_team_event(team_id, form):
         except requests.exceptions.RequestException as e:
             flash("An error occurred while creating the event.", "danger")
             app_log.error("Error during team event creation: %s", str(e))
-    return render_template('createTeamEvent.html', form=form, team=team)
+    return render_template('createTeamEvent.html', form=form, team=team, team_nav=True)
 
 def handle_delete_team_event (team_id, event_id):
     user = require_role('Coach')

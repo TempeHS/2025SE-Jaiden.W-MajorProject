@@ -322,3 +322,21 @@ def get_private_messages(user1, user2, limit=50):
     ]
     conn.close()
     return list(reversed(messages))
+
+def update_user_profile(username, email, full_name, role, hashed_password):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("""
+        UPDATE secure_users_9f
+        SET email = ?, full_name = ?, role = ?, password = ?
+        WHERE username = ?
+    """, (email, full_name, role, hashed_password, username))
+    conn.commit()
+    conn.close()
+
+def delete_user_by_username(username):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("DELETE FROM secure_users_9f WHERE username = ?", (username,))
+    conn.commit()
+    conn.close()

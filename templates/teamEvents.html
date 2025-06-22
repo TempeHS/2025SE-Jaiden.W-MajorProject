@@ -117,14 +117,16 @@
           </div>
           {% endif %} {% if session.get('role') == 'Coach' %}
           <!-- Button to trigger Attendance Summary Modal -->
-          <button
-            type="button"
-            class="btn btn-info btn-sm"
-            data-bs-toggle="modal"
-            data-bs-target="#attendanceSummaryModal{{ event.id }}"
-          >
-            View Attendance Summary
-          </button>
+          <div class="d-grid gap-2 col-3">
+            <button
+              type="button"
+              class="btn btn-info btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#attendanceSummaryModal{{ event.id }}"
+            >
+              View Attendance Summary
+            </button>
+          </div>
 
           <!-- Attendance Summary Modal -->
           <div
@@ -199,14 +201,17 @@
           </div>
           {% endif %} {% if session.get('role') == 'Coach' %}
           <!-- Delete Event Button (Coach Only) -->
-          <form
-            method="POST"
-            action="{{ url_for('delete_team_event', team_id=team.id, event_id=event.id) }}"
-            style="display: inline"
-          >
-            {{ delete_forms[event.id].hidden_tag() }} {{
-            delete_forms[event.id].submit(class_="btn btn-danger btn-sm") }}
-          </form>
+          <div class="d-grid gap-2 col-3">
+            <form
+              method="POST"
+              action="{{ url_for('delete_team_event', team_id=team.id, event_id=event.id) }}"
+              style="display: inline"
+              class="delete-event-form"
+            >
+              {{ delete_forms[event.id].hidden_tag() }} {{
+              delete_forms[event.id].submit(class_="btn btn-danger btn-sm") }}
+            </form>
+          </div>
           {% endif %}
           <!-- RSVP Button (Player Only) -->
           {% if session.get('role') == 'Player' %}
@@ -389,4 +394,5 @@
     </div>
   </div>
 </div>
+<script src="{{ url_for('static', filename='js/deleteConfirm.js') }}"></script>
 {% endblock %}

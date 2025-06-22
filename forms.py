@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, RadioField, TextAreaField, DateTimeField, SelectField, DateField
+from wtforms import StringField, PasswordField, SubmitField, RadioField, TextAreaField, DateTimeField, SelectField, DateField, ValidationError
 from wtforms.validators import DataRequired, Length, Regexp, ValidationError
 
 def has_uppercase(_form, field):
@@ -99,3 +99,41 @@ class DeleteEventForm(FlaskForm):
 class AttendanceForm(FlaskForm):
     status = SelectField('Attendance', choices=[('attending', 'Yes, I will attend'), ('not_attending', 'No, I cannot attend')])
     submit = SubmitField('Submit')
+
+class DeleteUserForm(FlaskForm):
+    submit = SubmitField('Delete my Data')
+
+class UpdateProfileForm(FlaskForm):
+    email = StringField('Email', validators=[
+        DataRequired(),
+        Length(max=120),
+        Regexp(r'^[\w\.-]+@[\w\.-]+\.\w+$', message="Enter a valid email address.")
+    ])
+    full_name = StringField('Full Name', validators=[
+        DataRequired(),
+        Length(min=2, max=100)
+    ])
+    role = RadioField('Role', choices=[('Player', 'Player'), ('Coach', 'Coach')], validators=[DataRequired()])
+    submit = SubmitField('Update Profile')
+
+class ChangePasswordForm(FlaskForm):
+    current_password = PasswordField('Current Password', validators=[DataRequired()])
+    new_password = PasswordField('New Password', validators=[
+        DataRequired(),
+        Length(min=8, max=128),
+        has_uppercase,
+        has_lowercase,
+        has_digit,
+        has_special_char
+    ])
+    confirm_password = PasswordField('Confirm New Password', validators=[DataRequired()])
+    submit = SubmitField('Change Password')
+
+    def validate(self):
+        rv = FlaskForm.validate(self)
+        if not rv:
+            return False
+        if self.new_password.data != self.confirm_password.data:
+            self.confirm_password.errors.append('New passwords must match.')
+            return False
+        return True

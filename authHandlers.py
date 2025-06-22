@@ -90,10 +90,5 @@ def handle_sign_up(signUpForm):
         except requests.exceptions.RequestException as e:
             flash('An error occurred', 'danger')
             app_log.error("Error during signup attempt for user: %s - %s", signUpForm.username.data, str(e))
-    else:
-        for field, errors in signUpForm.errors.items():
-            for error in errors: 
-                flash(f"Error in {getattr(signUpForm, field).label.text}: {error}", 'danger')
-                app_log.warning("Validation error in %s: %s", getattr(signUpForm, field).label.text, error)
     return render_template('signUp.html', form=signUpForm)
 

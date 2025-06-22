@@ -1,6 +1,6 @@
 import logging
 from datetime import timedelta
-from flask import Flask, render_template, request, redirect, flash, session
+from flask import Flask, render_template, request, redirect, flash, session, url_for
 from flask_wtf.csrf import CSRFProtect
 from flask_csp.csp import csp_header
 from flask_limiter import Limiter
@@ -10,10 +10,11 @@ from flask_session import Session
 from flask_socketio import SocketIO
 
 import chatSocket
-from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm, TeamEventForm
+from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm, TeamEventForm, DeleteUserForm, UpdateProfileForm
 from authHandlers import handle_login, handle_two_factor, handle_sign_up
 import teamHandlers as teamHandler
 from sessionLocks import acquire_session_lock, cleanup_session_lock
+from profileHandler import deleteData, handle_profile
 
 app = Flask(__name__)
 app.secret_key = b"T4Ht6NAcHy2yNDH3;apl"
@@ -187,6 +188,18 @@ def logout():
         app_log.info("User '%s' logged out successfully", username)
     flash('You have been logged out.', 'success')
     return redirect("login.html")
+
+@app.route("/profile.html", methods=["GET", "POST"])
+def profile():
+    lock = acquire_session_lock()
+    with lock:
+        return handle_profile()
+
+@app.route("/delete_data", methods=["POST"])
+def delete_data():
+    lock = acquire_session_lock()
+    with lock:
+        return deleteData(app)
 
 # Endpoint for logging CSP violations
 @app.route("/csp_report", methods=["POST"])

@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      // Set theme before CSS loads to prevent flash
+      (function () {
+        const theme = localStorage.getItem("bsTheme") || "light";
+        document.documentElement.setAttribute("data-bs-theme", theme);
+      })();
+    </script>
     <meta
       http-equiv="Content-Security-Policy"
       content="base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'self'; worker-src 'self'; frame-src 'none'; form-action 'self'; manifest-src 'self'"
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
@@ -33,5 +41,6 @@
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/serviceWorker.js') }}"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/darkMode.js') }}"></script>
   </body>
 </html>
