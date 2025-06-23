@@ -1,160 +1,171 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container">
-  <h1 class="mt-5">User Profile</h1>
-  <p class="lead">Welcome, {{ username }}!</p>
+  <div class="profile-header">
+    <h1 class="mt-5">User Profile</h1>
+    <p class="lead">Welcome, {{ username }}!</p>
 
-  <!-- Bootstrap 5 switch -->
-  <div class="form-check form-switch">
-    <input
-      class="form-check-input"
-      type="checkbox"
-      id="darkModeSwitch"
-      checked
-    />
-    <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
-  </div>
-
-  {% with messages = get_flashed_messages(with_categories=true) %} {% if
-  messages %}
-  <div class="flash-messages">
-    {% for category, message in messages %}
-    <div
-      class="alert alert-{{ category }} alert-dismissible fade show"
-      role="alert"
-    >
-      {{ message }}
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="alert"
-        aria-label="Close"
-      ></button>
+    <!-- Bootstrap 5 switch -->
+    <div class="form-check form-switch">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="darkModeSwitch"
+        checked
+      />
+      <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
     </div>
-    {% endfor %}
-  </div>
-  {% endif %} {% endwith %}
 
-  <div class="mt-5">
-    <h2>Update Profile</h2>
-    <form method="post" action="{{ url_for('profile') }}">
-      {{ updateForm.hidden_tag() }}
-      <div class="mb-3">
-        {{ updateForm.email.label(class="form-label") }} {{
-        updateForm.email(class="form-control") }} {% for error in
-        updateForm.email.errors %}
-        <div class="text-danger">{{ error }}</div>
-        {% endfor %}
-      </div>
-      <div class="mb-3">
-        {{ updateForm.full_name.label(class="form-label") }} {{
-        updateForm.full_name(class="form-control") }} {% for error in
-        updateForm.full_name.errors %}
-        <div class="text-danger">{{ error }}</div>
-        {% endfor %}
-      </div>
-      <div class="mb-3">
-        {{ updateForm.role.label(class="form-label") }}
-        <div>
-          {% for subfield in updateForm.role %}
-          <div class="form-check form-check-inline">
-            {{ subfield(class="form-check-input") }} {{
-            subfield.label(class="form-check-label") }}
-          </div>
-          {% endfor %}
-        </div>
-        {% for error in updateForm.role.errors %}
-        <div class="text-danger">{{ error }}</div>
-        {% endfor %}
-      </div>
-      <button type="submit" name="update_profile" class="btn btn-primary">
-        {{ updateForm.submit.label.text }}
-      </button>
-    </form>
-  </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="largeFontSwitch" />
+      <label class="form-check-label" for="largeFontSwitch">Large Font</label>
+    </div>
 
-  <div class="mt-5">
-    <h2>Change Password</h2>
-    <form method="post" action="{{ url_for('profile') }}">
-      {{ passwordForm.hidden_tag() }}
-      <div class="mb-3">
-        {{ passwordForm.current_password.label(class="form-label") }} {{
-        passwordForm.current_password(class="form-control") }} {% for error in
-        passwordForm.current_password.errors %}
-        <div class="text-danger">{{ error }}</div>
-        {% endfor %}
-      </div>
-      <div class="mb-3">
-        {{ passwordForm.new_password.label(class="form-label") }} {{
-        passwordForm.new_password(class="form-control") }} {% for error in
-        passwordForm.new_password.errors %}
-        <div class="text-danger">{{ error }}</div>
-        {% endfor %}
-      </div>
-      <div class="mb-3">
-        {{ passwordForm.confirm_password.label(class="form-label") }} {{
-        passwordForm.confirm_password(class="form-control") }} {% for error in
-        passwordForm.confirm_password.errors %}
-        <div class="text-danger">{{ error }}</div>
-        {% endfor %}
-      </div>
-      <button type="submit" name="change_password" class="btn btn-warning">
-        {{ passwordForm.submit.label.text }}
-      </button>
-    </form>
-  </div>
-
-  <div class="mt-3">
-    <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-danger"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      Delete my Data
-    </button>
-  </div>
-</div>
-
-<!-- Modal -->
-<div
-  class="modal fade"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">
-          Confirm Deletion
-        </h1>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    <div class="flash-messages">
+      {% for category, message in messages %}
+      <div
+        class="alert alert-{{ category }} alert-dismissible fade show"
+        role="alert"
+      >
+        {{ message }}
         <button
           type="button"
           class="btn-close"
-          data-bs-dismiss="modal"
+          data-bs-dismiss="alert"
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body">
-        Are you sure you want to delete your data? This action cannot be undone.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Close
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+
+    <div class="form-section">
+      <h2>Update Profile</h2>
+      <form method="post" action="{{ url_for('profile') }}">
+        {{ updateForm.hidden_tag() }}
+        <div class="mb-3">
+          {{ updateForm.email.label(class="form-label") }} {{
+          updateForm.email(class="form-control") }} {% for error in
+          updateForm.email.errors %}
+          <div class="text-danger">{{ error }}</div>
+          {% endfor %}
+        </div>
+        <div class="mb-3">
+          {{ updateForm.full_name.label(class="form-label") }} {{
+          updateForm.full_name(class="form-control") }} {% for error in
+          updateForm.full_name.errors %}
+          <div class="text-danger">{{ error }}</div>
+          {% endfor %}
+        </div>
+        <div class="mb-3">
+          {{ updateForm.role.label(class="form-label") }}
+          <div>
+            {% for subfield in updateForm.role %}
+            <div class="form-check form-check-inline">
+              {{ subfield(class="form-check-input") }} {{
+              subfield.label(class="form-check-label") }}
+            </div>
+            {% endfor %}
+          </div>
+          {% for error in updateForm.role.errors %}
+          <div class="text-danger">{{ error }}</div>
+          {% endfor %}
+        </div>
+        <button type="submit" name="update_profile" class="btn btn-primary">
+          {{ updateForm.submit.label.text }}
         </button>
-        <form
-          id="delete-form"
-          action="{{ url_for('delete_data') }}"
-          method="post"
-        >
-          {{ form.hidden_tag() }}
-          <button type="submit" class="btn btn-danger">Delete My Data</button>
-        </form>
+      </form>
+    </div>
+
+    <div class="form-section">
+      <h2>Change Password</h2>
+      <form method="post" action="{{ url_for('profile') }}">
+        {{ passwordForm.hidden_tag() }}
+        <div class="mb-3">
+          {{ passwordForm.current_password.label(class="form-label") }} {{
+          passwordForm.current_password(class="form-control") }} {% for error in
+          passwordForm.current_password.errors %}
+          <div class="text-danger">{{ error }}</div>
+          {% endfor %}
+        </div>
+        <div class="mb-3">
+          {{ passwordForm.new_password.label(class="form-label") }} {{
+          passwordForm.new_password(class="form-control") }} {% for error in
+          passwordForm.new_password.errors %}
+          <div class="text-danger">{{ error }}</div>
+          {% endfor %}
+        </div>
+        <div class="mb-3">
+          {{ passwordForm.confirm_password.label(class="form-label") }} {{
+          passwordForm.confirm_password(class="form-control") }} {% for error in
+          passwordForm.confirm_password.errors %}
+          <div class="text-danger">{{ error }}</div>
+          {% endfor %}
+        </div>
+        <button type="submit" name="change_password" class="btn btn-warning">
+          {{ passwordForm.submit.label.text }}
+        </button>
+      </form>
+    </div>
+
+    <div class="mt-3">
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn profile-delete-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Delete my Data/Account
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Confirm Deletion
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete your data? This action cannot be
+          undone.
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <form
+            id="delete-form"
+            action="{{ url_for('delete_data') }}"
+            method="post"
+          >
+            {{ form.hidden_tag() }}
+            <button type="submit" class="btn btn-danger">Delete My Data</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 {% endblock %}

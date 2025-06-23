@@ -1,5 +1,14 @@
 # Spike Connect
 
+## Overview
+
+Currently, volleyball teams face fragmented communication across group chats, emails, and verbal reminders, leading to confusion around training schedules, missed updates, and poor attendance tracking. My clients struggle to coordinate efficiently, especially when dealing with last-minute changes. This centralised platform called 'Spike Connect' will be used to manage team communication, confirm attendance at training sessions and matches, send announcements, and share multimedia content. It serves as a daily tool for my clients to stay organized, informed, and connected with their teams.
+
+## Documentation
+
+- System Report
+- GIF of the project in action
+
 ## How to use Spike Connect
 
 ### Running required files

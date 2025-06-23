@@ -20,8 +20,9 @@ def handle_login(loginForm):
             response.raise_for_status()
             if response.status_code == 200:
                 user_data = response.json()
-                session['username'] = loginForm.username.data
-                session['role'] = user_data.get('role')
+                # session variables to track pre-2FA state
+                session['pre_2fa_user'] = loginForm.username.data 
+                session['pre_2fa_role'] = user_data.get('role')
                 session.permanent = True  # Mark the session as permanent
                 app_log.info("User '%s' logged in, hasn't passed 2FA", loginForm.username.data)
                 return redirect(url_for('two_factor'))
@@ -37,9 +38,9 @@ def handle_login(loginForm):
     return render_template("login.html", form=loginForm, rate_limit_exceeded=rate_limit_exceeded)
 
 def handle_two_factor(twoFactorForm):
-    if 'username' not in session:
+    if 'pre_2fa_user' not in session:
         return redirect(url_for('login'))
-    username = session['username']
+    username = session['pre_2fa_user']
     user = dbHandler.retrieveUserByUsername(username)
     if not user:
         return redirect(url_for('login'))
@@ -61,13 +62,18 @@ def handle_two_factor(twoFactorForm):
         if verify_totp(token, secret):
             if show_qr:
                 dbHandler.setTwoFAEnabled(username, True)
+            # set session variables for successful login
+            session['username'] = username
+            session['role'] = session.get('pre_2fa_role')
+            session.pop('pre_2fa_user', None)
+            session.pop('pre_2fa_role', None)
             app_log.info("2FA successful, User '%s' logged in successfully", username)
             return redirect(url_for('index'))
         else:
             flash('Invalid 2FA token', 'danger')
             app_log.warning("Invalid 2FA token for user: %s", username)
     return render_template("2fa.html", form=twoFactorForm, qr_code=qr_code)
- 
+
 def handle_sign_up(signUpForm):
     if signUpForm.validate_on_submit():
         sanitized_data = sanitize_data({
@@ -82,7 +88,7 @@ def handle_sign_up(signUpForm):
             response.raise_for_status()
             if response.status_code == 201:
                 app_log.info("User '%s' signed up successfully", signUpForm.username.data)
-                #flash('Sign up successful. Please log in.', 'success')
+                flash('Sign up successful. Please log in.', 'success')
                 return redirect(url_for('login'))
             else:
                 flash('An error occurred during sign up. Please try again.', 'danger')

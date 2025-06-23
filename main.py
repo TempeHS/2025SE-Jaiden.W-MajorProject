@@ -66,6 +66,7 @@ def ratelimit_handler(_e):
     app_log.warning("Rate limit exceeded for IP: %s", request.remote_addr)
     return render_template("login.html", form=LoginForm(), rate_limit_exceeded=True), 429
 
+
 # Redirect index.html to domain root for consistent UX
 @app.route("/index", methods=["GET"])
 @app.route("/index.htm", methods=["GET"])
@@ -82,7 +83,7 @@ def root():
         "base-uri": "'self'",
         "default-src": "'self'",
         "style-src": "'self'",
-        "script-src": "'self'" and "https://cdnjs.cloudflare.com",
+        "script-src": "'self' https://cdnjs.cloudflare.com",
         "img-src": "'self' data:",
         "media-src": "'self'",
         "font-src": "'self'",
