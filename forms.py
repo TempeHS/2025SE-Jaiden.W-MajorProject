@@ -15,7 +15,7 @@ def has_digit(_form, field):
         raise ValidationError('Password must contain at least one digit.')
 
 def has_special_char(_form, field):
-    if not any(char in '@$!%*?&' for char in field.data):
+    if not any(char in '@$!%*?&#' for char in field.data):
         raise ValidationError('Password must contain at least one special character (@$!%*?&).')
 
 class LoginForm(FlaskForm):

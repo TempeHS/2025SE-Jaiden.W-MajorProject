@@ -64,7 +64,6 @@
           <form
             method="post"
             action="{{ url_for('join_team', team_id=team.id) }}"
-            style="display: inline"
           >
             {{ form.hidden_tag() }} {% if user_team_id and team.id ==
             user_team_id %}

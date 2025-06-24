@@ -3,8 +3,9 @@
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
 
 - ~~Edit profile (name, team, role, password)~~
-- Responsive interface using Bootstrap
-- Dark mode toggle
+- ~~Responsive interface using Bootstrap~~
+- ~~Dark mode toggle~~
+- ~~Large-font accessibility option~~
 - ~~Users given the option to delete their data/account~~
 
 ## Increment (what must be achieved by the end of the sprint)

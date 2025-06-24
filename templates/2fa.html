@@ -1,4 +1,9 @@
-{% extends 'layout.html' %} {% block content %}
+{% extends 'layout.html' %} {% block content %} {% if qr_code %}
+<div class="qr-code-container">
+  <p>Scan this QR code with your authenticator app:</p>
+  <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code" />
+</div>
+{% endif %}
 <div class="twofa-container">
   <h1>Two-Factor Authentication</h1>
   <form method="POST" class="twofa-form">
@@ -9,7 +14,7 @@
       >
       {{ form.token(class="input__field") }}
     </div>
-    <div class="input__wrapper">{{ form.submit(class="btn") }}</div>
+    <div class="input__wrapper">{{ form.submit(class="btn-danger") }}</div>
     <a href="{{ url_for('login') }}" class="btn btn-secondary">Back to Login</a>
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %}
@@ -21,9 +26,4 @@
     {% endif %} {% endwith %}
   </form>
 </div>
-{% if qr_code %}
-<div class="qr-code-container">
-  <p>Scan this QR code with your authenticator app:</p>
-  <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code" />
-</div>
-{% endif %} {% endblock %}
+{% endblock %}

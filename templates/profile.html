@@ -4,22 +4,6 @@
     <h1 class="mt-5">User Profile</h1>
     <p class="lead">Welcome, {{ username }}!</p>
 
-    <!-- Bootstrap 5 switch -->
-    <div class="form-check form-switch">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        id="darkModeSwitch"
-        checked
-      />
-      <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
-    </div>
-
-    <div class="form-check form-switch">
-      <input class="form-check-input" type="checkbox" id="largeFontSwitch" />
-      <label class="form-check-label" for="largeFontSwitch">Large Font</label>
-    </div>
-
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %}
     <div class="flash-messages">
@@ -39,6 +23,22 @@
       {% endfor %}
     </div>
     {% endif %} {% endwith %}
+
+    <!-- Bootstrap 5 switch -->
+    <div class="form-check form-switch">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="darkModeSwitch"
+        checked
+      />
+      <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+    </div>
+
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="largeFontSwitch" />
+      <label class="form-check-label" for="largeFontSwitch">Large Font</label>
+    </div>
 
     <div class="form-section">
       <h2>Update Profile</h2>

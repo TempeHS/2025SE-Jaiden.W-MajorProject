@@ -1,6 +1,6 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="login-container">
-  <h2 class="form-title">Sign Up</h2>
+  <h1 class="form-title">Sign Up</h1>
   <form action="{{ url_for('sign_up') }}" method="post" class="login-form">
     {{ form.hidden_tag() }}
     <div class="input__wrapper">
@@ -19,9 +19,15 @@
       {{ form.email.label }} {{ form.email(class="input__field") }}
     </div>
     <div class="input__wrapper">
-      {{ form.role.label }} {% for subfield in form.role %}
-      <label>{{ subfield() }} {{ subfield.label.text }}</label>
-      {% endfor %}
+      {{ form.role.label }}
+      <div>
+        {% for subfield in form.role %}
+        <div class="form-check form-check-inline">
+          {{ subfield(class="form-check-input") }} {{
+          subfield.label(class="form-check-label") }}
+        </div>
+        {% endfor %}
+      </div>
     </div>
     <div class="input__wrapper">{{ form.submit(class="btn") }}</div>
     <div class="input__wrapper">

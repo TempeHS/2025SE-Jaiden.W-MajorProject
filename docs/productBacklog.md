@@ -18,6 +18,7 @@
 
 - Responsive interface using Bootstrap
 - Dark mode toggle
+- Large-font accessibility option
 
 ### Security/Privacy Features
 
