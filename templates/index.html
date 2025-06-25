@@ -5,13 +5,34 @@
       <h1 class="mt-5">Welcome, {{ session['username']}}!</h1>
     </div>
   </div>
+
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %}
+  <div class="flash-messages">
+    {% for category, message in messages %}
+    <div
+      class="alert alert-{{ category }} alert-dismissible fade show"
+      role="alert"
+    >
+      {{ message }}
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %} {% endwith %}
+
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    {% if team %}
+    {% if teams and teams|length > 0 %} {% for team in teams %}
     <div class="col">
       <div class="card h-100">
         <img
-          src="{{ url_for('static', filename='images/volleyballteam.png') }}"
-          class="card-img-top"
+          src="{{ url_for('static', filename='images/team_pics/' ~ (team.profile_pic if team.profile_pic else 'volleyballteam.png')) }}"
+          class="card-img-top team-profile-pic"
           alt="{{ team.name }}"
         />
         <div class="card-body">
@@ -19,14 +40,24 @@
           <p class="card-text">{{ team.description }}</p>
           <a
             href="{{ url_for('team_detail', team_id=team.id) }}"
-            class="btn btn-primary"
+            class="btn btn-primary btn-space"
             >View Team</a
           >
+          <form
+            action="{{ url_for('leave_team', team_id=team.id) }}"
+            method="post"
+            class="leave-team-form d-inline"
+          >
+            {{ leave_team_form.hidden_tag() }}
+            <button type="submit" class="btn btn-danger btn-sm">
+              Leave Team
+            </button>
+          </form>
         </div>
         <div class="card-footer"></div>
       </div>
     </div>
-    {% else %}
+    {% endfor %} {% else %}
     <p>You have not joined a team yet.</p>
     {% endif %}
   </div>

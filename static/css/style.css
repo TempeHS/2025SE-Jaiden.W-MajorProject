@@ -270,6 +270,10 @@ footer {
   border-color: var(--spike-gold);
 }
 
+.btn-space {
+  margin-bottom: 1rem;
+}
+
 /* --- FLASH MESSAGES --- */
 .flash-messages {
   margin-top: 20px;
@@ -513,6 +517,7 @@ footer {
 }
 
 /* --- TEAM CARDS (HOME & SEARCH) --- */
+
 .card,
 .card.shadow-sm {
   border: none;
@@ -590,6 +595,17 @@ footer {
   font-weight: 700;
   padding: 0.5rem 1.2rem;
   opacity: 0.7;
+}
+
+.team-profile-pic {
+  width: 225px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1rem auto 0.5rem auto;
+  display: block;
+  background: #fffbe6;
+  border: 2px solid var(--spike-gold);
 }
 
 /* --- CREATE NEW TEAM BUTTON --- */

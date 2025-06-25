@@ -1,6 +1,8 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, RadioField, TextAreaField, DateTimeField, SelectField, DateField, ValidationError
 from wtforms.validators import DataRequired, Length, Regexp, ValidationError
+from flask_wtf.file import FileField, FileAllowed
+
 
 def has_uppercase(_form, field):
     if not any(char.isupper() for char in field.data):
@@ -70,6 +72,7 @@ class TeamForm(FlaskForm):
         DataRequired(), 
         Length(max=200)
     ])
+    profile_pic = FileField('Team Profile Picture', validators=[FileAllowed(['jpg', 'png', 'jpeg'], 'Images only!')])
     submit = SubmitField('Create Team')
 
 class TeamEventForm(FlaskForm):
@@ -137,3 +140,6 @@ class ChangePasswordForm(FlaskForm):
             self.confirm_password.errors.append('New passwords must match.')
             return False
         return True
+
+class LeaveTeamForm(FlaskForm):
+    submit = SubmitField('Leave Team')

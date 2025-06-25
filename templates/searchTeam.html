@@ -65,8 +65,8 @@
             method="post"
             action="{{ url_for('join_team', team_id=team.id) }}"
           >
-            {{ form.hidden_tag() }} {% if user_team_id and team.id ==
-            user_team_id %}
+            {{ form.hidden_tag() }} {% if user_team_ids and team.id in
+            user_team_ids %}
             <button class="btn btn-secondary btn-sm" disabled>
               Already Joined
             </button>

@@ -7,3 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".leave-team-form").forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      if (!confirm("Are you sure you want to leave this team?")) {
+        e.preventDefault();
+      }
+    });
+  });
+});

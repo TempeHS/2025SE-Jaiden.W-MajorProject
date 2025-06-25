@@ -10,7 +10,7 @@ from flask_session import Session
 from flask_socketio import SocketIO
 
 import chatSocket
-from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm, TeamEventForm, DeleteUserForm, UpdateProfileForm
+from forms import LoginForm, SignUpForm, TwoFactorForm, JoinTeamForm, TeamForm, TeamEventForm, LeaveTeamForm
 from authHandlers import handle_login, handle_two_factor, handle_sign_up
 import teamHandlers as teamHandler
 from sessionLocks import acquire_session_lock, cleanup_session_lock
@@ -136,6 +136,16 @@ def join_team(team_id):
     lock = acquire_session_lock()
     with lock:
         return teamHandler.handle_join_team(team_id)
+    
+@app.route('/leave_team/<int:team_id>', methods=['POST'])
+def leave_team(team_id):
+    form = LeaveTeamForm()
+    if form.validate_on_submit():
+        lock = acquire_session_lock()
+        with lock:
+            return teamHandler.handle_leave_team(team_id)
+    flash("Invalid request.", "danger")
+    return redirect(url_for('index'))
 
 @app.route('/create_team', methods=['GET', 'POST'])
 def create_team():

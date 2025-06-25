@@ -1,14 +1,13 @@
-# This file contains functions to manage the database operations for the volleyball team application.
-
 import sqlite3 as sql
 from datetime import datetime
 
 db_path = "./databaseFiles/database.db"
 
+# --- USER MANAGEMENT ---
+
 def insertUser(username, hashed_password, totp_secret, email, full_name, role):
     con = sql.connect(db_path)
     cur = con.cursor()
-    # Check if the username already exists
     cur.execute("SELECT COUNT(*) FROM secure_users_9f WHERE username = ?", (username,))
     if cur.fetchone()[0] > 0:
         con.close()
@@ -28,8 +27,13 @@ def retrieveUserByUsername(username):
         (username,)
     )
     user = cur.fetchone()
-    conn.close()
     if user:
+        cur.execute(
+            "SELECT team_id FROM user_teams WHERE user_id = ?",
+            (user[0],)
+        )
+        team_ids = [row[0] for row in cur.fetchall()]
+        conn.close()
         return {
             'id': user[0],
             'username': user[1],
@@ -37,10 +41,11 @@ def retrieveUserByUsername(username):
             'email': user[3],
             'full_name': user[4],
             'role': user[5],
-            'team_id': user[6],
-            'totp_secret': user[7],
-            'twofa_enabled': user[8],
+            'totp_secret': user[6],
+            'twofa_enabled': user[7],
+            'team_ids': team_ids 
         }
+    conn.close()
     return None
 
 def updateUserTotpSecret(username, totp_secret):
@@ -62,16 +67,37 @@ def setTwoFAEnabled(username, enabled=True):
     conn.commit()
     conn.close()
 
+def update_user_profile(username, email, full_name, role, hashed_password):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("""
+        UPDATE secure_users_9f
+        SET email = ?, full_name = ?, role = ?, password = ?
+        WHERE username = ?
+    """, (email, full_name, role, hashed_password, username))
+    conn.commit()
+    conn.close()
+
+def delete_user_by_username(username):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("DELETE FROM secure_users_9f WHERE username = ?", (username,))
+    conn.commit()
+    conn.close()
+
+# --- TEAM MANAGEMENT ---
+
 def get_all_teams():
     conn = sql.connect(db_path)
     cur = conn.cursor()
-    cur.execute("SELECT id, name, description, created_at FROM volleyball_teams")
+    cur.execute("SELECT id, name, description, created_at, profile_pic FROM volleyball_teams")
     teams = [
         {
             "id": row[0],
             "name": row[1],
             "description": row[2],
-            "created_at": row[3]
+            "created_at": row[3],
+            "profile_pic": row[4] 
         }
         for row in cur.fetchall()
     ]
@@ -81,7 +107,7 @@ def get_all_teams():
 def get_team_by_id(team_id):
     conn = sql.connect(db_path)
     cur = conn.cursor()
-    cur.execute("SELECT id, name, description, created_at FROM volleyball_teams WHERE id = ?", (team_id,))
+    cur.execute("SELECT id, name, description, created_at, profile_pic FROM volleyball_teams WHERE id = ?", (team_id,))
     row = cur.fetchone()
     conn.close()
     if row:
@@ -89,44 +115,110 @@ def get_team_by_id(team_id):
             "id": row[0],
             "name": row[1],
             "description": row[2],
-            "created_at": row[3]
+            "created_at": row[3],
+            "profile_pic": row[4]  
         }
     return None
 
 def search_teams_by_name(query):
     conn = sql.connect(db_path)
     cur = conn.cursor()
-    cur.execute("SELECT id, name, description, created_at FROM volleyball_teams WHERE name LIKE ?", ('%' + query + '%',))
+    cur.execute("SELECT id, name, description, created_at, profile_pic FROM volleyball_teams WHERE name LIKE ?", ('%' + query + '%',))
     teams = [
         {
             "id": row[0],
             "name": row[1],
             "description": row[2],
-            "created_at": row[3]
+            "created_at": row[3],
+            "profile_pic": row[4]
         }
         for row in cur.fetchall()
     ]
     conn.close()
     return teams
 
-def update_user_team(username, team_id):
+def create_team(name, description, profile_pic=None):
     conn = sql.connect(db_path)
     cur = conn.cursor()
-    cur.execute("UPDATE secure_users_9f SET team_id = ? WHERE username = ?", (team_id, username))
-    conn.commit()
-    conn.close()
-
-def create_team(name, description):
-    conn = sql.connect(db_path)
-    cur = conn.cursor()
-    #check if the team name already exists
     cur.execute("SELECT COUNT(*) FROM volleyball_teams WHERE name = ?", (name,))
     if cur.fetchone()[0] > 0:
         conn.close()
         raise Exception ("Team name already exists")
-    cur.execute("INSERT INTO volleyball_teams (name, description) VALUES (?, ?)", (name, description))
+    cur.execute("INSERT INTO volleyball_teams (name, description, profile_pic) VALUES (?, ?, ?)", (name, description, profile_pic))
     conn.commit()
     conn.close()
+
+# --- USER-TEAM RELATIONSHIP (MANY-TO-MANY) ---
+
+def update_user_team(user_id, team_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute(
+        "INSERT OR IGNORE INTO user_teams (user_id, team_id) VALUES (?, ?)",
+        (user_id, team_id)
+    )
+    conn.commit()
+    conn.close()
+
+def remove_user_from_team(user_id, team_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute(
+        "DELETE FROM user_teams WHERE user_id = ? AND team_id = ?",
+        (user_id, team_id)
+    )
+    conn.commit()
+    conn.close()
+
+def get_teams_for_user(user_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT team.id, team.name, team.description, team.created_at, team.profile_pic
+        FROM volleyball_teams AS team
+        JOIN user_teams AS user_team ON team.id = user_team.team_id
+        WHERE user_team.user_id = ?
+    """, (user_id,))
+    teams = [
+        {
+            "id": row[0],
+            "name": row[1],
+            "description": row[2],
+            "created_at": row[3],
+            "profile_pic": row[4]
+        }
+        for row in cur.fetchall()
+    ]
+    conn.close()
+    return teams
+
+def get_team_members(team_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT user.id, user.username
+        FROM secure_users_9f AS user
+        JOIN user_teams AS user_team ON user.id = user_team.user_id
+        WHERE user_team.team_id = ? AND user.role != 'Coach'
+    """, (team_id,))
+    members = cur.fetchall() 
+    conn.close()
+    return members
+
+def get_all_usernames_in_team(team_id):
+    conn = sql.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT user.username
+        FROM secure_users_9f AS user
+        JOIN user_teams AS user_team ON user.id = user_team.user_id
+        WHERE user_team.team_id = ?
+    """, (team_id,))
+    members = [row[0] for row in cur.fetchall()]
+    conn.close()
+    return members
+
+# --- TEAM EVENTS ---
 
 def create_team_event(team_id, title, description, event_date, location):
     conn = sql.connect(db_path)
@@ -195,10 +287,11 @@ def delete_team_event(event_id):
     conn.commit()
     conn.close()
 
+# --- EVENT ATTENDANCE ---
+
 def set_event_attendance (event_id, user_id, status):
     conn = sql.connect(db_path)
     cur = conn.cursor()
-    # inserts a new attendance record or updates the existing one by using ON CONFLICT
     cur.execute("""
         INSERT INTO event_attendance (event_id, user_id, status)
         VALUES (?, ?, ?)
@@ -225,27 +318,10 @@ def get_event_attendance_counts(event_id):
     """, (event_id,))
     counts = {row[0]: row[1] for row in cur.fetchall()}
     conn.close()
-    # Ensure both keys exist 
     return {
         'attending': counts.get('attending', 0),
         'not_attending': counts.get('not_attending', 0)
     }
-
-def get_team_members(team_id):
-    conn = sql.connect(db_path)
-    cur = conn.cursor()
-    cur.execute("SELECT id, username FROM secure_users_9f WHERE team_id = ? AND role != 'Coach'", (team_id,))
-    members = cur.fetchall() 
-    conn.close()
-    return members
-
-def get_all_usernames_in_team(team_id):
-    conn = sql.connect(db_path)
-    cur = conn.cursor()
-    cur.execute("SELECT username FROM secure_users_9f WHERE team_id = ?", (team_id,))
-    members = [row[0] for row in cur.fetchall()]
-    conn.close()
-    return members
 
 def get_event_responses(event_id):
     conn = sql.connect(db_path)
@@ -275,13 +351,15 @@ def categorize_attendance(event_id, team_id):
         'not_responded': not_responded
     }
 
+# --- TEAM MESSAGES ---
+
 def save_team_messages (team_id, username, message, timestamp):
     conn = sql.connect(db_path)
     cur = conn.cursor()
     cur.execute(
         "INSERT INTO team_messages (team_id, username, message, timestamp) VALUES (?,?,?,?)", 
         (team_id, username, message, timestamp)
-                )
+    )
     conn.commit()
     conn.close()
 
@@ -290,13 +368,15 @@ def get_team_messages(team_id, limit=50):
     cur = conn.cursor()
     cur.execute("SELECT username, message, timestamp FROM team_messages WHERE team_id = ? ORDER by timestamp DESC LIMIT ?",
                 (team_id, limit)
-                )
+    )
     messages = [
         {"name": row[0], "message": row[1], "timestamp": row[2]}
         for row in cur.fetchall()
     ]
     conn.close()
     return list(reversed(messages))  # Oldest first
+
+# --- PRIVATE MESSAGES ---
 
 def save_private_message(sender, recipient, message, timestamp):
     conn = sql.connect(db_path)
@@ -322,21 +402,3 @@ def get_private_messages(user1, user2, limit=50):
     ]
     conn.close()
     return list(reversed(messages))
-
-def update_user_profile(username, email, full_name, role, hashed_password):
-    conn = sql.connect(db_path)
-    cur = conn.cursor()
-    cur.execute("""
-        UPDATE secure_users_9f
-        SET email = ?, full_name = ?, role = ?, password = ?
-        WHERE username = ?
-    """, (email, full_name, role, hashed_password, username))
-    conn.commit()
-    conn.close()
-
-def delete_user_by_username(username):
-    conn = sql.connect(db_path)
-    cur = conn.cursor()
-    cur.execute("DELETE FROM secure_users_9f WHERE username = ?", (username,))
-    conn.commit()
-    conn.close()

@@ -3,23 +3,61 @@
   <!-- Sidebar -->
   <div class="chat-sidebar">
     <h4>Chats</h4>
-    <button
-      class="chat-switch-btn active"
-      data-room="team_{{ team_id }}"
-      data-type="team"
-    >
-      Team Chat
-    </button>
-    {% for user in dm_users %}
-    <button
-      class="chat-switch-btn"
-      data-room="dm_{{ [session['username'], user]|sort|join('_') }}"
-      data-type="dm"
-      data-user="{{ user }}"
-    >
-      DM: {{ user }}
-    </button>
-    {% endfor %}
+    <!-- Dropdown for mobile -->
+    <div class="dropdown d-md-none mb-3">
+      <button
+        class="btn btn-primary dropdown-toggle w-100"
+        type="button"
+        id="chatDropdown"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Select Chat
+      </button>
+      <ul class="dropdown-menu w-100" aria-labelledby="chatDropdown">
+        <li>
+          <a
+            class="dropdown-item chat-switch-btn active"
+            data-room="team_{{ team_id }}"
+            data-type="team"
+            href="#"
+            >Team Chat</a
+          >
+        </li>
+        {% for user in dm_users %}
+        <li>
+          <a
+            class="dropdown-item chat-switch-btn"
+            data-room="dm_{{ [session['username'], user]|sort|join('_') }}"
+            data-type="dm"
+            data-user="{{ user }}"
+            href="#"
+            >DM: {{ user }}</a
+          >
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <!-- Sidebar buttons for desktop -->
+    <div class="d-none d-md-block">
+      <button
+        class="chat-switch-btn active"
+        data-room="team_{{ team_id }}"
+        data-type="team"
+      >
+        Team Chat
+      </button>
+      {% for user in dm_users %}
+      <button
+        class="chat-switch-btn"
+        data-room="dm_{{ [session['username'], user]|sort|join('_') }}"
+        data-type="dm"
+        data-user="{{ user }}"
+      >
+        DM: {{ user }}
+      </button>
+      {% endfor %}
+    </div>
   </div>
   <!-- Main chat area -->
   <div class="message-box">

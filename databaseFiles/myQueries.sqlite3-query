@@ -53,3 +53,12 @@
     message TEXT NOT NULL,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );*/
+
+/*CREATE TABLE user_teams (
+    user_id INTEGER NOT NULL,
+    team_id INTEGER NOT NULL,
+    PRIMARY KEY (user_id, team_id),
+    FOREIGN KEY (user_id) REFERENCES secure_users_9f(id),
+    FOREIGN KEY (team_id) REFERENCES volleyball_teams(id)
+);*/
+
