@@ -16,3 +16,7 @@ def sanitize_input(input_string):
     sanitized_string = re.sub(r'[^\w\s-]', '', input_string) 
     sanitized_string = html.escape(sanitized_string)  
     return sanitized_string
+
+def sanitize_message_for_display(message):
+    # Only escape HTML special characters, do not remove punctuation
+    return html.escape(message)

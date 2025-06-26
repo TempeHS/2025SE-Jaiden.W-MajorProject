@@ -1,34 +1,29 @@
-{% extends 'layout.html' %} {% block content %}
-<body>
-  <div class="twofa-container">
-    <h1>Two-Factor Authentication</h1>
-    <form method="POST" class="twofa-form">
-      {{ form.hidden_tag() }}
-      <div class="input__wrapper">
-        <label for="token"
-          >Enter the 2FA token from your Google Authenticator app:</label
-        >
-        {{ form.token(class="input__field") }}
-      </div>
-      <div class="input__wrapper">{{ form.submit(class="btn") }}</div>
-      <a href="{{ url_for('login') }}" class="btn btn-secondary"
-        >Back to Login</a
+{% extends 'layout.html' %} {% block content %} {% if qr_code %}
+<div class="qr-code-container">
+  <p>Scan this QR code with your authenticator app:</p>
+  <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code" />
+</div>
+{% endif %}
+<div class="twofa-container">
+  <h1>Two-Factor Authentication</h1>
+  <form method="POST" class="twofa-form">
+    {{ form.hidden_tag() }}
+    <div class="input__wrapper">
+      <label for="token"
+        >Enter the 2FA token from your Google Authenticator app:</label
       >
-      {% with messages = get_flashed_messages(with_categories=true) %} {% if
-      messages %}
-      <div class="flash-messages">
-        {% for category, message in messages %}
-        <p class="flash-message {{ category }}">{{ message }}</p>
-        {% endfor %}
-      </div>
-      {% endif %} {% endwith %}
-    </form>
-    {% if qr_code %}
-    <div class="qr-code-container">
-      <p>Scan this QR code with your authenticator app:</p>
-      <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code" />
+      {{ form.token(class="input__field") }}
     </div>
-    {% endif %}
-  </div>
-</body>
+    <div class="input__wrapper">{{ form.submit(class="btn-danger") }}</div>
+    <a href="{{ url_for('login') }}" class="btn btn-secondary">Back to Login</a>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    <div class="flash-messages">
+      {% for category, message in messages %}
+      <p class="flash-message {{ category }}">{{ message }}</p>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+  </form>
+</div>
 {% endblock %}

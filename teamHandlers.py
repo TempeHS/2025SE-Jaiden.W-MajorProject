@@ -3,10 +3,19 @@ from flask import flash, session, redirect, render_template, request, url_for
 import requests
 import databaseManagement as dbHandler
 from sanitize import sanitize_data, sanitize_input
-from forms import DeleteEventForm, AttendanceForm
+from forms import DeleteEventForm, AttendanceForm, LeaveTeamForm
+import os
+from werkzeug.utils import secure_filename
 
 app_log = logging.getLogger(__name__)
 app_header = {"Authorisation": "uPTPeF9BDNiqAkNj"}
+
+UPLOAD_FOLDER = 'static/images/team_pics'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+
+# Ensures allowed file extensions
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def user_in_team(team_id):
     """returns user if logged in and in the given team, else None"""
@@ -16,12 +25,12 @@ def user_in_team(team_id):
     if not user:
         return None
     try:
-        # Always compare as integers
-        if int(user.get('team_id')) != int(team_id):
+        # Check if team_id is in user's team_ids list
+        if int(team_id) not in [int(tid) for tid in user.get('team_ids', [])]:
             print(f"User {session['username']} is not in team {team_id}.")
             return None
     except (ValueError, TypeError):
-        print(f"Type error comparing team IDs")
+        print("Type error comparing team IDs")
         return None
     return user
 
@@ -40,11 +49,11 @@ def handle_my_team():
     user = get_logged_in_user()
     if not user:
         return redirect(url_for('login'))
-    if not user or not user.get('team_id'):
-        flash("You have not joined a team yet.", "info")
-        return render_template('index.html', team=None)
-    team = dbHandler.get_team_by_id(user['team_id'])
-    return render_template('index.html', team=team)
+    if not user.get('team_ids'):
+        #flash("You have not joined a team yet.", "info")
+        return render_template('index.html', teams=[])
+    teams = dbHandler.get_teams_for_user(user['id'])
+    return render_template('index.html', teams=teams, leave_team_form=LeaveTeamForm())
 
 def handle_search_team(JoinTeamForm):
     query = request.args.get('q', '')
@@ -59,15 +68,26 @@ def handle_search_team(JoinTeamForm):
     except Exception as _e:
         flash("Could not fetch teams from the server.", "danger")
         teams = []
-    return render_template('searchTeam.html', teams=teams, query=query, form=JoinTeamForm)
+    user = get_logged_in_user()
+    user_team_ids = user.get('team_ids', []) if user else []
+    return render_template('searchTeam.html', teams=teams, query=query, form=JoinTeamForm, user_team_ids=user_team_ids)
 
 def handle_join_team(team_id):
     user = get_logged_in_user()
     if not user:
         return redirect(url_for('login'))
-    dbHandler.update_user_team(user['username'], team_id)
-    flash("You have joined the team!", "success")
+    dbHandler.update_user_team(user['id'], team_id)    
+    flash("You have joined the team! Go back to the Home page to access", "success")
     return redirect(url_for('search_team'))
+
+def handle_leave_team(team_id):
+    user = get_logged_in_user()
+    if not user:
+        flash("You must be logged in to leave a team.", "danger")
+        return redirect(url_for('index'))
+    dbHandler.remove_user_from_team(user['id'], team_id)
+    flash("You have left the team.", "success")
+    return redirect(url_for('index'))
 
 def handle_create_team(teamForm):
     user = get_logged_in_user()
@@ -76,9 +96,17 @@ def handle_create_team(teamForm):
     if not user or user.get('role') != 'Coach':
         return redirect(url_for('index'))
     if teamForm.validate_on_submit():
+        # Handle file upload
+        filename = None
+        if teamForm.profile_pic.data and allowed_file(teamForm.profile_pic.data.filename):
+            filename = secure_filename(teamForm.profile_pic.data.filename)
+            save_path = os.path.join(UPLOAD_FOLDER, filename)
+            os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+            teamForm.profile_pic.data.save(save_path)
         sanitized_data = sanitize_data({
             "name": teamForm.team_name.data,
-            "description": teamForm.team_description.data
+            "description": teamForm.team_description.data,
+            "profile_pic": filename
         })
         try:
             response = requests.post("http://127.0.0.1:3000/api/create_team", json=sanitized_data, headers=app_header, timeout=5)
@@ -160,7 +188,7 @@ def handle_create_team_event(team_id, form):
             "event_date": form.event_date.data.strftime('%Y-%m-%dT%H:%M'),
             "location": form.location.data,
             "recurrence": form.recurrence.data,
-            "recurrence_end": form.recurrence_end.data.strftime('%Y-%m-%d') if form.recurrence_end.data != "none" else None
+            "recurrence_end": form.recurrence_end.data.strftime('%Y-%m-%d') if form.recurrence_end.data else None
         }
         try:
             response = requests.post("http://127.0.0.1:3000/api/create_team_event",json=event_data,headers=app_header, timeout=5)
@@ -174,7 +202,7 @@ def handle_create_team_event(team_id, form):
         except requests.exceptions.RequestException as e:
             flash("An error occurred while creating the event.", "danger")
             app_log.error("Error during team event creation: %s", str(e))
-    return render_template('createTeamEvent.html', form=form, team=team)
+    return render_template('createTeamEvent.html', form=form, team=team, team_nav=True)
 
 def handle_delete_team_event (team_id, event_id):
     user = require_role('Coach')

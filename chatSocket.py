@@ -1,7 +1,7 @@
 from flask_socketio import join_room, leave_room, send
 from flask import request, session
 import databaseManagement as dbHandler
-from sanitize import sanitize_input
+from sanitize import sanitize_message_for_display
 from flask_wtf.csrf import validate_csrf, ValidationError
 from teamHandlers import user_in_team
 from datetime import datetime
@@ -55,7 +55,7 @@ def register_socketio_events(socketio, app_log):
         username = user['username']
         room = data['room']
         time = datetime.now(ZoneInfo("Australia/Sydney")).strftime("%Y-%m-%d %H:%M")
-        message_text = sanitize_input(data['message'])
+        message_text = sanitize_message_for_display(data['message'])
         # save to DB for team chat
         if room.startswith("team_"):
             dbHandler.save_team_messages(team_id, username, message_text, time)
@@ -84,7 +84,7 @@ def register_socketio_events(socketio, app_log):
             return False  # Not authenticated
         recipient = data['recipient']
         time = datetime.now(ZoneInfo("Australia/Sydney")).strftime("%Y-%m-%d %H:%M")
-        message = sanitize_input(data['message'])
+        message = sanitize_message_for_display(data['message'])
         room = f"dm_{'_'.join(sorted([sender, recipient]))}"
         dbHandler.save_private_message(sender, recipient, message, time)
         socketio.emit("private_message", {"name": sender, "message": message, "timestamp": time}, to=room)

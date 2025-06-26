@@ -2,38 +2,30 @@
 <div class="container py-5">
   <div class="row mb-4">
     <div class="col text-center">
-      <h1 class="display-4">{{ team.name }}</h1>
+      <h1 class="mt-5">{{ team.name }}</h1>
     </div>
   </div>
   <div class="row justify-content-center">
     <div class="col-md-4 mb-3">
       <a
         href="{{ url_for('team_events', team_id=team.id) }}"
-        class="btn btn-primary btn-lg w-100 py-4 shadow-sm d-flex flex-column align-items-center"
+        class="team-detail-btn"
       >
         <img
           src="{{ url_for('static', filename='icons/team_event_icon.png') }}"
           alt="Events"
-          width="48"
-          height="48"
-          class="mb-2"
         />
-        <span class="fs-4">Events</span>
+        <span>Events</span>
       </a>
-    </div>
-    <div class="col-md-4 mb-3">
       <a
         href="{{ url_for('team_messages', team_id=team.id) }}"
-        class="btn btn-success btn-lg w-100 py-4 shadow-sm d-flex flex-column align-items-center"
+        class="team-detail-btn"
       >
         <img
           src="{{ url_for('static', filename='icons/team_messages_icon.png') }}"
           alt="Messages"
-          width="48"
-          height="48"
-          class="mb-2"
         />
-        <span class="fs-4">Messages</span>
+        <span>Messages</span>
       </a>
     </div>
   </div>

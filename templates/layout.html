@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="{{ url_for('static', filename='js/themeInit.js') }}"></script>
     <meta
       http-equiv="Content-Security-Policy"
       content="base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'self'; worker-src 'self'; frame-src 'none'; form-action 'self'; manifest-src 'self'"
@@ -9,17 +10,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
     <title>Spike Connect</title>
     {% block head %}{% endblock %}
-    <link rel="manifest" href="static/manifest.json" />
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.png" />
-    <meta name="theme-color" content="" />
+    <!-- ...Favicon... -->
     <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+      rel="manifest"
+      href="{{ url_for('static', filename='favicon/manifest.json') }}"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='favicon/favicon-96x96.png') }}"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="{{ url_for('static', filename='favicon/favicon.svg') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon/favicon.ico') }}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}"
+    />
+    <meta name="apple-mobile-web-app-title" content="Spike Connect" />
+    <link
+      rel="manifest"
+      href="{{ url_for('static', filename='favicon/site.webmanifest') }}"
+    />
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
       integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
@@ -33,5 +62,7 @@
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/serviceWorker.js') }}"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/darkMode.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/deleteConfirm.js') }}"></script>
   </body>
 </html>

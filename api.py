@@ -89,8 +89,9 @@ def api_create_team():
     data = request.get_json()
     team_name = data.get("name")
     team_description = data.get("description")
+    team_profile_picture = data.get("profile_pic")
     try:
-        dbHandler.create_team(team_name, team_description)
+        dbHandler.create_team(team_name, team_description, team_profile_picture)
         return jsonify({"message": "Team created successfully"}), 201
     except Exception as e:
         if "already exists" in str(e):

@@ -1,62 +1,97 @@
 {
-    "name": "",
-    "short_name": "",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#000",
-    "theme_color": "#000",
-    "orientation": "landscape-primary",
-    "icons": [
-      {
-        "src": "static/icons/icon-128x128.png",
-        "type": "image/png",
-        "sizes": "128x128",
-        "purpose": "maskable"
-      },
-      {
-        "src": "static/icons/icon-128x128.png",
-        "type": "image/png",
-        "sizes": "128x128",
-        "purpose": "any"
-      },
-      {
-        "src": "static/icons/icon-192x192.png",
-        "type": "image/png",
-        "sizes": "192x192",
-        "purpose": "maskable"
-      },
-      {
-        "src": "static/icons/icon-192x192.png",
-        "type": "image/png",
-        "sizes": "192x192",
-        "purpose": "any"
-      },
-      {
-        "src": "static/icons/icon-384x384.png",
-        "type": "image/png",
-        "sizes": "384x384",
-        "purpose": "maskable"
-      },
-      {
-        "src": "static/icons/icon-384x384.png",
-        "type": "image/png",
-        "sizes": "384x384",
-        "purpose": "any"
-      },
-      {
-        "src": "static/icons/icon-512x512.png",
-        "type": "image/png",
-        "sizes": "512x512",
-        "purpose": "maskable"
-      },
-      {
-        "src": "static/icons/icon-512x512.png",
-        "type": "image/png",
-        "sizes": "512x512",
-        "purpose": "any"
-      }
-    ],
-  "screenshots" : [
+  "name": "",
+  "short_name": "",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000",
+  "theme_color": "#000",
+  "orientation": "landscape-primary",
+  "icons": [
+    {
+      "src": "static/icons/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "maskable"
+    },
+    {
+      "src": "static/icons/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any"
+    },
+    {
+      "src": "static/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "static/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "static/icons/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "maskable"
+    },
+    {
+      "src": "static/icons/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "any"
+    },
+    {
+      "src": "static/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "static/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "static/favicon/favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "static/favicon/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "static/favicon/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "48x48 32x32 16x16"
+    },
+    {
+      "src": "static/favicon/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "static/icons/team_event_icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "static/icons/team_messages_icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "static/images/volleyballteam.png",
+      "type": "image/png",
+      "sizes": "658x658"
+    }
+  ],
+  "screenshots": [
     {
       "src": "static/icons/desktop_screenshot.png",
       "sizes": "1080x1920",
@@ -64,11 +99,11 @@
       "form_factor": "wide",
       "label": ""
     },
-        {
+    {
       "src": "static/icons/mobile_screenshot.png",
       "sizes": "1920x1080",
       "type": "image/png",
       "label": ""
     }
   ]
-  }
+}
