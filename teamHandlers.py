@@ -101,8 +101,13 @@ def handle_create_team(teamForm):
         if teamForm.profile_pic.data and allowed_file(teamForm.profile_pic.data.filename):
             filename = secure_filename(teamForm.profile_pic.data.filename)
             save_path = os.path.join(UPLOAD_FOLDER, filename)
-            os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-            teamForm.profile_pic.data.save(save_path)
+            try:
+                os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+                teamForm.profile_pic.data.save(save_path)
+            except OSError as e:
+                app_log.error(f"File upload failed: {e}")
+                flash("Failed to save profile picture. Please try again or contact support.", "danger")
+                filename = None
         sanitized_data = sanitize_data({
             "name": teamForm.team_name.data,
             "description": teamForm.team_description.data,

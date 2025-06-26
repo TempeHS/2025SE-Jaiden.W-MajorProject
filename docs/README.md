@@ -22,7 +22,17 @@ Currently, volleyball teams face fragmented communication across group chats, em
 
 ## Documentation
 
-- System Report
+- [View the System Report (PDF)](/docs/README_resources/system_report.pdf)
+
+### Project Sprints
+- [Sprint-1.0](https://github.com/TempeHS/2025SE-Jaiden.W-MajorProject/tree/Sprint-1.0)
+- [Sprint-2.0](https://github.com/TempeHS/2025SE-Jaiden.W-MajorProject/tree/Sprint-2.0)
+- [Sprint-3.0](https://github.com/TempeHS/2025SE-Jaiden.W-MajorProject/tree/Sprint-3.0)
+- [Sprint-4.0](https://github.com/TempeHS/2025SE-Jaiden.W-MajorProject/tree/Sprint-4.0)
+
+
+### Gantt Chart
+![Gantt chart of project](/docs/README_resources/gantt_chart.png "Gantt chart of project")
 
 ## How to use Spike Connect for developers
 
