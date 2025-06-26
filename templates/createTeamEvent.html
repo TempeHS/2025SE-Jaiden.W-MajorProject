@@ -1,6 +1,29 @@
 {% extends 'layout.html' %} {% block content %}
+<script src="{{ url_for('static', filename='js/recurrenceEnd.js') }}"></script>
+
 <div class="container mt-5">
   <div class="row justify-content-center">
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    <div class="flash-messages">
+      {% for category, message in messages %}
+      <div
+        class="alert alert-{{ category }} alert-dismissible fade show"
+        role="alert"
+      >
+        {{ message }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+    <!-- Flash Messages -->
     <div class="col-md-8">
       <h2 class="mb-4">Create Event for {{ team.name }}</h2>
       <form method="POST">
@@ -35,9 +58,9 @@
         </div>
         <div class="mb-3">
           {{ form.recurrence.label(class="form-label") }} {{
-          form.recurrence(class="form-select") }}
+          form.recurrence(class="form-select", id="recurrence") }}
         </div>
-        <div class="mb-3">
+        <div class="mb-3" id="recurrence_end_group">
           {{ form.recurrence_end.label(class="form-label") }} {{
           form.recurrence_end(class="form-control") }}
         </div>

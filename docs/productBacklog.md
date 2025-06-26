@@ -16,9 +16,9 @@
 
 ### UI Elements
 
-- Responsive interface using Bootstrap
-- Dark mode toggle
-- Large-font accessibility option
+- ~~Responsive interface using Bootstrap~~
+- ~~Dark mode toggle~~
+- ~~Large-font accessibility option~~
 
 ### Security/Privacy Features
 

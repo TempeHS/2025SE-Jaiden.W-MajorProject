@@ -50,7 +50,7 @@ def handle_my_team():
     if not user:
         return redirect(url_for('login'))
     if not user.get('team_ids'):
-        flash("You have not joined a team yet.", "info")
+        #flash("You have not joined a team yet.", "info")
         return render_template('index.html', teams=[])
     teams = dbHandler.get_teams_for_user(user['id'])
     return render_template('index.html', teams=teams, leave_team_form=LeaveTeamForm())
@@ -77,7 +77,7 @@ def handle_join_team(team_id):
     if not user:
         return redirect(url_for('login'))
     dbHandler.update_user_team(user['id'], team_id)    
-    flash("You have joined the team!", "success")
+    flash("You have joined the team! Go back to the Home page to access", "success")
     return redirect(url_for('search_team'))
 
 def handle_leave_team(team_id):
@@ -188,7 +188,7 @@ def handle_create_team_event(team_id, form):
             "event_date": form.event_date.data.strftime('%Y-%m-%dT%H:%M'),
             "location": form.location.data,
             "recurrence": form.recurrence.data,
-            "recurrence_end": form.recurrence_end.data.strftime('%Y-%m-%d') if form.recurrence_end.data != "none" else None
+            "recurrence_end": form.recurrence_end.data.strftime('%Y-%m-%d') if form.recurrence_end.data else None
         }
         try:
             response = requests.post("http://127.0.0.1:3000/api/create_team_event",json=event_data,headers=app_header, timeout=5)

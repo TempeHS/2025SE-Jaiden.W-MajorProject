@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, RadioField, TextAreaField, DateTimeField, SelectField, DateField, ValidationError
-from wtforms.validators import DataRequired, Length, Regexp, ValidationError
+from wtforms.validators import DataRequired, Length, Regexp, ValidationError, Optional
 from flask_wtf.file import FileField, FileAllowed
 
 
@@ -46,7 +46,7 @@ class SignUpForm(FlaskForm):
     ])
     password = PasswordField('Password', validators=[
         DataRequired(), 
-        Length(min=8, max=128),
+        Length(min=6, max=128),
         has_uppercase,
         has_lowercase,
         has_digit,
@@ -81,7 +81,7 @@ class TeamEventForm(FlaskForm):
         Length(min=2, max=100)
     ])
     description = TextAreaField('Description', validators=[
-        Length(max=500)
+        Length(max=200)
     ])
     event_date = DateTimeField('Event Date & Time', format='%Y-%m-%dT%H:%M', validators=[DataRequired()], render_kw={"type": "datetime-local"})
     location = StringField('Location', validators=[
@@ -93,7 +93,7 @@ class TeamEventForm(FlaskForm):
         ('daily', 'Daily'),
         ('weekly', 'Weekly'),
     ], default='none')
-    recurrence_end = DateField('Repeat Until', format='%Y-%m-%d', render_kw={"type": "date"})
+    recurrence_end = DateField('Repeat Until', format='%Y-%m-%d', render_kw={"type": "date"}, validators=[Optional()])
     submit = SubmitField('Create Event')
 
 class DeleteEventForm(FlaskForm):
@@ -123,7 +123,7 @@ class ChangePasswordForm(FlaskForm):
     current_password = PasswordField('Current Password', validators=[DataRequired()])
     new_password = PasswordField('New Password', validators=[
         DataRequired(),
-        Length(min=8, max=128),
+        Length(min=6, max=128),
         has_uppercase,
         has_lowercase,
         has_digit,

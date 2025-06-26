@@ -66,7 +66,6 @@ def ratelimit_handler(_e):
     app_log.warning("Rate limit exceeded for IP: %s", request.remote_addr)
     return render_template("login.html", form=LoginForm(), rate_limit_exceeded=True), 429
 
-
 # Redirect index.html to domain root for consistent UX
 @app.route("/index", methods=["GET"])
 @app.route("/index.htm", methods=["GET"])
